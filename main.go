@@ -7,15 +7,25 @@ import (
 	"github.com/SamuelMuloki/GOExamples/utils"
 )
 
-func main() {
-	a, b := utils.Swap("hello", "world")
+func helloWorld() {
+	fmt.Println("hello world")
+	fmt.Println("Hello, 世界")
+}
 
+func swap() {
+	a, b := utils.Swap("hello", "world")
+	fmt.Println(a, b)
+}
+
+func speak() {
 	animals := []methods.Animal{methods.Dog{}, methods.Cat{}, methods.Llama{}, methods.JavaProgrammer{}}
 	for _, animal := range animals {
 		fmt.Println(animal.Speak())
 	}
+}
 
-	fmt.Println("hello world")
-	fmt.Println("Hello, 世界")
-	fmt.Println(a, b)
+func main() {
+	helloWorld()
+	swap()
+	speak()
 }
