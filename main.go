@@ -28,4 +28,14 @@ func main() {
 	helloWorld()
 	swap()
 	speak()
+
+	athletes := methods.New()
+
+	athletes.Push(methods.Person{Name: "Lebron", Age: 37})
+	athletes.Push(methods.Person{Name: "Jordan", Age: 50})
+	athletes.Push(methods.Person{Name: "Kareem", Age: 65})
+
+	athletes.Pop()
+
+	fmt.Printf("There are %d GOATS", athletes.Length())
 }
