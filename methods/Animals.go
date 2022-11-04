@@ -1,3 +1,4 @@
+// methods contains example methods
 package methods
 
 // Animal interface is satisfied if a type defines its methods
