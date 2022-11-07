@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 
+	"github.com/SamuelMuloki/GOExamples/leetcode"
 	"github.com/SamuelMuloki/GOExamples/methods"
 	"github.com/SamuelMuloki/GOExamples/utils"
 )
@@ -38,4 +39,7 @@ func main() {
 	athletes.Pop()
 
 	fmt.Printf("There are %d GOATS", athletes.Length())
+
+	nums := []int{1, 2, 3, 1}
+	fmt.Printf("Array contains duplicate: %v", leetcode.ContainsDuplicate(nums))
 }
