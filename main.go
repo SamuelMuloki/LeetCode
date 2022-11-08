@@ -43,4 +43,5 @@ func main() {
 	nums := []int{1, 2, 3, 1}
 	fmt.Printf("Array contains duplicate: %v\n", leetcode.ContainsDuplicate(nums))
 	fmt.Printf("Is Anagram: %v\n", leetcode.IsAnagram("anagram", "nagaram"))
+	fmt.Printf("Two sum indices are %v\n", leetcode.TwoSum([]int{-3, 4, 3, 90}, 0))
 }
