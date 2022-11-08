@@ -41,5 +41,6 @@ func main() {
 	fmt.Printf("There are %d GOATS", athletes.Length())
 
 	nums := []int{1, 2, 3, 1}
-	fmt.Printf("Array contains duplicate: %v", leetcode.ContainsDuplicate(nums))
+	fmt.Printf("Array contains duplicate: %v\n", leetcode.ContainsDuplicate(nums))
+	fmt.Printf("Is Anagram: %v\n", leetcode.IsAnagram("anagram", "nagaram"))
 }
