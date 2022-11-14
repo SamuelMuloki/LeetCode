@@ -46,4 +46,5 @@ func main() {
 	fmt.Printf("Two sum indices are %v\n", leetcode.TwoSum([]int{-3, 4, 3, 90}, 0))
 	fmt.Printf("Group Anagrams: %v\n", leetcode.GroupAnagrams([]string{"eat", "tea", "tan", "ate", "nat", "bat"}))
 	fmt.Printf("The top k frequent elements are: %v\n", leetcode.TopKFrequent([]int{7, 10, 11, 5, 2, 5, 5, 7, 11, 8, 9}, 4))
+	fmt.Printf("The product of array except self is: %v\n", leetcode.ProductExceptSelf([]int{1, 2, 3, 4}))
 }
