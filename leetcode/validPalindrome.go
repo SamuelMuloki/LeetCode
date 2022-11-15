@@ -6,18 +6,22 @@ import (
 )
 
 func IsPalindrome(s string) bool {
+	if len(s) <= 1 {
+		return true
+	}
+
 	nonAlphaNum := regexp.MustCompile("[^a-zA-Z0-9]+")
 	str := strings.ToLower(nonAlphaNum.ReplaceAllString(s, ""))
 
-	return str == Reverse(str)
-}
+	i, j := 0, len(str)-1
+	for i <= j {
+		if str[i] != str[j] {
+			return false
+		}
 
-func Reverse(s string) string {
-	runes := []rune(s)
-
-	for i, j := 0, len(runes)-1; i < j; i, j = i+1, j-1 {
-		runes[i], runes[j] = runes[j], runes[i]
+		i++
+		j--
 	}
 
-	return string(runes)
+	return true
 }
