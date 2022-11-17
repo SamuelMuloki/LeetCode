@@ -49,4 +49,5 @@ func main() {
 	fmt.Printf("The product of array except self is: %v\n", leetcode.ProductExceptSelf([]int{1, 2, 3, 4}))
 	fmt.Printf("The string is a valid palidronme: %v\n", leetcode.IsPalindrome("A man, a plan, a canal: Panama"))
 	fmt.Printf("Two sum 2 indices are %v\n", leetcode.TwoSum2([]int{-3, 4, 3, 90}, 0))
+	fmt.Printf("The distinct triplets are %v\n", leetcode.ThreeSum([]int{-2, 0, 1, 1, 2}))
 }
