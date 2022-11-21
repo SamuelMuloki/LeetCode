@@ -50,4 +50,5 @@ func main() {
 	fmt.Printf("The string is a valid palidronme: %v\n", leetcode.IsPalindrome("A man, a plan, a canal: Panama"))
 	fmt.Printf("Two sum 2 indices are %v\n", leetcode.TwoSum2([]int{-3, 4, 3, 90}, 0))
 	fmt.Printf("The distinct triplets are %v\n", leetcode.ThreeSum([]int{-2, 0, 1, 1, 2}))
+	fmt.Printf("The maximum area of the container is %v\n", leetcode.MaxArea([]int{1, 8, 6, 2, 5, 4, 8, 3, 7}))
 }
