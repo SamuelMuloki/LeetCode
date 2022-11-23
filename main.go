@@ -52,4 +52,5 @@ func main() {
 	fmt.Printf("The distinct triplets are %v\n", leetcode.ThreeSum([]int{-2, 0, 1, 1, 2}))
 	fmt.Printf("The maximum area of the container is %v\n", leetcode.MaxArea([]int{1, 8, 6, 2, 5, 4, 8, 3}))
 	fmt.Printf("The maximum sum of the array is %d\n", leetcode.MaxSum([]int{5, 2, -1, 0, 3}, 3))
+	fmt.Printf("The maximum profit is %d\n", leetcode.MaxProfit([]int{7, 1, 5, 3, 6, 4}))
 }
