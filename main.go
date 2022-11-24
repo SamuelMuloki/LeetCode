@@ -53,4 +53,5 @@ func main() {
 	fmt.Printf("The maximum area of the container is %v\n", leetcode.MaxArea([]int{1, 8, 6, 2, 5, 4, 8, 3}))
 	fmt.Printf("The maximum sum of the array is %d\n", leetcode.MaxSum([]int{5, 2, -1, 0, 3}, 3))
 	fmt.Printf("The maximum profit is %d\n", leetcode.MaxProfit([]int{7, 1, 5, 3, 6, 4}))
+	fmt.Printf("The length of the longest substring is %d\n", leetcode.LengthOfLongestSubstring("abcabcbb"))
 }
