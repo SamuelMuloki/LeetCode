@@ -11,20 +11,14 @@ type LinkedList struct {
 }
 
 func ReverseList(head *ListNode) *ListNode {
-	if head == nil {
-		return nil
-	}
-
 	curr := head
 	var prev *ListNode
-	for curr.Next != nil {
+	for curr != nil {
 		temp := curr.Next
 		curr.Next = prev
 		prev = curr
 		curr = temp
 	}
-	head = curr
-	head.Next = prev
 
-	return head
+	return prev
 }
