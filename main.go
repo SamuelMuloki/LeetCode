@@ -55,4 +55,5 @@ func main() {
 	fmt.Printf("The maximum profit is %d\n", leetcode.MaxProfit([]int{7, 1, 5, 3, 6, 4}))
 	fmt.Printf("The length of the longest substring is %d\n", leetcode.LengthOfLongestSubstring("abcabcbb"))
 	fmt.Printf("String has valid parentheses: %v\n", leetcode.IsValid("()[]{}"))
+	fmt.Printf("The index of the target is: %v\n", leetcode.Search([]int{-1, 0, 3, 5, 9, 12}, 9))
 }
