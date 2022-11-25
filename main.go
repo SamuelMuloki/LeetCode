@@ -30,15 +30,27 @@ func main() {
 	swap()
 	speak()
 
+	// Stack
 	athletes := methods.New()
-
 	athletes.Push(methods.Person{Name: "Lebron", Age: 37})
 	athletes.Push(methods.Person{Name: "Jordan", Age: 50})
 	athletes.Push(methods.Person{Name: "Kareem", Age: 65})
-
 	athletes.Pop()
-
 	fmt.Printf("There are %d GOATS\n", athletes.Length())
+
+	// Linked List
+	list := methods.LinkedList{}
+	list.PushBack(&methods.Node{Data: 20})
+	list.PushBack(&methods.Node{Data: 30})
+	list.PushBack(&methods.Node{Data: 40})
+	list.PushBack(&methods.Node{Data: 50})
+	list.PushBack(&methods.Node{Data: 70})
+
+	fmt.Printf("Length = %d", list.Length)
+	list.Display()
+	fmt.Printf("Length = %d", list.Length)
+	list.Reverse()
+	list.Display()
 
 	nums := []int{1, 2, 3, 1}
 	fmt.Printf("Array contains duplicate: %v\n", leetcode.ContainsDuplicate(nums))
