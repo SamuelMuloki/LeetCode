@@ -68,4 +68,13 @@ func main() {
 	fmt.Printf("The length of the longest substring is %d\n", leetcode.LengthOfLongestSubstring("abcabcbb"))
 	fmt.Printf("String has valid parentheses: %v\n", leetcode.IsValid("()[]{}"))
 	fmt.Printf("The index of the target is: %v\n", leetcode.Search([]int{-1, 0, 3, 5, 9, 12}, 9))
+
+	head := &leetcode.ListNode{
+		Val: 1,
+		Next: &leetcode.ListNode{
+			Val:  2,
+			Next: nil,
+		},
+	}
+	fmt.Printf("The Reversed linked list is: %v\n", leetcode.ReverseList(head))
 }
