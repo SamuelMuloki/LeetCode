@@ -46,9 +46,9 @@ func main() {
 	list.PushBack(&methods.Node{Data: 50})
 	list.PushBack(&methods.Node{Data: 70})
 
-	fmt.Printf("Length = %d", list.Length)
+	fmt.Printf("Length = %d\n", list.Length)
 	list.Display()
-	fmt.Printf("Length = %d", list.Length)
+	fmt.Printf("Length = %d\n", list.Length)
 	list.Reverse()
 	list.Display()
 

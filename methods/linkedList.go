@@ -13,12 +13,26 @@ type LinkedList struct {
 	Tail   *Node
 }
 
-func (l *LinkedList) Display() {
+func (l LinkedList) Display() {
 	for l.Head != nil {
 		fmt.Printf("%d -> ", l.Head.Data)
 		l.Head = l.Head.Next
 	}
 	fmt.Println()
+}
+
+func (l LinkedList) Front() (int, error) {
+	if l.Head == nil {
+		return 0, fmt.Errorf("Cannot find Front value in an empty Linked list")
+	}
+	return l.Head.Data, nil
+}
+
+func (l LinkedList) Back() (int, error) {
+	if l.Head == nil {
+		return 0, fmt.Errorf("Cannot find Back value in an empty Linked list")
+	}
+	return l.Tail.Data, nil
 }
 
 func (l *LinkedList) PushBack(node *Node) {
@@ -53,20 +67,6 @@ func (l *LinkedList) Delete(key int) {
 	prev.Next = curr.Next
 	l.Length--
 	fmt.Println("Node Deleted")
-}
-
-func (l *LinkedList) Front() (int, error) {
-	if l.Head == nil {
-		return 0, fmt.Errorf("Cannot find Front value in an empty Linked list")
-	}
-	return l.Head.Data, nil
-}
-
-func (l *LinkedList) Back() (int, error) {
-	if l.Head == nil {
-		return 0, fmt.Errorf("Cannot find Back value in an empty Linked list")
-	}
-	return l.Tail.Data, nil
 }
 
 func (l *LinkedList) Reverse() {
