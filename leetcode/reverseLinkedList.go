@@ -5,11 +5,6 @@ type ListNode struct {
 	Next *ListNode
 }
 
-type LinkedList struct {
-	Head ListNode
-	Tail ListNode
-}
-
 func ReverseList(head *ListNode) *ListNode {
 	curr := head
 	var prev *ListNode
