@@ -69,12 +69,10 @@ func main() {
 	fmt.Printf("String has valid parentheses: %v\n", leetcode.IsValid("()[]{}"))
 	fmt.Printf("The index of the target is: %v\n", leetcode.Search([]int{-1, 0, 3, 5, 9, 12}, 9))
 
-	head := &leetcode.ListNode{
-		Val: 1,
-		Next: &leetcode.ListNode{
-			Val:  2,
-			Next: nil,
-		},
-	}
+	head := &leetcode.ListNode{Val: 1, Next: &leetcode.ListNode{Val: 2, Next: nil}}
 	fmt.Printf("The Reversed linked list is: %v\n", leetcode.ReverseList(head))
+
+	list1 := &leetcode.ListNode{Val: 1, Next: &leetcode.ListNode{Val: 2, Next: &leetcode.ListNode{Val: 4, Next: nil}}}
+	list2 := &leetcode.ListNode{Val: 1, Next: &leetcode.ListNode{Val: 3, Next: &leetcode.ListNode{Val: 4, Next: nil}}}
+	fmt.Printf("The final lists after merging two lists is %v\n", leetcode.MergeTwoLists(list1, list2))
 }
