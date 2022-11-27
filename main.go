@@ -75,4 +75,5 @@ func main() {
 	list1 := &leetcode.ListNode{Val: 1, Next: &leetcode.ListNode{Val: 2, Next: &leetcode.ListNode{Val: 4, Next: nil}}}
 	list2 := &leetcode.ListNode{Val: 1, Next: &leetcode.ListNode{Val: 3, Next: &leetcode.ListNode{Val: 4, Next: nil}}}
 	fmt.Printf("The final lists after merging two lists is %v\n", leetcode.MergeTwoLists(list1, list2))
+	fmt.Printf("You can climb to the top in %d distinct ways\n", leetcode.ClimbStairs(6))
 }
