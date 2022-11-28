@@ -52,6 +52,26 @@ func main() {
 	list.Reverse()
 	list.Display()
 
+	// Queue
+	queue := methods.Queue{Size: 3}
+	fmt.Println(queue.Elements)
+	queue.Enqueue(1)
+	fmt.Println(queue.Elements)
+	queue.Enqueue(2)
+	fmt.Println(queue.Elements)
+	queue.Enqueue(3)
+	fmt.Println(queue.Elements)
+	queue.Enqueue(5)
+	fmt.Println(queue.Elements)
+	elem := queue.Dequeue()
+	fmt.Println(elem)
+	fmt.Println(queue.Elements)
+	queue.Enqueue(9)
+	fmt.Println(queue.Elements)
+	elem = queue.Dequeue()
+	fmt.Println(elem)
+	fmt.Println(queue.Elements)
+
 	nums := []int{1, 2, 3, 1}
 	fmt.Printf("Array contains duplicate: %v\n", leetcode.ContainsDuplicate(nums))
 	fmt.Printf("Is Anagram: %v\n", leetcode.IsAnagram("anagram", "nagaram"))
