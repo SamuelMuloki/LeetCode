@@ -101,4 +101,11 @@ func main() {
 	leftTree := &leetcode.TreeNode{Val: 1, Left: &leetcode.TreeNode{Val: 2, Right: &leetcode.TreeNode{Val: 3}}}
 	rightTree := &leetcode.TreeNode{Val: 1, Left: &leetcode.TreeNode{Val: 2, Right: &leetcode.TreeNode{Val: 3}}}
 	fmt.Printf("The trees p and q are equal: %v\n", leetcode.IsSameTree(leftTree, rightTree))
+
+	symTree := &leetcode.TreeNode{
+		Val:   1,
+		Left:  &leetcode.TreeNode{Val: 2, Right: &leetcode.TreeNode{Val: 3}, Left: &leetcode.TreeNode{Val: 4}},
+		Right: &leetcode.TreeNode{Val: 2, Right: &leetcode.TreeNode{Val: 4}, Left: &leetcode.TreeNode{Val: 3}},
+	}
+	fmt.Printf("The root if binary tree is symetric: %v\n", leetcode.IsSymmetric(symTree))
 }
