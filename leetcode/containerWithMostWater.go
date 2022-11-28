@@ -23,7 +23,7 @@ func MaxArea(height []int) int {
 
 	i, j := 0, len(height)-1
 	for i < j {
-		area = findMax(area, findMin(height[j], height[i])*(j-i))
+		area = max(area, min(height[j], height[i])*(j-i))
 
 		if height[i] > height[j] {
 			j--
@@ -35,7 +35,7 @@ func MaxArea(height []int) int {
 	return int(area)
 }
 
-func findMin(x int, y int) int {
+func min(x int, y int) int {
 	if x < y {
 		return x
 	}
@@ -43,7 +43,7 @@ func findMin(x int, y int) int {
 	return y
 }
 
-func findMax(x int, y int) int {
+func max(x int, y int) int {
 	if x > y {
 		return x
 	}

@@ -96,4 +96,5 @@ func main() {
 	list2 := &leetcode.ListNode{Val: 1, Next: &leetcode.ListNode{Val: 3, Next: &leetcode.ListNode{Val: 4, Next: nil}}}
 	fmt.Printf("The final lists after merging two lists is %v\n", leetcode.MergeTwoLists(list1, list2))
 	fmt.Printf("You can climb to the top in %d distinct ways\n", leetcode.ClimbStairs(6))
+	fmt.Printf("The median of two sorted arrays a, b is %v\n", leetcode.FindMedianSortedArrays([]int{1, 2}, []int{3}))
 }

@@ -14,7 +14,7 @@ func MaxSum(arr []int, k int) int {
 	window_sum := max_sum
 	for j := k; j < len(arr); j++ {
 		window_sum += arr[j] - arr[j-k]
-		max_sum = findMax(window_sum, max_sum)
+		max_sum = max(window_sum, max_sum)
 	}
 
 	return max_sum

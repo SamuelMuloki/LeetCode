@@ -8,9 +8,9 @@ func LengthOfLongestSubstring(s string) int {
 	for j := 0; j < len(ss); j++ {
 		_, ok = m[ss[j]]
 		if ok {
-			i = findMax(i, m[ss[j]])
+			i = max(i, m[ss[j]])
 		}
-		maxLen = findMax(maxLen, j-i+1)
+		maxLen = max(maxLen, j-i+1)
 		m[ss[j]] = j + 1
 	}
 
