@@ -108,4 +108,13 @@ func main() {
 		Right: &leetcode.TreeNode{Val: 2, Right: &leetcode.TreeNode{Val: 4}, Left: &leetcode.TreeNode{Val: 3}},
 	}
 	fmt.Printf("The root if binary tree is symetric: %v\n", leetcode.IsSymmetric(symTree))
+
+	stream := leetcode.Stream{
+		Set:      map[int]int{},
+		MaxValue: 1,
+	}
+	stream.GetHighestNumber(1)
+	stream.GetHighestNumber(2)
+	stream.GetHighestNumber(3)
+	fmt.Printf("The highest number for stream is %d\n", stream.GetHighestNumber(7))
 }
