@@ -117,4 +117,12 @@ func main() {
 	stream.GetHighestNumber(2)
 	stream.GetHighestNumber(3)
 	fmt.Printf("The highest number for stream is %d\n", stream.GetHighestNumber(7))
+
+	reorderHead := &leetcode.ListNode{
+		Val: 1, Next: &leetcode.ListNode{Val: 2, Next: &leetcode.ListNode{
+			Val: 3, Next: &leetcode.ListNode{Val: 4, Next: nil},
+		}}}
+
+	leetcode.ReorderList(reorderHead)
+	fmt.Printf("After reordering list head is now %v\n", reorderHead)
 }
