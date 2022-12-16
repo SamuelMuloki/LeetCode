@@ -125,4 +125,5 @@ func main() {
 
 	leetcode.ReorderList(reorderHead)
 	fmt.Printf("After reordering list head is now %v\n", reorderHead)
+	fmt.Printf("The inverse of tree is :%v\n", leetcode.InvertTree(symTree))
 }
