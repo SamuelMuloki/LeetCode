@@ -134,4 +134,5 @@ func main() {
 		},
 	}
 	fmt.Printf("Tha maximum depth of the binary tree is: %d\n", leetcode.MaxDepth(depthTree))
+	fmt.Printf("Tha diameter of the binary tree is: %d\n", leetcode.DiameterOfBinaryTree(depthTree))
 }
