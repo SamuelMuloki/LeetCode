@@ -108,4 +108,30 @@ func main() {
 		Right: &leetcode.TreeNode{Val: 2, Right: &leetcode.TreeNode{Val: 4}, Left: &leetcode.TreeNode{Val: 3}},
 	}
 	fmt.Printf("The root if binary tree is symetric: %v\n", leetcode.IsSymmetric(symTree))
+
+	stream := leetcode.Stream{
+		Set:      map[int]int{},
+		MaxValue: 1,
+	}
+	stream.GetHighestNumber(1)
+	stream.GetHighestNumber(2)
+	stream.GetHighestNumber(3)
+	fmt.Printf("The highest number for stream is %d\n", stream.GetHighestNumber(7))
+
+	reorderHead := &leetcode.ListNode{
+		Val: 1, Next: &leetcode.ListNode{Val: 2, Next: &leetcode.ListNode{
+			Val: 3, Next: &leetcode.ListNode{Val: 4, Next: nil},
+		}}}
+
+	leetcode.ReorderList(reorderHead)
+	fmt.Printf("After reordering list head is now %v\n", reorderHead)
+	fmt.Printf("The inverse of tree is :%v\n", leetcode.InvertTree(symTree))
+
+	depthTree := &leetcode.TreeNode{
+		Val: 1,
+		Left: &leetcode.TreeNode{
+			Val: 2,
+		},
+	}
+	fmt.Printf("Tha maximum depth of the binary tree is: %d\n", leetcode.MaxDepth(depthTree))
 }
