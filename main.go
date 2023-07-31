@@ -126,4 +126,12 @@ func main() {
 	leetcode.ReorderList(reorderHead)
 	fmt.Printf("After reordering list head is now %v\n", reorderHead)
 	fmt.Printf("The inverse of tree is :%v\n", leetcode.InvertTree(symTree))
+
+	depthTree := &leetcode.TreeNode{
+		Val: 1,
+		Left: &leetcode.TreeNode{
+			Val: 2,
+		},
+	}
+	fmt.Printf("Tha maximum depth of the binary tree is: %d\n", leetcode.MaxDepth(depthTree))
 }
