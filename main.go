@@ -133,6 +133,7 @@ func main() {
 			Val: 2,
 		},
 	}
-	fmt.Printf("Tha maximum depth of the binary tree is: %d\n", leetcode.MaxDepth(depthTree))
-	fmt.Printf("Tha diameter of the binary tree is: %d\n", leetcode.DiameterOfBinaryTree(depthTree))
+	fmt.Printf("The maximum depth of the binary tree is: %d\n", leetcode.MaxDepth(depthTree))
+	fmt.Printf("The diameter of the binary tree is: %d\n", leetcode.DiameterOfBinaryTree(depthTree))
+	fmt.Printf("Is the binary tree balanced: %v\n", leetcode.IsBalanced(depthTree))
 }
