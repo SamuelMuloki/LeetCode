@@ -1,8 +1,6 @@
 // https://leetcode.com/problems/balanced-binary-tree/
 package leetcode
 
-import "fmt"
-
 func IsBalanced(root *TreeNode) bool {
 	isValid := true
 	findDepth(root, &isValid)
@@ -21,7 +19,6 @@ func findDepth(root *TreeNode, isValid *bool) int {
 	if *isValid && (maxDepth-minDepth) > 1 {
 		*isValid = false
 	}
-	fmt.Println(minDepth, maxDepth)
 
 	return maxDepth + 1
 }

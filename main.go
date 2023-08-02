@@ -136,4 +136,7 @@ func main() {
 	fmt.Printf("The maximum depth of the binary tree is: %d\n", leetcode.MaxDepth(depthTree))
 	fmt.Printf("The diameter of the binary tree is: %d\n", leetcode.DiameterOfBinaryTree(depthTree))
 	fmt.Printf("Is the binary tree balanced: %v\n", leetcode.IsBalanced(depthTree))
+
+	kthLargest := leetcode.Constructor(3, []int{4, 5, 8, 2})
+	fmt.Printf("The kth largest in the stream is: %v\n", kthLargest.Add(3))
 }
