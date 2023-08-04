@@ -143,4 +143,7 @@ func main() {
 
 	num := 19
 	fmt.Printf("Number %d is a happy number: %v\n", num, leetcode.IsHappy(num))
+
+	digits := []int{9}
+	fmt.Printf("Adding plus one equals: %v\n", leetcode.PlusOne(digits))
 }
