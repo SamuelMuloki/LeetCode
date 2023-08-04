@@ -140,4 +140,7 @@ func main() {
 	kthLargest := leetcode.Constructor(3, []int{4, 5, 8, 2})
 	fmt.Printf("The kth largest in the stream is: %v\n", kthLargest.Add(3))
 	fmt.Printf("The last stone weight is: %v\n", leetcode.LastStoneWeight([]int{2, 7, 4, 1, 8, 1}))
+
+	num := 19
+	fmt.Printf("Number %d is a happy number: %v\n", num, leetcode.IsHappy(num))
 }
