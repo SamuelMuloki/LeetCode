@@ -146,4 +146,6 @@ func main() {
 
 	digits := []int{9}
 	fmt.Printf("Adding plus one equals: %v\n", leetcode.PlusOne(digits))
+
+	fmt.Printf("The value of myPow is %v\n", leetcode.MyPow(2.00000, -2))
 }
