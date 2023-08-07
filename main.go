@@ -148,4 +148,5 @@ func main() {
 	fmt.Printf("Adding plus one equals: %v\n", leetcode.PlusOne(digits))
 
 	fmt.Printf("The value of myPow is %v\n", leetcode.MyPow(2.00000, -2))
+	fmt.Printf("The result of adding two string numbers is %s\n", leetcode.AddStrings("289", "99"))
 }
