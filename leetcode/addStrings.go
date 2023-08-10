@@ -3,13 +3,12 @@ package leetcode
 import "fmt"
 
 func AddStrings(num1 string, num2 string) string {
-	var ret string
-	carry := 0
+	ret, carry := "", 0
+
 	for x, y := len(num1)-1, len(num2)-1; x >= 0 || y >= 0; x, y = x-1, y-1 {
 		i, j := toInt(x, num1), toInt(y, num2)
 		sum := i + j + carry
 		ret = fmt.Sprintf("%d%s", sum%10, ret)
-		fmt.Println(sum, ret)
 
 		if sum <= 9 {
 			carry = 0
