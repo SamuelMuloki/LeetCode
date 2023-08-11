@@ -151,4 +151,5 @@ func main() {
 	fmt.Printf("The result of adding two string numbers is %s\n", leetcode.AddStrings("289", "99"))
 	fmt.Printf("The product of two string numbers is %s\n", leetcode.Multiply("3866762897776739956", "15975363164662"))
 	fmt.Printf("The single number in the array is %d\n", leetcode.SingleNumber([]int{2, 2, 1}))
+	fmt.Printf("The number is a power of two: %v\n", leetcode.IsPowerOfTwo(36))
 }
