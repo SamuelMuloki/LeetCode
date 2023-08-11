@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strconv"
 
 	"github.com/SamuelMuloki/GOExamples/leetcode"
 	"github.com/SamuelMuloki/GOExamples/methods"
@@ -152,4 +153,7 @@ func main() {
 	fmt.Printf("The product of two string numbers is %s\n", leetcode.Multiply("3866762897776739956", "15975363164662"))
 	fmt.Printf("The single number in the array is %d\n", leetcode.SingleNumber([]int{2, 2, 1}))
 	fmt.Printf("The number is a power of two: %v\n", leetcode.IsPowerOfTwo(0))
+
+	numWeight, _ := strconv.ParseInt("00000000000000000000000010000000", 2, 64)
+	fmt.Printf("The hamming weight of the number is %d\n", leetcode.HammingWeight(uint32(numWeight)))
 }
