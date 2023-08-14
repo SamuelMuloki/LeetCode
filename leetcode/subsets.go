@@ -1,18 +1,24 @@
 package leetcode
 
 func Subsets(nums []int) [][]int {
-	subs := [][]int{{}}
+	subs := make([][]int, 0)
+	curr := make([]int, 0)
 
-	for i := 0; i < len(nums); i++ {
-		addToBase := [][]int{}
-		for j := 0; j < len(subs); j++ {
-			newSet := append([]int{}, subs[j]...)
-			newSet = append(newSet, nums[i])
-			addToBase = append(addToBase, newSet)
+	var backtrack func(idx int)
+	backtrack = func(idx int) {
+		subs = append(subs, append([]int{}, curr...))
+		if idx == len(nums) {
+			return
 		}
 
-		subs = append(subs, addToBase...)
+		for i := idx; i < len(nums); i++ {
+			curr = append(curr, nums[i])
+			backtrack(i + 1)
+			curr = curr[:len(curr)-1]
+		}
 	}
+
+	backtrack(0)
 
 	return subs
 }
