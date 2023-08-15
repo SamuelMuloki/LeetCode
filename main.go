@@ -157,5 +157,6 @@ func main() {
 	numWeight, _ := strconv.ParseInt("00000000000000000000000010000000", 2, 64)
 	fmt.Printf("The hamming weight of the number is %d\n", leetcode.HammingWeight(uint32(numWeight)))
 
-	fmt.Printf("The subsets of the array are %v\n", leetcode.Subsets([]int{9, 0, 3, 5, 7}))
+	fmt.Printf("The subsets of the array are %v\n", leetcode.Subsets([]int{1, 2, 3}))
+	fmt.Printf("The combination sum is %v\n", leetcode.CombinationSum([]int{2, 3, 5}, 8))
 }
