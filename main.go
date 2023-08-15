@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strconv"
 
 	"github.com/SamuelMuloki/GOExamples/leetcode"
 	"github.com/SamuelMuloki/GOExamples/methods"
@@ -133,5 +134,30 @@ func main() {
 			Val: 2,
 		},
 	}
-	fmt.Printf("Tha maximum depth of the binary tree is: %d\n", leetcode.MaxDepth(depthTree))
+	fmt.Printf("The maximum depth of the binary tree is: %d\n", leetcode.MaxDepth(depthTree))
+	fmt.Printf("The diameter of the binary tree is: %d\n", leetcode.DiameterOfBinaryTree(depthTree))
+	fmt.Printf("Is the binary tree balanced: %v\n", leetcode.IsBalanced(depthTree))
+
+	kthLargest := leetcode.Constructor(3, []int{4, 5, 8, 2})
+	fmt.Printf("The kth largest in the stream is: %v\n", kthLargest.Add(3))
+	fmt.Printf("The last stone weight is: %v\n", leetcode.LastStoneWeight([]int{2, 7, 4, 1, 8, 1}))
+
+	num := 19
+	fmt.Printf("Number %d is a happy number: %v\n", num, leetcode.IsHappy(num))
+
+	digits := []int{9}
+	fmt.Printf("Adding plus one equals: %v\n", leetcode.PlusOne(digits))
+
+	fmt.Printf("The value of myPow is %v\n", leetcode.MyPow(2.00000, -2))
+	fmt.Printf("The result of adding two string numbers is %s\n", leetcode.AddStrings("289", "99"))
+	fmt.Printf("The product of two string numbers is %s\n", leetcode.Multiply("3866762897776739956", "15975363164662"))
+	fmt.Printf("The single number in the array is %d\n", leetcode.SingleNumber([]int{2, 2, 1}))
+	fmt.Printf("The number is a power of two: %v\n", leetcode.IsPowerOfTwo(0))
+
+	numWeight, _ := strconv.ParseInt("00000000000000000000000010000000", 2, 64)
+	fmt.Printf("The hamming weight of the number is %d\n", leetcode.HammingWeight(uint32(numWeight)))
+
+	fmt.Printf("The subsets of the array are %v\n", leetcode.Subsets([]int{1, 2, 3}))
+	fmt.Printf("The combination sum is %v\n", leetcode.CombinationSum([]int{2, 3, 5}, 8))
+	fmt.Printf("The permutation is %v\n", leetcode.Permute([]int{1, 2, 3}))
 }
