@@ -161,4 +161,6 @@ func main() {
 	fmt.Printf("The combination sum is %v\n", leetcode.CombinationSum([]int{2, 3, 5}, 8))
 	fmt.Printf("The permutation is %v\n", leetcode.Permute([]int{1, 2, 3}))
 	fmt.Printf("The subsets with dupes are %v\n", leetcode.SubsetsWithDup([]int{4, 4, 4, 1, 4}))
+
+	fmt.Printf("The combination sum 2 is %v\n", leetcode.CombinationSum2([]int{10, 1, 2, 7, 6, 1, 5}, 8))
 }
