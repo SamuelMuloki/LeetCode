@@ -11,6 +11,7 @@ func CombinationSum2(candidates []int, target int) [][]int {
 	backtrack = func(idx int, currSum int, curr []int) {
 		if currSum == target {
 			output = append(output, append([]int{}, curr...))
+			return
 		}
 
 		if currSum > target {
