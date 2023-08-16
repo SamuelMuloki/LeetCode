@@ -163,4 +163,12 @@ func main() {
 	fmt.Printf("The subsets with dupes are %v\n", leetcode.SubsetsWithDup([]int{4, 4, 4, 1, 4}))
 
 	fmt.Printf("The combination sum 2 is %v\n", leetcode.CombinationSum2([]int{10, 1, 2, 7, 6, 1, 5}, 8))
+
+	var board [][]byte = [][]byte{
+		{byte('A'), byte('B'), byte('C'), byte('E')},
+		{byte('S'), byte('F'), byte('C'), byte('S')},
+		{byte('A'), byte('D'), byte('E'), byte('E')},
+	}
+	word := "ABCCED"
+	fmt.Printf("Word exists in grid: %v\n", leetcode.Exist(board, word))
 }
