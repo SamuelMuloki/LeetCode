@@ -171,4 +171,9 @@ func main() {
 	}
 	word := "ABCCED"
 	fmt.Printf("Word exists in grid: %v\n", leetcode.Exist(board, word))
+
+	rootTree := leetcode.NewTree([]int{4, 3, 5, 1, 2})
+	subTree := leetcode.NewTree([]int{3, 1, 2})
+
+	fmt.Printf("There is a subtree of the root tree: %v\n", leetcode.IsSubtree(rootTree, subTree))
 }
