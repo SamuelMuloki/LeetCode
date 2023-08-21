@@ -176,4 +176,5 @@ func main() {
 	subTree := leetcode.NewTree([]int{3, 1, 2})
 
 	fmt.Printf("There is a subtree of the root tree: %v\n", leetcode.IsSubtree(rootTree, subTree))
+	fmt.Printf("The possible palindrome partitions of s are %v\n", leetcode.Partition("aab"))
 }
