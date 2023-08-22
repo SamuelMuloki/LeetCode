@@ -11,5 +11,5 @@ go get github.com/SamuelMuloki/LeetCode/
 ```
 - Run the code
 ```
-go run go/main.go
+cd go && go run main.go
 ```
