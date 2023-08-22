@@ -1,15 +1,5 @@
 package leetcode
 
-/*
-Given stream of numbers, return the highest number, 1 is the starting point
-1,2
-GetHighestNumber() -> 2
-3, 4
-GetHighestNumber() -> 4
-5, 7
-GetHighestNumber() -> 4
-*/
-
 type Stream struct {
 	Set      map[int]int
 	MaxValue int

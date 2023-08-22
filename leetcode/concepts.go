@@ -1,9 +1,5 @@
 package leetcode
 
-/*
-Qn -> Find the Sum of k Consecutive elements in array
-Window sliding technique
-*/
 func MaxSum(arr []int, k int) int {
 	max_sum := 0
 

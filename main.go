@@ -160,4 +160,22 @@ func main() {
 	fmt.Printf("The subsets of the array are %v\n", leetcode.Subsets([]int{1, 2, 3}))
 	fmt.Printf("The combination sum is %v\n", leetcode.CombinationSum([]int{2, 3, 5}, 8))
 	fmt.Printf("The permutation is %v\n", leetcode.Permute([]int{1, 2, 3}))
+	fmt.Printf("The subsets with dupes are %v\n", leetcode.SubsetsWithDup([]int{4, 4, 4, 1, 4}))
+
+	fmt.Printf("The combination sum 2 is %v\n", leetcode.CombinationSum2([]int{10, 1, 2, 7, 6, 1, 5}, 8))
+
+	var board [][]byte = [][]byte{
+		{byte('A'), byte('B'), byte('C'), byte('E')},
+		{byte('S'), byte('F'), byte('C'), byte('S')},
+		{byte('A'), byte('D'), byte('E'), byte('E')},
+	}
+	word := "ABCCED"
+	fmt.Printf("Word exists in grid: %v\n", leetcode.Exist(board, word))
+
+	rootTree := leetcode.NewTree([]int{4, 3, 5, 1, 2})
+	subTree := leetcode.NewTree([]int{3, 1, 2})
+
+	fmt.Printf("There is a subtree of the root tree: %v\n", leetcode.IsSubtree(rootTree, subTree))
+	fmt.Printf("The possible palindrome partitions of s are %v\n", leetcode.Partition("aab"))
+	fmt.Printf("The letter combnations are %v\n", leetcode.LetterCombinations("23"))
 }

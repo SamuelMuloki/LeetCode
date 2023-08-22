@@ -1,9 +1,12 @@
 package leetcode
 
-func CombinationSum(candidates []int, target int) [][]int {
+import "sort"
+
+func CombinationSum2(candidates []int, target int) [][]int {
 	output := make([][]int, 0)
 	curr := make([]int, 0)
 
+	sort.Ints(candidates)
 	var backtrack func(idx int, currSum int, curr []int)
 	backtrack = func(idx int, currSum int, curr []int) {
 		if currSum == target {
@@ -16,8 +19,12 @@ func CombinationSum(candidates []int, target int) [][]int {
 		}
 
 		for i := idx; i < len(candidates); i++ {
+			if i > idx && candidates[i] == candidates[i-1] {
+				continue
+			}
+
 			curr = append(curr, candidates[i])
-			backtrack(i, currSum+candidates[i], curr)
+			backtrack(i+1, currSum+candidates[i], curr)
 			curr = curr[:len(curr)-1]
 		}
 	}
