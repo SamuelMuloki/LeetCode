@@ -1,13 +1,15 @@
-# GOExamples
-This repository contains hobbyist starter examples for the go programming language.
+# LeetCode
+This repository contains solutions to Leetcode problems for a couple of programming languages.
 
-Follow these steps to run the code in this example
+Follow these steps to run the code
 
 - Get the code
+
+## Go
 ```
-go get github.com/SamuelMuloki/GOExamples/
+go get github.com/SamuelMuloki/LeetCode/
 ```
 - Run the code
 ```
-go run main.go
+go run go/main.go
 ```
