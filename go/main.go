@@ -178,4 +178,5 @@ func main() {
 	fmt.Printf("There is a subtree of the root tree: %v\n", solutions.IsSubtree(rootTree, subTree))
 	fmt.Printf("The possible palindrome partitions of s are %v\n", solutions.Partition("aab"))
 	fmt.Printf("The letter combnations are %v\n", solutions.LetterCombinations("23"))
+	fmt.Printf("Converting columnNumber to title equals: %s\n", solutions.ConvertToTitle(2147483647))
 }
