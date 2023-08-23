@@ -4,6 +4,7 @@ var { convertToTitle } = require("./0168-excel-sheet-column-title");
 var { createHelloWorld } = require("./2667-create-hello-world-function")
 var { createCounter } = require("./2620-counter")
 const { expect } = require("./2704-to-be-or-not-to-be");
+const { createCounter2 } = require("./2665-counter-ii");
 
 console.log(containsDuplicate([1, 2, 3, 1]));
 console.log(isAnagram("rat", "car"));
@@ -12,3 +13,7 @@ console.log(createHelloWorld()())
 const counter = createCounter(10)
 console.log(counter())
 console.log(expect(5).toBe(5))
+const counter2 = createCounter2(5)
+console.log(counter2.increment())
+console.log(counter2.reset())
+console.log(counter2.decrement())
