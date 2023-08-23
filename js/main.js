@@ -5,6 +5,7 @@ var { createHelloWorld } = require("./2667-create-hello-world-function")
 var { createCounter } = require("./2620-counter")
 const { expect } = require("./2704-to-be-or-not-to-be");
 const { createCounter2 } = require("./2665-counter-ii");
+const { map } = require("./2635-apply-transform-over-each-element-in-array");
 
 console.log(containsDuplicate([1, 2, 3, 1]));
 console.log(isAnagram("rat", "car"));
@@ -17,3 +18,4 @@ const counter2 = createCounter2(5)
 console.log(counter2.increment())
 console.log(counter2.reset())
 console.log(counter2.decrement())
+console.log(map([1, 2, 3], function plusI(n, i) { return n + i; }))
