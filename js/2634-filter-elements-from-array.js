@@ -5,7 +5,7 @@
  */
 var filter = function (arr, fn) {
   var filteredArr = [];
-  for (let i = 0; i < arr.length; i++) {
+  for (var i = 0; i < arr.length; i++) {
     if (fn.call(this, arr[i], i)) {
       filteredArr.push(arr[i]);
     }

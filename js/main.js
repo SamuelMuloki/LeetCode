@@ -7,6 +7,7 @@ const { expect } = require("./2704-to-be-or-not-to-be");
 const { createCounter2 } = require("./2665-counter-ii");
 const { map } = require("./2635-apply-transform-over-each-element-in-array");
 const { filter } = require("./2634-filter-elements-from-array");
+const { reduce } = require("./2626-array-reduce-transformation");
 
 console.log(containsDuplicate([1, 2, 3, 1]));
 console.log(isAnagram("rat", "car"));
@@ -28,4 +29,11 @@ console.log(
   filter([-2, -1, 0, 1, 2], function plusOne(n) {
     return n + 1;
   })
+);
+console.log(
+  reduce(
+    [],
+    function sum(accum, curr) { return 0; },
+    25
+  )
 );
