@@ -9,6 +9,7 @@ const { map } = require("./2635-apply-transform-over-each-element-in-array");
 const { filter } = require("./2634-filter-elements-from-array");
 const { reduce } = require("./2626-array-reduce-transformation");
 const { compose } = require("./2629-function-composition");
+const { once } = require("./2666-allow-one-function-call");
 
 console.log(containsDuplicate([1, 2, 3, 1]));
 console.log(isAnagram("rat", "car"));
@@ -34,9 +35,16 @@ console.log(
 console.log(
   reduce(
     [],
-    function sum(accum, curr) { return 0; },
+    function sum(accum, curr) {
+      return 0;
+    },
     25
   )
 );
-const fn = compose([])
-console.log(fn(42))
+const composeFn = compose([]);
+console.log(composeFn(42));
+
+let fn = (a, b, c) => a + b + c;
+let onceFn = once(fn);
+console.log(onceFn(1, 2, 3));
+console.log(onceFn(2, 3, 6));
