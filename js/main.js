@@ -10,6 +10,7 @@ const { filter } = require("./2634-filter-elements-from-array");
 const { reduce } = require("./2626-array-reduce-transformation");
 const { compose } = require("./2629-function-composition");
 const { once } = require("./2666-allow-one-function-call");
+const { memoize } = require("./2623-memoize");
 
 console.log(containsDuplicate([1, 2, 3, 1]));
 console.log(isAnagram("rat", "car"));
@@ -48,3 +49,11 @@ let fn = (a, b, c) => a + b + c;
 let onceFn = once(fn);
 console.log(onceFn(1, 2, 3));
 console.log(onceFn(2, 3, 6));
+let callCount = 0;
+const memoizedFn = memoize(function (a, b) {
+  callCount += 1;
+  return a + b;
+});
+console.log(memoizedFn(0, 0));
+console.log(memoizedFn(0, 0));
+console.log(callCount);

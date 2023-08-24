@@ -1,4 +1,5 @@
 /**
+ * https://leetcode.com/problems/allow-one-function-call/
  * @param {Function} fn
  * @return {Function}
  */
