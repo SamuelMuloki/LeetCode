@@ -8,6 +8,7 @@ const { createCounter2 } = require("./2665-counter-ii");
 const { map } = require("./2635-apply-transform-over-each-element-in-array");
 const { filter } = require("./2634-filter-elements-from-array");
 const { reduce } = require("./2626-array-reduce-transformation");
+const { compose } = require("./2629-function-composition");
 
 console.log(containsDuplicate([1, 2, 3, 1]));
 console.log(isAnagram("rat", "car"));
@@ -37,3 +38,5 @@ console.log(
     25
   )
 );
+const fn = compose([])
+console.log(fn(42))
