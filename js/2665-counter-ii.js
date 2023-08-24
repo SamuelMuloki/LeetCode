@@ -3,7 +3,7 @@
  * @param {integer} init
  * @return { increment: Function, decrement: Function, reset: Function }
  */
-var createCounter2 = function (init) {
+var createCounter = function (init) {
   const initial = init;
   return {
     increment: function () {
@@ -24,4 +24,4 @@ var createCounter2 = function (init) {
  * counter.reset(); // 5
  * counter.decrement(); // 4
  */
-module.exports = { createCounter2 };
+module.exports.createCounter2 = createCounter;
