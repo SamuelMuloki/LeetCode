@@ -5,7 +5,7 @@
  */
 var once = function (fn) {
   return function (...args) {
-    const val = fn.apply(this, args)
+    const val = fn.apply(null, args)
     fn = () => undefined
     return val
   };

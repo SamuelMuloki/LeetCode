@@ -12,6 +12,7 @@ const { compose } = require("./2629-function-composition");
 const { once } = require("./2666-allow-one-function-call");
 const { memoize } = require("./2623-memoize");
 const { addTwoPromises } = require("./2723-add-two-promises");
+const { cancellable } = require("./2715-timeout-cancellation");
 
 console.log(containsDuplicate([1, 2, 3, 1]));
 console.log(isAnagram("rat", "car"));
@@ -46,8 +47,8 @@ console.log(
 const composeFn = compose([]);
 console.log(composeFn(42));
 
-let fn = (a, b, c) => a + b + c;
-let onceFn = once(fn);
+let ofn = (a, b, c) => a + b + c;
+let onceFn = once(ofn);
 console.log(onceFn(1, 2, 3));
 console.log(onceFn(2, 3, 6));
 let callCount = 0;
@@ -59,3 +60,25 @@ console.log(memoizedFn(0, 0));
 console.log(memoizedFn(0, 0));
 console.log(callCount);
 addTwoPromises(Promise.resolve(2), Promise.resolve(2)).then(console.log);
+
+const result = [];
+const fn = (x) => x * 5;
+const args = [2],
+  t = 20,
+  cancelT = 50;
+const start = performance.now();
+const log = (...argsArr) => {
+  const diff = Math.floor(performance.now() - start);
+  result.push({ time: diff, returned: fn(...argsArr) });
+};
+
+const cancel = cancellable(log, args, t);
+const maxT = Math.max(t, cancelT);
+
+setTimeout(() => {
+  cancel();
+}, cancelT);
+
+setTimeout(() => {
+  console.log(result); // [{"time":20,"returned":10}]
+}, maxT + 1);

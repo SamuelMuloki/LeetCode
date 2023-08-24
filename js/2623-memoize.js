@@ -9,7 +9,7 @@ function memoize(fn) {
 
     if (key in memo) return memo[key]
 
-    return (memo[key] = fn.apply(this, args));
+    return (memo[key] = fn.apply(null, args));
   };
 }
 
