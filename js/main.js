@@ -13,6 +13,7 @@ const { once } = require("./2666-allow-one-function-call");
 const { memoize } = require("./2623-memoize");
 const { addTwoPromises } = require("./2723-add-two-promises");
 const { cancellable } = require("./2715-timeout-cancellation");
+const { timeLimit } = require("./2637-promise-time-limit");
 
 console.log(containsDuplicate([1, 2, 3, 1]));
 console.log(isAnagram("rat", "car"));
@@ -82,3 +83,6 @@ setTimeout(() => {
 setTimeout(() => {
   console.log(result); // [{"time":20,"returned":10}]
 }, maxT + 1);
+
+const limited = timeLimit((t) => new Promise(res => setTimeout(res, t)), 100);
+limited(150).catch(console.log) // "Time Limit Exceeded" at t=100ms
