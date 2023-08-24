@@ -11,6 +11,7 @@ const { reduce } = require("./2626-array-reduce-transformation");
 const { compose } = require("./2629-function-composition");
 const { once } = require("./2666-allow-one-function-call");
 const { memoize } = require("./2623-memoize");
+const { addTwoPromises } = require("./2723-add-two-promises");
 
 console.log(containsDuplicate([1, 2, 3, 1]));
 console.log(isAnagram("rat", "car"));
@@ -57,3 +58,4 @@ const memoizedFn = memoize(function (a, b) {
 console.log(memoizedFn(0, 0));
 console.log(memoizedFn(0, 0));
 console.log(callCount);
+addTwoPromises(Promise.resolve(2), Promise.resolve(2)).then(console.log);
