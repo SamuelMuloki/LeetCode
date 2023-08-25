@@ -15,6 +15,7 @@ const { addTwoPromises } = require("./2723-add-two-promises");
 const { cancellable } = require("./2715-timeout-cancellation");
 const { timeLimit } = require("./2637-promise-time-limit");
 const { TimeLimitedCache } = require("./2622-cache-with-time-limit");
+const { debounce } = require("./2627-debounce");
 
 console.log(containsDuplicate([1, 2, 3, 1]));
 console.log(isAnagram("rat", "car"));
@@ -95,3 +96,11 @@ setTimeout(() => console.log("count1", obj.count()), 50);
 setTimeout(() => console.log("count1", obj.count()), 100);
 setTimeout(() => console.log("count1", obj.count()), 300);
 setTimeout(() => console.log("count1", obj.count()), 500);
+
+let start2 = Date.now();
+function log2(...inputs) { 
+  console.log([Date.now() - start2, inputs ])
+}
+const dlog = debounce(log2, 50);
+setTimeout(() => dlog(1), 50);
+setTimeout(() => dlog(2), 75);
