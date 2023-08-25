@@ -14,6 +14,7 @@ const { memoize } = require("./2623-memoize");
 const { addTwoPromises } = require("./2723-add-two-promises");
 const { cancellable } = require("./2715-timeout-cancellation");
 const { timeLimit } = require("./2637-promise-time-limit");
+const { TimeLimitedCache } = require("./2622-cache-with-time-limit");
 
 console.log(containsDuplicate([1, 2, 3, 1]));
 console.log(isAnagram("rat", "car"));
@@ -86,3 +87,11 @@ setTimeout(() => {
 
 const limited = timeLimit((t) => new Promise(res => setTimeout(res, t)), 100);
 limited(150).catch(console.log) // "Time Limit Exceeded" at t=100ms
+
+var obj = new TimeLimitedCache()
+console.log("set1", obj.set(1, 2, 200));
+console.log("set2", obj.set(10, 20, 400));
+setTimeout(() => console.log("count1", obj.count()), 50);
+setTimeout(() => console.log("count1", obj.count()), 100);
+setTimeout(() => console.log("count1", obj.count()), 300);
+setTimeout(() => console.log("count1", obj.count()), 500);
