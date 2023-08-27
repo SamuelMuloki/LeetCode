@@ -16,6 +16,9 @@ const { cancellable } = require("./2715-timeout-cancellation");
 const { timeLimit } = require("./2637-promise-time-limit");
 const { TimeLimitedCache } = require("./2622-cache-with-time-limit");
 const { debounce } = require("./2627-debounce");
+const {
+  promiseAll,
+} = require("./2721-execute-asynchronous-functions-in-parallel");
 
 console.log(containsDuplicate([1, 2, 3, 1]));
 console.log(isAnagram("rat", "car"));
@@ -86,10 +89,10 @@ setTimeout(() => {
   console.log(result); // [{"time":20,"returned":10}]
 }, maxT + 1);
 
-const limited = timeLimit((t) => new Promise(res => setTimeout(res, t)), 100);
-limited(150).catch(console.log) // "Time Limit Exceeded" at t=100ms
+const limited = timeLimit((t) => new Promise((res) => setTimeout(res, t)), 100);
+limited(150).catch(console.log); // "Time Limit Exceeded" at t=100ms
 
-var obj = new TimeLimitedCache()
+var obj = new TimeLimitedCache();
 console.log("set1", obj.set(1, 2, 200));
 console.log("set2", obj.set(10, 20, 400));
 setTimeout(() => console.log("count1", obj.count()), 50);
@@ -98,9 +101,15 @@ setTimeout(() => console.log("count1", obj.count()), 300);
 setTimeout(() => console.log("count1", obj.count()), 500);
 
 let start2 = Date.now();
-function log2(...inputs) { 
-  console.log([Date.now() - start2, inputs ])
+function log2(...inputs) {
+  console.log([Date.now() - start2, inputs]);
 }
 const dlog = debounce(log2, 50);
 setTimeout(() => dlog(1), 50);
 setTimeout(() => dlog(2), 75);
+
+const promise = promiseAll([
+  () => new Promise((resolve) => setTimeout(() => resolve(1), 200)),
+  () => new Promise((resolve, reject) => setTimeout(() => reject("Error"))),
+]);
+promise.then(console.log); // [42]

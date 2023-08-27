@@ -1,4 +1,5 @@
 /**
+ * https://leetcode.com/problems/debounce
  * @param {Function} fn
  * @param {number} t milliseconds
  * @return {Function}
