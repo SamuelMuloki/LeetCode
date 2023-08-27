@@ -20,6 +20,7 @@ const {
   promiseAll,
 } = require("./2721-execute-asynchronous-functions-in-parallel");
 const { isEmpty } = require("./2727-is-object-empty");
+const { chunk } = require("./2677-chunk-array");
 
 console.log(containsDuplicate([1, 2, 3, 1]));
 console.log(isAnagram("rat", "car"));
@@ -116,3 +117,7 @@ const promise = promiseAll([
 ]);
 promise.then(console.log); // [42]
 console.log("Object isEmpty:", isEmpty({ x: 5, y: 42 }));
+
+var arr = [1, 9, 6, 3, 2],
+  size = 3;
+console.log(chunk(arr, size));
