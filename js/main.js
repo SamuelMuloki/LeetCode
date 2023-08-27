@@ -19,6 +19,7 @@ const { debounce } = require("./2627-debounce");
 const {
   promiseAll,
 } = require("./2721-execute-asynchronous-functions-in-parallel");
+const { isEmpty } = require("./2727-is-object-empty");
 
 console.log(containsDuplicate([1, 2, 3, 1]));
 console.log(isAnagram("rat", "car"));
@@ -109,7 +110,9 @@ setTimeout(() => dlog(1), 50);
 setTimeout(() => dlog(2), 75);
 
 const promise = promiseAll([
-  () => new Promise((resolve) => setTimeout(() => resolve(1), 200)),
-  () => new Promise((resolve, reject) => setTimeout(() => reject("Error"))),
+  () => new Promise((resolve) => setTimeout(() => resolve(4), 50)),
+  () => new Promise((resolve) => setTimeout(() => resolve(10), 150)),
+  () => new Promise((resolve) => setTimeout(() => resolve(16), 100)),
 ]);
 promise.then(console.log); // [42]
+console.log("Object isEmpty:", isEmpty({ x: 5, y: 42 }));
