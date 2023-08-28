@@ -4,6 +4,6 @@
  * @return {Array}
  */
 var sortBy = function (arr, fn) {
-  return arr.sort((a, b) => fn(a) < fn(b) ? -1 : 1);
+    return arr.sort((a, b) => fn(a) - fn(b));
 };
 module.exports = { sortBy };
