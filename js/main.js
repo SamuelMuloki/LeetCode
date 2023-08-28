@@ -27,6 +27,7 @@ const { flat } = require("./2625-flatten-deeply-nested-array");
 const { compactObject } = require("./2705-compact-object");
 const { reverseString } = require("./0344-reverse-string");
 const { EventEmitter } = require("./2694-event-emitter");
+const { ArrayWrapper } = require("./2695-array-wrapper");
 
 console.log(containsDuplicate([1, 2, 3, 1]));
 console.log(isAnagram("rat", "car"));
@@ -152,3 +153,8 @@ console.log(emitter.emit("firstEvent", [1, 2, 3])); // ["1,2,3"]
 sub.unsubscribe(); // undefined
 console.log(emitter.emit("firstEvent", [4, 5, 6])); // [], there are no subscriptions
 
+const obj1 = new ArrayWrapper([1, 2]);
+const obj2 = new ArrayWrapper([3,4]);
+console.log(obj1 + obj2);
+console.log(String(obj1));
+console.log(String(obj2));
