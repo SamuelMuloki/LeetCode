@@ -21,6 +21,7 @@ const {
 } = require("./2721-execute-asynchronous-functions-in-parallel");
 const { isEmpty } = require("./2727-is-object-empty");
 const { chunk } = require("./2677-chunk-array");
+const { sortBy } = require("./2724-sort-by");
 
 console.log(containsDuplicate([1, 2, 3, 1]));
 console.log(isAnagram("rat", "car"));
@@ -121,3 +122,6 @@ console.log("Object isEmpty:", isEmpty({ x: 5, y: 42 }));
 var arr = [1, 9, 6, 3, 2],
   size = 3;
 console.log(chunk(arr, size));
+
+var sortArr = [{"x": 1}, {"x": 0}, {"x": -1}], sortFn = (d) => d.x
+console.log(sortBy(sortArr, sortFn))
