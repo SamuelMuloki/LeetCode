@@ -4,19 +4,18 @@
  * @return {any[]}
  */
 var flat = function (arr, n) {
-  while (n > 0) {
-    for (i = 0; i < arr.length; ) {
-      if (Array.isArray(arr[i])) {
-        var iLen = arr[i].length;
-        arr.splice(i, 1, ...arr[i]);
-        i += iLen;
-      } else {
-        i++;
-      }
-    }
-    n--;
+  if (n === 0) {
+    return arr;
   }
 
-  return arr;
+  return arr.reduce((output, element) => {
+    if (Array.isArray(element)) {
+      output.push(...flat(element, n - 1));
+    } else {
+      output.push(element);
+    }
+
+    return output;
+  }, []);
 };
 module.exports = { flat };
