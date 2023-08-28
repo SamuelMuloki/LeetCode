@@ -24,6 +24,7 @@ const { chunk } = require("./2677-chunk-array");
 const { sortBy } = require("./2724-sort-by");
 const { join } = require("./2722-join-two-arrays-by-id");
 const { flat } = require("./2625-flatten-deeply-nested-array");
+const { compactObject } = require("./2705-compact-object");
 
 console.log(containsDuplicate([1, 2, 3, 1]));
 console.log(isAnagram("rat", "car"));
@@ -140,3 +141,4 @@ console.log(
 );
 
 console.log(flat([1, 2, 3, [4, 5, 6], [7, 8, [9, 10, 11], 12], [13, 14, 15]], 1));
+console.log(compactObject([null, 0, false, 1]))
