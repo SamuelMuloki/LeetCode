@@ -3,19 +3,17 @@
  * @return {Array}
  */
 Array.prototype.groupBy = function (fn) {
-  var output = {};
-  this.forEach((element) => {
+  return this.reduce((output, element) => {
     var res = fn(element);
 
     if (res in output) {
-      var curr = output[res];
-      curr.push(element);
+      output[res].push(element);
     } else {
       output[res] = [element];
     }
-  });
 
-  return output;
+    return output;
+  }, {});
 };
 
 /**
