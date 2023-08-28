@@ -4,18 +4,40 @@
  * @return {Array}
  */
 var join = function (arr1, arr2) {
-  var joinedArr = [...arr1, ...arr2];
-  joinedArr.sort((a, b) => a.id - b.id);
+  arr1.sort((a, b) => a.id - b.id);
+  arr2.sort((a, b) => a.id - b.id);
+  let i = 0,
+    j = 0;
 
-  for (i = 0; i < joinedArr.length - 1; i++) {
-    if (joinedArr[i].id === joinedArr[i + 1].id) {
-      joinedArr[i + 1] = { ...joinedArr[i], ...joinedArr[i + 1] };
+  const joinedArr = [];
+  while (i < arr1.length && j < arr2.length) {
+    if (arr1[i].id === arr2[j].id) {
+      joinedArr.push({ ...arr1[i], ...arr2[j] });
+      i++;
+      j++;
+      continue;
     }
+
+    if (arr[i].id < arr[2].id) {
+      joinedArr.push({ ...arr1[i] });
+      i++;
+      continue;
+    }
+
+    joinedArr.push({ ...arr2[j] });
+    j++;
   }
 
-  return joinedArr.filter(
-    (val, i, arr) =>
-      (arr[i + 1] && val.id !== arr[i + 1].id) || (arr[i] && !arr[i + 1])
-  );
+  while (i < arr1.length) {
+    joinedArr.push({ ...arr1[i] });
+    i++;
+  }
+
+  while (j < arr2.length) {
+    joinedArr.push({ ...arr2[j] });
+    j++;
+  }
+
+  return joinedArr;
 };
 module.exports = { join };
