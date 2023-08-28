@@ -22,6 +22,7 @@ const {
 const { isEmpty } = require("./2727-is-object-empty");
 const { chunk } = require("./2677-chunk-array");
 const { sortBy } = require("./2724-sort-by");
+const { join } = require("./2722-join-two-arrays-by-id");
 
 console.log(containsDuplicate([1, 2, 3, 1]));
 console.log(isAnagram("rat", "car"));
@@ -123,5 +124,16 @@ var arr = [1, 9, 6, 3, 2],
   size = 3;
 console.log(chunk(arr, size));
 
-var sortArr = [{"x": 1}, {"x": 0}, {"x": -1}], sortFn = (d) => d.x
-console.log(sortBy(sortArr, sortFn))
+var sortArr = [{ x: 1 }, { x: 0 }, { x: -1 }],
+  sortFn = (d) => d.x;
+console.log(sortBy(sortArr, sortFn));
+
+console.log(
+  join(
+    [
+      { id: 1, r: 67, h: 83, d: 2 },
+      { id: 2, f: 84, o: 46, l: 7 },
+    ],
+    [{ id: 1, c: 70, w: 1 }]
+  )
+);
