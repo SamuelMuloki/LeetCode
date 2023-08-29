@@ -183,4 +183,5 @@ func main() {
 	arrBytes := []byte{'h', 'e', 'l', 'l', 'o'}
 	solutions.ReverseString(arrBytes)
 	fmt.Printf("The result of reversing the array is %v\n", arrBytes)
+	fmt.Printf("The distinct solutions for the n-queens puzzle are, %v\n", solutions.SolveNQueens(4))
 }
