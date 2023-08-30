@@ -1,21 +1,17 @@
 package solutions
 
-import "math"
-
 func Search(nums []int, target int) int {
 	l, r := 0, len(nums)-1
 
 	for l != r {
-		mid := int(math.Ceil(float64((l + r)) / 2))
-		if nums[mid] > target {
+		mid := (l + r) / 2
+		if nums[mid] < target {
+			l = mid + 1
+		} else if nums[mid] > target {
 			r = mid - 1
 		} else {
-			l = mid
+			return mid
 		}
-	}
-
-	if nums[l] == target {
-		return l
 	}
 
 	return -1
