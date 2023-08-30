@@ -1,22 +1,18 @@
 package solutions
 
 func Search(nums []int, target int) int {
-	index := -1
+	l, r := 0, len(nums)-1
 
-	mid := len(nums) / 2
-	switch {
-	case len(nums) == 0:
-		return index
-	case nums[mid] > target:
-		index = Search(nums[:mid], target)
-	case nums[mid] < target:
-		index = Search(nums[mid+1:], target)
-		if index >= 0 {
-			index += mid + 1
+	for l <= r {
+		mid := (l + r) / 2
+		if nums[mid] < target {
+			l = mid + 1
+		} else if nums[mid] > target {
+			r = mid - 1
+		} else {
+			return mid
 		}
-	default:
-		index = mid
 	}
 
-	return index
+	return -1
 }
