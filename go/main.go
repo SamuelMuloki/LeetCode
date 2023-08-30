@@ -188,4 +188,5 @@ func main() {
 	fmt.Printf("The index of the element in the rotated array is %d\n", solutions.RotatedSearch([]int{4, 5, 6, 7, 0, 1, 2}, 6))
 	fmt.Printf("The square root of x is %d\n", solutions.MySqrt(20))
 	fmt.Printf("The number that i picked was %d\n", solutions.GuessNumber(10))
+	fmt.Printf("The first bad version is %d\n", solutions.FirstBadVersion(10))
 }
