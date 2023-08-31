@@ -189,4 +189,5 @@ func main() {
 	fmt.Printf("The square root of x is %d\n", solutions.MySqrt(20))
 	fmt.Printf("The number that i picked was %d\n", solutions.GuessNumber(10))
 	fmt.Printf("The first bad version is %d\n", solutions.FirstBadVersion(10))
+	fmt.Printf("The search insert position is %d\n", solutions.SearchInsert([]int{1, 3, 5, 6}, 5))
 }
