@@ -74,13 +74,13 @@ func main() {
 	fmt.Println(queue.Elements)
 
 	nums := []int{1, 2, 3, 1}
-	fmt.Printf("Array contains duplicate: %v\n", solutions.ContainsDuplicate(nums))
-	fmt.Printf("Is Anagram: %v\n", solutions.IsAnagram("anagram", "nagaram"))
+	fmt.Printf("Array contains duplicate: %t\n", solutions.ContainsDuplicate(nums))
+	fmt.Printf("Is Anagram: %t\n", solutions.IsAnagram("anagram", "nagaram"))
 	fmt.Printf("Two sum indices are %v\n", solutions.TwoSum([]int{-3, 4, 3, 90}, 0))
 	fmt.Printf("Group Anagrams: %v\n", solutions.GroupAnagrams([]string{"eat", "tea", "tan", "ate", "nat", "bat"}))
 	fmt.Printf("The top k frequent elements are: %v\n", solutions.TopKFrequent([]int{7, 10, 11, 5, 2, 5, 5, 7, 11, 8, 9}, 4))
 	fmt.Printf("The product of array except self is: %v\n", solutions.ProductExceptSelf([]int{1, 2, 3, 4}))
-	fmt.Printf("The string is a valid palidronme: %v\n", solutions.IsPalindrome("A man, a plan, a canal: Panama"))
+	fmt.Printf("The string is a valid palidronme: %t\n", solutions.IsPalindrome("A man, a plan, a canal: Panama"))
 	fmt.Printf("Two sum 2 indices are %v\n", solutions.TwoSum2([]int{-3, 4, 3, 90}, 0))
 	fmt.Printf("The distinct triplets are %v\n", solutions.ThreeSum([]int{-2, 0, 1, 1, 2}))
 	fmt.Printf("The maximum area of the container is %v\n", solutions.MaxArea([]int{1, 8, 6, 2, 5, 4, 8, 3}))
@@ -101,14 +101,14 @@ func main() {
 
 	leftTree := &utils.TreeNode{Val: 1, Left: &utils.TreeNode{Val: 2, Right: &utils.TreeNode{Val: 3}}}
 	rightTree := &utils.TreeNode{Val: 1, Left: &utils.TreeNode{Val: 2, Right: &utils.TreeNode{Val: 3}}}
-	fmt.Printf("The trees p and q are equal: %v\n", solutions.IsSameTree(leftTree, rightTree))
+	fmt.Printf("The trees p and q are equal: %t\n", solutions.IsSameTree(leftTree, rightTree))
 
 	symTree := &utils.TreeNode{
 		Val:   1,
 		Left:  &utils.TreeNode{Val: 2, Right: &utils.TreeNode{Val: 3}, Left: &utils.TreeNode{Val: 4}},
 		Right: &utils.TreeNode{Val: 2, Right: &utils.TreeNode{Val: 4}, Left: &utils.TreeNode{Val: 3}},
 	}
-	fmt.Printf("The root if binary tree is symetric: %v\n", solutions.IsSymmetric(symTree))
+	fmt.Printf("The root if binary tree is symetric: %t\n", solutions.IsSymmetric(symTree))
 
 	stream := solutions.Stream{
 		Set:      map[int]int{},
@@ -136,14 +136,14 @@ func main() {
 	}
 	fmt.Printf("The maximum depth of the binary tree is: %d\n", solutions.MaxDepth(depthTree))
 	fmt.Printf("The diameter of the binary tree is: %d\n", solutions.DiameterOfBinaryTree(depthTree))
-	fmt.Printf("Is the binary tree balanced: %v\n", solutions.IsBalanced(depthTree))
+	fmt.Printf("Is the binary tree balanced: %t\n", solutions.IsBalanced(depthTree))
 
 	kthLargest := solutions.Constructor(3, []int{4, 5, 8, 2})
 	fmt.Printf("The kth largest in the stream is: %v\n", kthLargest.Add(3))
 	fmt.Printf("The last stone weight is: %v\n", solutions.LastStoneWeight([]int{2, 7, 4, 1, 8, 1}))
 
 	num := 19
-	fmt.Printf("Number %d is a happy number: %v\n", num, solutions.IsHappy(num))
+	fmt.Printf("Number %d is a happy number: %t\n", num, solutions.IsHappy(num))
 
 	digits := []int{9}
 	fmt.Printf("Adding plus one equals: %v\n", solutions.PlusOne(digits))
@@ -152,7 +152,7 @@ func main() {
 	fmt.Printf("The result of adding two string numbers is %s\n", solutions.AddStrings("289", "99"))
 	fmt.Printf("The product of two string numbers is %s\n", solutions.Multiply("3866762897776739956", "15975363164662"))
 	fmt.Printf("The single number in the array is %d\n", solutions.SingleNumber([]int{2, 2, 1}))
-	fmt.Printf("The number is a power of two: %v\n", solutions.IsPowerOfTwo(0))
+	fmt.Printf("The number is a power of two: %t\n", solutions.IsPowerOfTwo(0))
 
 	numWeight, _ := strconv.ParseInt("00000000000000000000000010000000", 2, 64)
 	fmt.Printf("The hamming weight of the number is %d\n", solutions.HammingWeight(uint32(numWeight)))
@@ -170,7 +170,7 @@ func main() {
 		{byte('A'), byte('D'), byte('E'), byte('E')},
 	}
 	word := "ABCCED"
-	fmt.Printf("Word exists in grid: %v\n", solutions.Exist(board, word))
+	fmt.Printf("Word exists in grid: %t\n", solutions.Exist(board, word))
 
 	rootTree := utils.NewTree([]int{4, 3, 5, 1, 2})
 	subTree := utils.NewTree([]int{3, 1, 2})
@@ -197,5 +197,6 @@ func main() {
 		{10, 11, 16, 20},
 		{23, 30, 34, 60},
 	}
-	fmt.Printf("The target is in search matrix %v\n", solutions.SearchMatrix(matrix, 3))
+	fmt.Printf("The target is in search matrix %t\n", solutions.SearchMatrix(matrix, 3))
+	fmt.Printf("The index of the element in the rotated array 2 is %t\n", solutions.RotatedSearch2([]int{1, 0, 1, 1, 1}, 0))
 }
