@@ -191,4 +191,11 @@ func main() {
 	fmt.Printf("The first bad version is %d\n", solutions.FirstBadVersion(10))
 	fmt.Printf("The search insert position is %d\n", solutions.SearchInsert([]int{1, 3, 5, 6}, 5))
 	fmt.Printf("The search range is %v\n", solutions.SearchRange([]int{5, 7, 7, 8, 8, 10}, 8))
+
+	matrix := [][]int{
+		{1, 3, 5, 7},
+		{10, 11, 16, 20},
+		{23, 30, 34, 60},
+	}
+	fmt.Printf("The target is in search matrix %v\n", solutions.SearchMatrix(matrix, 3))
 }
