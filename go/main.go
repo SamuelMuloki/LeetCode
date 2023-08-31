@@ -201,4 +201,5 @@ func main() {
 	fmt.Printf("The index of the element in the rotated array 2 is %t\n", solutions.RotatedSearch2([]int{1, 0, 1, 1, 1}, 0))
 	fmt.Printf("The minimum element in the rotated array 2 is %d\n", solutions.FindMin2([]int{2, 2, 2, 0, 2}))
 	fmt.Printf("The peak element in the array is %d\n", solutions.FindPeakElement([]int{1, 2, 3, 1}))
+	fmt.Printf("The minimum size of subarray sum is %d\n", solutions.MinSubArrayLen(11, []int{1, 2, 3, 4, 5}))
 }
