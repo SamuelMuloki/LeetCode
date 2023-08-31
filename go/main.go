@@ -199,4 +199,5 @@ func main() {
 	}
 	fmt.Printf("The target is in search matrix %t\n", solutions.SearchMatrix(matrix, 3))
 	fmt.Printf("The index of the element in the rotated array 2 is %t\n", solutions.RotatedSearch2([]int{1, 0, 1, 1, 1}, 0))
+	fmt.Printf("The minimum element in the rotated array 2 is %d\n", solutions.FindMin2([]int{2, 2, 2, 0, 2}))
 }
