@@ -29,6 +29,7 @@ const { reverseString } = require("./0344-reverse-string");
 const { EventEmitter } = require("./2694-event-emitter");
 const { ArrayWrapper } = require("./2695-array-wrapper");
 const { Calculator } = require("./2726-calculator-with-method-chaining");
+const { isPalindrome } = require("./0009-palindrome-number");
 
 console.log(containsDuplicate([1, 2, 3, 1]));
 console.log(isAnagram("rat", "car"));
@@ -161,3 +162,4 @@ console.log(String(obj1));
 console.log(String(obj2));
 
 console.log(new Calculator(2).multiply(5).power(2).getResult())
+console.log("palindrome", isPalindrome(121))

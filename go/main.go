@@ -206,4 +206,5 @@ func main() {
 	l1 := &solutions.ListNode{Val: 9, Next: &solutions.ListNode{Val: 9, Next: &solutions.ListNode{Val: 9, Next: &solutions.ListNode{Val: 9, Next: &solutions.ListNode{Val: 9, Next: &solutions.ListNode{Val: 9, Next: &solutions.ListNode{Val: 9}}}}}}}
 	l2 := &solutions.ListNode{Val: 9, Next: &solutions.ListNode{Val: 9, Next: &solutions.ListNode{Val: 9, Next: &solutions.ListNode{Val: 9}}}}
 	fmt.Printf("The sum of two numbers is %v\n", solutions.AddTwoNumbers(l1, l2))
+	fmt.Printf("The number is a palindrome: %t\n", solutions.IsPalindromeNumber(12345654321))
 }
