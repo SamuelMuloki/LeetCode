@@ -207,4 +207,5 @@ func main() {
 	l2 := &solutions.ListNode{Val: 9, Next: &solutions.ListNode{Val: 9, Next: &solutions.ListNode{Val: 9, Next: &solutions.ListNode{Val: 9}}}}
 	fmt.Printf("The sum of two numbers is %v\n", solutions.AddTwoNumbers(l1, l2))
 	fmt.Printf("The number is a palindrome: %t\n", solutions.IsPalindromeNumber(12345654321))
+	fmt.Printf("The integer after conversion is %d\n", solutions.MyAtoi("-2147483647"))
 }
