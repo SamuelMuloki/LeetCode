@@ -2,7 +2,6 @@
 package solutions
 
 import (
-	"fmt"
 	"math"
 )
 
@@ -48,7 +47,6 @@ func MyAtoi(s string) int {
 	}
 
 	if neg > 0 {
-		fmt.Println(n)
 		n = -n
 	}
 
