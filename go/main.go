@@ -212,4 +212,5 @@ func main() {
 	fmt.Printf("Merging strings alternately yields %s\n", solutions.MergeAlternately("ab", "pqrs"))
 	fmt.Printf("The greatest common divisor of strings is %s\n", solutions.GcdOfStrings("ABABAB", "ABAB"))
 	fmt.Printf("The number of symmetric integers in the range is %d\n", solutions.CountSymmetricIntegers(1, 100))
+	fmt.Printf("The minimum operations to make a special number are %d\n", solutions.MinimumOperations("19"))
 }
