@@ -211,4 +211,5 @@ func main() {
 	fmt.Printf("The reverse of the integer is %d\n", solutions.Reverse(-123))
 	fmt.Printf("Merging strings alternately yields %s\n", solutions.MergeAlternately("ab", "pqrs"))
 	fmt.Printf("The greatest common divisor of strings is %s\n", solutions.GcdOfStrings("ABABAB", "ABAB"))
+	fmt.Printf("The number of symmetric integers in the range is %d\n", solutions.CountSymmetricIntegers(1, 100))
 }
