@@ -8,19 +8,20 @@ var reverseVowels = function (s) {
 
   var isVowel = function (c) {
     return (
-      "a" == c ||
-      "e" == c ||
-      "i" == c ||
-      "o" == c ||
-      "u" == c ||
-      "A" == c ||
-      "E" == c ||
-      "I" == c ||
-      "O" == c ||
-      "U" == c
+      c == 'a' ||
+      c == 'e' ||
+      c == 'i' ||
+      c == 'o' ||
+      c == 'u' ||
+      c == 'A' ||
+      c == 'E' ||
+      c == 'I' ||
+      c == 'O' ||
+      c == 'U'
     );
   };
 
+  s = s.split("");
   while (i < j) {
     if (!isVowel(s[i])) {
       i++;
@@ -32,20 +33,15 @@ var reverseVowels = function (s) {
       continue;
     }
 
-    (sI = s[i]),
-      (sJ = s[j]),
-      (s = s.setCharAt(s, i, sJ)),
-      (s = s.setCharAt(s, j, sI));
+    var temp = s[i];
+    s[i] = s[j];
+    s[j] = temp;
+
     i++;
     j--;
   }
 
-  return s;
-};
-
-String.prototype.setCharAt = function (str, i, c) {
-  if (i > str.length - 1) return str;
-  return str.substring(0, i) + c + str.substring(i + 1);
+  return s.join("");
 };
 
 module.exports = { reverseVowels };
