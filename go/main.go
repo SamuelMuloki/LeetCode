@@ -214,4 +214,5 @@ func main() {
 	fmt.Printf("The number of symmetric integers in the range is %d\n", solutions.CountSymmetricIntegers(1, 100))
 	fmt.Printf("The minimum operations to make a special number are %d\n", solutions.MinimumOperations("19"))
 	fmt.Printf("The strings can be made equal with operations: %t\n", solutions.CanBeEqual("bnxw", "bwxn"))
+	fmt.Printf("The reverse vowels of a string a are %s\n", solutions.ReverseVowels("hello"))
 }
