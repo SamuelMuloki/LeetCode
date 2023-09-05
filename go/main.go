@@ -216,4 +216,5 @@ func main() {
 	fmt.Printf("The strings can be made equal with operations: %t\n", solutions.CanBeEqual("bnxw", "bwxn"))
 	fmt.Printf("The reverse vowels of a string a are %s\n", solutions.ReverseVowels("hello"))
 	fmt.Printf("We can place flowers in the flowerbed: %t\n", solutions.CanPlaceFlowers([]int{1, 0, 1, 0, 0}, 1))
+	fmt.Printf("The reverse words in a string are %s\n", solutions.ReverseWords("  hello world  "))
 }
