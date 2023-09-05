@@ -215,4 +215,5 @@ func main() {
 	fmt.Printf("The minimum operations to make a special number are %d\n", solutions.MinimumOperations("19"))
 	fmt.Printf("The strings can be made equal with operations: %t\n", solutions.CanBeEqual("bnxw", "bwxn"))
 	fmt.Printf("The reverse vowels of a string a are %s\n", solutions.ReverseVowels("hello"))
+	fmt.Printf("We can place flowers in the flowerbed: %t\n", solutions.CanPlaceFlowers([]int{1, 0, 1, 0, 0}, 1))
 }
