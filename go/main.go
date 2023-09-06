@@ -223,4 +223,5 @@ func main() {
 	fmt.Printf("Moving Zeroes to the end yields %v\n", arr)
 
 	fmt.Printf("Counting bits of n yields %v\n", solutions.CountBits(2))
+	fmt.Printf("The extra characters in the string are %d\n", solutions.MinExtraChar("leetscode", []string{"leet", "code", "leetcode"}))
 }
