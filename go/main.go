@@ -221,4 +221,6 @@ func main() {
 	arr := []int{1, 0, 0, 1, 0, 0, 2}
 	solutions.MoveZeroes(arr)
 	fmt.Printf("Moving Zeroes to the end yields %v\n", arr)
+
+	fmt.Printf("Counting bits of n yields %v\n", solutions.CountBits(2))
 }
