@@ -226,4 +226,9 @@ func main() {
 	fmt.Printf("The extra characters in the string are %d\n", solutions.MinExtraChar("leetscode", []string{"leet", "code", "leetcode"}))
 	fmt.Printf("Converting roman to integer yields %d\n", solutions.RomanToInt("MCCCXCIX"))
 	fmt.Printf("Converting integer to roman yields %s\n", solutions.IntToRoman(1399))
+
+	rbl := &solutions.ListNode{Val: 1, Next: &solutions.ListNode{Val: 2, Next: &solutions.ListNode{Val: 3, Next: &solutions.ListNode{Val: 4, Next: &solutions.ListNode{Val: 5}}}}}
+	val := solutions.ReverseBetween(rbl, 1, 4)
+	fmt.Println(val.Next.Next.Next)
+	fmt.Printf("Reversing the linked list yields %v\n", val)
 }
