@@ -224,5 +224,6 @@ func main() {
 
 	fmt.Printf("Counting bits of n yields %v\n", solutions.CountBits(2))
 	fmt.Printf("The extra characters in the string are %d\n", solutions.MinExtraChar("leetscode", []string{"leet", "code", "leetcode"}))
-	fmt.Printf("Converting roman to integer yields %d\n", solutions.RomanToInt("MCMXCIV"))
+	fmt.Printf("Converting roman to integer yields %d\n", solutions.RomanToInt("MCCCXCIX"))
+	fmt.Printf("Converting integer to roman yields %s\n", solutions.IntToRoman(1399))
 }
