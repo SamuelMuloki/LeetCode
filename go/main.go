@@ -231,4 +231,5 @@ func main() {
 	val := solutions.ReverseBetween(rbl, 1, 4)
 	fmt.Println(val.Next.Next.Next)
 	fmt.Printf("Reversing the linked list yields %v\n", val)
+	fmt.Printf("The result of the pascals triangle is %v\n", solutions.Generate(5))
 }
