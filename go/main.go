@@ -232,4 +232,5 @@ func main() {
 	fmt.Println(val.Next.Next.Next)
 	fmt.Printf("Reversing the linked list yields %v\n", val)
 	fmt.Printf("The result of the pascals triangle is %v\n", solutions.Generate(5))
+	fmt.Printf("Is s a subsequence of t: %t\n", solutions.IsSubsequence("abc", "ahbgdc"))
 }
