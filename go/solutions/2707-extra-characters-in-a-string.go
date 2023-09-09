@@ -1,7 +1,5 @@
 package solutions
 
-import "fmt"
-
 func MinExtraChar(s string, dictionary []string) int {
 	set := make(map[string]bool)
 	for k := 0; k < len(dictionary); k++ {
@@ -20,8 +18,6 @@ func MinExtraChar(s string, dictionary []string) int {
 			dp[i] = min(dp[i], dp[j]+sLen)
 		}
 	}
-
-	fmt.Println(dp)
 
 	return dp[len(s)]
 }

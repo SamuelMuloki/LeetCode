@@ -233,4 +233,5 @@ func main() {
 	fmt.Printf("Reversing the linked list yields %v\n", val)
 	fmt.Printf("The result of the pascals triangle is %v\n", solutions.Generate(5))
 	fmt.Printf("Is s a subsequence of t: %t\n", solutions.IsSubsequence("abc", "ahbgdc"))
+	fmt.Printf("The combination sum 4 of the array of integers is %d\n", solutions.CombinationSum4([]int{1, 2, 3}, 4))
 }
