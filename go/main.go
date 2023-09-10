@@ -159,7 +159,7 @@ func main() {
 
 	fmt.Printf("The subsets of the array are %v\n", solutions.Subsets([]int{1, 2, 3}))
 	fmt.Printf("The combination sum is %v\n", solutions.CombinationSum([]int{2, 3, 5}, 8))
-	fmt.Printf("The permutation is %v\n", solutions.Permute([]int{1, 2, 3}))
+	fmt.Printf("The permutation is %v\n", solutions.Permute([]int{1, 2, 3, 4}))
 	fmt.Printf("The subsets with dupes are %v\n", solutions.SubsetsWithDup([]int{4, 4, 4, 1, 4}))
 
 	fmt.Printf("The combination sum 2 is %v\n", solutions.CombinationSum2([]int{10, 1, 2, 7, 6, 1, 5}, 8))
@@ -235,4 +235,5 @@ func main() {
 	fmt.Printf("Is s a subsequence of t: %t\n", solutions.IsSubsequence("abc", "ahbgdc"))
 	fmt.Printf("The combination sum 4 of the array of integers is %d\n", solutions.CombinationSum4([]int{1, 2, 3}, 4))
 	fmt.Printf("The number of integer points covered with any part of the car are %d\n", solutions.NumberOfPoints([][]int{{3, 6}, {1, 5}, {4, 7}}))
+	fmt.Printf("Tha valid pickup and delivery options are %d\n", solutions.CountOrders(2))
 }
