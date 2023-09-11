@@ -237,4 +237,5 @@ func main() {
 	fmt.Printf("The number of integer points covered with any part of the car are %d\n", solutions.NumberOfPoints([][]int{{3, 6}, {1, 5}, {4, 7}}))
 	fmt.Printf("Tha valid pickup and delivery options are %d\n", solutions.CountOrders(2))
 	fmt.Printf("The result after grouping the people is %v\n", solutions.GroupThePeople([]int{2, 1, 3, 3, 3, 2}))
+	fmt.Printf("The possible unique permutations that might contain duplicates are %v\n", solutions.PermuteUnique([]int{1, 1, 2}))
 }
