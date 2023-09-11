@@ -236,4 +236,5 @@ func main() {
 	fmt.Printf("The combination sum 4 of the array of integers is %d\n", solutions.CombinationSum4([]int{1, 2, 3}, 4))
 	fmt.Printf("The number of integer points covered with any part of the car are %d\n", solutions.NumberOfPoints([][]int{{3, 6}, {1, 5}, {4, 7}}))
 	fmt.Printf("Tha valid pickup and delivery options are %d\n", solutions.CountOrders(2))
+	fmt.Printf("The result after grouping the people is %v\n", solutions.GroupThePeople([]int{2, 1, 3, 3, 3, 2}))
 }
