@@ -1,7 +1,5 @@
 package solutions
 
-import "fmt"
-
 func PermuteUnique(nums []int) [][]int {
 	output := make([][]int, 0)
 
@@ -13,7 +11,6 @@ func PermuteUnique(nums []int) [][]int {
 
 		visited := make(map[int]int)
 		for i := l; i <= r; i++ {
-			fmt.Println(visited, curr, i, l)
 			if visited[curr[i]] == 0 {
 				curr[l], curr[i] = curr[i], curr[l]
 				backtrack(curr, l+1, r)
