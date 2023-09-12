@@ -5,7 +5,7 @@ func RotatedSearch(nums []int, target int) int {
 	l, r := 0, len(nums)-1
 
 	for l <= r {
-		mid := (l + r) / 2
+		mid := l + (r-l)/2
 		if target == nums[mid] {
 			return mid
 		}

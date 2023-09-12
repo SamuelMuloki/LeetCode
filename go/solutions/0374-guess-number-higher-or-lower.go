@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/guess-number-higher-or-lower
 package solutions
 
 /**
@@ -13,7 +14,7 @@ func GuessNumber(n int) int {
 	l, r := 0, n
 
 	for {
-		mid := (l + r) / 2
+		mid := l + (r-l)/2
 		p := guess(mid)
 
 		if p == -1 {

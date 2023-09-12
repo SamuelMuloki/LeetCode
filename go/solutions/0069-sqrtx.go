@@ -1,10 +1,11 @@
+// https://leetcode.com/problems/sqrtx
 package solutions
 
 func MySqrt(x int) int {
 	l, r := 0, x
 
 	for {
-		mid := (l + r) / 2
+		mid := l + (r-l)/2
 		midS := mid * mid
 
 		if midS <= x && x < (mid+1)*(mid+1) {
