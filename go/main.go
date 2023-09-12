@@ -240,4 +240,5 @@ func main() {
 	fmt.Printf("The possible unique permutations that might contain duplicates are %v\n", solutions.PermuteUnique([]int{1, 1, 2}))
 	fmt.Printf("The two strings can be made equal %t\n", solutions.CheckStrings("abcdba", "cabdab"))
 	fmt.Printf("The maximum average subarray 1 is %v\n", solutions.FindMaxAverage([]int{1, 12, -5, -6, 50, 3}, 4))
+	fmt.Printf("The minimum number of characters to delete are %d\n", solutions.MinDeletions("abcabc"))
 }
