@@ -244,4 +244,5 @@ func main() {
 	fmt.Printf("The maximum of almost unique subarrays is %d\n", solutions.MaxSum([]int{5, 9, 9, 2, 4, 5, 4}, 1, 3))
 	fmt.Printf("The K closest elements of the array are %v\n", solutions.FindClosestElements([]int{1, 2, 3, 4, 5}, 3, 50))
 	fmt.Printf("The number is a valid perfect square %t\n", solutions.IsPerfectSquare(14))
+	fmt.Printf("The smallest letter greater than the target %s\n", string(solutions.NextGreatestLetter([]byte{'c', 'f', 'j'}, 'c')))
 }
