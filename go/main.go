@@ -245,4 +245,5 @@ func main() {
 	fmt.Printf("The K closest elements of the array are %v\n", solutions.FindClosestElements([]int{1, 2, 3, 4, 5}, 3, 50))
 	fmt.Printf("The number is a valid perfect square %t\n", solutions.IsPerfectSquare(14))
 	fmt.Printf("The smallest letter greater than the target %s\n", string(solutions.NextGreatestLetter([]byte{'c', 'f', 'j'}, 'c')))
+	fmt.Printf("The minimum number of candies is %d\n", solutions.Candy([]int{1, 0, 2}))
 }
