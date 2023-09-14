@@ -32,6 +32,7 @@ const { Calculator } = require("./2726-calculator-with-method-chaining");
 const { isPalindrome } = require("./0009-palindrome-number");
 const { reverseVowels } = require("./0345-reverse-vowels-of-a-string");
 const { canPlaceFlowers } = require("./0605-can-place-flowers");
+const { intersection } = require("./0349-intersection-of-two-arrays");
 
 console.log(containsDuplicate([1, 2, 3, 1]));
 console.log(isAnagram("rat", "car"));
@@ -169,3 +170,4 @@ console.log(new Calculator(2).multiply(5).power(2).getResult());
 console.log("palindrome", isPalindrome(121));
 console.log("reverse", reverseVowels("leetcode"));
 console.log("flowerbed", canPlaceFlowers([1,0,0,0,1], 1))
+console.log("intersection of arrays", intersection([1,2,2,1], [2,2]))
