@@ -248,4 +248,5 @@ func main() {
 	fmt.Printf("The minimum number of candies is %d\n", solutions.Candy([]int{1, 0, 2}))
 	fmt.Printf("The intersection of two arrays is %d\n", solutions.Intersection([]int{1, 2, 2, 1}, []int{2, 2}))
 	fmt.Printf("The intersection of two arrays ii is %d\n", solutions.Intersect([]int{1, 2, 2, 1}, []int{2, 2}))
+	fmt.Printf("The duplicate in the array is %d\n", solutions.FindDuplicate([]int{3, 1, 3, 4, 2}))
 }
