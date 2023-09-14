@@ -263,4 +263,8 @@ func main() {
 	fmt.Printf("The Itinerary is %v\n", solutions.FindItinerary([][]string{
 		{"JFK", "SFO"}, {"JFK", "ATL"}, {"SFO", "ATL"}, {"ATL", "JFK"}, {"ATL", "SFO"},
 	}))
+
+	cycle := &solutions.ListNode{Val: 2, Next: &solutions.ListNode{Val: 0, Next: &solutions.ListNode{Val: 4}}}
+	cycle.Next = cycle
+	fmt.Printf("The linked list has a cycle: %t\n", solutions.HasCycle(&solutions.ListNode{Val: 3, Next: cycle}))
 }
