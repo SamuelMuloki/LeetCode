@@ -73,6 +73,17 @@ func main() {
 	fmt.Println(elem)
 	fmt.Println(queue.Elements)
 
+	// DFS Graph
+	g := methods.NewDFSGraph()
+	g.AddEdge(0, 1)
+	g.AddEdge(0, 2)
+	g.AddEdge(1, 2)
+	g.AddEdge(2, 0)
+	g.AddEdge(2, 3)
+	g.AddEdge(3, 3)
+
+	g.DFS(2)
+
 	nums := []int{1, 2, 3, 1}
 	fmt.Printf("Array contains duplicate: %t\n", solutions.ContainsDuplicate(nums))
 	fmt.Printf("Is Anagram: %t\n", solutions.IsAnagram("anagram", "nagaram"))
