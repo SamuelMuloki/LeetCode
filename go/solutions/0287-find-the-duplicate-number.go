@@ -1,16 +1,22 @@
 package solutions
 
 func FindDuplicate(nums []int) int {
-	set := make(map[int]int)
+	slow, fast := nums[0], nums[0]
 
-	i := 0
 	for {
-		set[nums[i]]++
+		slow = nums[slow]
+		fast = nums[nums[fast]]
 
-		if set[nums[i]] > 1 {
-			return nums[i]
+		if slow == fast {
+			break
 		}
-
-		i++
 	}
+
+	slow = nums[0]
+	for slow != fast {
+		slow = nums[slow]
+		fast = nums[fast]
+	}
+
+	return slow
 }
