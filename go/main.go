@@ -247,4 +247,5 @@ func main() {
 	fmt.Printf("The smallest letter greater than the target %s\n", string(solutions.NextGreatestLetter([]byte{'c', 'f', 'j'}, 'c')))
 	fmt.Printf("The minimum number of candies is %d\n", solutions.Candy([]int{1, 0, 2}))
 	fmt.Printf("The intersection of two arrays is %d\n", solutions.Intersection([]int{1, 2, 2, 1}, []int{2, 2}))
+	fmt.Printf("The intersection of two arrays ii is %d\n", solutions.Intersect([]int{1, 2, 2, 1}, []int{2, 2}))
 }
