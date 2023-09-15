@@ -1,4 +1,4 @@
-// https://solutions.com/problems/kth-largest-element-in-a-stream/
+// https://leetcode.com/problems/kth-largest-element-in-a-stream/
 package solutions
 
 import (

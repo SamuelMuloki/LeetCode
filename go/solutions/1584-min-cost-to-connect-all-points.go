@@ -1,8 +1,6 @@
 package solutions
 
-import (
-	"sort"
-)
+import "container/heap"
 
 type Edge struct {
 	Vertex1 int
@@ -63,10 +61,12 @@ func MinCostConnectPoints(points [][]int) int {
 		return abs(pointX[0]-pointY[0]) + abs(pointX[1]-pointY[1])
 	}
 
-	edges := make([]Edge, 0)
+	edges := &EdgeMinHeap{}
+	heap.Init(edges)
+
 	for i := 0; i < len(points); i++ {
 		for j := i + 1; j < len(points); j++ {
-			edges = append(edges, Edge{
+			heap.Push(edges, Edge{
 				Vertex1: i,
 				Vertex2: j,
 				Weight:  getWeight(points[i], points[j]),
@@ -74,23 +74,34 @@ func MinCostConnectPoints(points [][]int) int {
 		}
 	}
 
-	sort.SliceStable(edges, func(i, j int) bool {
-		return edges[i].Weight < edges[j].Weight
-	})
-
 	var output int
 	connected := 0
 
-	for i := 0; i < len(edges); i++ {
-		if union(edges[i].Vertex1, edges[i].Vertex2) {
+	for edges.Len() > 0 {
+		edge := heap.Pop(edges).(Edge)
+		if union(edge.Vertex1, edge.Vertex2) {
 			connected++
-			output += edges[i].Weight
+			output += edge.Weight
 		}
 
-		if connected == len(edges)-1 {
+		if connected == len(points)-1 {
 			return output
 		}
 	}
 
 	return output
+}
+
+type EdgeMinHeap []Edge
+
+func (h EdgeMinHeap) Len() int           { return len(h) }
+func (h EdgeMinHeap) Less(i, j int) bool { return h[i].Weight < h[j].Weight }
+func (h EdgeMinHeap) Swap(i, j int)      { h[i], h[j] = h[j], h[i] }
+func (h *EdgeMinHeap) Push(x any)        { *h = append(*h, x.(Edge)) }
+func (h *EdgeMinHeap) Pop() any {
+	old := *h
+	n := len(old)
+	x := old[n-1]
+	*h = old[0 : n-1]
+	return x
 }
