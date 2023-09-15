@@ -267,4 +267,7 @@ func main() {
 	cycle := &solutions.ListNode{Val: 2, Next: &solutions.ListNode{Val: 0, Next: &solutions.ListNode{Val: 4}}}
 	cycle.Next = cycle
 	fmt.Printf("The linked list has a cycle: %t\n", solutions.HasCycle(&solutions.ListNode{Val: 3, Next: cycle}))
+	fmt.Printf("The minimum cost to connect all points is %d\n", solutions.MinCostConnectPoints([][]int{
+		{0, 0}, {2, 2}, {3, 10}, {5, 2}, {7, 0},
+	}))
 }
