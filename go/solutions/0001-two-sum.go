@@ -1,4 +1,4 @@
-// https://solutions.com/problems/two-sum/
+// https://leetcode.com/problems/two-sum/
 package solutions
 
 func TwoSum(nums []int, target int) []int {
