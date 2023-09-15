@@ -270,4 +270,5 @@ func main() {
 	fmt.Printf("The minimum cost to connect all points is %d\n", solutions.MinCostConnectPoints([][]int{
 		{0, 0}, {2, 2}, {3, 10}, {5, 2}, {7, 0},
 	}))
+	fmt.Printf("There exists a triplet of indices i, j, k such that i < j < k: %t\n", solutions.IncreasingTriplet([]int{20, 100, 10, 12, 5, 13}))
 }
