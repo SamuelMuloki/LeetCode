@@ -13,36 +13,33 @@ func MinCostConnectPoints(points [][]int) int {
 	rank := make([]int, len(points))
 
 	for i := 0; i < len(points); i++ {
-		parent[i] = -1
-		rank[i] = 1
+		parent[i] = i
 	}
 
 	var find func(i int) int
 	find = func(i int) int {
-		if parent[i] == -1 {
-			return i
+		if i != parent[i] {
+			parent[i] = find(parent[i])
 		}
-
-		parent[i] = find(parent[i])
 
 		return parent[i]
 	}
 
-	union := func(x, y int) bool {
-		s1, s2 := find(x), find(y)
+	union := func(v1, v2 int) bool {
+		p1, p2 := find(v1), find(v2)
 
-		if s1 == s2 {
+		if p1 == p2 {
 			return false
 		}
 
 		switch {
-		case rank[s1] < rank[s2]:
-			parent[s1] = s2
-		case rank[s1] > rank[s2]:
-			parent[s2] = s1
+		case rank[p1] < rank[p2]:
+			parent[p1] = p2
+		case rank[p1] > rank[p2]:
+			parent[p2] = p1
 		default:
-			parent[s2] = s1
-			rank[s1]++
+			parent[p2] = p1
+			rank[p1]++
 
 		}
 
