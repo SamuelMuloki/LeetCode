@@ -295,4 +295,5 @@ func main() {
 	fmt.Printf("The shortest path visting all nodes is %d\n", solutions.ShortestPathLength([][]int{
 		{1, 2, 3}, {0}, {0}, {0},
 	}))
+	fmt.Printf("The difference of two arrays is %v\n", solutions.FindDifference([]int{1, 2, 3, 3}, []int{1, 1, 2, 2}))
 }
