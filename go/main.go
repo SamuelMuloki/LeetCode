@@ -296,4 +296,5 @@ func main() {
 		{1, 2, 3}, {0}, {0}, {0},
 	}))
 	fmt.Printf("The difference of two arrays is %v\n", solutions.FindDifference([]int{1, 2, 3, 3}, []int{1, 1, 2, 2}))
+	fmt.Printf("The array has a unique number of occurences %t\n", solutions.UniqueOccurrences([]int{1, 2}))
 }
