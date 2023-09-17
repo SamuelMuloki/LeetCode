@@ -1,35 +1,18 @@
 package methods
 
-import "fmt"
+func (g *Graph) DFS(start *Vertex, visitCb func(int)) {
+	visited := make(map[int]bool)
 
-type Graph interface {
-	AddEdge(v, w int)
-	DFS(v int)
-}
-
-type DFSGraph struct {
-	visited map[int]bool
-	adj     map[int][]int
-}
-
-func NewDFSGraph() DFSGraph {
-	return DFSGraph{
-		visited: make(map[int]bool),
-		adj:     make(map[int][]int),
+	if start == nil {
+		return
 	}
-}
 
-func (g DFSGraph) AddEdge(v, w int) {
-	g.adj[v] = append(g.adj[v], w)
-}
+	visited[start.Key] = true
+	visitCb(start.Key)
 
-func (g DFSGraph) DFS(v int) {
-	g.visited[v] = true
-	fmt.Println(v)
-
-	for _, val := range g.adj[v] {
-		if !g.visited[val] {
-			g.DFS(val)
+	for _, v := range start.Vertices {
+		if !visited[v.Key] {
+			g.DFS(v, visitCb)
 		}
 	}
 }

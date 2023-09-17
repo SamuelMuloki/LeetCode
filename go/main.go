@@ -74,15 +74,32 @@ func main() {
 	fmt.Println(queue.Elements)
 
 	// DFS Graph
-	g := methods.NewDFSGraph()
-	g.AddEdge(0, 1)
-	g.AddEdge(0, 2)
-	g.AddEdge(1, 2)
-	g.AddEdge(2, 0)
-	g.AddEdge(2, 3)
-	g.AddEdge(3, 3)
+	g := methods.NewDirectedGraph()
+	g.AddVertex(1)
+	g.AddVertex(2)
+	g.AddVertex(3)
+	g.AddVertex(4)
 
-	g.DFS(2)
+	g.AddEdge(1, 4)
+	g.AddEdge(1, 2)
+	g.AddEdge(1, 3)
+	g.AddEdge(2, 3)
+	g.AddEdge(2, 4)
+	g.AddEdge(3, 4)
+
+	visitedOrder := make([]int, 0)
+	g.DFS(g.Vertices[1], func(i int) {
+		visitedOrder = append(visitedOrder, i)
+	})
+
+	fmt.Println("DFS", visitedOrder)
+
+	visitedBFSOrder := make([]int, 0)
+	g.BFS(g.Vertices[1], func(i int) {
+		visitedBFSOrder = append(visitedOrder, i)
+	})
+
+	fmt.Println("BFS", visitedBFSOrder)
 
 	nums := []int{1, 2, 3, 1}
 	fmt.Printf("Array contains duplicate: %t\n", solutions.ContainsDuplicate(nums))
