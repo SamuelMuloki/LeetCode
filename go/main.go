@@ -275,4 +275,7 @@ func main() {
 	fmt.Printf("The path with minimum effort is %d\n", solutions.MinimumEffortPath([][]int{
 		{1, 2, 2}, {3, 8, 2}, {5, 3, 5},
 	}))
+	fmt.Printf("The shortest path visting all nodes is %d\n", solutions.ShortestPathLength([][]int{
+		{1, 2, 3}, {0}, {0}, {0},
+	}))
 }
