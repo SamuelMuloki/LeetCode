@@ -3,9 +3,7 @@ package solutions
 import "container/heap"
 
 type Edge struct {
-	Vertex1 int
-	Vertex2 int
-	Weight  int
+	Vertex1, Vertex2, Weight int
 }
 
 func MinCostConnectPoints(points [][]int) int {

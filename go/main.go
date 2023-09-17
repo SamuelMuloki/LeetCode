@@ -272,4 +272,7 @@ func main() {
 	}))
 	fmt.Printf("There exists a triplet of indices i, j, k such that i < j < k: %t\n", solutions.IncreasingTriplet([]int{20, 100, 10, 12, 5, 13}))
 	fmt.Printf("The max number of k-sum pairs are %d\n", solutions.MaxOperations([]int{2, 2, 2, 3, 1, 1, 4, 1}, 4))
+	fmt.Printf("The path with minimum effort is %d\n", solutions.MinimumEffortPath([][]int{
+		{1, 2, 2}, {3, 8, 2}, {5, 3, 5},
+	}))
 }
