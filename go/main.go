@@ -301,4 +301,5 @@ func main() {
 	fmt.Printf("The k weakest rows in a matrix are %v\n", solutions.KWeakestRows([][]int{
 		{1, 1, 0, 0, 0}, {1, 1, 1, 1, 0}, {1, 0, 0, 0, 0}, {1, 1, 0, 0, 0}, {1, 1, 1, 1, 1},
 	}, 3))
+	fmt.Printf("The sum of indices with k set bits are %d\n", solutions.SumIndicesWithKSetBits([]int{5, 10, 1, 5, 2}, 1))
 }
