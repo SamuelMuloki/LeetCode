@@ -1,4 +1,4 @@
-// https://solutions.com/problems/diameter-of-binary-tree/
+// https://leetcode.com/problems/diameter-of-binary-tree/
 package solutions
 
 import "github.com/SamuelMuloki/LeetCode/go/utils"

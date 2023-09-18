@@ -1,4 +1,4 @@
-// https://solutions.com/problems/3sum/
+// https://leetcode.com/problems/3sum/
 package solutions
 
 import (

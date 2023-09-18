@@ -1,4 +1,4 @@
-// https://solutions.com/problems/group-anagrams/
+// https://leetcode.com/problems/group-anagrams/
 package solutions
 
 import "sort"

@@ -1,4 +1,4 @@
-// https://solutions.com/problems/powx-n
+// https://leetcode.com/problems/powx-n
 package solutions
 
 func MyPow(x float64, n int) float64 {

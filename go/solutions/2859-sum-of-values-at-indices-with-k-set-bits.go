@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/sum-of-values-at-indices-with-k-set-bits
 package solutions
 
 func SumIndicesWithKSetBits(nums []int, k int) int {

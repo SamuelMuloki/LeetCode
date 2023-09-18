@@ -1,4 +1,4 @@
-// https://solutions.com/problems/palindrome-partitioning/
+// https://leetcode.com/problems/palindrome-partitioning/
 package solutions
 
 func Partition(s string) [][]string {
