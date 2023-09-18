@@ -298,4 +298,7 @@ func main() {
 	fmt.Printf("The difference of two arrays is %v\n", solutions.FindDifference([]int{1, 2, 3, 3}, []int{1, 1, 2, 2}))
 	fmt.Printf("The array has a unique number of occurences %t\n", solutions.UniqueOccurrences([]int{1, 2}))
 	fmt.Printf("The minimum right shifts to sort the array are %d\n", solutions.MinimumRightShifts([]int{3, 4, 5, 1, 2}))
+	fmt.Printf("The k weakest rows in a matrix are %v\n", solutions.KWeakestRows([][]int{
+		{1, 1, 0, 0, 0}, {1, 1, 1, 1, 0}, {1, 0, 0, 0, 0}, {1, 1, 0, 0, 0}, {1, 1, 1, 1, 1},
+	}, 3))
 }
