@@ -1,11 +1,8 @@
 package solutions
 
-import "fmt"
-
 func SumIndicesWithKSetBits(nums []int, k int) int {
 	bin := make([]int, len(nums))
 	for i := 0; i < len(nums); i++ {
-		fmt.Println(bin)
 		bin[i] = bin[i>>1] + i&1
 	}
 
