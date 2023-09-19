@@ -12,14 +12,12 @@ import "github.com/SamuelMuloki/LeetCode/go/utils"
  */
 func InorderTraversal(root *utils.TreeNode) []int {
 	output := make([]int, 0)
-
 	if root == nil {
 		return output
 	}
 
-	s := make([]*utils.TreeNode, 0)
 	curr := root
-
+	s := make([]*utils.TreeNode, 0)
 	for curr != nil || len(s) != 0 {
 		for curr != nil {
 			s = append(s, curr)
