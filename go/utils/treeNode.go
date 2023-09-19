@@ -8,6 +8,11 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
+type Node struct {
+	Val      int
+	Children *[]Node
+}
+
 func NewTree(nodes []int) (root *TreeNode) {
 	root = &TreeNode{Val: nodes[0]}
 	for i := range nodes {

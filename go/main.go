@@ -309,7 +309,13 @@ func main() {
 	fmt.Printf("The Binary tree Inorder Traversal of tree is %v\n", solutions.InorderTraversal(&utils.TreeNode{
 		Val: 3, Left: &utils.TreeNode{Val: 1, Right: &utils.TreeNode{Val: 2}},
 	}))
-	fmt.Printf("The Binary tree Inorder Traversal of tree is %v\n", solutions.PostorderTraversal(&utils.TreeNode{
+	fmt.Printf("The Binary tree Postorder Traversal of tree is %v\n", solutions.PostorderTraversal(&utils.TreeNode{
 		Val: 1, Left: &utils.TreeNode{Val: 2, Left: &utils.TreeNode{Val: 3}, Right: &utils.TreeNode{Val: 4, Left: &utils.TreeNode{Val: 5}, Right: &utils.TreeNode{Val: 6}}}, Right: &utils.TreeNode{Val: 7},
+	}))
+	fmt.Printf("The N array tree Postorder Traversal of tree is %v\n", solutions.Postorder(&utils.Node{
+		Val: 1, Children: &[]utils.Node{
+			{Val: 3, Children: &[]utils.Node{{Val: 5}, {Val: 6}}},
+			{Val: 2}, {Val: 4},
+		},
 	}))
 }
