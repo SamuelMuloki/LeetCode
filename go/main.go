@@ -303,4 +303,7 @@ func main() {
 	}, 3))
 	fmt.Printf("The sum of indices with k set bits are %d\n", solutions.SumIndicesWithKSetBits([]int{5, 10, 1, 5, 2}, 1))
 	fmt.Printf("The possible way to select a group of students so that everyone remains happy is %d\n", solutions.CountWays([]int{6, 0, 3, 3, 6, 7, 2, 7}))
+	fmt.Printf("The Binary tree Preorder Traversal of tree is %v\n", solutions.PreorderTraversal(&utils.TreeNode{
+		Val: 1, Left: &utils.TreeNode{Val: 2}, Right: &utils.TreeNode{Val: 3},
+	}))
 }
