@@ -3,20 +3,15 @@ package solutions
 func ProductExceptSelf(nums []int) []int {
 	prod := make([]int, len(nums))
 
-	for i := range nums {
-		prod[i] = 1
+	prod[0] = 1
+	for k := 1; k < len(nums); k++ {
+		prod[k] = prod[k-1] * nums[k-1]
 	}
 
-	temp := 1
-	for i := 0; i < len(nums); i++ {
-		prod[i] = temp
-		temp *= nums[i]
-	}
-
-	temp = 1
+	right := 1
 	for i := len(nums) - 1; i >= 0; i-- {
-		prod[i] *= temp
-		temp *= nums[i]
+		prod[i] *= right
+		right *= nums[i]
 	}
 
 	return prod

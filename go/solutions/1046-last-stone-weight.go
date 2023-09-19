@@ -2,7 +2,6 @@ package solutions
 
 import (
 	"container/heap"
-	"fmt"
 )
 
 func LastStoneWeight(stones []int) int {
@@ -12,8 +11,6 @@ func LastStoneWeight(stones []int) int {
 	for _, stone := range stones {
 		heap.Push(maxHeap, stone)
 	}
-
-	fmt.Println(*maxHeap)
 
 	for maxHeap.Len() > 1 {
 		stone1 := heap.Pop(maxHeap).(int)

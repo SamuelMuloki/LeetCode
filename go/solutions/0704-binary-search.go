@@ -1,22 +1,23 @@
+// https://leetcode.com/problems/binary-search/
 package solutions
 
-func Search(nums []int, target int) int {
-	index := -1
+import "math"
 
-	mid := len(nums) / 2
-	switch {
-	case len(nums) == 0:
-		return index
-	case nums[mid] > target:
-		index = Search(nums[:mid], target)
-	case nums[mid] < target:
-		index = Search(nums[mid+1:], target)
-		if index >= 0 {
-			index += mid + 1
+func Search(nums []int, target int) int {
+	l, r := 0, len(nums)-1
+
+	for l != r {
+		mid := int(math.Ceil(float64((l + r)) / 2))
+		if nums[mid] > target {
+			r = mid - 1
+		} else {
+			l = mid
 		}
-	default:
-		index = mid
 	}
 
-	return index
+	if nums[l] == target {
+		return l
+	}
+
+	return -1
 }

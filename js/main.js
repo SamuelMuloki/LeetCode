@@ -29,6 +29,11 @@ const { reverseString } = require("./0344-reverse-string");
 const { EventEmitter } = require("./2694-event-emitter");
 const { ArrayWrapper } = require("./2695-array-wrapper");
 const { Calculator } = require("./2726-calculator-with-method-chaining");
+const { isPalindrome } = require("./0009-palindrome-number");
+const { reverseVowels } = require("./0345-reverse-vowels-of-a-string");
+const { canPlaceFlowers } = require("./0605-can-place-flowers");
+const { intersection } = require("./0349-intersection-of-two-arrays");
+const { intersect } = require("./0350-intersection-of-two-arrays-ii");
 
 console.log(containsDuplicate([1, 2, 3, 1]));
 console.log(isAnagram("rat", "car"));
@@ -144,20 +149,27 @@ console.log(
   )
 );
 
-console.log(flat([1, 2, 3, [4, 5, 6], [7, 8, [9, 10, 11], 12], [13, 14, 15]], 1));
-console.log(compactObject([null, 0, false, 1]))
-console.log(reverseString(["h","e","l","l","o"]))
+console.log(
+  flat([1, 2, 3, [4, 5, 6], [7, 8, [9, 10, 11], 12], [13, 14, 15]], 1)
+);
+console.log(compactObject([null, 0, false, 1]));
+console.log(reverseString(["h", "e", "l", "l", "o"]));
 
 const emitter = new EventEmitter();
-const sub = emitter.subscribe("firstEvent", (...args) => args.join(','));
+const sub = emitter.subscribe("firstEvent", (...args) => args.join(","));
 console.log(emitter.emit("firstEvent", [1, 2, 3])); // ["1,2,3"]
 sub.unsubscribe(); // undefined
 console.log(emitter.emit("firstEvent", [4, 5, 6])); // [], there are no subscriptions
 
 const obj1 = new ArrayWrapper([1, 2]);
-const obj2 = new ArrayWrapper([3,4]);
+const obj2 = new ArrayWrapper([3, 4]);
 console.log(obj1 + obj2);
 console.log(String(obj1));
 console.log(String(obj2));
 
-console.log(new Calculator(2).multiply(5).power(2).getResult())
+console.log(new Calculator(2).multiply(5).power(2).getResult());
+console.log("palindrome", isPalindrome(121));
+console.log("reverse", reverseVowels("leetcode"));
+console.log("flowerbed", canPlaceFlowers([1, 0, 0, 0, 1], 1));
+console.log("intersection of arrays", intersection([1, 2, 2, 1], [2, 2]));
+console.log("intersection of arrays ii", intersect([1, 2, 2, 1], [2, 2, 2]));

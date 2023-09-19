@@ -2,28 +2,21 @@ package solutions
 
 func Permute(nums []int) [][]int {
 	output := make([][]int, 0)
-	curr := make([]int, 0)
-	n := len(nums)
-	visited := make(map[int]int)
 
-	var backtrack func(idx int)
-	backtrack = func(idx int) {
-		if len(curr) == n {
+	var backtrack func(curr []int, l int, r int)
+	backtrack = func(curr []int, l int, r int) {
+		if l == r {
 			output = append(output, append([]int{}, curr...))
 		}
 
-		for i := 0; i < n; i++ {
-			if visited[i] == 0 {
-				visited[i]++
-				curr = append(curr, nums[i])
-				backtrack(i + 1)
-				curr = curr[:len(curr)-1]
-				visited[i]--
-			}
+		for i := l; i <= r; i++ {
+			curr[l], curr[i] = curr[i], curr[l]
+			backtrack(curr, l+1, r)
+			curr[l], curr[i] = curr[i], curr[l]
 		}
 	}
 
-	backtrack(0)
+	backtrack(nums, 0, len(nums)-1)
 
 	return output
 }

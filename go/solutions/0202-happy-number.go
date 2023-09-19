@@ -1,4 +1,4 @@
-// https://solutions.com/problems/happy-number
+// https://leetcode.com/problems/happy-number
 package solutions
 
 func IsHappy(n int) bool {

@@ -1,4 +1,4 @@
-// https://solutions.com/problems/balanced-binary-tree/
+// https://leetcode.com/problems/balanced-binary-tree/
 package solutions
 
 import "github.com/SamuelMuloki/LeetCode/go/utils"
