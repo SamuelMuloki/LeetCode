@@ -10,7 +10,7 @@ type TreeNode struct {
 
 type Node struct {
 	Val      int
-	Children *[]Node
+	Children []*Node
 }
 
 func NewTree(nodes []int) (root *TreeNode) {

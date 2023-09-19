@@ -313,9 +313,11 @@ func main() {
 		Val: 1, Left: &utils.TreeNode{Val: 2, Left: &utils.TreeNode{Val: 3}, Right: &utils.TreeNode{Val: 4, Left: &utils.TreeNode{Val: 5}, Right: &utils.TreeNode{Val: 6}}}, Right: &utils.TreeNode{Val: 7},
 	}))
 	fmt.Printf("The N array tree Postorder Traversal of tree is %v\n", solutions.Postorder(&utils.Node{
-		Val: 1, Children: &[]utils.Node{
-			{Val: 3, Children: &[]utils.Node{{Val: 5}, {Val: 6}}},
-			{Val: 2}, {Val: 4},
+		Val: 1, Children: []*utils.Node{
+			{Val: 2},
+			{Val: 3, Children: []*utils.Node{{Val: 6}, {Val: 7, Children: []*utils.Node{{Val: 11}, {Val: 14}}}}},
+			{Val: 4, Children: []*utils.Node{{Val: 8}, {Val: 12}}},
+			{Val: 5, Children: []*utils.Node{{Val: 9, Children: []*utils.Node{{Val: 13}}}, {Val: 10}}},
 		},
 	}))
 }
