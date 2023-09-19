@@ -11,17 +11,25 @@ import "github.com/SamuelMuloki/LeetCode/go/utils"
  * }
  */
 func InorderTraversal(root *utils.TreeNode) []int {
-	return recur(root, &[]int{})
-}
+	output := make([]int, 0)
 
-func recur(root *utils.TreeNode, output *[]int) []int {
 	if root == nil {
-		return *output
+		return output
 	}
 
-	recur(root.Left, output)
-	*output = append(*output, root.Val)
-	recur(root.Right, output)
+	s := make([]*utils.TreeNode, 0)
+	curr := root
 
-	return *output
+	for curr != nil || len(s) != 0 {
+		for curr != nil {
+			s = append(s, curr)
+			curr = curr.Left
+		}
+
+		s, curr = s[:len(s)-1], s[len(s)-1]
+		output = append(output, curr.Val)
+		curr = curr.Right
+	}
+
+	return output
 }
