@@ -320,4 +320,5 @@ func main() {
 			{Val: 5, Children: []*utils.Node{{Val: 9, Children: []*utils.Node{{Val: 13}}}, {Val: 10}}},
 		},
 	}))
+	fmt.Printf("The minimum number of operations to reduce x to zero are %d\n", solutions.MinOperations([]int{1, 1, 4, 2, 3}, 5))
 }
