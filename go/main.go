@@ -322,4 +322,6 @@ func main() {
 	}))
 	fmt.Printf("The minimum number of operations to reduce x to zero are %d\n", solutions.MinOperations([]int{1, 1, 4, 2, 3}, 5))
 	fmt.Printf("The sub array sum is %d\n", solutions.SubarraySum([]int{-4, 3, 6, -2, 1, -1, 0, 2, -2, 3, 1}, 5))
+	fmt.Printf("The pivot index of the array is %d\n", solutions.PivotIndex([]int{1, 7, 3, 6, 5, 6}))
+	fmt.Printf("The middle index in the array is %d\n", solutions.FindMiddleIndex([]int{2, 3, -1, 8, 4}))
 }
