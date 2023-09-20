@@ -118,11 +118,11 @@ func main() {
 	fmt.Printf("String has valid parentheses: %v\n", solutions.IsValid("()[]{}"))
 	fmt.Printf("The index of the target is: %v\n", solutions.Search([]int{-1, 0, 3, 5, 9, 12}, 9))
 
-	head := &solutions.ListNode{Val: 1, Next: &solutions.ListNode{Val: 2, Next: nil}}
+	head := &utils.ListNode{Val: 1, Next: &utils.ListNode{Val: 2, Next: nil}}
 	fmt.Printf("The Reversed linked list is: %v\n", solutions.ReverseList(head))
 
-	list1 := &solutions.ListNode{Val: 1, Next: &solutions.ListNode{Val: 2, Next: &solutions.ListNode{Val: 4, Next: nil}}}
-	list2 := &solutions.ListNode{Val: 1, Next: &solutions.ListNode{Val: 3, Next: &solutions.ListNode{Val: 4, Next: nil}}}
+	list1 := &utils.ListNode{Val: 1, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 4, Next: nil}}}
+	list2 := &utils.ListNode{Val: 1, Next: &utils.ListNode{Val: 3, Next: &utils.ListNode{Val: 4, Next: nil}}}
 	fmt.Printf("The final lists after merging two lists is %v\n", solutions.MergeTwoLists(list1, list2))
 	fmt.Printf("You can climb to the top in %d distinct ways\n", solutions.ClimbStairs(6))
 	fmt.Printf("The median of two sorted arrays a, b is %v\n", solutions.FindMedianSortedArrays([]int{1, 2}, []int{3}))
@@ -147,9 +147,9 @@ func main() {
 	stream.GetHighestNumber(3)
 	fmt.Printf("The highest number for stream is %d\n", stream.GetHighestNumber(7))
 
-	reorderHead := &solutions.ListNode{
-		Val: 1, Next: &solutions.ListNode{Val: 2, Next: &solutions.ListNode{
-			Val: 3, Next: &solutions.ListNode{Val: 4, Next: nil},
+	reorderHead := &utils.ListNode{
+		Val: 1, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{
+			Val: 3, Next: &utils.ListNode{Val: 4, Next: nil},
 		}}}
 
 	solutions.ReorderList(reorderHead)
@@ -231,8 +231,8 @@ func main() {
 	fmt.Printf("The peak element in the array is %d\n", solutions.FindPeakElement([]int{1, 2, 3, 1}))
 	fmt.Printf("The minimum size of subarray sum is %d\n", solutions.MinSubArrayLen(11, []int{1, 2, 3, 4, 5}))
 
-	l1 := &solutions.ListNode{Val: 9, Next: &solutions.ListNode{Val: 9, Next: &solutions.ListNode{Val: 9, Next: &solutions.ListNode{Val: 9, Next: &solutions.ListNode{Val: 9, Next: &solutions.ListNode{Val: 9, Next: &solutions.ListNode{Val: 9}}}}}}}
-	l2 := &solutions.ListNode{Val: 9, Next: &solutions.ListNode{Val: 9, Next: &solutions.ListNode{Val: 9, Next: &solutions.ListNode{Val: 9}}}}
+	l1 := &utils.ListNode{Val: 9, Next: &utils.ListNode{Val: 9, Next: &utils.ListNode{Val: 9, Next: &utils.ListNode{Val: 9, Next: &utils.ListNode{Val: 9, Next: &utils.ListNode{Val: 9, Next: &utils.ListNode{Val: 9}}}}}}}
+	l2 := &utils.ListNode{Val: 9, Next: &utils.ListNode{Val: 9, Next: &utils.ListNode{Val: 9, Next: &utils.ListNode{Val: 9}}}}
 	fmt.Printf("The sum of two numbers is %v\n", solutions.AddTwoNumbers(l1, l2))
 	fmt.Printf("The number is a palindrome: %t\n", solutions.IsPalindromeNumber(12345654321))
 	fmt.Printf("The integer after conversion is %d\n", solutions.MyAtoi("-2147483647"))
@@ -255,7 +255,7 @@ func main() {
 	fmt.Printf("Converting roman to integer yields %d\n", solutions.RomanToInt("MCCCXCIX"))
 	fmt.Printf("Converting integer to roman yields %s\n", solutions.IntToRoman(1399))
 
-	rbl := &solutions.ListNode{Val: 1, Next: &solutions.ListNode{Val: 2, Next: &solutions.ListNode{Val: 3, Next: &solutions.ListNode{Val: 4, Next: &solutions.ListNode{Val: 5}}}}}
+	rbl := &utils.ListNode{Val: 1, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 3, Next: &utils.ListNode{Val: 4, Next: &utils.ListNode{Val: 5}}}}}
 	val := solutions.ReverseBetween(rbl, 1, 4)
 	fmt.Println(val.Next.Next.Next)
 	fmt.Printf("Reversing the linked list yields %v\n", val)
@@ -281,9 +281,9 @@ func main() {
 		{"JFK", "SFO"}, {"JFK", "ATL"}, {"SFO", "ATL"}, {"ATL", "JFK"}, {"ATL", "SFO"},
 	}))
 
-	cycle := &solutions.ListNode{Val: 2, Next: &solutions.ListNode{Val: 0, Next: &solutions.ListNode{Val: 4}}}
+	cycle := &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 0, Next: &utils.ListNode{Val: 4}}}
 	cycle.Next = cycle
-	fmt.Printf("The linked list has a cycle: %t\n", solutions.HasCycle(&solutions.ListNode{Val: 3, Next: cycle}))
+	fmt.Printf("The linked list has a cycle: %t\n", solutions.HasCycle(&utils.ListNode{Val: 3, Next: cycle}))
 	fmt.Printf("The minimum cost to connect all points is %d\n", solutions.MinCostConnectPoints([][]int{
 		{0, 0}, {2, 2}, {3, 10}, {5, 2}, {7, 0},
 	}))

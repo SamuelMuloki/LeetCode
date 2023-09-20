@@ -1,7 +1,9 @@
 package solutions
 
-func MergeTwoLists(list1 *ListNode, list2 *ListNode) *ListNode {
-	result := &ListNode{}
+import "github.com/SamuelMuloki/LeetCode/go/utils"
+
+func MergeTwoLists(list1 *utils.ListNode, list2 *utils.ListNode) *utils.ListNode {
+	result := &utils.ListNode{}
 	current := result
 
 	for list1 != nil && list2 != nil {

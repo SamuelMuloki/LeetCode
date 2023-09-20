@@ -1,13 +1,15 @@
 package solutions
 
+import "github.com/SamuelMuloki/LeetCode/go/utils"
+
 /**
  * Definition for singly-linked list.
  * type ListNode struct {
  *     Val int
- *     Next *ListNode
+ *     Next *utils.ListNode
  * }
  */
-func HasCycle(head *ListNode) bool {
+func HasCycle(head *utils.ListNode) bool {
 	slow, fast := head, head
 
 	for slow != nil && fast != nil && fast.Next != nil {

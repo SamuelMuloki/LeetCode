@@ -1,14 +1,16 @@
 package solutions
 
+import "github.com/SamuelMuloki/LeetCode/go/utils"
+
 /**
  * Definition for singly-linked list.
  * type ListNode struct {
  *     Val int
- *     Next *ListNode
+ *     Next *utils.ListNode
  * }
  */
-func AddTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
-	dummyPtr, carry := new(ListNode), 0
+func AddTwoNumbers(l1 *utils.ListNode, l2 *utils.ListNode) *utils.ListNode {
+	dummyPtr, carry := new(utils.ListNode), 0
 	final := dummyPtr
 
 	for l1 != nil || l2 != nil || carry != 0 {
@@ -24,7 +26,7 @@ func AddTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 		}
 
 		carry = sum / 10
-		dummyPtr.Next = &ListNode{Val: sum % 10}
+		dummyPtr.Next = &utils.ListNode{Val: sum % 10}
 		dummyPtr = dummyPtr.Next
 	}
 
