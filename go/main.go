@@ -324,4 +324,7 @@ func main() {
 	fmt.Printf("The sub array sum is %d\n", solutions.SubarraySum([]int{-4, 3, 6, -2, 1, -1, 0, 2, -2, 3, 1}, 5))
 	fmt.Printf("The pivot index of the array is %d\n", solutions.PivotIndex([]int{1, 7, 3, 6, 5, 6}))
 	fmt.Printf("The middle index in the array is %d\n", solutions.FindMiddleIndex([]int{2, 3, -1, 8, 4}))
+	fmt.Printf("The head after removing the nth node from the end of the linked list is %v\n", solutions.RemoveNthFromEnd(&utils.ListNode{
+		Val: 1, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 3, Next: &utils.ListNode{Val: 4, Next: &utils.ListNode{Val: 5}}}},
+	}, 2))
 }
