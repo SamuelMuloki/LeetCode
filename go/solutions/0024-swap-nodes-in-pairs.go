@@ -14,18 +14,10 @@ func SwapPairs(head *utils.ListNode) *utils.ListNode {
 		return head
 	}
 
-	dummy := new(utils.ListNode)
-	prev := dummy
-	curr := head
+	temp := head.Next
 
-	for curr != nil && curr.Next != nil {
-		prev.Next = curr.Next
-		curr.Next = prev.Next.Next
-		prev.Next.Next = curr
+	head.Next = SwapPairs(head.Next.Next)
+	temp.Next = head
 
-		prev = curr
-		curr = curr.Next
-	}
-
-	return dummy.Next
+	return temp
 }
