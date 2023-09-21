@@ -333,4 +333,7 @@ func main() {
 	fmt.Printf("Swap nodes in pairs yields %v\n", solutions.SwapPairs(&utils.ListNode{
 		Val: 1, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 3, Next: &utils.ListNode{Val: 4}}},
 	}))
+	fmt.Printf("The level order traversal is %v\n", solutions.LevelOrder(&utils.TreeNode{
+		Val: 3, Left: &utils.TreeNode{Val: 9}, Right: &utils.TreeNode{Val: 20, Left: &utils.TreeNode{Val: 15}, Right: &utils.TreeNode{Val: 7}},
+	}))
 }
