@@ -330,4 +330,7 @@ func main() {
 	fmt.Printf("The longest palindromic substring is %s\n", solutions.LongestPalindrome("babad"))
 	fmt.Printf("The longest prefix is %s\n", solutions.LongestCommonPrefix([]string{"flower", "flow", "flight"}))
 	fmt.Printf("The parentheses are %v\n", solutions.GenerateParenthesis(2))
+	fmt.Printf("Swap nodes in pairs yields %v\n", solutions.SwapPairs(&utils.ListNode{
+		Val: 1, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 3, Next: &utils.ListNode{Val: 4}}},
+	}))
 }
