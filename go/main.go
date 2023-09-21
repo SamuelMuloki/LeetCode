@@ -327,4 +327,5 @@ func main() {
 	fmt.Printf("The head after removing the nth node from the end of the linked list is %v\n", solutions.RemoveNthFromEnd(&utils.ListNode{
 		Val: 1, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 3, Next: &utils.ListNode{Val: 4, Next: &utils.ListNode{Val: 5}}}},
 	}, 2))
+	fmt.Printf("The longest palindromic substring is %s\n", solutions.LongestPalindrome("babad"))
 }
