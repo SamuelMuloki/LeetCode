@@ -6,7 +6,7 @@ import "github.com/SamuelMuloki/LeetCode/go/utils"
  * Definition for singly-linked list.
  * type ListNode struct {
  *     Val int
- *     Next *utils.ListNode
+ *     Next *ListNode
  * }
  */
 func AddTwoNumbers(l1 *utils.ListNode, l2 *utils.ListNode) *utils.ListNode {
