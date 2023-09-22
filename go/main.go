@@ -337,4 +337,7 @@ func main() {
 		Val: 3, Left: &utils.TreeNode{Val: 9}, Right: &utils.TreeNode{Val: 20, Left: &utils.TreeNode{Val: 15}, Right: &utils.TreeNode{Val: 7}},
 	}))
 	fmt.Printf("The index of the string is %d\n", solutions.StrStr("sadbutsad", "sad"))
+	fmt.Printf("Is valid BST %t\n", solutions.IsValidBST(&utils.TreeNode{
+		Val: 2, Left: &utils.TreeNode{Val: 1}, Right: &utils.TreeNode{Val: 3},
+	}))
 }
