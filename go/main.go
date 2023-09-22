@@ -340,4 +340,7 @@ func main() {
 	fmt.Printf("Is valid BST %t\n", solutions.IsValidBST(&utils.TreeNode{
 		Val: 2, Left: &utils.TreeNode{Val: 1}, Right: &utils.TreeNode{Val: 3},
 	}))
+	fmt.Printf("Is palindrome linked list %t\n", solutions.IsPalindromeList(&utils.ListNode{
+		Val: 1, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 1}}},
+	}))
 }
