@@ -336,4 +336,5 @@ func main() {
 	fmt.Printf("The level order traversal is %v\n", solutions.LevelOrder(&utils.TreeNode{
 		Val: 3, Left: &utils.TreeNode{Val: 9}, Right: &utils.TreeNode{Val: 20, Left: &utils.TreeNode{Val: 15}, Right: &utils.TreeNode{Val: 7}},
 	}))
+	fmt.Printf("The index of the string is %d\n", solutions.StrStr("sadbutsad", "sad"))
 }
