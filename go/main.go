@@ -343,4 +343,5 @@ func main() {
 	fmt.Printf("Is palindrome linked list %t\n", solutions.IsPalindromeList(&utils.ListNode{
 		Val: 1, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 1}}},
 	}))
+	fmt.Printf("The longest string chain is %d\n", solutions.LongestStrChain([]string{"abcd", "dbqca"}))
 }
