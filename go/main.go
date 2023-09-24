@@ -346,4 +346,5 @@ func main() {
 	fmt.Printf("The longest string chain is %d\n", solutions.LongestStrChain([]string{"abcd", "dbqca"}))
 	fmt.Printf("The longest increasing subsequence is %d\n", solutions.LengthOfLIS([]int{10, 9, 2, 5, 3, 7, 101, 18}))
 	fmt.Printf("The champagne tower Jth class in the ith row is this full %v\n", solutions.ChampagneTower(1, 1, 1))
+	fmt.Printf("The maximum odd binary is %s\n", solutions.MaximumOddBinaryNumber("010"))
 }
