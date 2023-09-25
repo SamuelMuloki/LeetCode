@@ -1,10 +1,11 @@
 package solutions
 
 func FindTheDifference(s string, t string) byte {
-	newArr := []byte(t)
+	s += t
+	c := byte(0)
 	for i := range s {
-		newArr[i+1] += newArr[i] - s[i]
+		c ^= s[i]
 	}
 
-	return newArr[len(newArr)-1]
+	return c
 }
