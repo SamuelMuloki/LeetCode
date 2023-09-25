@@ -348,4 +348,5 @@ func main() {
 	fmt.Printf("The champagne tower Jth class in the ith row is this full %v\n", solutions.ChampagneTower(1, 1, 1))
 	fmt.Printf("The maximum odd binary is %s\n", solutions.MaximumOddBinaryNumber("010"))
 	fmt.Printf("The difference between strings s and t is %d\n", solutions.FindTheDifference("aeee", "aeeea"))
+	fmt.Printf("The length of the last word is %d\n", solutions.LengthOfLastWord("Hello World"))
 }
