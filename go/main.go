@@ -349,4 +349,7 @@ func main() {
 	fmt.Printf("The maximum odd binary is %s\n", solutions.MaximumOddBinaryNumber("010"))
 	fmt.Printf("The difference between strings s and t is %d\n", solutions.FindTheDifference("aeee", "aeeea"))
 	fmt.Printf("The length of the last word is %d\n", solutions.LengthOfLastWord("Hello World"))
+	fmt.Printf("Removing the duplicates yields %v\n", solutions.DeleteDuplicates(&utils.ListNode{
+		Val: 1, Next: &utils.ListNode{Val: 1, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 1}}}},
+	}))
 }
