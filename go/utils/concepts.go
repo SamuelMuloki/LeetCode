@@ -58,8 +58,8 @@ func PrintAllSubsets(n, minMask int) {
 				fmt.Printf("%d", k+1)
 			}
 		}
+		fmt.Println()
 	}
-	fmt.Println()
 }
 
 func MaximumCost(i, mask, n int, dp [3][1 << 3]int, cost [][]int) int {
