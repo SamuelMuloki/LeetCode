@@ -377,6 +377,6 @@ func main() {
 			}}},
 	}))
 	fmt.Printf("Compressing the string yields %d\n", solutions.Compress([]byte{'a', 'a', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'c', 'c', 'c'}))
-	fmt.Printf("Removing duplicate letters yields %s\n", solutions.RemoveDuplicateLetters("abc"))
+	fmt.Printf("Removing duplicate letters yields %s\n", solutions.RemoveDuplicateLetters("bcabc"))
 	fmt.Printf("The smallest subsequence of distinct characters is %s\n", solutions.SmallestSubsequence("cbacdcbc"))
 }
