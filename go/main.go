@@ -101,6 +101,22 @@ func main() {
 
 	fmt.Println("BFS", visitedBFSOrder)
 
+	fmt.Println("Printing all subsets of 3")
+	utils.PrintAllSubsets(3, (1<<3)-1) // O(2^N * N)
+
+	dp := [3][1 << 3]int{}
+	for i := range dp {
+		for k := range dp[i] {
+			dp[i][k] = -1
+		}
+	}
+
+	fmt.Printf("The maximum cost is %d\n", utils.MaximumCost(0, 0, 3, dp, [][]int{
+		{2, 9, 7},
+		{6, 4, 3},
+		{1, 8, 5},
+	})) // O(N * 2^N)
+
 	nums := []int{1, 2, 3, 1}
 	fmt.Printf("Array contains duplicate: %t\n", solutions.ContainsDuplicate(nums))
 	fmt.Printf("Is Anagram: %t\n", solutions.IsAnagram("anagram", "nagaram"))
