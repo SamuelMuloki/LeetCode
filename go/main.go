@@ -380,4 +380,5 @@ func main() {
 	fmt.Printf("Removing duplicate letters yields %s\n", solutions.RemoveDuplicateLetters("bcabc"))
 	fmt.Printf("The smallest subsequence of distinct characters is %s\n", solutions.SmallestSubsequence("cbacdcbc"))
 	fmt.Printf("The maximum number of vowels in a substring is %d\n", solutions.MaxVowels("abciiidef", 3))
+	fmt.Printf("The maximum consecutive ones are %d\n", solutions.FindMaxConsecutiveOnes([]int{1, 1, 0, 1, 1, 1}))
 }
