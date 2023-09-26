@@ -360,4 +360,5 @@ func main() {
 				}},
 			}}},
 	}))
+	fmt.Printf("Compressing the string yields %d\n", solutions.Compress([]byte{'a', 'a', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'c', 'c', 'c'}))
 }
