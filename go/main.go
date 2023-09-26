@@ -382,4 +382,5 @@ func main() {
 	fmt.Printf("The maximum number of vowels in a substring is %d\n", solutions.MaxVowels("abciiidef", 3))
 	fmt.Printf("The maximum consecutive ones are %d\n", solutions.FindMaxConsecutiveOnes([]int{1, 1, 0, 1, 1, 1}))
 	fmt.Printf("The maximum consecutive ones wih k Os flipped is %d\n", solutions.LongestOnes([]int{1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0}, 2))
+	fmt.Printf("The longest subarray of 1's after deleting one element is %d\n", solutions.LongestSubarray([]int{1, 1, 0, 1}))
 }
