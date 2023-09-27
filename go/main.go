@@ -385,4 +385,5 @@ func main() {
 	fmt.Printf("The longest subarray of 1's after deleting one element is %d\n", solutions.LongestSubarray([]int{1, 1, 0, 1}))
 	fmt.Printf("The decoded string at index is %s\n", solutions.DecodeAtIndex("y959q969u3hb22odq595", 222280369))
 	fmt.Printf("The highest altitude is %d\n", solutions.LargestAltitude([]int{-5, 1, 5, 0, -7}))
+	fmt.Printf("The integer at rowIndex of the pascal's triangle is %v\n", solutions.GetRow(3))
 }
