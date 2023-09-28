@@ -386,4 +386,7 @@ func main() {
 	fmt.Printf("The decoded string at index is %s\n", solutions.DecodeAtIndex("y959q969u3hb22odq595", 222280369))
 	fmt.Printf("The highest altitude is %d\n", solutions.LargestAltitude([]int{-5, 1, 5, 0, -7}))
 	fmt.Printf("The integer at rowIndex of the pascal's triangle is %v\n", solutions.GetRow(3))
+	nums1 := []int{1, 2, 3, 0, 0, 0}
+	solutions.Merge(nums1, 3, []int{2, 5, 6}, 3)
+	fmt.Printf("The merged sorted array is %d\n", nums1)
 }
