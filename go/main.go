@@ -393,4 +393,7 @@ func main() {
 	fmt.Printf("The longest substring in repeating character replaced array is %d\n", solutions.CharacterReplacement("ABAB", 2))
 	fmt.Printf("The number of distinct solutions for the n-queens puzzle are, %d\n", solutions.TotalNQueens(4))
 	fmt.Printf("The minimum number of operations to form a target array is %d\n", solutions.MinNumberOperations([]int{3, 1, 1, 2}))
+	fmt.Printf("The sorted list is %v\n", solutions.MergeKLists([]*utils.ListNode{
+		{Val: 1}, {Val: 2},
+	}))
 }
