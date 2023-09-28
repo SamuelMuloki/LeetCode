@@ -390,4 +390,5 @@ func main() {
 	solutions.Merge(nums1, 3, []int{2, 5, 6}, 3)
 	fmt.Printf("The merged sorted array is %d\n", nums1)
 	fmt.Printf("Sorting an array by parity yields %v\n", solutions.SortArrayByParity([]int{3, 1, 2, 4}))
+	fmt.Printf("The longest substring in repeating character replaced array is %d\n", solutions.CharacterReplacement("ABAB", 2))
 }
