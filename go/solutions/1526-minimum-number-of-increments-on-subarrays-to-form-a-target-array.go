@@ -1,17 +1,13 @@
 package solutions
 
 func MinNumberOperations(target []int) int {
-	st, count := []int{0}, 0
-	for i := 0; i < len(target); i++ {
-		if target[i] > st[len(st)-1] {
-			count += target[i] - st[len(st)-1]
+	res := target[0]
+	for i := 1; i < len(target); i++ {
+		prev, curr := target[i-1], target[i]
+		if curr > prev {
+			res += curr - prev
 		}
-
-		for st[len(st)-1] > target[i] {
-			st = st[:len(st)-1]
-		}
-		st = append(st, target[i])
 	}
 
-	return count
+	return res
 }
