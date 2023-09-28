@@ -1,5 +1,7 @@
 package solutions
 
+import "github.com/SamuelMuloki/LeetCode/go/utils"
+
 func Candy(ratings []int) int {
 	n := len(ratings)
 
@@ -17,18 +19,10 @@ func Candy(ratings []int) int {
 	candies := left[n-1]
 	for i := n - 2; i >= 0; i-- {
 		if ratings[i] > ratings[i+1] {
-			left[i] = max(left[i], left[i+1]+1)
+			left[i] = utils.Max(left[i], left[i+1]+1)
 		}
 		candies += left[i]
 	}
 
 	return candies
-}
-
-func max(x, y int) int {
-	if x > y {
-		return x
-	}
-
-	return y
 }
