@@ -3,6 +3,8 @@ package solutions
 import (
 	"math"
 	"strings"
+
+	"github.com/SamuelMuloki/LeetCode/go/utils"
 )
 
 func LongestCommonPrefix(strs []string) string {
@@ -12,7 +14,7 @@ func LongestCommonPrefix(strs []string) string {
 
 	minLen := math.MaxInt
 	for i := range strs {
-		minLen = min(minLen, len(strs[i]))
+		minLen = utils.Min(minLen, len(strs[i]))
 	}
 
 	l, r := 1, minLen
