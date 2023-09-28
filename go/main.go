@@ -389,4 +389,5 @@ func main() {
 	nums1 := []int{1, 2, 3, 0, 0, 0}
 	solutions.Merge(nums1, 3, []int{2, 5, 6}, 3)
 	fmt.Printf("The merged sorted array is %d\n", nums1)
+	fmt.Printf("Sorting an array by parity yields %v\n", solutions.SortArrayByParity([]int{3, 1, 2, 4}))
 }
