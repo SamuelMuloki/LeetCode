@@ -36,6 +36,7 @@ const { intersection } = require("./0349-intersection-of-two-arrays");
 const { intersect } = require("./0350-intersection-of-two-arrays-ii");
 const { isSubsequence } = require("./0392-is-subsequence");
 const { strStr } = require("./0028-find-the-index-of-the-first-occurrence-in-a-string");
+const { firstUniqChar } = require("./0387-first-unique-character-in-a-string");
 
 console.log(containsDuplicate([1, 2, 3, 1]));
 console.log(isAnagram("rat", "car"));
@@ -177,3 +178,4 @@ console.log("Intersection of arrays", intersection([1, 2, 2, 1], [2, 2]));
 console.log("Intersection of arrays ii", intersect([1, 2, 2, 1], [2, 2, 2]));
 console.log("Is subsequence", isSubsequence("abc", "ahbgdc"))
 console.log("The index of the string is ", strStr("sadbutsad", "sad"))
+console.log("The first unique character in the string is at position", firstUniqChar("leetcode"))
