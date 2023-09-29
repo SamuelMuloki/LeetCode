@@ -396,4 +396,5 @@ func main() {
 	fmt.Printf("The sorted list is %v\n", solutions.MergeKLists([]*utils.ListNode{
 		{Val: 1}, {Val: 2},
 	}))
+	fmt.Printf("Is the array monotonic %t\n", solutions.IsMonotonic([]int{-1, 3, 2}))
 }
