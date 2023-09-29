@@ -399,4 +399,5 @@ func main() {
 	fmt.Printf("Is the array monotonic %t\n", solutions.IsMonotonic([]int{-1, 3, 2}))
 	fmt.Printf("The number of unique paths are %d\n", solutions.UniquePaths(3, 2))
 	fmt.Println("The first unique character in the string is at position", solutions.FirstUniqChar("loveleetcode"))
+	fmt.Printf("The maximum subarray sum is %d\n", solutions.MaxSubArray([]int{-2, 1, -3, 4, -1, 2, 1, -5, 4}))
 }
