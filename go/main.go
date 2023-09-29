@@ -397,5 +397,6 @@ func main() {
 		{Val: 1}, {Val: 2},
 	}))
 	fmt.Printf("Is the array monotonic %t\n", solutions.IsMonotonic([]int{-1, 3, 2}))
-	fmt.Printf("The number of unique paths are %d\n", solutions.UniquePaths(3, 7))
+	fmt.Printf("The number of unique paths are %d\n", solutions.UniquePaths(3, 2))
+	fmt.Println("The first unique character in the string is at position", solutions.FirstUniqChar("loveleetcode"))
 }
