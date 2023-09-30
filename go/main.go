@@ -410,5 +410,10 @@ func main() {
 	fmt.Println(RecentCounter.Ping(5936))
 	fmt.Printf("The Number of recent calls are: %v\n", RecentCounter.Ping(5957))
 
-	fmt.Printf("Deleting middle node of the linked list yields %v\n", solutions.DeleteMiddle(&utils.ListNode{Val: 2}))
+	fmt.Printf("Deleting middle node of the linked list yields %v\n", solutions.DeleteMiddle(&utils.ListNode{
+		Val: 2, Next: &utils.ListNode{Val: 1},
+	}))
+	fmt.Printf("The Odd even linked list is now %v\n", solutions.OddEvenList(&utils.ListNode{
+		Val: 1, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 3, Next: &utils.ListNode{Val: 4, Next: &utils.ListNode{Val: 5}}}},
+	}))
 }
