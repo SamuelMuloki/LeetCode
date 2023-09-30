@@ -400,4 +400,5 @@ func main() {
 	fmt.Printf("The number of unique paths are %d\n", solutions.UniquePaths(3, 2))
 	fmt.Println("The first unique character in the string is at position", solutions.FirstUniqChar("loveleetcode"))
 	fmt.Printf("The maximum subarray sum is %d\n", solutions.MaxSubArray([]int{-2, 1, -3, 4, -1, 2, 1, -5, 4}))
+	fmt.Printf("There is a 132 pattern in the array %t\n", solutions.Find132pattern([]int{1, 2, 3, 4}))
 }
