@@ -409,4 +409,6 @@ func main() {
 	fmt.Println(RecentCounter.Ping(4921))
 	fmt.Println(RecentCounter.Ping(5936))
 	fmt.Printf("The Number of recent calls are: %v\n", RecentCounter.Ping(5957))
+
+	fmt.Printf("Deleting middle node of the linked list yields %v\n", solutions.DeleteMiddle(&utils.ListNode{Val: 2}))
 }
