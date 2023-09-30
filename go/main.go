@@ -401,4 +401,5 @@ func main() {
 	fmt.Println("The first unique character in the string is at position", solutions.FirstUniqChar("loveleetcode"))
 	fmt.Printf("The maximum subarray sum is %d\n", solutions.MaxSubArray([]int{-2, 1, -3, 4, -1, 2, 1, -5, 4}))
 	fmt.Printf("There is a 132 pattern in the array %t\n", solutions.Find132pattern([]int{1, 2, 3, 4}))
+	fmt.Printf("The minimum cost climbing stairs is %d\n", solutions.MinCostClimbingStairs([]int{10, 15, 20}))
 }
