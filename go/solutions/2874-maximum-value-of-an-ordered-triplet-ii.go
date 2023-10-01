@@ -1,13 +1,10 @@
 package solutions
 
-import (
-	"github.com/SamuelMuloki/LeetCode/go/utils"
-)
+import "github.com/SamuelMuloki/LeetCode/go/utils"
 
-func MaximumTripletValue(nums []int) int64 {
+func MaximumTripletValue2(nums []int) int64 {
 	maxV, n := 0, len(nums)
-	maxLeft := make([]int, n)
-	maxRight := make([]int, n)
+	maxLeft, maxRight := make([]int, n), make([]int, n)
 
 	maxRight[n-1] = nums[n-1]
 	for i := n - 2; i >= 0; i-- {
