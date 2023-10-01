@@ -417,4 +417,5 @@ func main() {
 		Val: 1, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 3, Next: &utils.ListNode{Val: 4, Next: &utils.ListNode{Val: 5}}}},
 	}))
 	fmt.Printf("Reverse the words III yields %s\n", solutions.ReverseWordsIII("Let's take LeetCode contest"))
+	fmt.Printf("The maximum triplet value is %d\n", solutions.MaximumTripletValue([]int{6, 11, 12, 12, 7, 9, 2, 11, 12, 4, 19, 14, 16, 8, 16}))
 }
