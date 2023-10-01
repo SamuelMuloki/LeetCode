@@ -416,4 +416,5 @@ func main() {
 	fmt.Printf("The Odd even linked list is now %v\n", solutions.OddEvenList(&utils.ListNode{
 		Val: 1, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 3, Next: &utils.ListNode{Val: 4, Next: &utils.ListNode{Val: 5}}}},
 	}))
+	fmt.Printf("Reverse the words III yields %s\n", solutions.ReverseWordsIII("Let's take LeetCode contest"))
 }
