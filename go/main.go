@@ -420,4 +420,5 @@ func main() {
 	fmt.Printf("The maximum triplet value of ordered triplet is %d\n", solutions.MaximumTripletValue([]int{12, 6, 1, 2, 7}))
 	fmt.Printf("The maximum triplet value of ordered triplet II is %d\n", solutions.MaximumTripletValue2([]int{1, 10, 3, 4, 19}))
 	fmt.Printf("The minimum size subarray in infinite array is %d\n", solutions.MinSizeSubarray([]int{1, 2, 3, 1, 2, 3, 1, 2, 3}, 5))
+	fmt.Printf("The winner of the remove colored pieces if both neighbors are the same color is %t\n", solutions.WinnerOfGame("AAAABB"))
 }
