@@ -423,4 +423,7 @@ func main() {
 	fmt.Printf("The winner of the remove colored pieces if both neighbors are the same color is %t\n", solutions.WinnerOfGame("AAAABB"))
 	fmt.Printf("The minimum operations to collect element are %d\n", solutions.MinCollectOperations([]int{3, 1, 5, 4, 2}, 2))
 	fmt.Printf("The minimum number of operations to make array empty are %d\n", solutions.MinEmptyOperations([]int{2, 3, 3, 2, 2, 4, 2, 3, 4}))
+	nums2 := []int{2, 0, 2, 1, 1, 0}
+	solutions.SortColors(nums2)
+	fmt.Printf("Sorting the colors yields %v\n", nums2)
 }
