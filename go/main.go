@@ -422,4 +422,5 @@ func main() {
 	fmt.Printf("The minimum size subarray in infinite array is %d\n", solutions.MinSizeSubarray([]int{1, 2, 3, 1, 2, 3, 1, 2, 3}, 5))
 	fmt.Printf("The winner of the remove colored pieces if both neighbors are the same color is %t\n", solutions.WinnerOfGame("AAAABB"))
 	fmt.Printf("The minimum operations to collect element are %d\n", solutions.MinCollectOperations([]int{3, 1, 5, 4, 2}, 2))
+	fmt.Printf("The minimum number of operations to make array empty are %d\n", solutions.MinEmptyOperations([]int{2, 3, 3, 2, 2, 4, 2, 3, 4}))
 }
