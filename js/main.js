@@ -40,6 +40,7 @@ const { firstUniqChar } = require("./0387-first-unique-character-in-a-string");
 const { find132pattern } = require("./0456-132-pattern");
 const { reverseWords } = require("./0557-reverse-words-in-a-string-iii");
 const { winnerOfGame } = require("./2038-remove-colored-pieces-if-both-neighbors-are-the-same-color");
+const { numIdenticalPairs } = require("./1512-number-of-good-pairs");
 
 console.log(containsDuplicate([1, 2, 3, 1]));
 console.log(isAnagram("rat", "car"));
@@ -185,3 +186,4 @@ console.log("The first unique character in the string is at position", firstUniq
 console.log("There is a 132 pattern in the array", find132pattern([1, 2, 3, 4]))
 console.log("Reverse the words III yields", reverseWords("Let's take LeetCode contest"))
 console.log("The winner of the remove colored pieces if both neighbors are the same color is", winnerOfGame("AAABABB"))
+console.log("The number of identical pairs in array are", numIdenticalPairs([1, 2, 3, 1, 1, 3]))
