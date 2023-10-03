@@ -427,4 +427,5 @@ func main() {
 	solutions.SortColors(nums2)
 	fmt.Printf("Sorting the colors yields %v\n", nums2)
 	fmt.Printf("The number of identical pairs in array are %d\n", solutions.NumIdenticalPairs([]int{1, 2, 3, 1, 1, 3}))
+	fmt.Printf("The strings are close, %t\n", solutions.CloseStrings("aaabbbbccddeeeeefffff", "aaaaabbcccdddeeeeffff"))
 }
