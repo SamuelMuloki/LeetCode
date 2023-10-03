@@ -429,4 +429,5 @@ func main() {
 	fmt.Printf("The number of identical pairs in array are %d\n", solutions.NumIdenticalPairs([]int{1, 2, 3, 1, 1, 3}))
 	fmt.Printf("The strings are close, %t\n", solutions.CloseStrings("aaabbbbccddeeeeefffff", "aaaaabbcccdddeeeeffff"))
 	fmt.Printf("The result string after removing the stars is %s\n", solutions.RemoveStars("leet**cod*e"))
+	fmt.Printf("The result of the array after asteroid collision is %v\n", solutions.AsteroidCollision([]int{5, 10, -5}))
 }
