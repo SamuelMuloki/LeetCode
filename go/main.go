@@ -430,4 +430,14 @@ func main() {
 	fmt.Printf("The strings are close, %t\n", solutions.CloseStrings("aaabbbbccddeeeeefffff", "aaaaabbcccdddeeeeffff"))
 	fmt.Printf("The result string after removing the stars is %s\n", solutions.RemoveStars("leet**cod*e"))
 	fmt.Printf("The result of the array after asteroid collision is %v\n", solutions.AsteroidCollision([]int{5, 10, -5}))
+
+	myHashMap := solutions.HashConstructor()
+	myHashMap.Put(1, 1)
+	myHashMap.Put(2, 2)
+	fmt.Printf("The Value for key %d from the hashmap is %d\n", 1, myHashMap.Get(1))
+	fmt.Printf("The Value for the key %d from the hashmap is %d\n", 3, myHashMap.Get(3))
+	myHashMap.Put(2, 1)
+	fmt.Printf("The Value for the key %d from the hashmap is %d\n", 2, myHashMap.Get(2))
+	myHashMap.Remove(2)
+	fmt.Printf("The Value for the key %d from the hashmap is %d\n", 2, myHashMap.Get(2))
 }
