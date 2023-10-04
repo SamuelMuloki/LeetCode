@@ -440,4 +440,9 @@ func main() {
 	fmt.Printf("The Value for the key %d from the hashmap is %d\n", 2, myHashMap.Get(2))
 	myHashMap.Remove(2)
 	fmt.Printf("The Value for the key %d from the hashmap is %d\n", 2, myHashMap.Get(2))
+
+	fmt.Printf("The tree leaves has a similar sequence %t\n", solutions.LeafSimilar(
+		&utils.TreeNode{Val: 1, Left: &utils.TreeNode{Val: 2}, Right: &utils.TreeNode{Val: 3}},
+		&utils.TreeNode{Val: 1, Left: &utils.TreeNode{Val: 3}, Right: &utils.TreeNode{Val: 2}},
+	))
 }
