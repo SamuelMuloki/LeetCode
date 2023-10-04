@@ -1,52 +1,29 @@
 package solutions
 
-type Pair struct {
-	key, value int
-}
-
 type MyHashMap struct {
-	Pairs []Pair
+	data []int
 }
 
 func HashConstructor() MyHashMap {
-	return MyHashMap{}
+	data := make([]int, 1000001)
+
+	for i := range data {
+		data[i] = -1
+	}
+
+	return MyHashMap{data: data}
 }
 
 func (this *MyHashMap) Put(key int, value int) {
-	for i := range this.Pairs {
-		if this.Pairs[i].key == key {
-			this.Pairs[i].value = value
-			return
-		}
-	}
-
-	this.Pairs = append(this.Pairs, Pair{
-		key:   key,
-		value: value,
-	})
+	this.data[key] = value
 }
 
 func (this *MyHashMap) Get(key int) int {
-	for i := range this.Pairs {
-		if this.Pairs[i].key == key {
-			return this.Pairs[i].value
-		}
-	}
-
-	return -1
+	return this.data[key]
 }
 
 func (this *MyHashMap) Remove(key int) {
-	for i := 0; i < len(this.Pairs); i++ {
-		if this.Pairs[i].key == key {
-			rem := this.Pairs[:i]
-			if i < len(this.Pairs) {
-				rem = append(rem, this.Pairs[i+1:]...)
-			}
-			this.Pairs = rem
-			return
-		}
-	}
+	this.data[key] = -1
 }
 
 /**
