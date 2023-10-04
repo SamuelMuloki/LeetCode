@@ -1,29 +1,60 @@
 package solutions
 
+type node struct {
+	key, val int
+	next     *node
+}
+
 type MyHashMap struct {
-	data []int
+	size, mult int
+	data       []*node
 }
 
 func HashConstructor() MyHashMap {
-	data := make([]int, 1000001)
+	return MyHashMap{size: 19997, mult: 12582917, data: make([]*node, 19997)}
+}
 
-	for i := range data {
-		data[i] = -1
-	}
-
-	return MyHashMap{data: data}
+func (this *MyHashMap) Hash(key int) int {
+	return (key * this.mult) % this.size
 }
 
 func (this *MyHashMap) Put(key int, value int) {
-	this.data[key] = value
+	this.Remove(key)
+	pos := this.Hash(key)
+	this.data[pos] = &node{key: key, val: value, next: this.data[pos]}
 }
 
 func (this *MyHashMap) Get(key int) int {
-	return this.data[key]
+	pos := this.Hash(key)
+	head := this.data[pos]
+
+	for ; head != nil; head = head.next {
+		if head.key == key {
+			return head.val
+		}
+	}
+
+	return -1
 }
 
 func (this *MyHashMap) Remove(key int) {
-	this.data[key] = -1
+	pos := this.Hash(key)
+	head := this.data[pos]
+
+	if head == nil {
+		return
+	}
+
+	if head.key == key {
+		this.data[pos] = head.next
+	} else {
+		for ; head.next != nil; head = head.next {
+			if head.next.key == key {
+				head.next = head.next.next
+				return
+			}
+		}
+	}
 }
 
 /**
