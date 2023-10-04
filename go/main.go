@@ -101,6 +101,22 @@ func main() {
 
 	fmt.Println("BFS", visitedBFSOrder)
 
+	fmt.Println("Printing all subsets of 3")
+	utils.PrintAllSubsets(3, (1<<3)-1) // O(2^N * N)
+
+	dp := [3][1 << 3]int{}
+	for i := range dp {
+		for k := range dp[i] {
+			dp[i][k] = -1
+		}
+	}
+
+	fmt.Printf("The maximum cost is %d\n", utils.MaximumCost(0, 0, 3, dp, [][]int{
+		{2, 9, 7},
+		{6, 4, 3},
+		{1, 8, 5},
+	})) // O(N * 2^N)
+
 	nums := []int{1, 2, 3, 1}
 	fmt.Printf("Array contains duplicate: %t\n", solutions.ContainsDuplicate(nums))
 	fmt.Printf("Is Anagram: %t\n", solutions.IsAnagram("anagram", "nagaram"))
@@ -118,11 +134,11 @@ func main() {
 	fmt.Printf("String has valid parentheses: %v\n", solutions.IsValid("()[]{}"))
 	fmt.Printf("The index of the target is: %v\n", solutions.Search([]int{-1, 0, 3, 5, 9, 12}, 9))
 
-	head := &solutions.ListNode{Val: 1, Next: &solutions.ListNode{Val: 2, Next: nil}}
+	head := &utils.ListNode{Val: 1, Next: &utils.ListNode{Val: 2, Next: nil}}
 	fmt.Printf("The Reversed linked list is: %v\n", solutions.ReverseList(head))
 
-	list1 := &solutions.ListNode{Val: 1, Next: &solutions.ListNode{Val: 2, Next: &solutions.ListNode{Val: 4, Next: nil}}}
-	list2 := &solutions.ListNode{Val: 1, Next: &solutions.ListNode{Val: 3, Next: &solutions.ListNode{Val: 4, Next: nil}}}
+	list1 := &utils.ListNode{Val: 1, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 4, Next: nil}}}
+	list2 := &utils.ListNode{Val: 1, Next: &utils.ListNode{Val: 3, Next: &utils.ListNode{Val: 4, Next: nil}}}
 	fmt.Printf("The final lists after merging two lists is %v\n", solutions.MergeTwoLists(list1, list2))
 	fmt.Printf("You can climb to the top in %d distinct ways\n", solutions.ClimbStairs(6))
 	fmt.Printf("The median of two sorted arrays a, b is %v\n", solutions.FindMedianSortedArrays([]int{1, 2}, []int{3}))
@@ -147,9 +163,9 @@ func main() {
 	stream.GetHighestNumber(3)
 	fmt.Printf("The highest number for stream is %d\n", stream.GetHighestNumber(7))
 
-	reorderHead := &solutions.ListNode{
-		Val: 1, Next: &solutions.ListNode{Val: 2, Next: &solutions.ListNode{
-			Val: 3, Next: &solutions.ListNode{Val: 4, Next: nil},
+	reorderHead := &utils.ListNode{
+		Val: 1, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{
+			Val: 3, Next: &utils.ListNode{Val: 4, Next: nil},
 		}}}
 
 	solutions.ReorderList(reorderHead)
@@ -231,8 +247,8 @@ func main() {
 	fmt.Printf("The peak element in the array is %d\n", solutions.FindPeakElement([]int{1, 2, 3, 1}))
 	fmt.Printf("The minimum size of subarray sum is %d\n", solutions.MinSubArrayLen(11, []int{1, 2, 3, 4, 5}))
 
-	l1 := &solutions.ListNode{Val: 9, Next: &solutions.ListNode{Val: 9, Next: &solutions.ListNode{Val: 9, Next: &solutions.ListNode{Val: 9, Next: &solutions.ListNode{Val: 9, Next: &solutions.ListNode{Val: 9, Next: &solutions.ListNode{Val: 9}}}}}}}
-	l2 := &solutions.ListNode{Val: 9, Next: &solutions.ListNode{Val: 9, Next: &solutions.ListNode{Val: 9, Next: &solutions.ListNode{Val: 9}}}}
+	l1 := &utils.ListNode{Val: 9, Next: &utils.ListNode{Val: 9, Next: &utils.ListNode{Val: 9, Next: &utils.ListNode{Val: 9, Next: &utils.ListNode{Val: 9, Next: &utils.ListNode{Val: 9, Next: &utils.ListNode{Val: 9}}}}}}}
+	l2 := &utils.ListNode{Val: 9, Next: &utils.ListNode{Val: 9, Next: &utils.ListNode{Val: 9, Next: &utils.ListNode{Val: 9}}}}
 	fmt.Printf("The sum of two numbers is %v\n", solutions.AddTwoNumbers(l1, l2))
 	fmt.Printf("The number is a palindrome: %t\n", solutions.IsPalindromeNumber(12345654321))
 	fmt.Printf("The integer after conversion is %d\n", solutions.MyAtoi("-2147483647"))
@@ -255,7 +271,7 @@ func main() {
 	fmt.Printf("Converting roman to integer yields %d\n", solutions.RomanToInt("MCCCXCIX"))
 	fmt.Printf("Converting integer to roman yields %s\n", solutions.IntToRoman(1399))
 
-	rbl := &solutions.ListNode{Val: 1, Next: &solutions.ListNode{Val: 2, Next: &solutions.ListNode{Val: 3, Next: &solutions.ListNode{Val: 4, Next: &solutions.ListNode{Val: 5}}}}}
+	rbl := &utils.ListNode{Val: 1, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 3, Next: &utils.ListNode{Val: 4, Next: &utils.ListNode{Val: 5}}}}}
 	val := solutions.ReverseBetween(rbl, 1, 4)
 	fmt.Println(val.Next.Next.Next)
 	fmt.Printf("Reversing the linked list yields %v\n", val)
@@ -281,9 +297,9 @@ func main() {
 		{"JFK", "SFO"}, {"JFK", "ATL"}, {"SFO", "ATL"}, {"ATL", "JFK"}, {"ATL", "SFO"},
 	}))
 
-	cycle := &solutions.ListNode{Val: 2, Next: &solutions.ListNode{Val: 0, Next: &solutions.ListNode{Val: 4}}}
+	cycle := &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 0, Next: &utils.ListNode{Val: 4}}}
 	cycle.Next = cycle
-	fmt.Printf("The linked list has a cycle: %t\n", solutions.HasCycle(&solutions.ListNode{Val: 3, Next: cycle}))
+	fmt.Printf("The linked list has a cycle: %t\n", solutions.HasCycle(&utils.ListNode{Val: 3, Next: cycle}))
 	fmt.Printf("The minimum cost to connect all points is %d\n", solutions.MinCostConnectPoints([][]int{
 		{0, 0}, {2, 2}, {3, 10}, {5, 2}, {7, 0},
 	}))
@@ -303,4 +319,130 @@ func main() {
 	}, 3))
 	fmt.Printf("The sum of indices with k set bits are %d\n", solutions.SumIndicesWithKSetBits([]int{5, 10, 1, 5, 2}, 1))
 	fmt.Printf("The possible way to select a group of students so that everyone remains happy is %d\n", solutions.CountWays([]int{6, 0, 3, 3, 6, 7, 2, 7}))
+	fmt.Printf("The Binary tree Preorder Traversal of tree is %v\n", solutions.PreorderTraversal(&utils.TreeNode{
+		Val: 1, Left: &utils.TreeNode{Val: 2}, Right: &utils.TreeNode{Val: 3},
+	}))
+	fmt.Printf("The Binary tree Inorder Traversal of tree is %v\n", solutions.InorderTraversal(&utils.TreeNode{
+		Val: 3, Left: &utils.TreeNode{Val: 1, Right: &utils.TreeNode{Val: 2}},
+	}))
+	fmt.Printf("The Binary tree Postorder Traversal of tree is %v\n", solutions.PostorderTraversal(&utils.TreeNode{
+		Val: 1, Left: &utils.TreeNode{Val: 2, Left: &utils.TreeNode{Val: 3}, Right: &utils.TreeNode{Val: 4, Left: &utils.TreeNode{Val: 5}, Right: &utils.TreeNode{Val: 6}}}, Right: &utils.TreeNode{Val: 7},
+	}))
+	fmt.Printf("The N array tree Postorder Traversal of tree is %v\n", solutions.Postorder(&utils.Node{
+		Val: 1, Children: []*utils.Node{
+			{Val: 2},
+			{Val: 3, Children: []*utils.Node{{Val: 6}, {Val: 7, Children: []*utils.Node{{Val: 11}, {Val: 14}}}}},
+			{Val: 4, Children: []*utils.Node{{Val: 8}, {Val: 12}}},
+			{Val: 5, Children: []*utils.Node{{Val: 9, Children: []*utils.Node{{Val: 13}}}, {Val: 10}}},
+		},
+	}))
+	fmt.Printf("The minimum number of operations to reduce x to zero are %d\n", solutions.MinOperations([]int{1, 1, 4, 2, 3}, 5))
+	fmt.Printf("The sub array sum is %d\n", solutions.SubarraySum([]int{-4, 3, 6, -2, 1, -1, 0, 2, -2, 3, 1}, 5))
+	fmt.Printf("The pivot index of the array is %d\n", solutions.PivotIndex([]int{1, 7, 3, 6, 5, 6}))
+	fmt.Printf("The middle index in the array is %d\n", solutions.FindMiddleIndex([]int{2, 3, -1, 8, 4}))
+	fmt.Printf("The head after removing the nth node from the end of the linked list is %v\n", solutions.RemoveNthFromEnd(&utils.ListNode{
+		Val: 1, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 3, Next: &utils.ListNode{Val: 4, Next: &utils.ListNode{Val: 5}}}},
+	}, 2))
+	fmt.Printf("The longest palindromic substring is %s\n", solutions.LongestPalindrome("babad"))
+	fmt.Printf("The longest prefix is %s\n", solutions.LongestCommonPrefix([]string{"flower", "flow", "flight"}))
+	fmt.Printf("The parentheses are %v\n", solutions.GenerateParenthesis(2))
+	fmt.Printf("Swap nodes in pairs yields %v\n", solutions.SwapPairs(&utils.ListNode{
+		Val: 1, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 3, Next: &utils.ListNode{Val: 4}}},
+	}))
+	fmt.Printf("The level order traversal is %v\n", solutions.LevelOrder(&utils.TreeNode{
+		Val: 3, Left: &utils.TreeNode{Val: 9}, Right: &utils.TreeNode{Val: 20, Left: &utils.TreeNode{Val: 15}, Right: &utils.TreeNode{Val: 7}},
+	}))
+	fmt.Printf("The index of the string is %d\n", solutions.StrStr("sadbutsad", "sad"))
+	fmt.Printf("Is valid BST %t\n", solutions.IsValidBST(&utils.TreeNode{
+		Val: 2, Left: &utils.TreeNode{Val: 1}, Right: &utils.TreeNode{Val: 3},
+	}))
+	fmt.Printf("Is palindrome linked list %t\n", solutions.IsPalindromeList(&utils.ListNode{
+		Val: 1, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 1}}},
+	}))
+	fmt.Printf("The longest string chain is %d\n", solutions.LongestStrChain([]string{"abcd", "dbqca"}))
+	fmt.Printf("The longest increasing subsequence is %d\n", solutions.LengthOfLIS([]int{10, 9, 2, 5, 3, 7, 101, 18}))
+	fmt.Printf("The champagne tower Jth class in the ith row is this full %v\n", solutions.ChampagneTower(1, 1, 1))
+	fmt.Printf("The maximum odd binary is %s\n", solutions.MaximumOddBinaryNumber("010"))
+	fmt.Printf("The difference between strings s and t is %d\n", solutions.FindTheDifference("aeee", "aeeea"))
+	fmt.Printf("The length of the last word is %d\n", solutions.LengthOfLastWord("Hello World"))
+	fmt.Printf("Deleting duplicates from sorted list yields %v\n", solutions.DeleteDuplicates(&utils.ListNode{
+		Val: 1, Next: &utils.ListNode{Val: 1, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 1}}}},
+	}))
+	fmt.Printf("Deleting duplicates from sorted list 2 yields %v\n", solutions.DeleteDuplicates2(&utils.ListNode{
+		Val: 1, Next: &utils.ListNode{Val: 1, Next: &utils.ListNode{
+			Val: 3, Next: &utils.ListNode{Val: 3, Next: &utils.ListNode{
+				Val: 3, Next: &utils.ListNode{Val: 4, Next: &utils.ListNode{
+					Val: 4, Next: &utils.ListNode{Val: 5}},
+				}},
+			}}},
+	}))
+	fmt.Printf("Compressing the string yields %d\n", solutions.Compress([]byte{'a', 'a', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'c', 'c', 'c'}))
+	fmt.Printf("Removing duplicate letters yields %s\n", solutions.RemoveDuplicateLetters("bcabc"))
+	fmt.Printf("The smallest subsequence of distinct characters is %s\n", solutions.SmallestSubsequence("cbacdcbc"))
+	fmt.Printf("The maximum number of vowels in a substring is %d\n", solutions.MaxVowels("abciiidef", 3))
+	fmt.Printf("The maximum consecutive ones are %d\n", solutions.FindMaxConsecutiveOnes([]int{1, 1, 0, 1, 1, 1}))
+	fmt.Printf("The maximum consecutive ones wih k Os flipped is %d\n", solutions.LongestOnes([]int{1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0}, 2))
+	fmt.Printf("The longest subarray of 1's after deleting one element is %d\n", solutions.LongestSubarray([]int{1, 1, 0, 1}))
+	fmt.Printf("The decoded string at index is %s\n", solutions.DecodeAtIndex("y959q969u3hb22odq595", 222280369))
+	fmt.Printf("The highest altitude is %d\n", solutions.LargestAltitude([]int{-5, 1, 5, 0, -7}))
+	fmt.Printf("The integer at rowIndex of the pascal's triangle is %v\n", solutions.GetRow(3))
+	nums1 := []int{1, 2, 3, 0, 0, 0}
+	solutions.Merge(nums1, 3, []int{2, 5, 6}, 3)
+	fmt.Printf("The merged sorted array is %d\n", nums1)
+	fmt.Printf("Sorting an array by parity yields %v\n", solutions.SortArrayByParity([]int{3, 1, 2, 4}))
+	fmt.Printf("The longest substring in repeating character replaced array is %d\n", solutions.CharacterReplacement("ABAB", 2))
+	fmt.Printf("The number of distinct solutions for the n-queens puzzle are, %d\n", solutions.TotalNQueens(4))
+	fmt.Printf("The minimum number of operations to form a target array is %d\n", solutions.MinNumberOperations([]int{3, 1, 1, 2}))
+	fmt.Printf("The sorted list is %v\n", solutions.MergeKLists([]*utils.ListNode{
+		{Val: 1}, {Val: 2},
+	}))
+	fmt.Printf("Is the array monotonic %t\n", solutions.IsMonotonic([]int{-1, 3, 2}))
+	fmt.Printf("The number of unique paths are %d\n", solutions.UniquePaths(3, 2))
+	fmt.Println("The first unique character in the string is at position", solutions.FirstUniqChar("loveleetcode"))
+	fmt.Printf("The maximum subarray sum is %d\n", solutions.MaxSubArray([]int{-2, 1, -3, 4, -1, 2, 1, -5, 4}))
+	fmt.Printf("There is a 132 pattern in the array %t\n", solutions.Find132pattern([]int{1, 2, 3, 4}))
+	fmt.Printf("The minimum cost climbing stairs is %d\n", solutions.MinCostClimbingStairs([]int{10, 15, 20}))
+
+	RecentCounter := solutions.RecentConstructor()
+	fmt.Println(RecentCounter.Ping(642))
+	fmt.Println(RecentCounter.Ping(1849))
+	fmt.Println(RecentCounter.Ping(4921))
+	fmt.Println(RecentCounter.Ping(5936))
+	fmt.Printf("The Number of recent calls are: %v\n", RecentCounter.Ping(5957))
+
+	fmt.Printf("Deleting middle node of the linked list yields %v\n", solutions.DeleteMiddle(&utils.ListNode{
+		Val: 2, Next: &utils.ListNode{Val: 1},
+	}))
+	fmt.Printf("The Odd even linked list is now %v\n", solutions.OddEvenList(&utils.ListNode{
+		Val: 1, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 3, Next: &utils.ListNode{Val: 4, Next: &utils.ListNode{Val: 5}}}},
+	}))
+	fmt.Printf("Reverse the words III yields %s\n", solutions.ReverseWordsIII("Let's take LeetCode contest"))
+	fmt.Printf("The maximum triplet value of ordered triplet is %d\n", solutions.MaximumTripletValue([]int{12, 6, 1, 2, 7}))
+	fmt.Printf("The maximum triplet value of ordered triplet II is %d\n", solutions.MaximumTripletValue2([]int{1, 10, 3, 4, 19}))
+	fmt.Printf("The minimum size subarray in infinite array is %d\n", solutions.MinSizeSubarray([]int{1, 2, 3, 1, 2, 3, 1, 2, 3}, 5))
+	fmt.Printf("The winner of the remove colored pieces if both neighbors are the same color is %t\n", solutions.WinnerOfGame("AAAABB"))
+	fmt.Printf("The minimum operations to collect element are %d\n", solutions.MinCollectOperations([]int{3, 1, 5, 4, 2}, 2))
+	fmt.Printf("The minimum number of operations to make array empty are %d\n", solutions.MinEmptyOperations([]int{2, 3, 3, 2, 2, 4, 2, 3, 4}))
+	nums2 := []int{2, 0, 2, 1, 1, 0}
+	solutions.SortColors(nums2)
+	fmt.Printf("Sorting the colors yields %v\n", nums2)
+	fmt.Printf("The number of identical pairs in array are %d\n", solutions.NumIdenticalPairs([]int{1, 2, 3, 1, 1, 3}))
+	fmt.Printf("The strings are close, %t\n", solutions.CloseStrings("aaabbbbccddeeeeefffff", "aaaaabbcccdddeeeeffff"))
+	fmt.Printf("The result string after removing the stars is %s\n", solutions.RemoveStars("leet**cod*e"))
+	fmt.Printf("The result of the array after asteroid collision is %v\n", solutions.AsteroidCollision([]int{5, 10, -5}))
+
+	myHashMap := solutions.HashConstructor()
+	myHashMap.Put(1, 1)
+	myHashMap.Put(2, 2)
+	fmt.Printf("The Value for key %d from the hashmap is %d\n", 1, myHashMap.Get(1))
+	fmt.Printf("The Value for the key %d from the hashmap is %d\n", 3, myHashMap.Get(3))
+	myHashMap.Put(2, 1)
+	fmt.Printf("The Value for the key %d from the hashmap is %d\n", 2, myHashMap.Get(2))
+	myHashMap.Remove(2)
+	fmt.Printf("The Value for the key %d from the hashmap is %d\n", 2, myHashMap.Get(2))
+
+	fmt.Printf("The tree leaves has a similar sequence %t\n", solutions.LeafSimilar(
+		&utils.TreeNode{Val: 1, Left: &utils.TreeNode{Val: 2}, Right: &utils.TreeNode{Val: 3}},
+		&utils.TreeNode{Val: 1, Left: &utils.TreeNode{Val: 3}, Right: &utils.TreeNode{Val: 2}},
+	))
 }

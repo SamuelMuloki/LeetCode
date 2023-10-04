@@ -1,6 +1,8 @@
 package solutions
 
-func ReorderList(head *ListNode) {
+import "github.com/SamuelMuloki/LeetCode/go/utils"
+
+func ReorderList(head *utils.ListNode) {
 	if head == nil || head.Next == nil {
 		return
 	}
@@ -10,7 +12,7 @@ func ReorderList(head *ListNode) {
 		slow, fast = slow.Next, fast.Next.Next
 	}
 
-	var prev *ListNode
+	var prev *utils.ListNode
 	for slow != nil {
 		slow.Next, prev, slow = prev, slow, slow.Next
 	}

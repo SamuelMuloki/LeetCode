@@ -3,6 +3,8 @@ package solutions
 import (
 	"container/heap"
 	"math"
+
+	"github.com/SamuelMuloki/LeetCode/go/utils"
 )
 
 func MinimumEffortPath(heights [][]int) int {
@@ -23,14 +25,6 @@ func MinimumEffortPath(heights [][]int) int {
 		return val
 	}
 
-	max := func(x, y int) int {
-		if x > y {
-			return x
-		}
-
-		return y
-	}
-
 	adj[0][0] = 0
 	moves := [][2]int{{0, 1}, {0, -1}, {1, 0}, {-1, 0}}
 
@@ -49,7 +43,7 @@ func MinimumEffortPath(heights [][]int) int {
 		for _, move := range moves {
 			nV1, nV2 := v1+move[0], v2+move[1]
 			if nV1 >= 0 && nV1 < rows && nV2 >= 0 && nV2 < cols {
-				newEffort := max(effort, abs(heights[v1][v2]-heights[nV1][nV2]))
+				newEffort := utils.Max(effort, abs(heights[v1][v2]-heights[nV1][nV2]))
 				if newEffort < adj[nV1][nV2] {
 					adj[nV1][nV2] = newEffort
 					heap.Push(edges, Edge{nV1, nV2, newEffort})

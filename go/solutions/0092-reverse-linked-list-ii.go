@@ -1,5 +1,7 @@
 package solutions
 
+import "github.com/SamuelMuloki/LeetCode/go/utils"
+
 /**
  * Definition for singly-linked list.
  * type ListNode struct {
@@ -7,12 +9,12 @@ package solutions
  *     Next *ListNode
  * }
  */
-func ReverseBetween(head *ListNode, left int, right int) *ListNode {
+func ReverseBetween(head *utils.ListNode, left int, right int) *utils.ListNode {
 	if head == nil || left == right {
 		return head
 	}
 
-	dummy := &ListNode{0, head}
+	dummy := &utils.ListNode{Val: 0, Next: head}
 	prev := dummy
 
 	for i := 0; i < left-1; i++ {

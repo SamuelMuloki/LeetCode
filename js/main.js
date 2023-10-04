@@ -34,6 +34,14 @@ const { reverseVowels } = require("./0345-reverse-vowels-of-a-string");
 const { canPlaceFlowers } = require("./0605-can-place-flowers");
 const { intersection } = require("./0349-intersection-of-two-arrays");
 const { intersect } = require("./0350-intersection-of-two-arrays-ii");
+const { isSubsequence } = require("./0392-is-subsequence");
+const { strStr } = require("./0028-find-the-index-of-the-first-occurrence-in-a-string");
+const { firstUniqChar } = require("./0387-first-unique-character-in-a-string");
+const { find132pattern } = require("./0456-132-pattern");
+const { reverseWords } = require("./0557-reverse-words-in-a-string-iii");
+const { winnerOfGame } = require("./2038-remove-colored-pieces-if-both-neighbors-are-the-same-color");
+const { numIdenticalPairs } = require("./1512-number-of-good-pairs");
+const { removeStars } = require("./2390-removing-stars-from-a-string");
 
 console.log(containsDuplicate([1, 2, 3, 1]));
 console.log(isAnagram("rat", "car"));
@@ -168,8 +176,16 @@ console.log(String(obj1));
 console.log(String(obj2));
 
 console.log(new Calculator(2).multiply(5).power(2).getResult());
-console.log("palindrome", isPalindrome(121));
-console.log("reverse", reverseVowels("leetcode"));
-console.log("flowerbed", canPlaceFlowers([1, 0, 0, 0, 1], 1));
-console.log("intersection of arrays", intersection([1, 2, 2, 1], [2, 2]));
-console.log("intersection of arrays ii", intersect([1, 2, 2, 1], [2, 2, 2]));
+console.log("Palindrome", isPalindrome(121));
+console.log("Reverse", reverseVowels("leetcode"));
+console.log("Flowerbed", canPlaceFlowers([1, 0, 0, 0, 1], 1));
+console.log("Intersection of arrays", intersection([1, 2, 2, 1], [2, 2]));
+console.log("Intersection of arrays ii", intersect([1, 2, 2, 1], [2, 2, 2]));
+console.log("Is subsequence", isSubsequence("abc", "ahbgdc"))
+console.log("The index of the string is ", strStr("sadbutsad", "sad"))
+console.log("The first unique character in the string is at position", firstUniqChar("leetcode"))
+console.log("There is a 132 pattern in the array", find132pattern([1, 2, 3, 4]))
+console.log("Reverse the words III yields", reverseWords("Let's take LeetCode contest"))
+console.log("The winner of the remove colored pieces if both neighbors are the same color is", winnerOfGame("AAABABB"))
+console.log("The number of identical pairs in array are", numIdenticalPairs([1, 2, 3, 1, 1, 3]))
+console.log("The result string after removing the stars is", removeStars("leet**cod*e"))
