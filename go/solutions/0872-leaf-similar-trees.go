@@ -15,24 +15,27 @@ import (
  * }
  */
 func LeafSimilar(root1 *utils.TreeNode, root2 *utils.TreeNode) bool {
-	arr1, arr2 := make([]int, 0), make([]int, 0)
+	arr := make([][]int, 2)
 
-	find(root1, &arr1)
-	find(root2, &arr2)
+	for i, val := range []*utils.TreeNode{root1, root2} {
+		st := append([]*utils.TreeNode{}, val)
+		for len(st) > 0 {
+			last := st[len(st)-1]
+			st = st[:len(st)-1]
 
-	return reflect.DeepEqual(arr1, arr2)
-}
+			if last.Left == nil && last.Right == nil {
+				arr[i] = append(arr[i], last.Val)
+			}
 
-func find(root *utils.TreeNode, arr *[]int) {
-	if root == nil {
-		return
+			if last.Right != nil {
+				st = append(st, last.Right)
+			}
+
+			if last.Left != nil {
+				st = append(st, last.Left)
+			}
+		}
 	}
 
-	if root.Left == nil && root.Right == nil {
-		*arr = append(*arr, root.Val)
-		return
-	}
-
-	find(root.Left, arr)
-	find(root.Right, arr)
+	return reflect.DeepEqual(arr[0], arr[1])
 }
