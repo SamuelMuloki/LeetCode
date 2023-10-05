@@ -43,6 +43,8 @@ const { winnerOfGame } = require("./2038-remove-colored-pieces-if-both-neighbors
 const { numIdenticalPairs } = require("./1512-number-of-good-pairs");
 const { removeStars } = require("./2390-removing-stars-from-a-string");
 const { majorityElement } = require("./0229-majority-element-ii");
+const { middleNode } = require("./0876-middle-of-the-linked-list");
+const { ListNode } = require("./utils/list")
 
 console.log(containsDuplicate([1, 2, 3, 1]));
 console.log(isAnagram("rat", "car"));
@@ -191,3 +193,6 @@ console.log("The winner of the remove colored pieces if both neighbors are the s
 console.log("The number of identical pairs in array are", numIdenticalPairs([1, 2, 3, 1, 1, 3]))
 console.log("The result string after removing the stars is", removeStars("leet**cod*e"))
 console.log("The majority element 2 in the array is", majorityElement([3,2,3]))
+
+var head = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))
+console.log("The middle node of the linked list is", middleNode(head))
