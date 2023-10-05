@@ -445,4 +445,5 @@ func main() {
 		&utils.TreeNode{Val: 1, Left: &utils.TreeNode{Val: 2}, Right: &utils.TreeNode{Val: 3}},
 		&utils.TreeNode{Val: 1, Left: &utils.TreeNode{Val: 3}, Right: &utils.TreeNode{Val: 2}},
 	))
+	fmt.Printf("The decoded string is %s\n", solutions.DecodeString("3[a2[c]]"))
 }
