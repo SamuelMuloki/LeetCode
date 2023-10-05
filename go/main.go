@@ -454,4 +454,7 @@ func main() {
 	fmt.Printf("The middle node of the linked list is %v\n", solutions.MiddleNode(&utils.ListNode{
 		Val: 1, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 3, Next: &utils.ListNode{Val: 4, Next: &utils.ListNode{Val: 5}}}},
 	}))
+	fmt.Printf("The twin pair sum of the linked list is %d\n", solutions.PairSum(&utils.ListNode{
+		Val: 5, Next: &utils.ListNode{Val: 4, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 1}}},
+	}))
 }
