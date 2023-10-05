@@ -1,30 +1,22 @@
 package solutions
 
-import (
-	"strconv"
-)
+import "fmt"
 
 func EqualPairs(grid [][]int) int {
 	var res int
 	set := make(map[string]int)
 
 	for i := 0; i < len(grid); i++ {
-		str := ""
-		for j := 0; j < len(grid[i]); j++ {
-			str += strconv.Itoa(grid[i][j])
-			str += "*"
-		}
-		set[str]++
+		set[fmt.Sprintf("%v", grid[i])]++
 	}
 
 	for i := 0; i < len(grid[0]); i++ {
-		str := ""
+		arr := []int{}
 		for j := 0; j < len(grid); j++ {
-			str += strconv.Itoa(grid[j][i])
-			str += "*"
+			arr = append(arr, grid[j][i])
 		}
 
-		res += set[str]
+		res += set[fmt.Sprintf("%v", arr)]
 	}
 
 	return res
