@@ -1,22 +1,22 @@
 package solutions
 
-import "fmt"
-
 func EqualPairs(grid [][]int) int {
 	var res int
-	set := make(map[string]int)
+	set := make(map[[200]int]int)
 
+	arr := [200]int{}
 	for i := 0; i < len(grid); i++ {
-		set[fmt.Sprintf("%v", grid[i])]++
+		copy(arr[:], grid[i])
+		set[arr]++
 	}
 
 	for i := 0; i < len(grid[0]); i++ {
-		arr := []int{}
+		arr := [200]int{}
 		for j := 0; j < len(grid); j++ {
-			arr = append(arr, grid[j][i])
+			arr[j] = grid[j][i]
 		}
 
-		res += set[fmt.Sprintf("%v", arr)]
+		res += set[arr]
 	}
 
 	return res
