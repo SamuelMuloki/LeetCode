@@ -1,6 +1,8 @@
 package solutions
 
-import "github.com/SamuelMuloki/LeetCode/go/utils"
+import (
+	"github.com/SamuelMuloki/LeetCode/go/utils"
+)
 
 /**
  * Definition for singly-linked list.
@@ -10,15 +12,25 @@ import "github.com/SamuelMuloki/LeetCode/go/utils"
  * }
  */
 func PairSum(head *utils.ListNode) int {
-	curr, arr := head, []int{}
-	for curr != nil {
-		arr = append(arr, curr.Val)
-		curr = curr.Next
+	slow, fast := head, head
+	for fast != nil && fast.Next != nil {
+		slow = slow.Next
+		fast = fast.Next.Next
+	}
+
+	second, prev := slow, new(utils.ListNode)
+	for second != nil {
+		tmp := second.Next
+		second.Next = prev
+		prev = second
+		second = tmp
 	}
 
 	maxSum := 0
-	for i := 0; i < len(arr)/2; i++ {
-		maxSum = utils.Max(maxSum, arr[i]+arr[len(arr)-1-i])
+	for head != slow && prev != nil {
+		maxSum = utils.Max(maxSum, head.Val+prev.Val)
+		head = head.Next
+		prev = prev.Next
 	}
 
 	return maxSum

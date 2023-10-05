@@ -44,7 +44,8 @@ const { numIdenticalPairs } = require("./1512-number-of-good-pairs");
 const { removeStars } = require("./2390-removing-stars-from-a-string");
 const { majorityElement } = require("./0229-majority-element-ii");
 const { middleNode } = require("./0876-middle-of-the-linked-list");
-const { ListNode } = require("./utils/list")
+const { ListNode } = require("./utils/list");
+const { pairSum } = require("./2130-maximum-twin-sum-of-a-linked-list");
 
 console.log(containsDuplicate([1, 2, 3, 1]));
 console.log(isAnagram("rat", "car"));
@@ -196,3 +197,6 @@ console.log("The majority element 2 in the array is", majorityElement([3,2,3]))
 
 var head = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))
 console.log("The middle node of the linked list is", middleNode(head))
+
+var pairSumHead = ListNode(5, ListNode(4, ListNode(2, ListNode(1))))
+console.log("The twin pair sum of the linked list is", pairSum(pairSumHead))
