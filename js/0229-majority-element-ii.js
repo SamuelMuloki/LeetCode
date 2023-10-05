@@ -3,22 +3,34 @@
  * @return {number[]}
  */
 var majorityElement = function (nums) {
-  var sorted = nums.sort((a, b) => a - b);
+  var candidate1 = 0,
+    candidate2 = 1,
+    count1 = 0,
+    count2 = 0;
 
-  var count = 1,
-    seen = Number.MIN_SAFE_INTEGER,
-    res = [];
-  for (var i = 0; i < sorted.length; i++) {
-    if (i + 1 < sorted.length && sorted[i] === sorted[i + 1]) {
-      count++;
+  for (var num of nums) {
+    if (num == candidate1) {
+      count1++;
+    } else if (num == candidate2) {
+      count2++;
+    } else if (count1 == 0) {
+      candidate1 = num;
+      count1 = 1;
+    } else if (count2 == 0) {
+      candidate2 = num;
+      count2 = 1;
     } else {
-      count = 1;
+      count1--;
+      count2--;
     }
+  }
 
-    if (seen !== sorted[i] && Math.floor(sorted.length / 3) < count) {
-      seen = sorted[i];
-      res.push(sorted[i]);
-    }
+  var res = [];
+  if (nums.filter((num) => num === candidate1).length > nums.length / 3) {
+    res.push(candidate1);
+  }
+  if (nums.filter((num) => num === candidate2).length > nums.length / 3) {
+    res.push(candidate2);
   }
 
   return res;
