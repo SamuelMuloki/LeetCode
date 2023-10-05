@@ -448,4 +448,7 @@ func main() {
 	fmt.Printf("The decoded string is %s\n", solutions.DecodeString("3[a2[c]]"))
 	fmt.Printf("The majority element in the array is %d\n", solutions.MajorityElement([]int{2, 2, 1, 1, 1, 2, 2}))
 	fmt.Printf("The majority element 2 in the array is %d\n", solutions.MajorityElement2([]int{1, 1, 2, 2, 1, 1, 1, 1, 2, 2, 1, 1}))
+	fmt.Printf("The grid contains the same row column pairs %d\n", solutions.EqualPairs([][]int{
+		{3, 1, 2, 2}, {1, 4, 4, 5}, {2, 4, 2, 2}, {2, 4, 2, 2},
+	}))
 }
