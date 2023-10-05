@@ -446,4 +446,5 @@ func main() {
 		&utils.TreeNode{Val: 1, Left: &utils.TreeNode{Val: 3}, Right: &utils.TreeNode{Val: 2}},
 	))
 	fmt.Printf("The decoded string is %s\n", solutions.DecodeString("3[a2[c]]"))
+	fmt.Printf("The majority element in the array is %d\n", solutions.MajorityElement([]int{2, 2, 1, 1, 1, 2, 2}))
 }
