@@ -46,6 +46,7 @@ const { majorityElement } = require("./0229-majority-element-ii");
 const { middleNode } = require("./0876-middle-of-the-linked-list");
 const { ListNode } = require("./utils/list");
 const { pairSum } = require("./2130-maximum-twin-sum-of-a-linked-list");
+const { integerBreak } = require("./0343-integer-break");
 
 console.log(containsDuplicate([1, 2, 3, 1]));
 console.log(isAnagram("rat", "car"));
@@ -200,3 +201,4 @@ console.log("The middle node of the linked list is", middleNode(head))
 
 var pairSumHead = ListNode(5, ListNode(4, ListNode(2, ListNode(1))))
 console.log("The twin pair sum of the linked list is", pairSum(pairSumHead))
+console.log("The maximum product after integer break is", integerBreak(10))
