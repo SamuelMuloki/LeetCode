@@ -458,4 +458,7 @@ func main() {
 		Val: 5, Next: &utils.ListNode{Val: 4, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 1}}},
 	}))
 	fmt.Printf("The maximum product after integer break is %d\n", solutions.IntegerBreak(10))
+	fmt.Printf("Reversing nodes in k group yields %v\n", solutions.ReverseKGroup(&utils.ListNode{
+		Val: 1, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 3, Next: &utils.ListNode{Val: 4, Next: &utils.ListNode{Val: 5}}}},
+	}, 2))
 }
