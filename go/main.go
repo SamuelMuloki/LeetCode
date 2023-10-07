@@ -462,4 +462,5 @@ func main() {
 		Val: 1, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 3, Next: &utils.ListNode{Val: 4, Next: &utils.ListNode{Val: 5}}}},
 	}, 2))
 	fmt.Printf("The kth largest element in an array is %d\n", solutions.FindKthLargest([]int{3, 2, 3, 1, 2, 4, 5, 5, 6}, 4))
+	fmt.Printf("The number of arrays that you can find the max k comparisons %v\n", solutions.NumOfArrays(50, 100, 25))
 }
