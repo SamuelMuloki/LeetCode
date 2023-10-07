@@ -470,4 +470,5 @@ func main() {
 	}, &utils.ListNode{
 		Val: 5, Next: &utils.ListNode{Val: 6, Next: &utils.ListNode{Val: 1, Next: inter}},
 	}))
+	fmt.Printf("The title to number of the excel colum is %d\n", solutions.TitleToNumber("AB"))
 }
