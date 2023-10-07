@@ -11,18 +11,19 @@ import "github.com/SamuelMuloki/LeetCode/go/utils"
  */
 func GetIntersectionNode(headA, headB *utils.ListNode) *utils.ListNode {
 	currA, currB := headA, headB
-	for currA != nil && currB != nil {
-		tempB := currB
-		for tempB != nil && currA.Val != tempB.Val {
-			tempB = tempB.Next
+	for currA != currB {
+		if currA == nil {
+			currA = headB
+		} else {
+			currA = currA.Next
 		}
 
-		if currA == tempB {
-			return currA
+		if currB == nil {
+			currB = headA
+		} else {
+			currB = currB.Next
 		}
-
-		currA = currA.Next
 	}
 
-	return nil
+	return currA
 }
