@@ -48,6 +48,7 @@ const { ListNode } = require("./utils/list");
 const { pairSum } = require("./2130-maximum-twin-sum-of-a-linked-list");
 const { integerBreak } = require("./0343-integer-break");
 const { titleToNumber } = require("./0171-excel-sheet-column-number");
+const { differenceOfSums } = require("./2894-divisible-and-non-divisible-sums-difference");
 
 console.log(containsDuplicate([1, 2, 3, 1]));
 console.log(isAnagram("rat", "car"));
@@ -204,3 +205,4 @@ var pairSumHead = ListNode(5, ListNode(4, ListNode(2, ListNode(1))))
 console.log("The twin pair sum of the linked list is", pairSum(pairSumHead))
 console.log("The maximum product after integer break is", integerBreak(10))
 console.log("The title to number of the excel colum is", titleToNumber("AB"))
+console.log("The difference of sums is", differenceOfSums(10, 3))

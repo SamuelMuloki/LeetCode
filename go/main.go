@@ -472,4 +472,5 @@ func main() {
 	}))
 	fmt.Printf("The title to number of the excel colum is %d\n", solutions.TitleToNumber("AB"))
 	fmt.Printf("The max dot product of two subsequences is %d\n", solutions.MaxDotProduct([]int{2, 1, -2, 5}, []int{3, 0, -6}))
+	fmt.Printf("The difference of sums is %d\n", solutions.DifferenceOfSums(10, 3))
 }
