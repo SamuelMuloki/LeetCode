@@ -471,4 +471,5 @@ func main() {
 		Val: 5, Next: &utils.ListNode{Val: 6, Next: &utils.ListNode{Val: 1, Next: inter}},
 	}))
 	fmt.Printf("The title to number of the excel colum is %d\n", solutions.TitleToNumber("AB"))
+	fmt.Printf("The max dot product of two subsequences is %d\n", solutions.MaxDotProduct([]int{2, 1, -2, 5}, []int{3, 0, -6}))
 }
