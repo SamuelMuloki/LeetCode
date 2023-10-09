@@ -10,14 +10,36 @@ import "github.com/SamuelMuloki/LeetCode/go/utils"
  *     Right *TreeNode
  * }
  */
+
+type PathSum struct {
+	currSum int
+	node    *utils.TreeNode
+}
+
 func HasPathSum(root *utils.TreeNode, targetSum int) bool {
 	if root == nil {
 		return false
 	}
 
-	if root.Left == nil && root.Right == nil {
-		return targetSum == root.Val
+	s := make([]PathSum, 0)
+	s = append(s, PathSum{node: root, currSum: targetSum})
+
+	for len(s) > 0 {
+		last := s[len(s)-1]
+		s = s[:len(s)-1]
+
+		if last.node.Left == nil && last.node.Right == nil && last.currSum == last.node.Val {
+			return true
+		}
+
+		if last.node.Right != nil {
+			s = append(s, PathSum{node: last.node.Right, currSum: last.currSum - last.node.Val})
+		}
+
+		if last.node.Left != nil {
+			s = append(s, PathSum{node: last.node.Left, currSum: last.currSum - last.node.Val})
+		}
 	}
 
-	return HasPathSum(root.Left, targetSum-root.Val) || HasPathSum(root.Right, targetSum-root.Val)
+	return false
 }
