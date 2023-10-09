@@ -473,4 +473,7 @@ func main() {
 	fmt.Printf("The title to number of the excel colum is %d\n", solutions.TitleToNumber("AB"))
 	fmt.Printf("The max dot product of two subsequences is %d\n", solutions.MaxDotProduct([]int{2, 1, -2, 5}, []int{3, 0, -6}))
 	fmt.Printf("The difference of sums is %d\n", solutions.DifferenceOfSums(10, 3))
+	fmt.Printf("The good nodes in the binary tree are %d\n", solutions.GoodNodes(&utils.TreeNode{
+		Val: 3, Left: &utils.TreeNode{Val: 1, Left: &utils.TreeNode{Val: 3}}, Right: &utils.TreeNode{Val: 4, Left: &utils.TreeNode{Val: 1}, Right: &utils.TreeNode{Val: 5}},
+	}))
 }
