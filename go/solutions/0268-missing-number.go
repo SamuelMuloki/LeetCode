@@ -1,14 +1,10 @@
 package solutions
 
-import "sort"
-
 func MissingNumber(nums []int) int {
-	sort.Ints(nums)
+	res := len(nums)
 	for i := 0; i < len(nums); i++ {
-		if nums[i] != i {
-			return i
-		}
+		res = res ^ i ^ nums[i] // a ^ b ^ b = a
 	}
 
-	return len(nums)
+	return res
 }
