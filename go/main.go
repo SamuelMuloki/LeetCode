@@ -480,4 +480,8 @@ func main() {
 		Val: 5, Left: &utils.TreeNode{Val: 4, Left: &utils.TreeNode{Val: 11, Left: &utils.TreeNode{Val: 7}, Right: &utils.TreeNode{Val: 2}}},
 		Right: &utils.TreeNode{Val: 8, Left: &utils.TreeNode{Val: 13}, Right: &utils.TreeNode{Val: 4, Right: &utils.TreeNode{Val: 1}}},
 	}, 22))
+	fmt.Printf("The root-to-leaf paths in the binary tree are %v\n", solutions.PathSum2(&utils.TreeNode{
+		Val: 5, Left: &utils.TreeNode{Val: 4, Left: &utils.TreeNode{Val: 11, Left: &utils.TreeNode{Val: 7}, Right: &utils.TreeNode{Val: 2}}},
+		Right: &utils.TreeNode{Val: 8, Left: &utils.TreeNode{Val: 13}, Right: &utils.TreeNode{Val: 4, Left: &utils.TreeNode{Val: 5}, Right: &utils.TreeNode{Val: 1}}},
+	}, 22))
 }
