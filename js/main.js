@@ -49,6 +49,7 @@ const { pairSum } = require("./2130-maximum-twin-sum-of-a-linked-list");
 const { integerBreak } = require("./0343-integer-break");
 const { titleToNumber } = require("./0171-excel-sheet-column-number");
 const { differenceOfSums } = require("./2894-divisible-and-non-divisible-sums-difference");
+const { searchRange } = require("./0034-find-first-and-last-position-of-element-in-sorted-array");
 
 console.log(containsDuplicate([1, 2, 3, 1]));
 console.log(isAnagram("rat", "car"));
@@ -206,3 +207,4 @@ console.log("The twin pair sum of the linked list is", pairSum(pairSumHead))
 console.log("The maximum product after integer break is", integerBreak(10))
 console.log("The title to number of the excel colum is", titleToNumber("AB"))
 console.log("The difference of sums is", differenceOfSums(10, 3))
+console.log("The search range is", searchRange([5,7,7,8,8,10], 8))
