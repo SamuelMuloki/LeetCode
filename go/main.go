@@ -485,4 +485,5 @@ func main() {
 		Right: &utils.TreeNode{Val: 8, Left: &utils.TreeNode{Val: 13}, Right: &utils.TreeNode{Val: 4, Left: &utils.TreeNode{Val: 5}, Right: &utils.TreeNode{Val: 1}}},
 	}, 22))
 	fmt.Printf("The missing number in the array of distinct nums is %d\n", solutions.MissingNumber([]int{3, 0, 1}))
+	fmt.Printf("Removing duplicates from the sorted array yields %d\n", solutions.RemoveDuplicates([]int{1, 1, 2}))
 }
