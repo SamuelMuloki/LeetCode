@@ -476,4 +476,8 @@ func main() {
 	fmt.Printf("The good nodes in the binary tree are %d\n", solutions.GoodNodes(&utils.TreeNode{
 		Val: 3, Left: &utils.TreeNode{Val: 1, Left: &utils.TreeNode{Val: 3}}, Right: &utils.TreeNode{Val: 4, Left: &utils.TreeNode{Val: 1}, Right: &utils.TreeNode{Val: 5}},
 	}))
+	fmt.Printf("The binary tree has path sum %t\n", solutions.HasPathSum(&utils.TreeNode{
+		Val: 5, Left: &utils.TreeNode{Val: 4, Left: &utils.TreeNode{Val: 11, Left: &utils.TreeNode{Val: 7}, Right: &utils.TreeNode{Val: 2}}},
+		Right: &utils.TreeNode{Val: 8, Left: &utils.TreeNode{Val: 13}, Right: &utils.TreeNode{Val: 4, Right: &utils.TreeNode{Val: 1}}},
+	}, 22))
 }
