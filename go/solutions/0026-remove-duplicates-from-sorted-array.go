@@ -2,20 +2,14 @@
 package solutions
 
 func RemoveDuplicates(nums []int) int {
+	count := 0
 	for i := 1; i < len(nums); i++ {
-		j := i
-		for j < len(nums) && nums[i-1] == nums[j] {
-			j++
-		}
-
-		if j > i {
-			rem := nums[:i]
-			if j < len(nums) {
-				rem = append(rem, nums[j:]...)
-			}
-			nums = rem
+		if nums[i] == nums[i-1] {
+			count++
+		} else {
+			nums[i-count] = nums[i]
 		}
 	}
 
-	return len(nums)
+	return len(nums) - count
 }
