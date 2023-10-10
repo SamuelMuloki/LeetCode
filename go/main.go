@@ -486,4 +486,5 @@ func main() {
 	}, 22))
 	fmt.Printf("The missing number in the array of distinct nums is %d\n", solutions.MissingNumber([]int{3, 0, 1}))
 	fmt.Printf("Removing duplicates from the sorted array yields %d\n", solutions.RemoveDuplicates([]int{1, 1, 2}))
+	fmt.Printf("The minimum operations to make array continous are %d\n", solutions.MinContinousOperations([]int{4, 8, 9, 11}))
 }
