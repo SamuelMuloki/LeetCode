@@ -496,4 +496,7 @@ func main() {
 		Left:  &utils.TreeNode{Val: 2, Left: &utils.TreeNode{Val: 1}, Right: &utils.TreeNode{Val: 3}},
 		Right: &utils.TreeNode{Val: 7},
 	}, 2))
+	fmt.Printf("Removing elements from linked list yields %v\n", solutions.RemoveElements(&utils.ListNode{
+		Val: 7, Next: &utils.ListNode{Val: 7, Next: &utils.ListNode{Val: 7, Next: &utils.ListNode{Val: 7}}},
+	}, 7))
 }
