@@ -491,4 +491,9 @@ func main() {
 		Val: 5, Left: &utils.TreeNode{Val: 4, Left: &utils.TreeNode{Val: 11, Left: &utils.TreeNode{Val: 7}, Right: &utils.TreeNode{Val: 2}}},
 		Right: &utils.TreeNode{Val: 8, Left: &utils.TreeNode{Val: 13}, Right: &utils.TreeNode{Val: 4, Left: &utils.TreeNode{Val: 5}, Right: &utils.TreeNode{Val: 1}}},
 	}, 22))
+	fmt.Printf("The node in the binary search tree is %v\n", solutions.SearchBST(&utils.TreeNode{
+		Val:   4,
+		Left:  &utils.TreeNode{Val: 2, Left: &utils.TreeNode{Val: 1}, Right: &utils.TreeNode{Val: 3}},
+		Right: &utils.TreeNode{Val: 7},
+	}, 2))
 }
