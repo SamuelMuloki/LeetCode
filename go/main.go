@@ -505,4 +505,5 @@ func main() {
 	fmt.Printf("The result afte rotating the array right k times is %v\n", solutions.RotateRight(&utils.ListNode{
 		Val: 1, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 3, Next: &utils.ListNode{Val: 4, Next: &utils.ListNode{Val: 5}}}},
 	}, 2))
+	fmt.Printf("The fibonacci of the number is %d\n", solutions.Fib(4))
 }
