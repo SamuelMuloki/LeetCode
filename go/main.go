@@ -499,4 +499,7 @@ func main() {
 	fmt.Printf("Removing elements from linked list yields %v\n", solutions.RemoveElements(&utils.ListNode{
 		Val: 7, Next: &utils.ListNode{Val: 7, Next: &utils.ListNode{Val: 7, Next: &utils.ListNode{Val: 7}}},
 	}, 7))
+	fmt.Printf("The number of flowers that are full blown when the ith person arrives are %v\n", solutions.FullBloomFlowers([][]int{
+		{1, 10}, {3, 3},
+	}, []int{3, 3, 2}))
 }
