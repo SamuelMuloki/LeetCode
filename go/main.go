@@ -507,4 +507,7 @@ func main() {
 	}, 2))
 	fmt.Printf("The fibonacci of the number is %d\n", solutions.Fib(4))
 	fmt.Printf("The peak index in the mountain array is %d\n", solutions.PeakIndexInMountainArray([]int{0, 2, 1, 0}))
+
+	mountainArr := solutions.NewMountainArray([]int{1, 2, 3, 4, 5, 3, 1})
+	fmt.Printf("Find in mountain array yields %d\n", solutions.FindInMountainArray(3, mountainArr))
 }
