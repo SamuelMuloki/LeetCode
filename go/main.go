@@ -506,4 +506,5 @@ func main() {
 		Val: 1, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 3, Next: &utils.ListNode{Val: 4, Next: &utils.ListNode{Val: 5}}}},
 	}, 2))
 	fmt.Printf("The fibonacci of the number is %d\n", solutions.Fib(4))
+	fmt.Printf("The peak index in the mountain array is %d\n", solutions.PeakIndexInMountainArray([]int{0, 2, 1, 0}))
 }
