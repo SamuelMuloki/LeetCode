@@ -514,4 +514,9 @@ func main() {
 		Val: 3, Left: &utils.TreeNode{Val: 9}, Right: &utils.TreeNode{Val: 20, Left: &utils.TreeNode{Val: 15}, Right: &utils.TreeNode{Val: 7}},
 	}))
 	fmt.Printf("Removing element from the array yields %d\n", solutions.RemoveElement([]int{3, 2, 2, 3}, 3))
+	fmt.Printf("Deleting a node in the Binary search tree yields %v\n", solutions.DeleteNode(&utils.TreeNode{
+		Val:   5,
+		Left:  &utils.TreeNode{Val: 3, Left: &utils.TreeNode{Val: 2}, Right: &utils.TreeNode{Val: 4}},
+		Right: &utils.TreeNode{Val: 6, Right: &utils.TreeNode{Val: 7}},
+	}, 3))
 }
