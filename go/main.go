@@ -513,4 +513,5 @@ func main() {
 	fmt.Printf("The minimum depth of the binary tree is %d\n", solutions.MinDepth(&utils.TreeNode{
 		Val: 3, Left: &utils.TreeNode{Val: 9}, Right: &utils.TreeNode{Val: 20, Left: &utils.TreeNode{Val: 15}, Right: &utils.TreeNode{Val: 7}},
 	}))
+	fmt.Printf("Removing element from the array yields %d\n", solutions.RemoveElement([]int{3, 2, 2, 3}, 3))
 }
