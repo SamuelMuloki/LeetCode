@@ -1,8 +1,6 @@
 package solutions
 
 import (
-	"math"
-
 	"github.com/SamuelMuloki/LeetCode/go/utils"
 )
 
@@ -19,24 +17,29 @@ func MinDepth(root *utils.TreeNode) int {
 		return 0
 	}
 
-	minVal := math.MaxInt
-	var dfs func(root *utils.TreeNode, count int)
-	dfs = func(root *utils.TreeNode, count int) {
-		if root == nil {
-			return
+	queue := make([]*utils.TreeNode, 0)
+	queue = append(queue, root)
+
+	level := 1
+	for len(queue) > 0 {
+		last := len(queue)
+		for i := 0; i < last; i++ {
+			if queue[i].Left == nil && queue[i].Right == nil {
+				return level
+			}
+
+			if queue[i].Left != nil {
+				queue = append(queue, queue[i].Left)
+			}
+
+			if queue[i].Right != nil {
+				queue = append(queue, queue[i].Right)
+			}
 		}
 
-		if root.Left == nil && root.Right == nil {
-			minVal = utils.Min(minVal, count)
-			return
-		}
-
-		count += 1
-		dfs(root.Left, count)
-		dfs(root.Right, count)
+		queue = queue[last:]
+		level++
 	}
 
-	dfs(root, 1)
-
-	return minVal
+	return -1
 }
