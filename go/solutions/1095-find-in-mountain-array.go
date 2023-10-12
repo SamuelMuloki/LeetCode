@@ -32,14 +32,16 @@ func (this *MountainArray) length() int {
 
 func FindInMountainArray(target int, mountainArr *MountainArray) int {
 	arrLen := mountainArr.length() - 1
-	peak := findPeak(0, arrLen, mountainArr)
+	cache := make(map[int]int)
 
-	left := binarySearchLeft(0, peak, target, mountainArr)
+	peak := findPeak(0, arrLen, mountainArr, cache)
+
+	left := binarySearchLeft(0, peak, target, mountainArr, cache)
 	if left != -1 {
 		return left
 	}
 
-	right := binarySearchRight(peak, arrLen, target, mountainArr)
+	right := binarySearchRight(peak, arrLen, target, mountainArr, cache)
 	if right != -1 {
 		return right
 	}
@@ -47,10 +49,26 @@ func FindInMountainArray(target int, mountainArr *MountainArray) int {
 	return -1
 }
 
-func findPeak(l, r int, mountainArr *MountainArray) int {
+func findPeak(l, r int, mountainArr *MountainArray, cache map[int]int) int {
 	for l < r {
 		mid := l + (r-l)/2
-		if mountainArr.get(mid) > mountainArr.get(mid+1) {
+
+		var midVal, nextMidVal int
+		if val, found := cache[mid]; found {
+			midVal = val
+		} else {
+			midVal = mountainArr.get(mid)
+			cache[mid] = midVal
+		}
+
+		if val, found := cache[mid+1]; found {
+			nextMidVal = val
+		} else {
+			nextMidVal = mountainArr.get(mid + 1)
+			cache[mid+1] = nextMidVal
+		}
+
+		if midVal > nextMidVal {
 			r = mid
 		} else {
 			l = mid + 1
@@ -60,10 +78,19 @@ func findPeak(l, r int, mountainArr *MountainArray) int {
 	return l
 }
 
-func binarySearchLeft(l, r, target int, mountainArr *MountainArray) int {
+func binarySearchLeft(l, r, target int, mountainArr *MountainArray, cache map[int]int) int {
 	for l != r {
 		mid := int(math.Ceil(float64((l + r)) / 2))
-		if mountainArr.get(mid) > target {
+
+		var midVal int
+		if val, found := cache[mid]; found {
+			midVal = val
+		} else {
+			midVal = mountainArr.get(mid)
+			cache[mid] = midVal
+		}
+
+		if midVal > target {
 			r = mid - 1
 		} else {
 			l = mid
@@ -77,17 +104,34 @@ func binarySearchLeft(l, r, target int, mountainArr *MountainArray) int {
 	return -1
 }
 
-func binarySearchRight(l, r, target int, mountainArr *MountainArray) int {
+func binarySearchRight(l, r, target int, mountainArr *MountainArray, cache map[int]int) int {
 	for l != r {
 		mid := int(math.Ceil(float64((l + r)) / 2))
-		if mountainArr.get(mid) < target {
+
+		var midVal int
+		if val, found := cache[mid]; found {
+			midVal = val
+		} else {
+			midVal = mountainArr.get(mid)
+			cache[mid] = midVal
+		}
+
+		if midVal < target {
 			r = mid - 1
 		} else {
 			l = mid
 		}
 	}
 
-	if mountainArr.get(l) == target {
+	var targetVal int
+	if val, found := cache[l]; found {
+		targetVal = val
+	} else {
+		targetVal = mountainArr.get(l)
+		cache[l] = targetVal
+	}
+
+	if targetVal == target {
 		return l
 	}
 
