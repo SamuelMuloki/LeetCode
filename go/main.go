@@ -510,4 +510,7 @@ func main() {
 
 	mountainArr := solutions.NewMountainArray([]int{1, 2, 3, 4, 5, 3, 1})
 	fmt.Printf("Find in mountain array yields %d\n", solutions.FindInMountainArray(3, mountainArr))
+	fmt.Printf("The minimum depth of the binary tree is %d\n", solutions.MinDepth(&utils.TreeNode{
+		Val: 3, Left: &utils.TreeNode{Val: 9}, Right: &utils.TreeNode{Val: 20, Left: &utils.TreeNode{Val: 15}, Right: &utils.TreeNode{Val: 7}},
+	}))
 }
