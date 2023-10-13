@@ -519,4 +519,5 @@ func main() {
 		Left:  &utils.TreeNode{Val: 3, Left: &utils.TreeNode{Val: 2}, Right: &utils.TreeNode{Val: 4}},
 		Right: &utils.TreeNode{Val: 6, Right: &utils.TreeNode{Val: 7}},
 	}, 3))
+	fmt.Printf("The longest consecutive sequence is %d\n", solutions.LongestConsecutive([]int{100, 4, 200, 1, 3, 2}))
 }
