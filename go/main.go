@@ -525,4 +525,9 @@ func main() {
 		Left:  &utils.TreeNode{Val: 7, Left: &utils.TreeNode{Val: 7}, Right: &utils.TreeNode{Val: -8}},
 		Right: &utils.TreeNode{Val: 0},
 	}))
+	fmt.Printf("The binary tree right side view is %v\n", solutions.RightSideView(&utils.TreeNode{
+		Val:   1,
+		Left:  &utils.TreeNode{Val: 2, Right: &utils.TreeNode{Val: 5}},
+		Right: &utils.TreeNode{Val: 3, Right: &utils.TreeNode{Val: 4}},
+	}))
 }
