@@ -520,4 +520,5 @@ func main() {
 		Right: &utils.TreeNode{Val: 6, Right: &utils.TreeNode{Val: 7}},
 	}, 3))
 	fmt.Printf("The longest consecutive sequence is %d\n", solutions.LongestConsecutive([]int{100, 4, 200, 1, 3, 2}))
+	fmt.Printf("The maximum level sum of a binary tree is %d\n", solutions.MaxLevelSum(utils.NewTree([]int{1, 7, 0, 7, -8, 0, 0})))
 }
