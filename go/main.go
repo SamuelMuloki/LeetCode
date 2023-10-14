@@ -530,4 +530,5 @@ func main() {
 		Left:  &utils.TreeNode{Val: 2, Right: &utils.TreeNode{Val: 5}},
 		Right: &utils.TreeNode{Val: 3, Right: &utils.TreeNode{Val: 4}},
 	}))
+	fmt.Printf("The minimum amount of money required to paint n walls is %d\n", solutions.PaintWalls([]int{1, 2, 3, 2}, []int{1, 2, 3, 2}))
 }
