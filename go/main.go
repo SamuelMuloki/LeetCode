@@ -531,4 +531,8 @@ func main() {
 		Right: &utils.TreeNode{Val: 3, Right: &utils.TreeNode{Val: 4}},
 	}))
 	fmt.Printf("The minimum amount of money required to paint n walls is %d\n", solutions.PaintWalls([]int{1, 2, 3, 2}, []int{1, 2, 3, 2}))
+	mat := [][]int{{1, 1, 1}, {1, 0, 1}, {1, 1, 1}}
+
+	solutions.SetZeroes(mat)
+	fmt.Printf("The matrix after setting zeros in place is %v\n", mat)
 }
