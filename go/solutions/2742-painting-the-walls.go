@@ -10,7 +10,6 @@ func PaintWalls(cost []int, time []int) int {
 		prevDp[i] = 1e9
 	}
 
-	prevDp[0] = 0
 	for i := n - 1; i >= 0; i-- {
 		dp = make([]int, n+1)
 		for remain := 1; remain <= n; remain++ {
