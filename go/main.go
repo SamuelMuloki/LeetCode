@@ -535,4 +535,7 @@ func main() {
 
 	solutions.SetZeroes(mat)
 	fmt.Printf("The matrix after setting zeros in place is %v\n", mat)
+
+	bit32, _ := strconv.ParseInt("00000010100101000001111010011100", 2, 32)
+	fmt.Printf("Reversing bits yields %d\n", solutions.ReverseBits(uint32(bit32)))
 }
