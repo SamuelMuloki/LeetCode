@@ -14,12 +14,6 @@ func NumberOfWays(startPos int, endPos int, k int) int {
 		dp[i] = make([]int, 1001)
 	}
 
-	for i := range dp {
-		for k := range dp[i] {
-			dp[i][k] = -1
-		}
-	}
-
 	var abs = func(diff int) int {
 		if diff < 0 {
 			return -diff
@@ -28,26 +22,12 @@ func NumberOfWays(startPos int, endPos int, k int) int {
 		return diff
 	}
 
-	var dfs func(diff, steps, ways int) int
-	dfs = func(diff, steps, ways int) int {
-		if diff == steps {
-			return 1
+	for k := 1; k <= 1000; k++ {
+		dp[k][k] = 1
+		for i := 0; i < k; i++ {
+			dp[k][i] = (dp[k-1][i+1] + dp[k-1][abs(i-1)]) % (1e9 + 7)
 		}
-
-		if diff > steps {
-			return 0
-		}
-
-		if dp[diff][steps] != -1 {
-			return dp[diff][steps]
-		}
-
-		left := dfs(diff+1, steps-1, ways)
-		right := dfs(abs(diff-1), steps-1, ways)
-		dp[diff][steps] = (left + right) % (1e9 + 7)
-
-		return dp[diff][steps]
 	}
 
-	return dfs(abs(startPos-endPos), k, 0)
+	return dp[k][abs(startPos-endPos)]
 }
