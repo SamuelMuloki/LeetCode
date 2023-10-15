@@ -540,4 +540,9 @@ func main() {
 	fmt.Printf("Reversing bits yields %d\n", solutions.ReverseBits(uint32(bit32)))
 	fmt.Printf("The number of ways to reach a position after exactly k steps is %d\n", solutions.NumberOfWays(1, 2, 3))
 	fmt.Printf("The number of ways to stay in the same place after some steps is %d\n", solutions.NumWays(3, 2))
+	fmt.Printf("The number of complete tree nodes are %d\n", solutions.CountNodes(&utils.TreeNode{
+		Val:   1,
+		Left:  &utils.TreeNode{Val: 2, Left: &utils.TreeNode{Val: 4}, Right: &utils.TreeNode{Val: 5}},
+		Right: &utils.TreeNode{Val: 3, Left: &utils.TreeNode{Val: 6}},
+	}))
 }
