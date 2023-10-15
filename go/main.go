@@ -538,4 +538,5 @@ func main() {
 
 	bit32, _ := strconv.ParseInt("00000010100101000001111010011100", 2, 32)
 	fmt.Printf("Reversing bits yields %d\n", solutions.ReverseBits(uint32(bit32)))
+	fmt.Printf("The number of ways to reach a position after exactly k steps is %d\n", solutions.NumberOfWays(1, 2, 3))
 }
