@@ -2,13 +2,16 @@ package solutions
 
 func NumberOfWays(startPos int, endPos int, k int) int {
 	/*
-		1 <= startPos, endPos, k <= 1000
-		We ONLY see three ranges of 1000 for start ranging from [ -1000 to 2000 ]
-		So only 3000 max states can be there for start
+		We'll consider the distance between start and end position since it's non negative
+		hence easier to memoize, For k number of steps and distance diff,
+		the number of ways is dfs(k - 1, diff + 1) + dfs(k - 1, abs(diff - 1))
+
+		Note that for d == 0, the number of ways is dfs(k - 1, 1) + dfs(k - 1, 1), since abs(0 - 1) == 1.
+		We can reach 0 from positions 1 and -1, and the number of ways for negative positions mirrors positive positions.
 	*/
-	dp := make([][]int, 3020)
+	dp := make([][]int, 1001)
 	for i := range dp {
-		dp[i] = make([]int, 1005)
+		dp[i] = make([]int, 1001)
 	}
 
 	for i := range dp {
@@ -17,26 +20,34 @@ func NumberOfWays(startPos int, endPos int, k int) int {
 		}
 	}
 
-	var dfs func(start, steps, ways int) int
-	dfs = func(start, steps, ways int) int {
-		if start == endPos && steps == 0 {
+	var abs = func(diff int) int {
+		if diff < 0 {
+			return -diff
+		}
+
+		return diff
+	}
+
+	var dfs func(diff, steps, ways int) int
+	dfs = func(diff, steps, ways int) int {
+		if diff == steps {
 			return 1
 		}
 
-		if steps == 0 {
+		if diff > steps {
 			return 0
 		}
 
-		if dp[start+1000][steps] != -1 {
-			return dp[start+1000][steps]
+		if dp[diff][steps] != -1 {
+			return dp[diff][steps]
 		}
 
-		left := dfs(start+1, steps-1, ways)
-		right := dfs(start-1, steps-1, ways)
-		dp[start+1000][steps] = (left + right) % (1e9 + 7)
+		left := dfs(diff+1, steps-1, ways)
+		right := dfs(abs(diff-1), steps-1, ways)
+		dp[diff][steps] = (left + right) % (1e9 + 7)
 
-		return dp[start+1000][steps]
+		return dp[diff][steps]
 	}
 
-	return dfs(startPos, k, 0)
+	return dfs(abs(startPos-endPos), k, 0)
 }
