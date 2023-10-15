@@ -6,26 +6,26 @@ import (
 
 func NumWays(steps int, arrLen int) int {
 	arrLen = utils.Min(arrLen, steps)
-	dp := make([][]int, arrLen)
-	for i := range dp {
-		dp[i] = make([]int, steps+1)
-	}
+	dp := make([]int, arrLen)
+	prevDp := make([]int, arrLen)
 
-	dp[0][0] = 1
+	prevDp[0] = 1
 	for remain := 1; remain <= steps; remain++ {
+		dp = make([]int, arrLen)
 		for curr := arrLen - 1; curr >= 0; curr-- {
-			res := dp[curr][remain-1]
+			res := prevDp[curr]
 			if curr > 0 {
-				res = (res + dp[curr-1][remain-1]) % (1e9 + 7)
+				res = (res + prevDp[curr-1]) % (1e9 + 7)
 			}
 
 			if curr < arrLen-1 {
-				res = (res + dp[curr+1][remain-1]) % (1e9 + 7)
+				res = (res + prevDp[curr+1]) % (1e9 + 7)
 			}
 
-			dp[curr][remain] = res
+			dp[curr] = res
 		}
+		prevDp = dp
 	}
 
-	return dp[0][steps]
+	return dp[0]
 }
