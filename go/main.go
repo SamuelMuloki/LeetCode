@@ -550,4 +550,7 @@ func main() {
 	fmt.Printf("The minimum path sum from top to bottom is %d\n", solutions.MinimumTotal([][]int{
 		{2}, {3, 4}, {6, 5, 7}, {4, 1, 8, 3},
 	}))
+	fmt.Printf("The minimum path sum of the m*n grid is %d\n", solutions.MinPathSum([][]int{
+		{1, 3, 1}, {1, 5, 1}, {4, 2, 1},
+	}))
 }
