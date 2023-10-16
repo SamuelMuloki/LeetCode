@@ -546,5 +546,8 @@ func main() {
 		Right: &utils.TreeNode{Val: 3, Left: &utils.TreeNode{Val: 6}},
 	}))
 	fmt.Printf("The indices wih index and value difference 1 are %v\n", solutions.FindIndices([]int{5, 1, 4, 1}, 2, 4))
-	fmt.Printf("The tribonacci of n is %d\n", solutions.Tribonacci(37))
+	fmt.Printf("The tribonacci of n is %d\n", solutions.Tribonacci(4))
+	fmt.Printf("The minimum path sum from top to bottom is %d\n", solutions.MinimumTotal([][]int{
+		{2}, {3, 4}, {6, 5, 7}, {4, 1, 8, 3},
+	}))
 }
