@@ -545,4 +545,5 @@ func main() {
 		Left:  &utils.TreeNode{Val: 2, Left: &utils.TreeNode{Val: 4}, Right: &utils.TreeNode{Val: 5}},
 		Right: &utils.TreeNode{Val: 3, Left: &utils.TreeNode{Val: 6}},
 	}))
+	fmt.Printf("The indices wih index and value difference 1 are %v\n", solutions.FindIndices([]int{5, 1, 4, 1}, 2, 4))
 }
