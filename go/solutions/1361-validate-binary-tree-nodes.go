@@ -1,52 +1,54 @@
 package solutions
 
-func ValidateBinaryTreeNodes(n int, leftChild []int, rightChild []int) bool {
-	findRoot := func() int {
-		children := make(map[int]bool)
+type UnionFind struct {
+	n, components int
+	parents       []int
+}
 
-		for i := range leftChild {
-			children[leftChild[i]] = true
-		}
-
-		for i := range rightChild {
-			children[rightChild[i]] = true
-		}
-
-		for i := 0; i < n; i++ {
-			if !children[i] {
-				return i
-			}
-		}
-
-		return -1
+func newUnionFind(n int) *UnionFind {
+	parents := make([]int, n)
+	for i := 0; i < n; i++ {
+		parents[i] = i
 	}
 
-	root := findRoot()
-	if root == -1 {
+	return &UnionFind{n, n, parents}
+}
+
+func (uf *UnionFind) Union(parent, child int) bool {
+	parentParent := uf.Find(parent)
+	childParent := uf.Find(child)
+
+	if childParent != child || parentParent == childParent {
 		return false
 	}
 
-	seen := make(map[int]bool)
-	st := make([]int, 0)
-	seen[root] = true
-	st = append(st, root)
+	uf.components--
+	uf.parents[childParent] = parentParent
+	return true
+}
 
-	for len(st) > 0 {
-		node := st[len(st)-1]
-		st = st[:len(st)-1]
+func (uf *UnionFind) Find(node int) int {
+	if uf.parents[node] != node {
+		uf.parents[node] = uf.Find(uf.parents[node])
+	}
 
+	return uf.parents[node]
+}
+
+func ValidateBinaryTreeNodes(n int, leftChild []int, rightChild []int) bool {
+	uf := newUnionFind(n)
+	for node := 0; node < n; node++ {
 		children := []int{leftChild[node], rightChild[node]}
 		for _, child := range children {
-			if child != -1 {
-				if seen[child] {
-					return false
-				}
+			if child == -1 {
+				continue
+			}
 
-				seen[child] = true
-				st = append(st, child)
+			if !uf.Union(node, child) {
+				return false
 			}
 		}
 	}
 
-	return len(seen) == n
+	return uf.components == 1
 }
