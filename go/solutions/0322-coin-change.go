@@ -8,35 +8,29 @@ import (
 
 func CoinChange(coins []int, amount int) int {
 	n := len(coins)
-	dp := make(map[int]int, n)
+	dp := make([][]int, n+1)
 
-	var dfs func(remain int) int
-	dfs = func(remain int) int {
-		if count, ok := dp[remain]; ok {
-			return count
-		}
-
-		if remain == 0 {
-			return 0
-		}
-
-		if remain < 0 {
-			return math.MaxInt32
-		}
-
-		minCount := math.MaxInt32
-		for _, coin := range coins {
-			minCount = utils.Min(minCount, dfs(remain-coin)+1)
-		}
-
-		dp[remain] = minCount
-		return dp[remain]
+	for i := range dp {
+		dp[i] = make([]int, amount+1)
 	}
 
-	res := dfs(amount)
-	if res == math.MaxInt32 {
+	for i := 1; i <= amount; i++ {
+		dp[0][i] = math.MaxInt32
+	}
+
+	for i := 1; i <= n; i++ {
+		for remain := 1; remain <= amount; remain++ {
+			if remain >= coins[i-1] {
+				dp[i][remain] = utils.Min(dp[i-1][remain], dp[i][remain-coins[i-1]]+1)
+			} else {
+				dp[i][remain] = dp[i-1][remain]
+			}
+		}
+	}
+
+	if dp[n][amount] == math.MaxInt32 {
 		return -1
 	}
 
-	return res
+	return dp[n][amount]
 }
