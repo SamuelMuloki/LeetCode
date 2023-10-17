@@ -557,4 +557,5 @@ func main() {
 		[]int{1, -1, 3, -1}, []int{2, -1, -1, -1},
 	))
 	fmt.Printf("The fewest number of coins needed to make up the amount are %d\n", solutions.CoinChange([]int{1, 2, 5}, 11))
+	fmt.Printf("The array contains nearby duplicate values %t\n", solutions.ContainsNearbyDuplicate([]int{1, 2, 3, 1}, 3))
 }
