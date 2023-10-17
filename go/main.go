@@ -553,4 +553,7 @@ func main() {
 	fmt.Printf("The minimum path sum of the m*n grid is %d\n", solutions.MinPathSum([][]int{
 		{1, 3, 1}, {1, 5, 1}, {4, 2, 1},
 	}))
+	fmt.Printf("The nodes form a valid binary tree %t\n", solutions.ValidateBinaryTreeNodes(4,
+		[]int{1, -1, 3, -1}, []int{2, -1, -1, -1},
+	))
 }
