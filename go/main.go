@@ -561,4 +561,7 @@ func main() {
 	fmt.Printf("The minimum number of months needed to complete all the courses is %d\n", solutions.MinimumTime(3, [][]int{
 		{1, 3}, {2, 3},
 	}, []int{3, 2, 5}))
+	fmt.Printf("The number of possible unique paths that a robot can make are %d\n", solutions.UniquePathsWithObstacles([][]int{
+		{0, 0, 0}, {0, 1, 0}, {0, 0, 0},
+	}))
 }
