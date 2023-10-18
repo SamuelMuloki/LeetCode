@@ -564,4 +564,5 @@ func main() {
 	fmt.Printf("The number of possible unique paths that a robot can make are %d\n", solutions.UniquePathsWithObstacles([][]int{
 		{0, 0, 0}, {0, 1, 0}, {0, 0, 0},
 	}))
+	fmt.Printf("The integer returned as a string is %v\n", solutions.FizzBuzz(5))
 }
