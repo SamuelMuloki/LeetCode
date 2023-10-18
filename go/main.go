@@ -565,4 +565,5 @@ func main() {
 		{0, 0, 0}, {0, 1, 0}, {0, 0, 0},
 	}))
 	fmt.Printf("The integer returned as a string is %v\n", solutions.FizzBuzz(5))
+	fmt.Printf("The lowercase version of the string is %s\n", solutions.ToLowerCase("LOVELY"))
 }
