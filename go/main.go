@@ -558,4 +558,7 @@ func main() {
 	))
 	fmt.Printf("The fewest number of coins needed to make up the amount are %d\n", solutions.CoinChange([]int{1, 2, 5}, 11))
 	fmt.Printf("The array contains nearby duplicate values %t\n", solutions.ContainsNearbyDuplicate([]int{1, 2, 3, 1}, 3))
+	fmt.Printf("The minimum number of months needed to complete all the courses is %d\n", solutions.MinimumTime(3, [][]int{
+		{1, 3}, {2, 3},
+	}, []int{3, 2, 5}))
 }
