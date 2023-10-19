@@ -581,4 +581,5 @@ func main() {
 	fmt.Printf("After Merging intervals the array is %v\n", solutions.MergeIntervals([][]int{
 		{1, 3}, {2, 6}, {8, 10}, {15, 18},
 	}))
+	fmt.Printf("The array is sorted and rotated %t\n", solutions.Check([]int{3, 4, 5, 1, 2}))
 }
