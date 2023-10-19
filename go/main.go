@@ -567,4 +567,8 @@ func main() {
 	fmt.Printf("The integer returned as a string is %v\n", solutions.FizzBuzz(5))
 	fmt.Printf("The lowercase version of the string is %s\n", solutions.ToLowerCase("LOVELY"))
 	fmt.Printf("The strings are equal when both typed into text editors %t\n", solutions.BackspaceCompare("ab#c", "ad#c"))
+
+	mat2 := [][]int{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}
+	solutions.Rotate(mat2)
+	fmt.Printf("Rotating the matrix yields %v\n", mat2)
 }
