@@ -566,4 +566,5 @@ func main() {
 	}))
 	fmt.Printf("The integer returned as a string is %v\n", solutions.FizzBuzz(5))
 	fmt.Printf("The lowercase version of the string is %s\n", solutions.ToLowerCase("LOVELY"))
+	fmt.Printf("The strings are equal when both typed into text editors %t\n", solutions.BackspaceCompare("ab#c", "ad#c"))
 }
