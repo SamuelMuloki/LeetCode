@@ -577,4 +577,5 @@ func main() {
 	fmt.Printf("The transpose of the matrix is %v\n", solutions.Transpose([][]int{
 		{1, 2, 3}, {4, 5, 6},
 	}))
+	fmt.Printf("Reversing only letters yields %s\n", solutions.ReverseOnlyLetters("Test1ng-Leet=code-Q!"))
 }
