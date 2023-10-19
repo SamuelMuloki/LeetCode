@@ -578,4 +578,7 @@ func main() {
 		{1, 2, 3}, {4, 5, 6},
 	}))
 	fmt.Printf("Reversing only letters yields %s\n", solutions.ReverseOnlyLetters("Test1ng-Leet=code-Q!"))
+	fmt.Printf("After Merging intervals the array is %v\n", solutions.MergeIntervals([][]int{
+		{1, 3}, {2, 6}, {8, 10}, {15, 18},
+	}))
 }
