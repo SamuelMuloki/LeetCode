@@ -585,4 +585,8 @@ func main() {
 	fmt.Printf("The intervals after insertion are %v\n", solutions.Insert([][]int{{1, 3}, {6, 9}}, []int{2, 5}))
 	fmt.Printf("Generating the matrix in spiral order yields %v\n", solutions.GenerateMatrix(3))
 	fmt.Printf("Removing duplicates from the sorted array II yields %d\n", solutions.RemoveDuplicates2([]int{1, 1, 1, 2, 2, 3}))
+
+	cycle2 := &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 0, Next: &utils.ListNode{Val: -4}}}
+	cycle2.Next = cycle2
+	fmt.Printf("There is a cycle in the linked list: %v\n", solutions.DetectCycle(&utils.ListNode{Val: 3, Next: cycle2}))
 }
