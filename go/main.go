@@ -582,4 +582,7 @@ func main() {
 		{1, 3}, {2, 6}, {8, 10}, {15, 18},
 	}))
 	fmt.Printf("The array is sorted and rotated %t\n", solutions.Check([]int{3, 4, 5, 1, 2}))
+	fmt.Printf("The intervals after insertion are %v\n", solutions.Insert([][]int{
+		{1, 3}, {6, 9},
+	}, []int{2, 5}))
 }
