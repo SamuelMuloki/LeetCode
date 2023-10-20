@@ -8,10 +8,23 @@ import (
 
 func Insert(intervals [][]int, newInterval []int) [][]int {
 	newIntervals := append([][]int{}, intervals...)
-	newIntervals = append(newIntervals, newInterval)
-	sort.Slice(newIntervals, func(i, j int) bool {
-		return newIntervals[i][0] < newIntervals[j][0]
+	j := sort.Search(len(newIntervals), func(k int) bool {
+		return newIntervals[k][0] > newInterval[0]
 	})
+
+	if j > -1 {
+		var fromJ [][]int
+		if j < len(newIntervals) {
+			fromJ = newIntervals[j:][:]
+		}
+		newIntervals = append([][]int{}, newIntervals[:j][:]...)
+		newIntervals = append(newIntervals, newInterval)
+		if len(fromJ) > 0 {
+			newIntervals = append(newIntervals, fromJ...)
+		}
+	} else {
+		newIntervals = append(newIntervals, newInterval)
+	}
 
 	res := make([][]int, 0)
 	res = append(res, newIntervals[0])
