@@ -589,4 +589,7 @@ func main() {
 	cycle2 := &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 0, Next: &utils.ListNode{Val: -4}}}
 	cycle2.Next = cycle2
 	fmt.Printf("There is a cycle in the linked list: %v\n", solutions.DetectCycle(&utils.ListNode{Val: 3, Next: cycle2}))
+	fmt.Printf("The non overlapping intervals are %v\n", solutions.EraseOverlapIntervals([][]int{
+		{1, 2}, {2, 3}, {3, 4}, {1, 3},
+	}))
 }
