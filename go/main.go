@@ -597,4 +597,5 @@ func main() {
 	}, 2))
 	fmt.Printf("The sliding window maximum is %v\n", solutions.MaxSlidingWindow([]int{1, 3, -1, -3, 5, 3, 6, 7}, 3))
 	fmt.Printf("The strings are isomorphic %t\n", solutions.IsIsomorphic("egg", "add"))
+	fmt.Printf("The result after repeatedly adding all its digits is %d\n", solutions.AddDigits(38))
 }
