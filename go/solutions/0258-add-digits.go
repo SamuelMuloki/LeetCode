@@ -1,9 +1,11 @@
 package solutions
 
 func AddDigits(num int) int {
-	for (num / 10) != 0 {
-		num = (num / 10) + (num % 10)
+	if num == 0 {
+		return 0
+	} else if num%9 == 0 {
+		return 9
 	}
 
-	return num
+	return num % 9
 }
