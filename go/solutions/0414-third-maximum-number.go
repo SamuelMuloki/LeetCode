@@ -1,21 +1,33 @@
 package solutions
 
-import "sort"
+import (
+	"container/heap"
+	"math"
+
+	"github.com/SamuelMuloki/LeetCode/go/utils"
+)
 
 func ThirdMax(nums []int) int {
-	arr := append([]int{}, nums...)
-	sort.Slice(arr, func(i, j int) bool {
-		return arr[i] > arr[j]
-	})
+	minHeap := &MinHeap{}
+	heap.Init(minHeap)
 
-	set := make(map[int]int)
-	for i := range arr {
-		set[arr[i]]++
+	set, maxVal := make(map[int]int), math.MinInt
+	for i := range nums {
+		if _, ok := set[nums[i]]; ok {
+			continue
+		}
 
-		if len(set) == 3 {
-			return arr[i]
+		set[nums[i]]++
+		maxVal = utils.Max(maxVal, nums[i])
+		heap.Push(minHeap, nums[i])
+		if minHeap.Len() > 3 {
+			heap.Pop(minHeap)
 		}
 	}
 
-	return arr[0]
+	if minHeap.Len() == 3 {
+		return (*minHeap)[0]
+	}
+
+	return maxVal
 }
