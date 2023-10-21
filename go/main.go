@@ -595,4 +595,5 @@ func main() {
 	fmt.Printf("The constrained subsequence sum is %d\n", solutions.ConstrainedSubsetSum([]int{
 		10, 2, -10, 5, 20,
 	}, 2))
+	fmt.Printf("The sliding window maximum is %v\n", solutions.MaxSlidingWindow([]int{1, 3, -1, -3, 5, 3, 6, 7}, 3))
 }
