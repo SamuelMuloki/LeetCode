@@ -592,4 +592,7 @@ func main() {
 	fmt.Printf("The non overlapping intervals are %v\n", solutions.EraseOverlapIntervals([][]int{
 		{1, 2}, {2, 3}, {3, 4}, {1, 3},
 	}))
+	fmt.Printf("The constrained subsequence sum is %d\n", solutions.ConstrainedSubsetSum([]int{
+		10, 2, -10, 5, 20,
+	}, 2))
 }
