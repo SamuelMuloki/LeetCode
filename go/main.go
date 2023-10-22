@@ -599,4 +599,5 @@ func main() {
 	fmt.Printf("The strings are isomorphic %t\n", solutions.IsIsomorphic("egg", "add"))
 	fmt.Printf("The result after repeatedly adding all its digits is %d\n", solutions.AddDigits(38))
 	fmt.Printf("The third maximum number in the array is %d\n", solutions.ThirdMax([]int{3, 2, 1}))
+	fmt.Printf("The maximum score of a good subarray in the array is %d\n", solutions.MaximumScore([]int{1, 4, 3, 7, 4, 5}, 3))
 }
