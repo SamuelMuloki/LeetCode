@@ -601,5 +601,5 @@ func main() {
 	fmt.Printf("The third maximum number in the array is %d\n", solutions.ThirdMax([]int{3, 2, 1}))
 	fmt.Printf("The maximum score of a good subarray in the array is %d\n", solutions.MaximumScore([]int{1, 4, 3, 7, 4, 5}, 3))
 	fmt.Printf("The minimum sum of mountain triplets I is %d\n", solutions.MinimumSum([]int{8, 6, 1, 5, 3}))
-	fmt.Printf("The minimum sum of mountain triplets II is %d\n", solutions.MinimumSum([]int{8, 6, 1, 5, 3}))
+	fmt.Printf("The minimum sum of mountain triplets II is %d\n", solutions.MinimumSum2([]int{5, 4, 8, 7, 10, 2}))
 }
