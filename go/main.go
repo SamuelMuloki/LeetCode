@@ -603,4 +603,5 @@ func main() {
 	fmt.Printf("The minimum sum of mountain triplets I is %d\n", solutions.MinimumSum([]int{8, 6, 1, 5, 3}))
 	fmt.Printf("The minimum sum of mountain triplets II is %d\n", solutions.MinimumSum2([]int{5, 4, 8, 7, 10, 2}))
 	fmt.Printf("String s follows pattern %t\n", solutions.WordPattern("abba", "dog cat cat dog"))
+	fmt.Printf("Number is a power of 4 %t\n", solutions.IsPowerOfFour(16))
 }
