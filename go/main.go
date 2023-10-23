@@ -606,4 +606,5 @@ func main() {
 	fmt.Printf("Number is a power of 4 %t\n", solutions.IsPowerOfFour(16))
 	fmt.Printf("Partitioning the array based on a pivot yields %v\n", solutions.PivotArray([]int{9, 12, 5, 10, 14, 3, 10}, 10))
 	fmt.Printf("Re arranging array elements by sign yields %v\n", solutions.RearrangeArray([]int{3, 1, -2, -5, 2, -4}))
+	fmt.Printf("Sorting array by parity II yields %v\n", solutions.SortArrayByParityII([]int{4, 2, 5, 7}))
 }
