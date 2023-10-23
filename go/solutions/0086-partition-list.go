@@ -10,25 +10,21 @@ import "github.com/SamuelMuloki/LeetCode/go/utils"
  * }
  */
 func PartitionList(head *utils.ListNode, x int) *utils.ListNode {
-	ans := &utils.ListNode{Val: 0}
-
-	curr, dummy := head, ans
-	for curr != nil {
-		if curr.Val < x {
-			dummy.Next = &utils.ListNode{Val: curr.Val}
-			dummy = dummy.Next
+	l1, l2 := new(utils.ListNode), new(utils.ListNode)
+	d1, d2 := l1, l2
+	for head != nil {
+		if head.Val < x {
+			l1.Next = head
+			l1 = l1.Next
+		} else {
+			l2.Next = head
+			l2 = l2.Next
 		}
-		curr = curr.Next
+		head = head.Next
 	}
 
-	curr = head
-	for curr != nil {
-		if curr.Val >= x {
-			dummy.Next = &utils.ListNode{Val: curr.Val}
-			dummy = dummy.Next
-		}
-		curr = curr.Next
-	}
+	l2.Next = nil
+	l1.Next = d2.Next
 
-	return ans.Next
+	return d1.Next
 }
