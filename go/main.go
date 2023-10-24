@@ -616,4 +616,5 @@ func main() {
 		Right: &utils.TreeNode{Val: 2, Right: &utils.TreeNode{Val: 9}},
 	}))
 	fmt.Printf("Sorting an array in ascending order yields %v\n", solutions.SortArray([]int{5, 2, 3, 1}))
+	fmt.Printf("The concatenation of two nums arrays is %v\n", solutions.GetConcatenation([]int{1, 2, 1}))
 }
