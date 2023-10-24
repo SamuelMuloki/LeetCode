@@ -615,4 +615,5 @@ func main() {
 		Left:  &utils.TreeNode{Val: 3, Left: &utils.TreeNode{Val: 5}, Right: &utils.TreeNode{Val: 3}},
 		Right: &utils.TreeNode{Val: 2, Right: &utils.TreeNode{Val: 9}},
 	}))
+	fmt.Printf("Sorting an array in ascending order yields %v\n", solutions.SortArray([]int{5, 2, 3, 1}))
 }
