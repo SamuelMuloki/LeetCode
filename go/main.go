@@ -610,4 +610,9 @@ func main() {
 	fmt.Printf("Partioning the list yields %v\n", solutions.PartitionList(&utils.ListNode{
 		Val: 1, Next: &utils.ListNode{Val: 4, Next: &utils.ListNode{Val: 3, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 5, Next: &utils.ListNode{Val: 2}}}}},
 	}, 3))
+	fmt.Printf("The largest value for each tree row is %v\n", solutions.LargestValues(&utils.TreeNode{
+		Val:   1,
+		Left:  &utils.TreeNode{Val: 3, Left: &utils.TreeNode{Val: 5}, Right: &utils.TreeNode{Val: 3}},
+		Right: &utils.TreeNode{Val: 2, Right: &utils.TreeNode{Val: 9}},
+	}))
 }
