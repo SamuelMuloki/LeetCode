@@ -617,4 +617,5 @@ func main() {
 	}))
 	fmt.Printf("Sorting an array in ascending order yields %v\n", solutions.SortArray([]int{5, 2, 3, 1}))
 	fmt.Printf("The concatenation of two nums arrays is %v\n", solutions.GetConcatenation([]int{1, 2, 1}))
+	fmt.Printf("The string is a valid palindrom after deleting atmost one character from it %t\n", solutions.ValidPalindrome("abca"))
 }
