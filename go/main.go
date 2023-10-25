@@ -623,4 +623,8 @@ func main() {
 	}, 1))
 	fmt.Printf("The kth symbol in grammar is %d\n", solutions.KthGrammar(3, 2))
 	fmt.Printf("Replacing elements with greatest element on the right side equals %v\n", solutions.ReplaceElements([]int{17, 18, 5, 4, 6, 1}))
+
+	rotateArr := []int{1, 2, 3, 4, 5, 6, 7}
+	solutions.RotateArray(rotateArr, 3)
+	fmt.Printf("Rotating the array k times yields %v\n", rotateArr)
 }
