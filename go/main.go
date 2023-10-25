@@ -627,4 +627,5 @@ func main() {
 	rotateArr := []int{1, 2, 3, 4, 5, 6, 7}
 	solutions.RotateArray(rotateArr, 3)
 	fmt.Printf("Rotating the array k times yields %v\n", rotateArr)
+	fmt.Printf("All numbers disappeared from array are %v\n", solutions.FindDisappearedNumbers([]int{4, 3, 2, 7, 8, 2, 3, 1}))
 }
