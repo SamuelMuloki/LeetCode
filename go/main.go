@@ -628,4 +628,5 @@ func main() {
 	solutions.RotateArray(rotateArr, 3)
 	fmt.Printf("Rotating the array k times yields %v\n", rotateArr)
 	fmt.Printf("All numbers disappeared from array are %v\n", solutions.FindDisappearedNumbers([]int{4, 3, 2, 7, 8, 2, 3, 1}))
+	fmt.Printf("Number is a power of 3 %t\n", solutions.IsPowerOfThree(27))
 }
