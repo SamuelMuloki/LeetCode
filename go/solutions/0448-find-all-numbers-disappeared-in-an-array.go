@@ -1,15 +1,17 @@
 package solutions
 
 func FindDisappearedNumbers(nums []int) []int {
-	n := len(nums)
-	ans, set := make([]int, 0), make(map[int]bool)
+	ans := make([]int, 0)
 	for i := range nums {
-		set[nums[i]] = true
+		idx := abs(nums[i]) - 1
+		if nums[idx] > 0 {
+			nums[idx] = -nums[idx]
+		}
 	}
 
-	for j := 1; j <= n; j++ {
-		if !set[j] {
-			ans = append(ans, j)
+	for i := 1; i <= len(nums); i++ {
+		if nums[i-1] > 0 {
+			ans = append(ans, i)
 		}
 	}
 
