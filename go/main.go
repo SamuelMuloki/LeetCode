@@ -622,4 +622,5 @@ func main() {
 		{1, 2, 3}, {4, 5, 6}, {7, 8, 9},
 	}, 1))
 	fmt.Printf("The kth symbol in grammar is %d\n", solutions.KthGrammar(3, 2))
+	fmt.Printf("Replacing elements with greatest element on the right side equals %v\n", solutions.ReplaceElements([]int{17, 18, 5, 4, 6, 1}))
 }
