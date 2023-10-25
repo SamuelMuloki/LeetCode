@@ -621,4 +621,5 @@ func main() {
 	fmt.Printf("Shifting 2d grid yields %v\n", solutions.ShiftGrid([][]int{
 		{1, 2, 3}, {4, 5, 6}, {7, 8, 9},
 	}, 1))
+	fmt.Printf("The kth symbol in grammar is %d\n", solutions.KthGrammar(3, 2))
 }
