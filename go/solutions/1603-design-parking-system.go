@@ -1,36 +1,22 @@
 package solutions
 
 type ParkingSystem struct {
-	big, medium, small int
+	CarType map[int]int
 }
 
 func ParkingConstructor(big int, medium int, small int) ParkingSystem {
-	return ParkingSystem{big, medium, small}
+	return ParkingSystem{
+		CarType: map[int]int{1: big, 2: medium, 3: small},
+	}
 }
 
 func (this *ParkingSystem) AddCar(carType int) bool {
-	if carType == 1 {
-		if this.big == 0 {
-			return false
-		}
-
-		this.big--
-		return true
-	} else if carType == 2 {
-		if this.medium == 0 {
-			return false
-		}
-
-		this.medium--
+	if this.CarType[carType] > 0 {
+		this.CarType[carType]--
 		return true
 	}
 
-	if this.small == 0 {
-		return false
-	}
-
-	this.small--
-	return true
+	return false
 }
 
 /**
