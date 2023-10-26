@@ -10,24 +10,16 @@ import "github.com/SamuelMuloki/LeetCode/go/utils"
  * }
  */
 func SwapNodes(head *utils.ListNode, k int) *utils.ListNode {
-	if head == nil {
-		return nil
-	}
+	begin, end := head, head
+	for curr := head; curr != nil; curr = curr.Next {
+		k--
+		if k == 0 {
+			begin = curr
+		}
 
-	count, curr := 0, head
-	for curr != nil {
-		count++
-		curr = curr.Next
-	}
-
-	begin := head
-	for i := 1; i < k; i++ {
-		begin = begin.Next
-	}
-
-	end := head
-	for i := 0; i < count-k; i++ {
-		end = end.Next
+		if k < 0 {
+			end = end.Next
+		}
 	}
 
 	begin.Val, end.Val = end.Val, begin.Val
