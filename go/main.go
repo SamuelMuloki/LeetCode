@@ -634,4 +634,5 @@ func main() {
 		Val: 4, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 1, Next: &utils.ListNode{Val: 3}}},
 	}))
 	fmt.Printf("The result after swapping nodes in the list is %v\n", solutions.SwapNodes(utils.NewListNode([]int{1, 2, 3, 4, 5}), 2))
+	fmt.Printf("The sign of the product array is %d\n", solutions.ArraySign([]int{-1, -2, -3, -4, 3, 2, 1}))
 }
