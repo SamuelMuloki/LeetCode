@@ -633,4 +633,5 @@ func main() {
 	fmt.Printf("The result after soting the list is %v\n", solutions.SortList(&utils.ListNode{
 		Val: 4, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 1, Next: &utils.ListNode{Val: 3}}},
 	}))
+	fmt.Printf("The result after swapping nodes in the list is %v\n", solutions.SwapNodes(utils.NewListNode([]int{1, 2, 3, 4, 5}), 2))
 }
