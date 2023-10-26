@@ -635,4 +635,10 @@ func main() {
 	}))
 	fmt.Printf("The result after swapping nodes in the list is %v\n", solutions.SwapNodes(utils.NewListNode([]int{1, 2, 3, 4, 5}), 2))
 	fmt.Printf("The sign of the product array is %d\n", solutions.ArraySign([]int{-1, -2, -3, -4, 3, 2, 1}))
+
+	parkingSystem := solutions.ParkingConstructor(1, 1, 0)
+	fmt.Println("There is 1 available slot for a big car", parkingSystem.AddCar(1))
+	fmt.Println("There is 1 available slot for a medium car", parkingSystem.AddCar(2))
+	fmt.Println("There is no available slot for a small car", parkingSystem.AddCar(3))
+	fmt.Println("There is no available slot for a big car. It is already occupied", parkingSystem.AddCar(1))
 }
