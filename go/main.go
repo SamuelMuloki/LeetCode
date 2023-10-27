@@ -643,4 +643,13 @@ func main() {
 	fmt.Println("There is no available slot for a big car. It is already occupied", parkingSystem.AddCar(1))
 
 	fmt.Printf("The number of palindromic substrings are %d\n", solutions.CountSubstrings("aaa"))
+
+	minStack := solutions.MinStackConstructor()
+	minStack.Push(-2)
+	minStack.Push(0)
+	minStack.Push(-3)
+	fmt.Printf("The current min value is %d\n", minStack.GetMin())
+	minStack.Pop()
+	fmt.Printf("The current top value is %d\n", minStack.Top())
+	fmt.Printf("The current min value is %d\n", minStack.GetMin())
 }
