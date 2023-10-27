@@ -2,38 +2,35 @@
 package solutions
 
 func LongestPalindrome(s string) string {
-	n := len(s)
-	dp := make([][]bool, n)
-	output := []int{0, 0}
+	ans := []int{0, 0}
 
-	for i := 0; i < n; i++ {
-		dp[i] = make([]bool, n)
-	}
+	for i := 0; i < len(s); i++ {
+		oddLen := expand(i, i, s)
+		if oddLen > ans[1]-ans[0]+1 {
+			dist := oddLen / 2
+			ans[0] = i - dist
+			ans[1] = i + dist
+		}
 
-	for i := 0; i < n; i++ {
-		dp[i][i] = true
-	}
-
-	for i := 0; i < n-1; i++ {
-		if string(s[i]) == string(s[i+1]) {
-			dp[i][i+1] = true
-			output[0] = i
-			output[1] = i + 1
+		evenLen := expand(i, i+1, s)
+		if evenLen > ans[1]-ans[0]+1 {
+			dist := (evenLen / 2) - 1
+			ans[0] = i - dist
+			ans[1] = i + 1 + dist
 		}
 	}
 
-	for diff := 2; diff < n; diff++ {
-		for i := 0; i < n-diff; i++ {
-			j := i + diff
-			if string(s[i]) == string(s[j]) && dp[i+1][j-1] {
-				dp[i][j] = true
-				output[0] = i
-				output[1] = j
-			}
-		}
-	}
-
-	i, j := output[0], output[1]
-
+	i, j := ans[0], ans[1]
 	return string(s[i : j+1])
+}
+
+func expand(i, j int, s string) int {
+	l, r := i, j
+
+	for l >= 0 && r < len(s) && s[l] == s[r] {
+		l--
+		r++
+	}
+
+	return r - l - 1
 }
