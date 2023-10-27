@@ -641,4 +641,6 @@ func main() {
 	fmt.Println("There is 1 available slot for a medium car", parkingSystem.AddCar(2))
 	fmt.Println("There is no available slot for a small car", parkingSystem.AddCar(3))
 	fmt.Println("There is no available slot for a big car. It is already occupied", parkingSystem.AddCar(1))
+
+	fmt.Printf("The number of palindromic substrings are %d\n", solutions.CountSubstrings("aaa"))
 }
