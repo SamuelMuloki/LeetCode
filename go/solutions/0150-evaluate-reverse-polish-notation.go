@@ -4,26 +4,21 @@ import "strconv"
 
 func EvalRPN(tokens []string) int {
 	st := []int{}
-	ops := map[byte]bool{'+': true, '-': true, '*': true, '/': true}
-	for i := 0; i < len(tokens); i++ {
-		if len(tokens[i][:]) == 1 && ops[tokens[i][0]] && len(st) > 1 {
+	ops := map[string]func(int, int) int{
+		"+": func(a, b int) int { return a + b },
+		"-": func(a, b int) int { return a - b },
+		"*": func(a, b int) int { return a * b },
+		"/": func(a, b int) int { return a / b },
+	}
+	for _, token := range tokens {
+		if lambda, ok := ops[token]; ok {
 			last, second := st[len(st)-1], st[len(st)-2]
+			res := lambda(second, last)
 			st = st[:len(st)-2]
-
-			var res int
-			if tokens[i][0] == '+' {
-				res = last + second
-			} else if tokens[i][0] == '-' {
-				res = second - last
-			} else if tokens[i][0] == '*' {
-				res = last * second
-			} else {
-				res = second / last
-			}
 
 			st = append(st, res)
 		} else {
-			num, _ := strconv.Atoi(tokens[i])
+			num, _ := strconv.Atoi(token)
 			st = append(st, num)
 		}
 	}
