@@ -654,4 +654,5 @@ func main() {
 	fmt.Printf("The current min value is %d\n", minStack.GetMin())
 
 	fmt.Printf("The result after evaluating the expression is %d\n", solutions.EvalRPN([]string{"10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+"}))
+	fmt.Printf("The number of ways you can make up the amount from the coins is %d\n", solutions.Change(5, []int{1, 2, 5}))
 }
