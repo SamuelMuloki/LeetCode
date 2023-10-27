@@ -652,4 +652,6 @@ func main() {
 	minStack.Pop()
 	fmt.Printf("The current top value is %d\n", minStack.Top())
 	fmt.Printf("The current min value is %d\n", minStack.GetMin())
+
+	fmt.Printf("The result after evaluating the expression is %d\n", solutions.EvalRPN([]string{"10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+"}))
 }
