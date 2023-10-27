@@ -1,33 +1,22 @@
 package solutions
 
 func CountSubstrings(s string) int {
-	n, count := len(s), 0
-	dp := make([][]bool, n)
-
-	for i := 0; i < n; i++ {
-		dp[i] = make([]bool, n)
+	count := 0
+	for i := 0; i < len(s); i++ {
+		count += expand2(i, i, s)
+		count += expand2(i, i+1, s)
 	}
 
-	for i := 0; i < n; i++ {
+	return count
+}
+
+func expand2(i, j int, s string) int {
+	l, r, count := i, j, 0
+
+	for l >= 0 && r < len(s) && s[l] == s[r] {
 		count++
-		dp[i][i] = true
-	}
-
-	for i := 0; i < n-1; i++ {
-		if string(s[i]) == string(s[i+1]) {
-			count++
-			dp[i][i+1] = true
-		}
-	}
-
-	for diff := 2; diff < n; diff++ {
-		for i := 0; i < n-diff; i++ {
-			j := i + diff
-			if string(s[i]) == string(s[j]) && dp[i+1][j-1] {
-				count++
-				dp[i][j] = true
-			}
-		}
+		l--
+		r++
 	}
 
 	return count
