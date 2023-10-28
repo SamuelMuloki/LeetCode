@@ -662,4 +662,9 @@ func main() {
 		"test.e.mail+bob.cathy@leetcode.com",
 		"testemail+david@lee.tcode.com",
 	}))
+
+	numArray := solutions.SumRangeConstructor([]int{-2, 0, 3, -5, 2, -1})
+	fmt.Printf("The sum of elements of nums between indices 0 and 2 are %d\n", numArray.SumRange(0, 2))
+	fmt.Printf("The sum of elements of nums between indices 2 and 5 are %d\n", numArray.SumRange(2, 5))
+	fmt.Printf("The sum of elements of nums between indices 0 and 5 are %d\n", numArray.SumRange(0, 5))
 }
