@@ -1,30 +1,15 @@
 package solutions
 
+import "strings"
+
 func NumUniqueEmails(emails []string) int {
 	set := make(map[string]bool)
 	for _, email := range emails {
-		str := ""
-		for i := 0; i < len(email); {
-			if email[i] == '.' {
-				i++
-				continue
-			}
+		parts := strings.Split(email, "@")
+		first := strings.Split(parts[0], "+")
+		final := strings.Replace(first[0], ".", "", -1) + "@" + parts[1]
 
-			if email[i] == '+' {
-				for ; email[i] != '@'; i++ {
-				}
-			}
-
-			if email[i] == '@' {
-				str += string(email[i:])
-				break
-			}
-
-			str += string(email[i])
-			i++
-		}
-
-		set[str] = true
+		set[final] = true
 	}
 
 	return len(set)
