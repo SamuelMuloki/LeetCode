@@ -655,4 +655,5 @@ func main() {
 
 	fmt.Printf("The result after evaluating the expression is %d\n", solutions.EvalRPN([]string{"10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+"}))
 	fmt.Printf("The number of ways you can make up the amount from the coins is %d\n", solutions.Change(5, []int{1, 2, 5}))
+	fmt.Printf("The number of strings that can be formed are %d\n", solutions.CountVowelPermutation(2))
 }
