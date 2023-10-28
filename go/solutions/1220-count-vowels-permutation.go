@@ -2,44 +2,24 @@ package solutions
 
 func CountVowelPermutation(n int) int {
 	mod := 1000000007
-	vowels := map[byte][]byte{
-		's': {'a', 'e', 'i', 'o', 'u'},
-		'a': {'e'},
-		'e': {'a', 'i'},
-		'i': {'a', 'e', 'o', 'u'},
-		'o': {'i', 'u'},
-		'u': {'a'},
-	}
-
-	dp := make(map[byte][]int)
-	for i := range vowels {
+	dp := make([][]int, 5)
+	for i := range dp {
 		dp[i] = make([]int, n+1)
 	}
 
-	for i := range dp {
-		for j := range dp[i] {
-			dp[i][j] = -1
-		}
+	dp[0][1], dp[1][1], dp[2][1], dp[3][1], dp[4][1] = 1, 1, 1, 1, 1
+	for i := 2; i <= n; i++ {
+		dp[0][i] = dp[1][i-1]
+		dp[1][i] = (dp[0][i-1] + dp[2][i-1]) % mod
+		dp[2][i] = (dp[0][i-1] + dp[1][i-1] + dp[3][i-1] + dp[4][i-1]) % mod
+		dp[3][i] = (dp[2][i-1] + dp[4][i-1]) % mod
+		dp[4][i] = dp[0][i-1]
 	}
 
-	var dfs func(i int, vowel byte) int
-	dfs = func(i int, vowel byte) int {
-		if i == 0 {
-			return 1
-		}
-
-		if dp[vowel][i] != -1 {
-			return dp[vowel][i]
-		}
-
-		count := 0
-		for _, v := range vowels[vowel] {
-			count = (count + dfs(i-1, v)) % mod
-		}
-
-		dp[vowel][i] = count
-		return dp[vowel][i]
+	ans := 0
+	for i := 0; i < 5; i++ {
+		ans = (ans + dp[i][n]) % mod
 	}
 
-	return dfs(n, 's')
+	return ans
 }
