@@ -657,4 +657,9 @@ func main() {
 	fmt.Printf("The number of ways you can make up the amount from the coins is %d\n", solutions.Change(5, []int{1, 2, 5}))
 	fmt.Printf("The number of strings that can be formed are %d\n", solutions.CountVowelPermutation(2))
 	fmt.Printf("The sum of scores on the record after applying all the operations is %d\n", solutions.CalPoints([]string{"5", "2", "C", "D", "+"}))
+	fmt.Printf("The number of unique email addresses are %d\n", solutions.NumUniqueEmails([]string{
+		"test.email+alex@leetcode.com",
+		"test.e.mail+bob.cathy@leetcode.com",
+		"testemail+david@lee.tcode.com",
+	}))
 }
