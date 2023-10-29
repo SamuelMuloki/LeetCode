@@ -676,4 +676,9 @@ func main() {
 	fmt.Printf("The head of the modified linked list after removing elements is %v\n", solutions.RemoveNodes(&utils.ListNode{
 		Val: 5, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 13, Next: &utils.ListNode{Val: 3, Next: &utils.ListNode{Val: 8}}}},
 	}))
+
+	node := &utils.ListNode{Val: 5, Next: &utils.ListNode{Val: 1, Next: &utils.ListNode{Val: 9}}}
+	deleteNode := &utils.ListNode{Val: 4, Next: node}
+	solutions.DeleteNode2(node)
+	fmt.Printf("After deleting the node, the list is %v\n", deleteNode)
 }
