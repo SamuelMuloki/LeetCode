@@ -667,4 +667,6 @@ func main() {
 	fmt.Printf("The sum of elements of nums between indices 0 and 2 are %d\n", numArray.SumRange(0, 2))
 	fmt.Printf("The sum of elements of nums between indices 2 and 5 are %d\n", numArray.SumRange(2, 5))
 	fmt.Printf("The sum of elements of nums between indices 0 and 5 are %d\n", numArray.SumRange(0, 5))
+
+	fmt.Printf("The minimum number of pigs needed to figure out which bucket is poisonous are %d\n", solutions.PoorPigs(4, 15, 15))
 }
