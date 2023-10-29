@@ -11,24 +11,26 @@ import "github.com/SamuelMuloki/LeetCode/go/utils"
  * }
  */
 func KthSmallest(root *utils.TreeNode, k int) int {
-	if root == nil {
-		return 0
+	st := make([]*utils.TreeNode, 0)
+	for root != nil {
+		st = append(st, root)
+		root = root.Left
 	}
 
-	output := make([]int, 0)
-	recur(root, &output)
+	for k != 0 {
+		last := st[len(st)-1]
+		st = st[:len(st)-1]
+		k--
+		if k == 0 {
+			return last.Val
+		}
 
-	return output[k-1]
-}
-
-func recur(root *utils.TreeNode, output *[]int) []int {
-	if root == nil {
-		return *output
+		right := last.Right
+		for right != nil {
+			st = append(st, right)
+			right = right.Left
+		}
 	}
 
-	recur(root.Left, output)
-	*output = append(*output, root.Val)
-	recur(root.Right, output)
-
-	return *output
+	return -1
 }
