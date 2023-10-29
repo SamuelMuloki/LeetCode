@@ -670,4 +670,7 @@ func main() {
 
 	fmt.Printf("The minimum number of pigs needed to figure out which bucket is poisonous are %d\n", solutions.PoorPigs(4, 15, 15))
 	fmt.Printf("The possible combinations of k numbers chosen from 1-n are %v\n", solutions.Combine(4, 2))
+	fmt.Printf("The kth smallest element in the BST is %d\n", solutions.KthSmallest(&utils.TreeNode{
+		Val: 3, Left: &utils.TreeNode{Val: 1, Right: &utils.TreeNode{Val: 2}}, Right: &utils.TreeNode{Val: 4},
+	}, 1))
 }
