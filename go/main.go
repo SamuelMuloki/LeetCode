@@ -673,4 +673,7 @@ func main() {
 	fmt.Printf("The kth smallest element in the BST is %d\n", solutions.KthSmallest(&utils.TreeNode{
 		Val: 3, Left: &utils.TreeNode{Val: 1, Right: &utils.TreeNode{Val: 2}}, Right: &utils.TreeNode{Val: 4},
 	}, 1))
+	fmt.Printf("The head of the modified linked list after removing elements is %v\n", solutions.RemoveNodes(&utils.ListNode{
+		Val: 5, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 13, Next: &utils.ListNode{Val: 3, Next: &utils.ListNode{Val: 8}}}},
+	}))
 }
