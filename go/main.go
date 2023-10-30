@@ -684,4 +684,5 @@ func main() {
 
 	fmt.Printf("Sorting integers by number of 1 bits yields %v\n", solutions.SortByBits([]int{1024, 512, 256, 128, 64, 32, 16, 8, 4, 2, 1}))
 	fmt.Printf("The minimum difference between highest and lowest of k scores is %d\n", solutions.MinimumDifference([]int{9, 4, 1, 7}, 2))
+	fmt.Printf("The number of odd numbers in an interval range are %d\n", solutions.CountOdds(8, 10))
 }
