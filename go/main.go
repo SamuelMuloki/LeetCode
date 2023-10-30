@@ -681,4 +681,6 @@ func main() {
 	deleteNode := &utils.ListNode{Val: 4, Next: node}
 	solutions.DeleteNode2(node)
 	fmt.Printf("After deleting the node, the list is %v\n", deleteNode)
+
+	fmt.Printf("Sorting integers by number of 1 bits yields %v\n", solutions.SortByBits([]int{1024, 512, 256, 128, 64, 32, 16, 8, 4, 2, 1}))
 }
