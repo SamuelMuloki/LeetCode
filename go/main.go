@@ -689,4 +689,5 @@ func main() {
 		{1, 2, 3}, {4, 5, 6}, {7, 8, 9},
 	}))
 	fmt.Printf("The squares of a sorted array are %v\n", solutions.SortedSquares([]int{-4, -1, 0, 3, 10}))
+	fmt.Printf("The array that satisfies xor is %v\n", solutions.FindArray([]int{5, 2, 0, 3, 1}))
 }
