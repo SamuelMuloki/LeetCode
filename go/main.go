@@ -691,4 +691,5 @@ func main() {
 	fmt.Printf("The squares of a sorted array are %v\n", solutions.SortedSquares([]int{-4, -1, 0, 3, 10}))
 	fmt.Printf("The array that satisfies xor is %v\n", solutions.FindArray([]int{5, 2, 0, 3, 1}))
 	fmt.Printf("The maximum number of instances of balloon that can be formed are %d\n", solutions.MaxNumberOfBalloons("loonbalxballpoon"))
+	fmt.Printf("The sentence is a pangram %t\n", solutions.CheckIfPangram("thequickbrownfoxjumpsoverthelazydog"))
 }
