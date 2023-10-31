@@ -692,4 +692,5 @@ func main() {
 	fmt.Printf("The array that satisfies xor is %v\n", solutions.FindArray([]int{5, 2, 0, 3, 1}))
 	fmt.Printf("The maximum number of instances of balloon that can be formed are %d\n", solutions.MaxNumberOfBalloons("loonbalxballpoon"))
 	fmt.Printf("The sentence is a pangram %t\n", solutions.CheckIfPangram("thequickbrownfoxjumpsoverthelazydog"))
+	fmt.Printf("Sorting the people in descending order by people's heights yields %v\n", solutions.SortPeople([]string{"Mary", "John", "Emma"}, []int{180, 165, 170}))
 }
