@@ -13,7 +13,9 @@ import (
  * }
  */
 func FindMode(root *utils.TreeNode) []int {
-	arr := make([]int, 0)
+	currStreak, maxStreak, currNum := 0, 0, 0
+	ans := make([]int, 0)
+
 	var dfs func(node *utils.TreeNode)
 	dfs = func(node *utils.TreeNode) {
 		if node == nil {
@@ -21,20 +23,12 @@ func FindMode(root *utils.TreeNode) []int {
 		}
 
 		dfs(node.Left)
-		arr = append(arr, node.Val)
-		dfs(node.Right)
-	}
 
-	dfs(root)
-
-	currStreak, maxStreak, currNum := 0, 0, 0
-	ans := make([]int, 0)
-	for i := range arr {
-		if arr[i] == currNum {
+		if node.Val == currNum {
 			currStreak++
 		} else {
 			currStreak = 1
-			currNum = arr[i]
+			currNum = node.Val
 		}
 
 		if currStreak > maxStreak {
@@ -43,9 +37,13 @@ func FindMode(root *utils.TreeNode) []int {
 		}
 
 		if currStreak == maxStreak {
-			ans = append(ans, arr[i])
+			ans = append(ans, node.Val)
 		}
+
+		dfs(node.Right)
 	}
+
+	dfs(root)
 
 	return ans
 }
