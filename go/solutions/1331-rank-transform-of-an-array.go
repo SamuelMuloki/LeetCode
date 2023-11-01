@@ -15,10 +15,9 @@ func ArrayRankTransform(arr []int) []int {
 		}
 	}
 
-	ans := make([]int, len(arr))
 	for i := range arr {
-		ans[i] = set[arr[i]]
+		arr[i] = set[arr[i]]
 	}
 
-	return ans
+	return arr
 }
