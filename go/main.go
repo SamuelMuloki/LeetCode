@@ -693,4 +693,7 @@ func main() {
 	fmt.Printf("The maximum number of instances of balloon that can be formed are %d\n", solutions.MaxNumberOfBalloons("loonbalxballpoon"))
 	fmt.Printf("The sentence is a pangram %t\n", solutions.CheckIfPangram("thequickbrownfoxjumpsoverthelazydog"))
 	fmt.Printf("Sorting the people in descending order by people's heights yields %v\n", solutions.SortPeople([]string{"Mary", "John", "Emma"}, []int{180, 165, 170}))
+	fmt.Printf("The modes in the binary search tree are %v\n", solutions.FindMode(&utils.TreeNode{
+		Val: 2, Left: &utils.TreeNode{Val: 1}, Right: &utils.TreeNode{Val: 2},
+	}))
 }
