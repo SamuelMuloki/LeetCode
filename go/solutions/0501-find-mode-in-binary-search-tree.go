@@ -1,8 +1,6 @@
 package solutions
 
 import (
-	"math"
-
 	"github.com/SamuelMuloki/LeetCode/go/utils"
 )
 
@@ -15,32 +13,37 @@ import (
  * }
  */
 func FindMode(root *utils.TreeNode) []int {
-	ans := make([]int, 0)
-	set := make(map[int]int)
-	maxFreq := math.MinInt
-
-	queue := make([]*utils.TreeNode, 0)
-	queue = append(queue, root)
-	for len(queue) > 0 {
-		qLen := len(queue)
-		for i := 0; i < qLen; i++ {
-			set[queue[i].Val]++
-			maxFreq = utils.Max(maxFreq, set[queue[i].Val])
-			if queue[i].Left != nil {
-				queue = append(queue, queue[i].Left)
-			}
-
-			if queue[i].Right != nil {
-				queue = append(queue, queue[i].Right)
-			}
+	arr := make([]int, 0)
+	var dfs func(node *utils.TreeNode)
+	dfs = func(node *utils.TreeNode) {
+		if node == nil {
+			return
 		}
 
-		queue = queue[qLen:]
+		dfs(node.Left)
+		arr = append(arr, node.Val)
+		dfs(node.Right)
 	}
 
-	for k := range set {
-		if set[k] == maxFreq {
-			ans = append(ans, k)
+	dfs(root)
+
+	currStreak, maxStreak, currNum := 0, 0, 0
+	ans := make([]int, 0)
+	for i := range arr {
+		if arr[i] == currNum {
+			currStreak++
+		} else {
+			currStreak = 1
+			currNum = arr[i]
+		}
+
+		if currStreak > maxStreak {
+			ans = []int{}
+			maxStreak = currStreak
+		}
+
+		if currStreak == maxStreak {
+			ans = append(ans, arr[i])
 		}
 	}
 
