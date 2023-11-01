@@ -698,4 +698,12 @@ func main() {
 	}))
 	fmt.Printf("Transforming the arrasy by rank yields %v\n", solutions.ArrayRankTransform([]int{40, 10, 20, 30}))
 	fmt.Printf("The party that will finally anounce victory is %s\n", solutions.PredictPartyVictory("RDD"))
+
+	trie := solutions.TrieConstructor()
+	trie.Insert("apple")
+	fmt.Println("Search apple", trie.Search("apple"))
+	fmt.Println("Search app", trie.Search("app"))
+	fmt.Println("Starts with app", trie.StartsWith("app"))
+	trie.Insert("app")
+	fmt.Println("Search app", trie.Search("app"))
 }
