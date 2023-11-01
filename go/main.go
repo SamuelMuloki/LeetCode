@@ -696,4 +696,5 @@ func main() {
 	fmt.Printf("The modes in the binary search tree are %v\n", solutions.FindMode(&utils.TreeNode{
 		Val: 2, Left: &utils.TreeNode{Val: 1}, Right: &utils.TreeNode{Val: 2},
 	}))
+	fmt.Printf("Transforming the arrasy by rank yields %v\n", solutions.ArrayRankTransform([]int{40, 10, 20, 30}))
 }
