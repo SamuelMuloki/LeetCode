@@ -697,4 +697,5 @@ func main() {
 		Val: 2, Left: &utils.TreeNode{Val: 1}, Right: &utils.TreeNode{Val: 2},
 	}))
 	fmt.Printf("Transforming the arrasy by rank yields %v\n", solutions.ArrayRankTransform([]int{40, 10, 20, 30}))
+	fmt.Printf("The party that will finally anounce victory is %s\n", solutions.PredictPartyVictory("RDD"))
 }
