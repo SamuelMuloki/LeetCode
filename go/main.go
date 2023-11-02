@@ -713,4 +713,5 @@ func main() {
 		Right: &utils.TreeNode{Val: 5, Right: &utils.TreeNode{Val: 6}},
 	}))
 	fmt.Printf("Shuffling the array yields %v\n", solutions.Shuffle([]int{1, 2, 3, 4, 4, 3, 2, 1}, 4))
+	fmt.Printf("Adding array-form of integer yields %v\n", solutions.AddToArrayForm([]int{2, 1, 5}, 806))
 }
