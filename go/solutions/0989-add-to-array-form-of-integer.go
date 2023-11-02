@@ -8,8 +8,12 @@ func AddToArrayForm(num []int, k int) []int {
 			sum += num[i]
 		}
 
-		ans = append([]int{sum % 10}, ans...)
+		ans = append(ans, sum%10)
 		sum /= 10
+	}
+
+	for i, j := 0, len(ans)-1; i < j; i, j = i+1, j-1 {
+		ans[i], ans[j] = ans[j], ans[i]
 	}
 
 	return ans
