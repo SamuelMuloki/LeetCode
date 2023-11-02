@@ -712,4 +712,5 @@ func main() {
 		Left:  &utils.TreeNode{Val: 8, Left: &utils.TreeNode{Val: 0}, Right: &utils.TreeNode{Val: 1}},
 		Right: &utils.TreeNode{Val: 5, Right: &utils.TreeNode{Val: 6}},
 	}))
+	fmt.Printf("Shuffling the array yields %v\n", solutions.Shuffle([]int{1, 2, 3, 4, 4, 3, 2, 1}, 4))
 }
