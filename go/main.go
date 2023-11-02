@@ -706,4 +706,10 @@ func main() {
 	fmt.Println("Starts with app", trie.StartsWith("app"))
 	trie.Insert("app")
 	fmt.Println("Search app", trie.Search("app"))
+
+	fmt.Printf("The number of nodes equal to equal to average of the subtree are %d\n", solutions.AverageOfSubtree(&utils.TreeNode{
+		Val:   4,
+		Left:  &utils.TreeNode{Val: 8, Left: &utils.TreeNode{Val: 0}, Right: &utils.TreeNode{Val: 1}},
+		Right: &utils.TreeNode{Val: 5, Right: &utils.TreeNode{Val: 6}},
+	}))
 }
