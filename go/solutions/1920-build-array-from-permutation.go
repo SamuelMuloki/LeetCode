@@ -1,10 +1,14 @@
 package solutions
 
 func BuildArray2(nums []int) []int {
-	ans := make([]int, len(nums))
-	for i := 0; i < len(nums); i++ {
-		ans[i] = nums[nums[i]]
+	n := len(nums)
+	for j := range nums {
+		nums[j] = nums[j] + n*(nums[nums[j]]%n)
 	}
 
-	return ans
+	for i := range nums {
+		nums[i] = nums[i] / n
+	}
+
+	return nums
 }
