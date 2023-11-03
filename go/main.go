@@ -718,4 +718,5 @@ func main() {
 	fmt.Printf("The stack operations needed to build target are %v\n", solutions.BuildArray([]int{1, 3}, 3))
 	fmt.Printf("Removing all adjacent duplicates in string yields %s\n", solutions.RemoveDuplicates3("abbaca"))
 	fmt.Printf("Removing all adjacent k duplicates in string yields %s\n", solutions.RemoveDuplicates4("deeedbbcccbdaa", 3))
+	fmt.Printf("The array ans is %v\n", solutions.BuildArray2([]int{0, 2, 1, 5, 3, 4}))
 }
