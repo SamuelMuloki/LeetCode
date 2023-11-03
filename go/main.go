@@ -716,4 +716,5 @@ func main() {
 	fmt.Printf("Adding array-form of integer yields %v\n", solutions.AddToArrayForm([]int{2, 1, 5}, 806))
 	fmt.Printf("The sum of multiples in range are %d\n", solutions.SumOfMultiples(7))
 	fmt.Printf("The stack operations needed to build target are %v\n", solutions.BuildArray([]int{1, 3}, 3))
+	fmt.Printf("Removing all adjacent duplicates in string yields %s\n", solutions.RemoveDuplicates3("abbaca"))
 }
