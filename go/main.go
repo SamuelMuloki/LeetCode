@@ -720,4 +720,5 @@ func main() {
 	fmt.Printf("Removing all adjacent k duplicates in string yields %s\n", solutions.RemoveDuplicates4("deeedbbcccbdaa", 3))
 	fmt.Printf("The array ans is %v\n", solutions.BuildArray2([]int{0, 2, 1, 5, 3, 4}))
 	fmt.Printf("Last moment before all ants fall out of a plank is %d\n", solutions.GetLastMoment(4, []int{4, 3}, []int{0, 1}))
+	fmt.Printf("Sorting the sentence yields %v\n", solutions.SortSentence("is2 sentence4 This1 a3"))
 }
