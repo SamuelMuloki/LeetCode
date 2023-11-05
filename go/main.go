@@ -730,4 +730,5 @@ func main() {
 	p := &utils.TreeNode{Val: 5, Left: &utils.TreeNode{Val: 6}, Right: &utils.TreeNode{Val: 2, Left: &utils.TreeNode{Val: 7}, Right: &utils.TreeNode{Val: 4}}}
 	q := &utils.TreeNode{Val: 1, Left: &utils.TreeNode{Val: 0}, Right: &utils.TreeNode{Val: 8}}
 	fmt.Printf("The lowest common ancestor of a binary tree is %v\n", solutions.LowestCommonAncestor(&utils.TreeNode{Val: 3, Left: p, Right: q}, p, q))
+	fmt.Printf("The hamming distance of integers x and y is %d\n", solutions.HammingDistance(1, 4))
 }
