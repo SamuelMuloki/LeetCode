@@ -732,4 +732,5 @@ func main() {
 	fmt.Printf("The lowest common ancestor of a binary tree is %v\n", solutions.LowestCommonAncestor(&utils.TreeNode{Val: 3, Left: p, Right: q}, p, q))
 	fmt.Printf("The hamming distance of integers x and y is %d\n", solutions.HammingDistance(1, 4))
 	fmt.Printf("The minimum bit flips to convert number %d\n", solutions.MinBitFlips(10, 7))
+	fmt.Printf("The minimum flips to make a OR b equal to c is %d\n", solutions.MinFlips(2, 6, 5))
 }
