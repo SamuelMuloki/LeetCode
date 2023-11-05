@@ -725,4 +725,5 @@ func main() {
 	fmt.Printf("Flipping and inverting an image yields %v\n", solutions.FlipAndInvertImage([][]int{
 		{1, 1, 0}, {1, 0, 1}, {0, 0, 0},
 	}))
+	fmt.Printf("The winner of an array game is %d\n", solutions.GetWinner([]int{2, 1, 3, 5, 4, 6, 7}, 2))
 }
