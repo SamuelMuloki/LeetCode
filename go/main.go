@@ -726,4 +726,8 @@ func main() {
 		{1, 1, 0}, {1, 0, 1}, {0, 0, 0},
 	}))
 	fmt.Printf("The winner of an array game is %d\n", solutions.GetWinner([]int{2, 1, 3, 5, 4, 6, 7}, 2))
+
+	p := &utils.TreeNode{Val: 5, Left: &utils.TreeNode{Val: 6}, Right: &utils.TreeNode{Val: 2, Left: &utils.TreeNode{Val: 7}, Right: &utils.TreeNode{Val: 4}}}
+	q := &utils.TreeNode{Val: 1, Left: &utils.TreeNode{Val: 0}, Right: &utils.TreeNode{Val: 8}}
+	fmt.Printf("The lowest common ancestor of a binary tree is %v\n", solutions.LowestCommonAncestor(&utils.TreeNode{Val: 3, Left: p, Right: q}, p, q))
 }
