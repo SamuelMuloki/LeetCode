@@ -1,23 +1,28 @@
 package solutions
 
+import "github.com/SamuelMuloki/LeetCode/go/utils"
+
 func GetWinner(arr []int, k int) int {
-	set := make(map[int]int)
-	for i := range arr {
-		set[arr[i]] = 0
-	}
-
-	n := len(arr)
+	maxElement, n := arr[0], len(arr)
 	for i := 1; i < n; i++ {
-		arr[1] = arr[i]
-		if arr[0] < arr[1] {
-			arr[0] = arr[1]
+		maxElement = utils.Max(maxElement, arr[i])
+	}
+
+	curr, winStreak := arr[0], 0
+	for i := 1; i < n; i++ {
+		opponent := arr[i]
+
+		if curr > opponent {
+			winStreak++
+		} else {
+			curr = opponent
+			winStreak = 1
 		}
 
-		set[arr[0]]++
-		if set[arr[0]] == k {
-			return arr[0]
+		if winStreak == k || curr == maxElement {
+			return curr
 		}
 	}
 
-	return arr[0]
+	return -1
 }
