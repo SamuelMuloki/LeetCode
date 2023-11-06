@@ -445,4 +445,308 @@ func main() {
 		&utils.TreeNode{Val: 1, Left: &utils.TreeNode{Val: 2}, Right: &utils.TreeNode{Val: 3}},
 		&utils.TreeNode{Val: 1, Left: &utils.TreeNode{Val: 3}, Right: &utils.TreeNode{Val: 2}},
 	))
+	fmt.Printf("The decoded string is %s\n", solutions.DecodeString("3[a2[c]]"))
+	fmt.Printf("The majority element in the array is %d\n", solutions.MajorityElement([]int{2, 2, 1, 1, 1, 2, 2}))
+	fmt.Printf("The majority element 2 in the array is %d\n", solutions.MajorityElement2([]int{1, 1, 2, 2, 1, 1, 1, 1, 2, 2, 1, 1}))
+	fmt.Printf("The grid contains the same row column pairs %d\n", solutions.EqualPairs([][]int{
+		{3, 1, 2, 2}, {1, 4, 4, 5}, {2, 4, 2, 2}, {2, 4, 2, 2},
+	}))
+	fmt.Printf("The middle node of the linked list is %v\n", solutions.MiddleNode(&utils.ListNode{
+		Val: 1, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 3, Next: &utils.ListNode{Val: 4, Next: &utils.ListNode{Val: 5}}}},
+	}))
+	fmt.Printf("The twin pair sum of the linked list is %d\n", solutions.PairSum(&utils.ListNode{
+		Val: 5, Next: &utils.ListNode{Val: 4, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 1}}},
+	}))
+	fmt.Printf("The maximum product after integer break is %d\n", solutions.IntegerBreak(10))
+	fmt.Printf("Reversing nodes in k group yields %v\n", solutions.ReverseKGroup(&utils.ListNode{
+		Val: 1, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 3, Next: &utils.ListNode{Val: 4, Next: &utils.ListNode{Val: 5}}}},
+	}, 2))
+	fmt.Printf("The kth largest element in an array is %d\n", solutions.FindKthLargest([]int{3, 2, 3, 1, 2, 4, 5, 5, 6}, 4))
+	fmt.Printf("The number of arrays that you can find the max k comparisons %v\n", solutions.NumOfArrays(2, 3, 1))
+
+	inter := &utils.ListNode{Val: 8, Next: &utils.ListNode{Val: 4, Next: &utils.ListNode{Val: 5}}}
+	fmt.Printf("The intersections of the two linked lists is %v\n", solutions.GetIntersectionNode(&utils.ListNode{
+		Val: 4, Next: &utils.ListNode{Val: 1, Next: inter},
+	}, &utils.ListNode{
+		Val: 5, Next: &utils.ListNode{Val: 6, Next: &utils.ListNode{Val: 1, Next: inter}},
+	}))
+	fmt.Printf("The title to number of the excel colum is %d\n", solutions.TitleToNumber("AB"))
+	fmt.Printf("The max dot product of two subsequences is %d\n", solutions.MaxDotProduct([]int{2, 1, -2, 5}, []int{3, 0, -6}))
+	fmt.Printf("The difference of sums is %d\n", solutions.DifferenceOfSums(10, 3))
+	fmt.Printf("The good nodes in the binary tree are %d\n", solutions.GoodNodes(&utils.TreeNode{
+		Val: 3, Left: &utils.TreeNode{Val: 1, Left: &utils.TreeNode{Val: 3}}, Right: &utils.TreeNode{Val: 4, Left: &utils.TreeNode{Val: 1}, Right: &utils.TreeNode{Val: 5}},
+	}))
+	fmt.Printf("The binary tree has path sum %t\n", solutions.HasPathSum(&utils.TreeNode{
+		Val: 5, Left: &utils.TreeNode{Val: 4, Left: &utils.TreeNode{Val: 11, Left: &utils.TreeNode{Val: 7}, Right: &utils.TreeNode{Val: 2}}},
+		Right: &utils.TreeNode{Val: 8, Left: &utils.TreeNode{Val: 13}, Right: &utils.TreeNode{Val: 4, Right: &utils.TreeNode{Val: 1}}},
+	}, 22))
+	fmt.Printf("The root-to-leaf paths in the binary tree are %v\n", solutions.PathSum2(&utils.TreeNode{
+		Val: 5, Left: &utils.TreeNode{Val: 4, Left: &utils.TreeNode{Val: 11, Left: &utils.TreeNode{Val: 7}, Right: &utils.TreeNode{Val: 2}}},
+		Right: &utils.TreeNode{Val: 8, Left: &utils.TreeNode{Val: 13}, Right: &utils.TreeNode{Val: 4, Left: &utils.TreeNode{Val: 5}, Right: &utils.TreeNode{Val: 1}}},
+	}, 22))
+	fmt.Printf("The missing number in the array of distinct nums is %d\n", solutions.MissingNumber([]int{3, 0, 1}))
+	fmt.Printf("Removing duplicates from the sorted array yields %d\n", solutions.RemoveDuplicates([]int{1, 1, 2}))
+	fmt.Printf("The minimum operations to make array continous are %d\n", solutions.MinContinousOperations([]int{4, 8, 9, 11}))
+	fmt.Printf("The paths in binary tree path sum 3 are %d\n", solutions.PathSum3(&utils.TreeNode{
+		Val: 5, Left: &utils.TreeNode{Val: 4, Left: &utils.TreeNode{Val: 11, Left: &utils.TreeNode{Val: 7}, Right: &utils.TreeNode{Val: 2}}},
+		Right: &utils.TreeNode{Val: 8, Left: &utils.TreeNode{Val: 13}, Right: &utils.TreeNode{Val: 4, Left: &utils.TreeNode{Val: 5}, Right: &utils.TreeNode{Val: 1}}},
+	}, 22))
+	fmt.Printf("The node in the binary search tree is %v\n", solutions.SearchBST(&utils.TreeNode{
+		Val:   4,
+		Left:  &utils.TreeNode{Val: 2, Left: &utils.TreeNode{Val: 1}, Right: &utils.TreeNode{Val: 3}},
+		Right: &utils.TreeNode{Val: 7},
+	}, 2))
+	fmt.Printf("Removing elements from linked list yields %v\n", solutions.RemoveElements(&utils.ListNode{
+		Val: 7, Next: &utils.ListNode{Val: 7, Next: &utils.ListNode{Val: 7, Next: &utils.ListNode{Val: 7}}},
+	}, 7))
+	fmt.Printf("The number of flowers that are full blown when the ith person arrives are %v\n", solutions.FullBloomFlowers([][]int{
+		{1, 10}, {3, 3},
+	}, []int{3, 3, 2}))
+	fmt.Printf("The result afte rotating the array right k times is %v\n", solutions.RotateRight(&utils.ListNode{
+		Val: 1, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 3, Next: &utils.ListNode{Val: 4, Next: &utils.ListNode{Val: 5}}}},
+	}, 2))
+	fmt.Printf("The fibonacci of the number is %d\n", solutions.Fib(4))
+	fmt.Printf("The peak index in the mountain array is %d\n", solutions.PeakIndexInMountainArray([]int{0, 2, 1, 0}))
+
+	mountainArr := solutions.NewMountainArray([]int{1, 2, 3, 4, 5, 3, 1})
+	fmt.Printf("Find in mountain array yields %d\n", solutions.FindInMountainArray(3, mountainArr))
+	fmt.Printf("The minimum depth of the binary tree is %d\n", solutions.MinDepth(&utils.TreeNode{
+		Val: 3, Left: &utils.TreeNode{Val: 9}, Right: &utils.TreeNode{Val: 20, Left: &utils.TreeNode{Val: 15}, Right: &utils.TreeNode{Val: 7}},
+	}))
+	fmt.Printf("Removing element from the array yields %d\n", solutions.RemoveElement([]int{3, 2, 2, 3}, 3))
+	fmt.Printf("Deleting a node in the Binary search tree yields %v\n", solutions.DeleteNode(&utils.TreeNode{
+		Val:   5,
+		Left:  &utils.TreeNode{Val: 3, Left: &utils.TreeNode{Val: 2}, Right: &utils.TreeNode{Val: 4}},
+		Right: &utils.TreeNode{Val: 6, Right: &utils.TreeNode{Val: 7}},
+	}, 3))
+	fmt.Printf("The longest consecutive sequence is %d\n", solutions.LongestConsecutive([]int{100, 4, 200, 1, 3, 2}))
+	fmt.Printf("The maximum level sum of a binary tree is %d\n", solutions.MaxLevelSum(&utils.TreeNode{
+		Val:   1,
+		Left:  &utils.TreeNode{Val: 7, Left: &utils.TreeNode{Val: 7}, Right: &utils.TreeNode{Val: -8}},
+		Right: &utils.TreeNode{Val: 0},
+	}))
+	fmt.Printf("The binary tree right side view is %v\n", solutions.RightSideView(&utils.TreeNode{
+		Val:   1,
+		Left:  &utils.TreeNode{Val: 2, Right: &utils.TreeNode{Val: 5}},
+		Right: &utils.TreeNode{Val: 3, Right: &utils.TreeNode{Val: 4}},
+	}))
+	fmt.Printf("The minimum amount of money required to paint n walls is %d\n", solutions.PaintWalls([]int{1, 2, 3, 2}, []int{1, 2, 3, 2}))
+	mat := [][]int{{1, 1, 1}, {1, 0, 1}, {1, 1, 1}}
+
+	solutions.SetZeroes(mat)
+	fmt.Printf("The matrix after setting zeros in place is %v\n", mat)
+
+	bit32, _ := strconv.ParseInt("00000010100101000001111010011100", 2, 32)
+	fmt.Printf("Reversing bits yields %d\n", solutions.ReverseBits(uint32(bit32)))
+	fmt.Printf("The number of ways to reach a position after exactly k steps is %d\n", solutions.NumberOfWays(1, 2, 3))
+	fmt.Printf("The number of ways to stay in the same place after some steps is %d\n", solutions.NumWays(3, 2))
+	fmt.Printf("The number of complete tree nodes are %d\n", solutions.CountNodes(&utils.TreeNode{
+		Val:   1,
+		Left:  &utils.TreeNode{Val: 2, Left: &utils.TreeNode{Val: 4}, Right: &utils.TreeNode{Val: 5}},
+		Right: &utils.TreeNode{Val: 3, Left: &utils.TreeNode{Val: 6}},
+	}))
+	fmt.Printf("The indices wih index and value difference 1 are %v\n", solutions.FindIndices([]int{5, 1, 4, 1}, 2, 4))
+	fmt.Printf("The tribonacci of n is %d\n", solutions.Tribonacci(4))
+	fmt.Printf("The minimum path sum from top to bottom is %d\n", solutions.MinimumTotal([][]int{
+		{2}, {3, 4}, {6, 5, 7}, {4, 1, 8, 3},
+	}))
+	fmt.Printf("The minimum path sum of the m*n grid is %d\n", solutions.MinPathSum([][]int{
+		{1, 3, 1}, {1, 5, 1}, {4, 2, 1},
+	}))
+	fmt.Printf("The nodes form a valid binary tree %t\n", solutions.ValidateBinaryTreeNodes(4,
+		[]int{1, -1, 3, -1}, []int{2, -1, -1, -1},
+	))
+	fmt.Printf("The fewest number of coins needed to make up the amount are %d\n", solutions.CoinChange([]int{1, 2, 5}, 11))
+	fmt.Printf("The array contains nearby duplicate values %t\n", solutions.ContainsNearbyDuplicate([]int{1, 2, 3, 1}, 3))
+	fmt.Printf("The minimum number of months needed to complete all the courses is %d\n", solutions.MinimumTime(3, [][]int{
+		{1, 3}, {2, 3},
+	}, []int{3, 2, 5}))
+	fmt.Printf("The number of possible unique paths that a robot can make are %d\n", solutions.UniquePathsWithObstacles([][]int{
+		{0, 0, 0}, {0, 1, 0}, {0, 0, 0},
+	}))
+	fmt.Printf("The integer returned as a string is %v\n", solutions.FizzBuzz(5))
+	fmt.Printf("The lowercase version of the string is %s\n", solutions.ToLowerCase("LOVELY"))
+	fmt.Printf("The strings are equal when both typed into text editors %t\n", solutions.BackspaceCompare("ab#c", "ad#c"))
+
+	mat2 := [][]int{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}
+	solutions.Rotate(mat2)
+	fmt.Printf("Rotating the matrix yields %v\n", mat2)
+	fmt.Printf("The spiral order of the matrix is %v\n", solutions.SpiralOrder([][]int{
+		{1, 2, 3, 4, 5, 6}, {7, 8, 9, 10, 11, 12}, {13, 14, 15, 16, 17, 18}, {19, 20, 21, 22, 23, 24}, {25, 26, 27, 28, 29, 30},
+	}))
+	fmt.Printf("The transpose of the matrix is %v\n", solutions.Transpose([][]int{
+		{1, 2, 3}, {4, 5, 6},
+	}))
+	fmt.Printf("Reversing only letters yields %s\n", solutions.ReverseOnlyLetters("Test1ng-Leet=code-Q!"))
+	fmt.Printf("After Merging intervals the array is %v\n", solutions.MergeIntervals([][]int{
+		{1, 3}, {2, 6}, {8, 10}, {15, 18},
+	}))
+	fmt.Printf("The array is sorted and rotated %t\n", solutions.Check([]int{3, 4, 5, 1, 2}))
+	fmt.Printf("The intervals after insertion are %v\n", solutions.Insert([][]int{{1, 3}, {6, 9}}, []int{2, 5}))
+	fmt.Printf("Generating the matrix in spiral order yields %v\n", solutions.GenerateMatrix(3))
+	fmt.Printf("Removing duplicates from the sorted array II yields %d\n", solutions.RemoveDuplicates2([]int{1, 1, 1, 2, 2, 3}))
+
+	cycle2 := &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 0, Next: &utils.ListNode{Val: -4}}}
+	cycle2.Next = cycle2
+	fmt.Printf("There is a cycle in the linked list: %v\n", solutions.DetectCycle(&utils.ListNode{Val: 3, Next: cycle2}))
+	fmt.Printf("The non overlapping intervals are %v\n", solutions.EraseOverlapIntervals([][]int{
+		{1, 2}, {2, 3}, {3, 4}, {1, 3},
+	}))
+	fmt.Printf("The constrained subsequence sum is %d\n", solutions.ConstrainedSubsetSum([]int{
+		10, 2, -10, 5, 20,
+	}, 2))
+	fmt.Printf("The sliding window maximum is %v\n", solutions.MaxSlidingWindow([]int{1, 3, -1, -3, 5, 3, 6, 7}, 3))
+	fmt.Printf("The strings are isomorphic %t\n", solutions.IsIsomorphic("egg", "add"))
+	fmt.Printf("The result after repeatedly adding all its digits is %d\n", solutions.AddDigits(38))
+	fmt.Printf("The third maximum number in the array is %d\n", solutions.ThirdMax([]int{3, 2, 1}))
+	fmt.Printf("The maximum score of a good subarray in the array is %d\n", solutions.MaximumScore([]int{1, 4, 3, 7, 4, 5}, 3))
+	fmt.Printf("The minimum sum of mountain triplets I is %d\n", solutions.MinimumSum([]int{8, 6, 1, 5, 3}))
+	fmt.Printf("The minimum sum of mountain triplets II is %d\n", solutions.MinimumSum2([]int{5, 4, 8, 7, 10, 2}))
+	fmt.Printf("String s follows pattern %t\n", solutions.WordPattern("abba", "dog cat cat dog"))
+	fmt.Printf("Number is a power of 4 %t\n", solutions.IsPowerOfFour(16))
+	fmt.Printf("Partitioning the array based on a pivot yields %v\n", solutions.PivotArray([]int{9, 12, 5, 10, 14, 3, 10}, 10))
+	fmt.Printf("Re arranging array elements by sign yields %v\n", solutions.RearrangeArray([]int{3, 1, -2, -5, 2, -4}))
+	fmt.Printf("Sorting array by parity II yields %v\n", solutions.SortArrayByParityII([]int{4, 2, 5, 7}))
+	fmt.Printf("Partioning the list yields %v\n", solutions.PartitionList(&utils.ListNode{
+		Val: 1, Next: &utils.ListNode{Val: 4, Next: &utils.ListNode{Val: 3, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 5, Next: &utils.ListNode{Val: 2}}}}},
+	}, 3))
+	fmt.Printf("The largest value for each tree row is %v\n", solutions.LargestValues(&utils.TreeNode{
+		Val:   1,
+		Left:  &utils.TreeNode{Val: 3, Left: &utils.TreeNode{Val: 5}, Right: &utils.TreeNode{Val: 3}},
+		Right: &utils.TreeNode{Val: 2, Right: &utils.TreeNode{Val: 9}},
+	}))
+	fmt.Printf("Sorting an array in ascending order yields %v\n", solutions.SortArray([]int{5, 2, 3, 1}))
+	fmt.Printf("The concatenation of two nums arrays is %v\n", solutions.GetConcatenation([]int{1, 2, 1}))
+	fmt.Printf("The string is a valid palindrom after deleting atmost one character from it %t\n", solutions.ValidPalindrome("abca"))
+	fmt.Printf("Shifting 2d grid yields %v\n", solutions.ShiftGrid([][]int{
+		{1, 2, 3}, {4, 5, 6}, {7, 8, 9},
+	}, 1))
+	fmt.Printf("The kth symbol in grammar is %d\n", solutions.KthGrammar(3, 2))
+	fmt.Printf("Replacing elements with greatest element on the right side equals %v\n", solutions.ReplaceElements([]int{17, 18, 5, 4, 6, 1}))
+
+	rotateArr := []int{1, 2, 3, 4, 5, 6, 7}
+	solutions.RotateArray(rotateArr, 3)
+	fmt.Printf("Rotating the array k times yields %v\n", rotateArr)
+	fmt.Printf("All numbers disappeared from array are %v\n", solutions.FindDisappearedNumbers([]int{4, 3, 2, 7, 8, 2, 3, 1}))
+	fmt.Printf("Number is a power of 3 %t\n", solutions.IsPowerOfThree(27))
+	fmt.Printf("The number of factored binary trees are %d\n", solutions.NumFactoredBinaryTrees([]int{2, 4, 5, 10}))
+	fmt.Printf("The result after soting the list is %v\n", solutions.SortList(&utils.ListNode{
+		Val: 4, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 1, Next: &utils.ListNode{Val: 3}}},
+	}))
+	fmt.Printf("The result after swapping nodes in the list is %v\n", solutions.SwapNodes(utils.NewListNode([]int{1, 2, 3, 4, 5}), 2))
+	fmt.Printf("The sign of the product array is %d\n", solutions.ArraySign([]int{-1, -2, -3, -4, 3, 2, 1}))
+
+	parkingSystem := solutions.ParkingConstructor(1, 1, 0)
+	fmt.Println("There is 1 available slot for a big car", parkingSystem.AddCar(1))
+	fmt.Println("There is 1 available slot for a medium car", parkingSystem.AddCar(2))
+	fmt.Println("There is no available slot for a small car", parkingSystem.AddCar(3))
+	fmt.Println("There is no available slot for a big car. It is already occupied", parkingSystem.AddCar(1))
+
+	fmt.Printf("The number of palindromic substrings are %d\n", solutions.CountSubstrings("aaa"))
+
+	minStack := solutions.MinStackConstructor()
+	minStack.Push(-2)
+	minStack.Push(0)
+	minStack.Push(-3)
+	fmt.Printf("The current min value is %d\n", minStack.GetMin())
+	minStack.Pop()
+	fmt.Printf("The current top value is %d\n", minStack.Top())
+	fmt.Printf("The current min value is %d\n", minStack.GetMin())
+
+	fmt.Printf("The result after evaluating the expression is %d\n", solutions.EvalRPN([]string{"10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+"}))
+	fmt.Printf("The number of ways you can make up the amount from the coins is %d\n", solutions.Change(5, []int{1, 2, 5}))
+	fmt.Printf("The number of strings that can be formed are %d\n", solutions.CountVowelPermutation(2))
+	fmt.Printf("The sum of scores on the record after applying all the operations is %d\n", solutions.CalPoints([]string{"5", "2", "C", "D", "+"}))
+	fmt.Printf("The number of unique email addresses are %d\n", solutions.NumUniqueEmails([]string{
+		"test.email+alex@leetcode.com",
+		"test.e.mail+bob.cathy@leetcode.com",
+		"testemail+david@lee.tcode.com",
+	}))
+
+	numArray := solutions.SumRangeConstructor([]int{-2, 0, 3, -5, 2, -1})
+	fmt.Printf("The sum of elements of nums between indices 0 and 2 are %d\n", numArray.SumRange(0, 2))
+	fmt.Printf("The sum of elements of nums between indices 2 and 5 are %d\n", numArray.SumRange(2, 5))
+	fmt.Printf("The sum of elements of nums between indices 0 and 5 are %d\n", numArray.SumRange(0, 5))
+
+	fmt.Printf("The minimum number of pigs needed to figure out which bucket is poisonous are %d\n", solutions.PoorPigs(4, 15, 15))
+	fmt.Printf("The possible combinations of k numbers chosen from 1-n are %v\n", solutions.Combine(4, 2))
+	fmt.Printf("The kth smallest element in the BST is %d\n", solutions.KthSmallest(&utils.TreeNode{
+		Val: 3, Left: &utils.TreeNode{Val: 1, Right: &utils.TreeNode{Val: 2}}, Right: &utils.TreeNode{Val: 4},
+	}, 1))
+	fmt.Printf("The head of the modified linked list after removing elements is %v\n", solutions.RemoveNodes(&utils.ListNode{
+		Val: 5, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 13, Next: &utils.ListNode{Val: 3, Next: &utils.ListNode{Val: 8}}}},
+	}))
+
+	node := &utils.ListNode{Val: 5, Next: &utils.ListNode{Val: 1, Next: &utils.ListNode{Val: 9}}}
+	deleteNode := &utils.ListNode{Val: 4, Next: node}
+	solutions.DeleteNode2(node)
+	fmt.Printf("After deleting the node, the list is %v\n", deleteNode)
+
+	fmt.Printf("Sorting integers by number of 1 bits yields %v\n", solutions.SortByBits([]int{1024, 512, 256, 128, 64, 32, 16, 8, 4, 2, 1}))
+	fmt.Printf("The minimum difference between highest and lowest of k scores is %d\n", solutions.MinimumDifference([]int{9, 4, 1, 7}, 2))
+	fmt.Printf("The number of odd numbers in an interval range are %d\n", solutions.CountOdds(8, 10))
+	fmt.Printf("The matrix diagonal sum is %d\n", solutions.DiagonalSum([][]int{
+		{1, 2, 3}, {4, 5, 6}, {7, 8, 9},
+	}))
+	fmt.Printf("The squares of a sorted array are %v\n", solutions.SortedSquares([]int{-4, -1, 0, 3, 10}))
+	fmt.Printf("The array that satisfies xor is %v\n", solutions.FindArray([]int{5, 2, 0, 3, 1}))
+	fmt.Printf("The maximum number of instances of balloon that can be formed are %d\n", solutions.MaxNumberOfBalloons("loonbalxballpoon"))
+	fmt.Printf("The sentence is a pangram %t\n", solutions.CheckIfPangram("thequickbrownfoxjumpsoverthelazydog"))
+	fmt.Printf("Sorting the people in descending order by people's heights yields %v\n", solutions.SortPeople([]string{"Mary", "John", "Emma"}, []int{180, 165, 170}))
+	fmt.Printf("The modes in the binary search tree are %v\n", solutions.FindMode(&utils.TreeNode{
+		Val: 2, Left: &utils.TreeNode{Val: 1}, Right: &utils.TreeNode{Val: 2},
+	}))
+	fmt.Printf("Transforming the arrasy by rank yields %v\n", solutions.ArrayRankTransform([]int{40, 10, 20, 30}))
+	fmt.Printf("The party that will finally anounce victory is %s\n", solutions.PredictPartyVictory("RDD"))
+
+	trie := solutions.TrieConstructor()
+	trie.Insert("apple")
+	fmt.Println("Search apple", trie.Search("apple"))
+	fmt.Println("Search app", trie.Search("app"))
+	fmt.Println("Starts with app", trie.StartsWith("app"))
+	trie.Insert("app")
+	fmt.Println("Search app", trie.Search("app"))
+
+	fmt.Printf("The number of nodes equal to equal to average of the subtree are %d\n", solutions.AverageOfSubtree(&utils.TreeNode{
+		Val:   4,
+		Left:  &utils.TreeNode{Val: 8, Left: &utils.TreeNode{Val: 0}, Right: &utils.TreeNode{Val: 1}},
+		Right: &utils.TreeNode{Val: 5, Right: &utils.TreeNode{Val: 6}},
+	}))
+	fmt.Printf("Shuffling the array yields %v\n", solutions.Shuffle([]int{1, 2, 3, 4, 4, 3, 2, 1}, 4))
+	fmt.Printf("Adding array-form of integer yields %v\n", solutions.AddToArrayForm([]int{2, 1, 5}, 806))
+	fmt.Printf("The sum of multiples in range are %d\n", solutions.SumOfMultiples(7))
+	fmt.Printf("The stack operations needed to build target are %v\n", solutions.BuildArray([]int{1, 3}, 3))
+	fmt.Printf("Removing all adjacent duplicates in string yields %s\n", solutions.RemoveDuplicates3("abbaca"))
+	fmt.Printf("Removing all adjacent k duplicates in string yields %s\n", solutions.RemoveDuplicates4("deeedbbcccbdaa", 3))
+	fmt.Printf("The array ans is %v\n", solutions.BuildArray2([]int{0, 2, 1, 5, 3, 4}))
+	fmt.Printf("Last moment before all ants fall out of a plank is %d\n", solutions.GetLastMoment(4, []int{4, 3}, []int{0, 1}))
+	fmt.Printf("Sorting the sentence yields %v\n", solutions.SortSentence("is2 sentence4 This1 a3"))
+	fmt.Printf("The number of good pairs with absolute difference k are %d\n", solutions.CountKDifference([]int{1, 2, 2, 1}, 1))
+	fmt.Printf("Flipping and inverting an image yields %v\n", solutions.FlipAndInvertImage([][]int{
+		{1, 1, 0}, {1, 0, 1}, {0, 0, 0},
+	}))
+	fmt.Printf("The winner of an array game is %d\n", solutions.GetWinner([]int{2, 1, 3, 5, 4, 6, 7}, 2))
+
+	p := &utils.TreeNode{Val: 5, Left: &utils.TreeNode{Val: 6}, Right: &utils.TreeNode{Val: 2, Left: &utils.TreeNode{Val: 7}, Right: &utils.TreeNode{Val: 4}}}
+	q := &utils.TreeNode{Val: 1, Left: &utils.TreeNode{Val: 0}, Right: &utils.TreeNode{Val: 8}}
+	fmt.Printf("The lowest common ancestor of a binary tree is %v\n", solutions.LowestCommonAncestor(&utils.TreeNode{Val: 3, Left: p, Right: q}, p, q))
+	fmt.Printf("The hamming distance of integers x and y is %d\n", solutions.HammingDistance(1, 4))
+	fmt.Printf("The minimum bit flips to convert number %d\n", solutions.MinBitFlips(10, 7))
+	fmt.Printf("The minimum flips to make a OR b equal to c is %d\n", solutions.MinFlips(2, 6, 5))
+
+	seatManager := solutions.ReserveConstructor(5)
+	fmt.Println("Reserving", seatManager.Reserve())
+	fmt.Println("Reserving", seatManager.Reserve())
+	seatManager.Unreserve(2)
+	fmt.Println("Reserving", seatManager.Reserve())
+	fmt.Println("Reserving", seatManager.Reserve())
+	fmt.Println("Reserving", seatManager.Reserve())
+	fmt.Println("Reserving", seatManager.Reserve())
+	seatManager.Unreserve(5)
+
+	fmt.Printf("The minimum number of arrows to burst balloons is %d\n", solutions.FindMinArrowShots([][]int{
+		{10, 16}, {2, 8}, {1, 6}, {7, 12},
+	}))
+	fmt.Printf("The number of days to wait after ith day to get warmer temperature are %v\n", solutions.DailyTemperatures([]int{73, 74, 75, 71, 69, 72, 76, 73}))
+	fmt.Printf("The next greater element I is %v\n", solutions.NextGreaterElement([]int{4, 1, 2}, []int{1, 3, 4, 2}))
 }

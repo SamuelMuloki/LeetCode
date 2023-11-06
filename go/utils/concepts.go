@@ -49,6 +49,17 @@ func Max(x int, y int) int {
 	return y
 }
 
+func MaxArr(arr []int) int {
+	maxVal := arr[0]
+	for i := range arr {
+		if arr[i] > maxVal {
+			maxVal = arr[i]
+		}
+	}
+
+	return maxVal
+}
+
 func PrintAllSubsets(n, minMask int) {
 	fmt.Printf("%d", 0)
 
