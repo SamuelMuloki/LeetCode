@@ -3,24 +3,25 @@ package solutions
 import "container/heap"
 
 type SeatManager struct {
-	Heap *MinHeap
+	Heap   *MinHeap
+	marker int
 }
 
 func ReserveConstructor(n int) SeatManager {
 	h := &MinHeap{}
 	heap.Init(h)
-
-	for i := 1; i <= n; i++ {
-		h.Push(i)
-	}
-
-	return SeatManager{h}
+	return SeatManager{h, 0}
 }
 
 func (this *SeatManager) Reserve() int {
-	lowest := (*this.Heap)[0]
-	heap.Pop(this.Heap)
-	return lowest
+	if this.Heap.Len() > 0 {
+		lowest := (*this.Heap)[0]
+		heap.Pop(this.Heap)
+		return lowest
+	}
+
+	this.marker++
+	return this.marker
 }
 
 func (this *SeatManager) Unreserve(seatNumber int) {
