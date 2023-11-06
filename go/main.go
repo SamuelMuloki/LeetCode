@@ -747,4 +747,5 @@ func main() {
 	fmt.Printf("The minimum number of arrows to burst balloons is %d\n", solutions.FindMinArrowShots([][]int{
 		{10, 16}, {2, 8}, {1, 6}, {7, 12},
 	}))
+	fmt.Printf("The number of days to wait after ith day to get warmer temperature are %v\n", solutions.DailyTemperatures([]int{73, 74, 75, 71, 69, 72, 76, 73}))
 }
