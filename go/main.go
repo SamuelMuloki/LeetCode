@@ -743,4 +743,8 @@ func main() {
 	fmt.Println("Reserving", seatManager.Reserve())
 	fmt.Println("Reserving", seatManager.Reserve())
 	seatManager.Unreserve(5)
+
+	fmt.Printf("The minimum number of arrows to burst balloons is %d\n", solutions.FindMinArrowShots([][]int{
+		{10, 16}, {2, 8}, {1, 6}, {7, 12},
+	}))
 }
