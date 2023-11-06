@@ -733,4 +733,14 @@ func main() {
 	fmt.Printf("The hamming distance of integers x and y is %d\n", solutions.HammingDistance(1, 4))
 	fmt.Printf("The minimum bit flips to convert number %d\n", solutions.MinBitFlips(10, 7))
 	fmt.Printf("The minimum flips to make a OR b equal to c is %d\n", solutions.MinFlips(2, 6, 5))
+
+	seatManager := solutions.ReserveConstructor(5)
+	fmt.Println("Reserving", seatManager.Reserve())
+	fmt.Println("Reserving", seatManager.Reserve())
+	seatManager.Unreserve(2)
+	fmt.Println("Reserving", seatManager.Reserve())
+	fmt.Println("Reserving", seatManager.Reserve())
+	fmt.Println("Reserving", seatManager.Reserve())
+	fmt.Println("Reserving", seatManager.Reserve())
+	seatManager.Unreserve(5)
 }
