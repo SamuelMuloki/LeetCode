@@ -1,22 +1,15 @@
 package solutions
 
 func FindMatrix(nums []int) [][]int {
-	set := make(map[int]int)
-	for i := 0; i < len(nums); i++ {
-		set[nums[i]]++
-	}
-
-	ans := make([][]int, 0)
-	for len(set) > 0 {
-		row := []int{}
-		for num := range set {
-			row = append(row, num)
-			set[num]--
-			if set[num] == 0 {
-				delete(set, num)
-			}
+	freq := make([]int, len(nums)+1)
+	ans := [][]int{}
+	for _, num := range nums {
+		if freq[num] >= len(ans) {
+			ans = append(ans, []int{})
 		}
-		ans = append(ans, row)
+
+		ans[freq[num]] = append(ans[freq[num]], num)
+		freq[num]++
 	}
 
 	return ans
