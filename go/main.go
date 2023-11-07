@@ -753,4 +753,9 @@ func main() {
 	fmt.Printf("Inserting greatest common divisor in linked list yields %v\n", solutions.InsertGreatestCommonDivisors(&utils.ListNode{
 		Val: 18, Next: &utils.ListNode{Val: 6, Next: &utils.ListNode{Val: 10, Next: &utils.ListNode{Val: 3}}},
 	}))
+	fmt.Printf("The deepest leaves sum is %d\n", solutions.DeepestLeavesSum(&utils.TreeNode{
+		Val:   1,
+		Left:  &utils.TreeNode{Val: 2, Left: &utils.TreeNode{Val: 4, Left: &utils.TreeNode{Val: 7}}, Right: &utils.TreeNode{Val: 5}},
+		Right: &utils.TreeNode{Val: 3, Right: &utils.TreeNode{Val: 6, Right: &utils.TreeNode{Val: 8}}},
+	}))
 }
