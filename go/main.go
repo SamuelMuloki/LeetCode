@@ -749,4 +749,5 @@ func main() {
 	}))
 	fmt.Printf("The number of days to wait after ith day to get warmer temperature are %v\n", solutions.DailyTemperatures([]int{73, 74, 75, 71, 69, 72, 76, 73}))
 	fmt.Printf("The next greater element I is %v\n", solutions.NextGreaterElement([]int{4, 1, 2}, []int{1, 3, 4, 2}))
+	fmt.Printf("The maximum number of monsters to eliminate are %d\n", solutions.EliminateMaximum([]int{1, 3, 4}, []int{1, 1, 1}))
 }
