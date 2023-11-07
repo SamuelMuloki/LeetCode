@@ -758,4 +758,5 @@ func main() {
 		Left:  &utils.TreeNode{Val: 2, Left: &utils.TreeNode{Val: 4, Left: &utils.TreeNode{Val: 7}}, Right: &utils.TreeNode{Val: 5}},
 		Right: &utils.TreeNode{Val: 3, Right: &utils.TreeNode{Val: 6, Right: &utils.TreeNode{Val: 8}}},
 	}))
+	fmt.Printf("The 2D array from array is %v\n", solutions.FindMatrix([]int{1, 3, 4, 1, 2, 3, 1}))
 }
