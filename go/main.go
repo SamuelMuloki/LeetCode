@@ -765,4 +765,9 @@ func main() {
 		Left:  &utils.TreeNode{Val: 1, Left: &utils.TreeNode{Val: 0}, Right: &utils.TreeNode{Val: 2, Right: &utils.TreeNode{Val: 3}}},
 		Right: &utils.TreeNode{Val: 6, Left: &utils.TreeNode{Val: 5}, Right: &utils.TreeNode{Val: 7, Right: &utils.TreeNode{Val: 8}}},
 	}))
+	fmt.Printf("Converting BST to greater tree yields %v\n", solutions.BstToGst(&utils.TreeNode{
+		Val:   4,
+		Left:  &utils.TreeNode{Val: 1, Left: &utils.TreeNode{Val: 0}, Right: &utils.TreeNode{Val: 2, Right: &utils.TreeNode{Val: 3}}},
+		Right: &utils.TreeNode{Val: 6, Left: &utils.TreeNode{Val: 5}, Right: &utils.TreeNode{Val: 7, Right: &utils.TreeNode{Val: 8}}},
+	}))
 }
