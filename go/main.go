@@ -774,4 +774,5 @@ func main() {
 	fmt.Printf("he max power of the string is %d\n", solutions.MaxPower("abbcccddddeeeeedcba"))
 	fmt.Printf("The longest continous increasing subsequence is %d\n", solutions.FindLengthOfLCIS([]int{1, 3, 5, 4, 7}))
 	fmt.Printf("The number of homogenous substrings is %d\n", solutions.CountHomogenous("zzzzz"))
+	fmt.Printf("The number of substrings with onl 1s are %d\n", solutions.NumSub("111111"))
 }
