@@ -773,4 +773,5 @@ func main() {
 	fmt.Printf("The xor operation of the array is %d\n", solutions.XorOperation(5, 0))
 	fmt.Printf("he max power of the string is %d\n", solutions.MaxPower("abbcccddddeeeeedcba"))
 	fmt.Printf("The longest continous increasing subsequence is %d\n", solutions.FindLengthOfLCIS([]int{1, 3, 5, 4, 7}))
+	fmt.Printf("The number of homogenous substrings is %d\n", solutions.CountHomogenous("zzzzz"))
 }
