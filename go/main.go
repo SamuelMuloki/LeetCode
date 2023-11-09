@@ -771,4 +771,5 @@ func main() {
 		Right: &utils.TreeNode{Val: 6, Left: &utils.TreeNode{Val: 5}, Right: &utils.TreeNode{Val: 7, Right: &utils.TreeNode{Val: 8}}},
 	}))
 	fmt.Printf("The xor operation of the array is %d\n", solutions.XorOperation(5, 0))
+	fmt.Printf("he max power of the string is %d\n", solutions.MaxPower("abbcccddddeeeeedcba"))
 }
