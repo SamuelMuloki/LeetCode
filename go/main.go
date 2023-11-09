@@ -775,4 +775,5 @@ func main() {
 	fmt.Printf("The longest continous increasing subsequence is %d\n", solutions.FindLengthOfLCIS([]int{1, 3, 5, 4, 7}))
 	fmt.Printf("The number of homogenous substrings is %d\n", solutions.CountHomogenous("zzzzz"))
 	fmt.Printf("The number of substrings with onl 1s are %d\n", solutions.NumSub("111111"))
+	fmt.Printf("The number of zero filled subarrays is %d\n", solutions.ZeroFilledSubarray([]int{1, 3, 0, 0, 2, 0, 0, 4}))
 }
