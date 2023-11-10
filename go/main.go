@@ -781,4 +781,5 @@ func main() {
 		{2, 1}, {3, 4}, {3, 2},
 	}))
 	fmt.Printf("The integer n is strictly palindromic %t\n", solutions.IsStrictlyPalindromic(9))
+	fmt.Printf("Merging nodes in between zeros yields %v\n", solutions.MergeNodes(utils.NewListNode([]int{0, 3, 1, 0, 4, 5, 2, 0})))
 }
