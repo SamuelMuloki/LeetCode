@@ -782,4 +782,9 @@ func main() {
 	}))
 	fmt.Printf("The integer n is strictly palindromic %t\n", solutions.IsStrictlyPalindromic(9))
 	fmt.Printf("Merging nodes in between zeros yields %v\n", solutions.MergeNodes(utils.NewListNode([]int{0, 3, 1, 0, 4, 5, 2, 0})))
+	fmt.Printf("The sum of nodes with even valued grandparents is %d\n", solutions.SumEvenGrandparent(&utils.TreeNode{
+		Val:   6,
+		Left:  &utils.TreeNode{Val: 7, Left: &utils.TreeNode{Val: 2, Left: &utils.TreeNode{Val: 9}}, Right: &utils.TreeNode{Val: 7, Left: &utils.TreeNode{Val: 1}, Right: &utils.TreeNode{Val: 4}}},
+		Right: &utils.TreeNode{Val: 8, Left: &utils.TreeNode{Val: 1}, Right: &utils.TreeNode{Val: 3, Right: &utils.TreeNode{Val: 5}}},
+	}))
 }
