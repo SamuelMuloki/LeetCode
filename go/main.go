@@ -780,4 +780,5 @@ func main() {
 	fmt.Printf("Restoring the array from adjacent pairs yields %v\n", solutions.RestoreArray([][]int{
 		{2, 1}, {3, 4}, {3, 2},
 	}))
+	fmt.Printf("The integer n is strictly palindromic %t\n", solutions.IsStrictlyPalindromic(9))
 }
