@@ -777,4 +777,7 @@ func main() {
 	fmt.Printf("The number of substrings with onl 1s are %d\n", solutions.NumSub("111111"))
 	fmt.Printf("The number of zero filled subarrays is %d\n", solutions.ZeroFilledSubarray([]int{1, 3, 0, 0, 2, 0, 0, 4}))
 	fmt.Printf("The longest contiguous segment of 1s is strictly longer than the zeroes %t\n", solutions.CheckZeroOnes("1101"))
+	fmt.Printf("Restoring the array from adjacent pairs yields %v\n", solutions.RestoreArray([][]int{
+		{2, 1}, {3, 4}, {3, 2},
+	}))
 }
