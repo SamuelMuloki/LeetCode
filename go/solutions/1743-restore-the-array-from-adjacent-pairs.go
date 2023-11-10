@@ -17,17 +17,21 @@ func RestoreArray(adjacentPairs [][]int) []int {
 		}
 	}
 
+	curr := root
 	ans := make([]int, 0)
-	var dfs func(node, prev int)
-	dfs = func(node, prev int) {
-		ans = append(ans, node)
-		for _, neighbor := range graph[node] {
+	ans = append(ans, root)
+	prev := math.MaxInt
+
+	for len(ans) < len(graph) {
+		for _, neighbor := range graph[curr] {
 			if neighbor != prev {
-				dfs(neighbor, node)
+				ans = append(ans, neighbor)
+				prev = curr
+				curr = neighbor
+				break
 			}
 		}
 	}
 
-	dfs(root, math.MaxInt)
 	return ans
 }
