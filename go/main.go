@@ -787,5 +787,11 @@ func main() {
 		Left:  &utils.TreeNode{Val: 7, Left: &utils.TreeNode{Val: 2, Left: &utils.TreeNode{Val: 9}}, Right: &utils.TreeNode{Val: 7, Left: &utils.TreeNode{Val: 1}, Right: &utils.TreeNode{Val: 4}}},
 		Right: &utils.TreeNode{Val: 8, Left: &utils.TreeNode{Val: 1}, Right: &utils.TreeNode{Val: 3, Right: &utils.TreeNode{Val: 5}}},
 	}))
+
+	graph := solutions.GraphConstructor(4, [][]int{{0, 2, 5}, {0, 1, 2}, {1, 2, 1}, {3, 0, 3}})
+	fmt.Printf("The cost of the shortest path from 3 to 2 is %d\n", graph.ShortestPath(3, 2))
+	fmt.Printf("The cost of the shortest path from 0 to 3 is %d\n", graph.ShortestPath(0, 3))
+	graph.AddEdge([]int{1, 3, 4})
+	fmt.Printf("The cost of the shortest path from 0 to 3 is %d\n", graph.ShortestPath(0, 3))
 	fmt.Printf("Sorting the vowels in a string yields %s\n", solutions.SortVowels("LQRamBOHfq"))
 }
