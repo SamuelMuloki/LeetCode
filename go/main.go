@@ -801,4 +801,5 @@ func main() {
 	fmt.Printf("The triangular sum of an array is %d\n", solutions.TriangularSum([]int{1, 2, 3, 4, 5}))
 	fmt.Printf("The minimum number of steps to make two strings anagram is %d\n", solutions.MinSteps("leetcode", "practice"))
 	fmt.Printf("The minimum number of steps to make two strings anagram II is %d\n", solutions.MinSteps2("leetcode", "coats"))
+	fmt.Printf("The Number of distinct integers after reverse operations is %d\n", solutions.CountDistinctIntegers([]int{1, 13, 10, 12, 31}))
 }
