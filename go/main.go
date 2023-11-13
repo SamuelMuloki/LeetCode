@@ -787,4 +787,5 @@ func main() {
 		Left:  &utils.TreeNode{Val: 7, Left: &utils.TreeNode{Val: 2, Left: &utils.TreeNode{Val: 9}}, Right: &utils.TreeNode{Val: 7, Left: &utils.TreeNode{Val: 1}, Right: &utils.TreeNode{Val: 4}}},
 		Right: &utils.TreeNode{Val: 8, Left: &utils.TreeNode{Val: 1}, Right: &utils.TreeNode{Val: 3, Right: &utils.TreeNode{Val: 5}}},
 	}))
+	fmt.Printf("Sorting the vowels in a string yields %s\n", solutions.SortVowels("LQRamBOHfq"))
 }
