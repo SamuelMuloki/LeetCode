@@ -799,4 +799,5 @@ func main() {
 	}, 1, 6))
 	fmt.Printf("Sorting the vowels in a string yields %s\n", solutions.SortVowels("LQRamBOHfq"))
 	fmt.Printf("The triangular sum of an array is %d\n", solutions.TriangularSum([]int{1, 2, 3, 4, 5}))
+	fmt.Printf("The minimum number of steps to make two strings anagram is %d\n", solutions.MinSteps("leetcode", "practice"))
 }
