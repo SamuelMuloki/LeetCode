@@ -793,5 +793,9 @@ func main() {
 	fmt.Printf("The cost of the shortest path from 0 to 3 is %d\n", graph.ShortestPath(0, 3))
 	graph.AddEdge([]int{1, 3, 4})
 	fmt.Printf("The cost of the shortest path from 0 to 3 is %d\n", graph.ShortestPath(0, 3))
+
+	fmt.Printf("The least number of buses you must take to travel from sourc to target are %d\n", solutions.NumBusesToDestination([][]int{
+		{1, 2, 7}, {3, 6, 7},
+	}, 1, 6))
 	fmt.Printf("Sorting the vowels in a string yields %s\n", solutions.SortVowels("LQRamBOHfq"))
 }
