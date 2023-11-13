@@ -1,24 +1,28 @@
 package solutions
 
-import "sort"
-
 func SortVowels(s string) string {
-	temp := make([]rune, 0)
+	count := make(map[rune]int)
 	runes := []rune(s)
 
 	for i := range runes {
 		if isVowel(runes[i]) {
-			temp = append(temp, runes[i])
+			count[runes[i]]++
 		}
 	}
 
-	sort.Slice(temp, func(i, j int) bool { return temp[i] < temp[j] })
-	k := 0
+	k, vowels := 0, "AEIOUaeiou"
+	sortedVowels := []rune(vowels)
 	for i := 0; i < len(runes); i++ {
-		if isVowel(runes[i]) {
-			runes[i] = temp[k]
+		if !isVowel(runes[i]) {
+			continue
+		}
+
+		for count[sortedVowels[k]] == 0 {
 			k++
 		}
+
+		runes[i] = sortedVowels[k]
+		count[runes[i]]--
 	}
 
 	return string(runes)
