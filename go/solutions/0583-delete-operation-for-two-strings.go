@@ -14,27 +14,17 @@ func MinDistance(word1 string, word2 string) int {
 		}
 	}
 
-	var dfs func(i, j int) int
-	dfs = func(i, j int) int {
-		if i == len(word1) && j == len(word2) {
-			return 0
+	for i := 0; i <= len(word1); i++ {
+		for j := 0; j <= len(word2); j++ {
+			if i == 0 || j == 0 {
+				dp[i][j] = i + j
+			} else if word1[i-1] == word2[j-1] {
+				dp[i][j] = dp[i-1][j-1]
+			} else {
+				dp[i][j] = 1 + utils.Min(dp[i-1][j], dp[i][j-1])
+			}
 		}
-
-		if i == len(word1) || j == len(word2) {
-			return utils.Max(len(word1)-i, len(word2)-j)
-		}
-
-		if dp[i][j] != -1 {
-			return dp[i][j]
-		}
-
-		if word1[i] == word2[j] {
-			return dfs(i+1, j+1)
-		}
-
-		dp[i][j] = 1 + utils.Min(dfs(i+1, j), dfs(i, j+1))
-		return dp[i][j]
 	}
 
-	return dfs(0, 0)
+	return dp[len(word1)][len(word2)]
 }
