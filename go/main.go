@@ -803,4 +803,5 @@ func main() {
 	fmt.Printf("The minimum number of steps to make two strings anagram II is %d\n", solutions.MinSteps2("leetcode", "coats"))
 	fmt.Printf("The Number of distinct integers after reverse operations is %d\n", solutions.CountDistinctIntegers([]int{1, 13, 10, 12, 31}))
 	fmt.Printf("The number of unique palindromic subsequences of length three are %d\n", solutions.CountPalindromicSubsequence("aabca"))
+	fmt.Printf("The minimum number of steps to make word1 and word2 the same is %d\n", solutions.MinDistance("sea", "eat"))
 }
