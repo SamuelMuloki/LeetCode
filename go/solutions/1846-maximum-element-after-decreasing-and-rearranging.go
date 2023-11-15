@@ -1,14 +1,17 @@
 package solutions
 
-import "sort"
+import "github.com/SamuelMuloki/LeetCode/go/utils"
 
 func MaximumElementAfterDecrementingAndRearranging(arr []int) int {
-	sort.Ints(arr)
+	n := len(arr)
+	counts := make([]int, n+1)
+	for i := range arr {
+		counts[utils.Min(arr[i], n)]++
+	}
+
 	ans := 1
-	for i := 1; i < len(arr); i++ {
-		if arr[i] >= ans+1 {
-			ans++
-		}
+	for num := 2; num <= n; num++ {
+		ans = utils.Min(ans+counts[num], num)
 	}
 
 	return ans
