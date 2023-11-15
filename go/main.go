@@ -806,4 +806,5 @@ func main() {
 	fmt.Printf("The minimum number of steps to make word1 and word2 the same is %d\n", solutions.MinDistance("sea", "eat"))
 	fmt.Printf("The result of s after removing all occurrences of a substring is %s\n", solutions.RemoveOccurrences("daabcbaabcbc", "abc"))
 	fmt.Printf("The duplicates in the arraya are %v\n", solutions.FindDuplicates([]int{4, 3, 2, 7, 8, 2, 3, 1}))
+	fmt.Printf("The maximum possible value of an element after decrementing and rearranging is %d\n", solutions.MaximumElementAfterDecrementingAndRearranging([]int{2, 2, 1, 2, 1}))
 }
