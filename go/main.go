@@ -812,4 +812,7 @@ func main() {
 			{Val: 3, Children: []*utils.Node{{Val: 5}, {Val: 6}}}, {Val: 2}, {Val: 4},
 		},
 	}))
+	fmt.Printf("The level order traversal II is %v\n", solutions.LevelOrderBottom(&utils.TreeNode{
+		Val: 3, Left: &utils.TreeNode{Val: 9}, Right: &utils.TreeNode{Val: 20, Left: &utils.TreeNode{Val: 15}, Right: &utils.TreeNode{Val: 7}},
+	}))
 }
