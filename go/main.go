@@ -818,4 +818,5 @@ func main() {
 	fmt.Printf("The Zigzag level order traversal is %v\n", solutions.ZigzagLevelOrder(&utils.TreeNode{
 		Val: 3, Left: &utils.TreeNode{Val: 9}, Right: &utils.TreeNode{Val: 20, Left: &utils.TreeNode{Val: 15}, Right: &utils.TreeNode{Val: 7}},
 	}))
+	fmt.Printf("Adding two integers yields %d\n", solutions.Sum(12, 5))
 }
