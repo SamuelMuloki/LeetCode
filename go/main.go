@@ -807,4 +807,9 @@ func main() {
 	fmt.Printf("The result of s after removing all occurrences of a substring is %s\n", solutions.RemoveOccurrences("daabcbaabcbc", "abc"))
 	fmt.Printf("The duplicates in the arraya are %v\n", solutions.FindDuplicates([]int{4, 3, 2, 7, 8, 2, 3, 1}))
 	fmt.Printf("The maximum possible value of an element after decrementing and rearranging is %d\n", solutions.MaximumElementAfterDecrementingAndRearranging([]int{2, 2, 1, 2, 1}))
+	fmt.Printf("The level order traversal of an n-array tree is %v\n", solutions.NArryLevelOrder(&utils.Node{
+		Val: 1, Children: []*utils.Node{
+			{Val: 3, Children: []*utils.Node{{Val: 5}, {Val: 6}}}, {Val: 2}, {Val: 4},
+		},
+	}))
 }
