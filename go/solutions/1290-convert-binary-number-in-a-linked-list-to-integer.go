@@ -1,8 +1,6 @@
 package solutions
 
 import (
-	"strconv"
-
 	"github.com/SamuelMuloki/LeetCode/go/utils"
 )
 
@@ -14,12 +12,12 @@ import (
  * }
  */
 func GetDecimalValue(head *utils.ListNode) int {
-	curr, str := head, ""
-	for curr != nil {
-		str += strconv.Itoa(curr.Val)
-		curr = curr.Next
+	ans := 0
+	for head != nil {
+		ans *= 2
+		ans += head.Val
+		head = head.Next
 	}
 
-	ans, _ := strconv.ParseInt(str, 2, 32)
-	return int(ans)
+	return ans
 }
