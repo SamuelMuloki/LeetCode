@@ -819,4 +819,5 @@ func main() {
 		Val: 3, Left: &utils.TreeNode{Val: 9}, Right: &utils.TreeNode{Val: 20, Left: &utils.TreeNode{Val: 15}, Right: &utils.TreeNode{Val: 7}},
 	}))
 	fmt.Printf("Adding two integers yields %d\n", solutions.Sum(12, 5))
+	fmt.Printf("The unique binary string is %s\n", solutions.FindDifferentBinaryString([]string{"01", "10"}))
 }
