@@ -3,21 +3,12 @@
  * @return {Generator}
  */
 var inorderTraversal = function* (arr) {
-  function flat(arr, n) {
-    return arr.reduce((output, element) => {
-      if (Array.isArray(element)) {
-        output.push(...flat(element, n - 1));
-      } else {
-        output.push(element);
-      }
-
-      return output;
-    }, []);
-  }
-
-  arr = flat(arr, arr.length);
-  for (const num of arr) {
-    yield num;
+  for (const element of arr) {
+    if (Array.isArray(element)) {
+      yield* inorderTraversal(element);
+    } else {
+      yield element;
+    }
   }
 };
 
