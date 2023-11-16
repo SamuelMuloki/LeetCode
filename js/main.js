@@ -51,6 +51,7 @@ const { titleToNumber } = require("./0171-excel-sheet-column-number");
 const { differenceOfSums } = require("./2894-divisible-and-non-divisible-sums-difference");
 const { searchRange } = require("./0034-find-first-and-last-position-of-element-in-sorted-array");
 const { inorderTraversal } = require("./2649-nested-array-generator");
+const { fibGenerator } = require("./2648-generate-fibonacci-sequence");
 
 console.log(containsDuplicate([1, 2, 3, 1]));
 console.log(isAnagram("rat", "car"));
@@ -215,3 +216,9 @@ console.log("The next value is", generator.next().value)
 console.log("The next value is", generator.next().value)
 console.log("The next value is", generator.next().value)
 console.log("The next value is", generator.next().done)
+
+const gen = fibGenerator();
+console.log("The next fibonacci value is", gen.next().value)
+console.log("The next fibonacci value is", gen.next().value)
+console.log("The next fibonacci value is", gen.next().value)
+console.log("The next fibonacci value is", gen.next().value)
