@@ -820,4 +820,5 @@ func main() {
 	}))
 	fmt.Printf("Adding two integers yields %d\n", solutions.Sum(12, 5))
 	fmt.Printf("The unique binary string is %s\n", solutions.FindDifferentBinaryString([]string{"01", "10"}))
+	fmt.Printf("The single non duplicate element in the sorted array is %d\n", solutions.SingleNonDuplicate([]int{1, 1, 2, 3, 3, 4, 4, 8, 8}))
 }
