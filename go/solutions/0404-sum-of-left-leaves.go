@@ -11,17 +11,18 @@ import "github.com/SamuelMuloki/LeetCode/go/utils"
  * }
  */
 func SumOfLeftLeaves(root *utils.TreeNode) int {
-	return dfs2(root, false)
-}
+	var dfs func(root *utils.TreeNode, isLeft bool) int
+	dfs = func(root *utils.TreeNode, isLeft bool) int {
+		if root == nil {
+			return 0
+		}
 
-func dfs2(root *utils.TreeNode, isLeft bool) int {
-	if root == nil {
-		return 0
+		if root.Left == nil && root.Right == nil && isLeft {
+			return root.Val
+		}
+
+		return dfs(root.Left, true) + dfs(root.Right, false)
 	}
 
-	if root.Left == nil && root.Right == nil && isLeft {
-		return root.Val
-	}
-
-	return dfs2(root.Left, true) + dfs2(root.Right, false)
+	return dfs(root, false)
 }
