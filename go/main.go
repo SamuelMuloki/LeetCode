@@ -824,4 +824,5 @@ func main() {
 	fmt.Printf("Coverting binary number in a linked list to integer yields %d\n", solutions.GetDecimalValue(&utils.ListNode{
 		Val: 1, Next: &utils.ListNode{Val: 0, Next: &utils.ListNode{Val: 1}},
 	}))
+	fmt.Printf("The minimized max pair sum in an array is %d\n", solutions.MinPairSum([]int{3, 5, 2, 3}))
 }
