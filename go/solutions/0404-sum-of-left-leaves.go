@@ -19,12 +19,8 @@ func dfs2(root *utils.TreeNode, isLeft bool) int {
 		return 0
 	}
 
-	if root.Left == nil && root.Right == nil {
-		if isLeft {
-			return root.Val
-		} else {
-			return 0
-		}
+	if root.Left == nil && root.Right == nil && isLeft {
+		return root.Val
 	}
 
 	return dfs2(root.Left, true) + dfs2(root.Right, false)
