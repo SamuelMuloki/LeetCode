@@ -826,4 +826,5 @@ func main() {
 	}))
 	fmt.Printf("The minimized max pair sum in an array is %d\n", solutions.MinPairSum([]int{3, 5, 2, 3}))
 	fmt.Printf("The single number II in the array is %d\n", solutions.SingleNumber2([]int{2, 2, 3, 2}))
+	fmt.Printf("The single numbers II in the array are %v\n", solutions.SingleNumber3([]int{1, 2, 1, 3, 2, 5}))
 }
