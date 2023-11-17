@@ -832,4 +832,5 @@ func main() {
 		Left:  &utils.TreeNode{Val: 9},
 		Right: &utils.TreeNode{Val: 20, Left: &utils.TreeNode{Val: 15}, Right: &utils.TreeNode{Val: 7}},
 	}))
+	fmt.Printf("The running sum of a 1d array is %v\n", solutions.RunningSum([]int{1, 2, 3, 4}))
 }
