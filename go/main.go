@@ -835,4 +835,5 @@ func main() {
 	fmt.Printf("The running sum of a 1d array is %v\n", solutions.RunningSum([]int{1, 2, 3, 4}))
 	fmt.Printf("The lonely numbers in the array are %v\n", solutions.FindLonely([]int{10, 6, 5, 8}))
 	fmt.Printf("The maximum possible frequency of an element after performing k operations is %d\n", solutions.MaxFrequency([]int{1, 2, 4}, 5))
+	fmt.Printf("The minimum number of positive deci-binary numbers needed are %d\n", solutions.MinPartitions("82734"))
 }
