@@ -2,8 +2,6 @@ package solutions
 
 import (
 	"sort"
-
-	"github.com/SamuelMuloki/LeetCode/go/utils"
 )
 
 func LongestStrChain(words []string) int {
@@ -18,10 +16,10 @@ func LongestStrChain(words []string) int {
 		for i := 0; i < len(word); i++ {
 			prev := word[:i] + word[i+1:]
 			if val, exists := dp[prev]; exists {
-				dp[word] = utils.Max(dp[word], val+1)
+				dp[word] = max(dp[word], val+1)
 			}
 		}
-		maxLen = utils.Max(maxLen, dp[word])
+		maxLen = max(maxLen, dp[word])
 	}
 
 	return maxLen

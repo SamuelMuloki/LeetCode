@@ -1,7 +1,5 @@
 package solutions
 
-import "github.com/SamuelMuloki/LeetCode/go/utils"
-
 func MaxPower(s string) int {
 	maxLen, currLen, prev := 0, 0, ' '
 	for i := 0; i < len(s); i++ {
@@ -12,7 +10,7 @@ func MaxPower(s string) int {
 			prev = rune(s[i])
 		}
 
-		maxLen = utils.Max(maxLen, currLen)
+		maxLen = max(maxLen, currLen)
 	}
 
 	return maxLen

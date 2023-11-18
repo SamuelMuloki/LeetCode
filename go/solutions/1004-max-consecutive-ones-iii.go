@@ -1,9 +1,5 @@
 package solutions
 
-import (
-	"github.com/SamuelMuloki/LeetCode/go/utils"
-)
-
 func LongestOnes(nums []int, k int) int {
 	res, zeroCount := 0, 0
 	currMax, pos := 0, 0
@@ -17,7 +13,7 @@ func LongestOnes(nums []int, k int) int {
 		}
 
 		currMax += nums[i] | 1
-		res = utils.Max(res, currMax)
+		res = max(res, currMax)
 	}
 
 	return res

@@ -2,8 +2,6 @@ package solutions
 
 import (
 	"math"
-
-	"github.com/SamuelMuloki/LeetCode/go/utils"
 )
 
 func CoinChange(coins []int, amount int) int {
@@ -15,7 +13,7 @@ func CoinChange(coins []int, amount int) int {
 	for _, coin := range coins {
 		for remain := 1; remain <= amount; remain++ {
 			if remain >= coin {
-				dp[remain] = utils.Min(dp[remain], dp[remain-coin]+1)
+				dp[remain] = min(dp[remain], dp[remain-coin]+1)
 			}
 		}
 	}

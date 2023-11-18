@@ -3,8 +3,6 @@ package solutions
 import (
 	"container/heap"
 	"math"
-
-	"github.com/SamuelMuloki/LeetCode/go/utils"
 )
 
 func ThirdMax(nums []int) int {
@@ -18,7 +16,7 @@ func ThirdMax(nums []int) int {
 		}
 
 		set[nums[i]]++
-		maxVal = utils.Max(maxVal, nums[i])
+		maxVal = max(maxVal, nums[i])
 		heap.Push(minHeap, nums[i])
 		if minHeap.Len() > 3 {
 			heap.Pop(minHeap)

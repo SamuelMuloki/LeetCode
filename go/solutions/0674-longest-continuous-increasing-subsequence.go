@@ -1,7 +1,5 @@
 package solutions
 
-import "github.com/SamuelMuloki/LeetCode/go/utils"
-
 func FindLengthOfLCIS(nums []int) int {
 	maxCount, count, prev := 0, 0, 0
 	for i := 0; i < len(nums); i++ {
@@ -12,7 +10,7 @@ func FindLengthOfLCIS(nums []int) int {
 		}
 
 		prev = nums[i]
-		maxCount = utils.Max(maxCount, count)
+		maxCount = max(maxCount, count)
 	}
 
 	return maxCount

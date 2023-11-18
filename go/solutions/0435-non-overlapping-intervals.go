@@ -2,8 +2,6 @@ package solutions
 
 import (
 	"sort"
-
-	"github.com/SamuelMuloki/LeetCode/go/utils"
 )
 
 func EraseOverlapIntervals(intervals [][]int) int {
@@ -18,7 +16,7 @@ func EraseOverlapIntervals(intervals [][]int) int {
 		n := len(res)
 		if intervals[i][0] < res[n-1][1] {
 			count++
-			res[n-1][1] = utils.Min(res[n-1][1], intervals[i][1])
+			res[n-1][1] = min(res[n-1][1], intervals[i][1])
 		} else {
 			res = append(res, intervals[i])
 		}

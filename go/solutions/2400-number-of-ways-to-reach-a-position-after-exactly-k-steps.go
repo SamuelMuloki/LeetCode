@@ -1,7 +1,5 @@
 package solutions
 
-import "github.com/SamuelMuloki/LeetCode/go/utils"
-
 func NumberOfWays(startPos int, endPos int, k int) int {
 	/*
 		We'll consider the distance between start and end position since it's non negative
@@ -11,7 +9,7 @@ func NumberOfWays(startPos int, endPos int, k int) int {
 		Note that for d == 0, the number of ways is dfs(k - 1, 1) + dfs(k - 1, 1), since abs(0 - 1) == 1.
 		We can reach 0 from positions 1 and -1, and the number of ways for negative positions mirrors positive positions.
 	*/
-	maxLen := utils.Max(endPos, k)
+	maxLen := max(endPos, k)
 	dp := make([]int, maxLen+1)
 	prevDp := make([]int, maxLen+1)
 	var abs = func(diff int) int {

@@ -2,8 +2,6 @@ package solutions
 
 import (
 	"sort"
-
-	"github.com/SamuelMuloki/LeetCode/go/utils"
 )
 
 func MinContinousOperations(nums []int) int {
@@ -29,7 +27,7 @@ func MinContinousOperations(nums []int) int {
 		}
 
 		count := j - i
-		ops = utils.Min(ops, n-count)
+		ops = min(ops, n-count)
 	}
 
 	return ops

@@ -1,11 +1,9 @@
 package solutions
 
-import "github.com/SamuelMuloki/LeetCode/go/utils"
-
 func GetWinner(arr []int, k int) int {
 	maxElement, n := arr[0], len(arr)
 	for i := 1; i < n; i++ {
-		maxElement = utils.Max(maxElement, arr[i])
+		maxElement = max(maxElement, arr[i])
 	}
 
 	curr, winStreak := arr[0], 0

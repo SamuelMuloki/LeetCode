@@ -1,11 +1,7 @@
 package solutions
 
-import (
-	"github.com/SamuelMuloki/LeetCode/go/utils"
-)
-
 func NumWays(steps int, arrLen int) int {
-	arrLen = utils.Min(arrLen, steps)
+	arrLen = min(arrLen, steps)
 	dp := make([]int, arrLen)
 	prevDp := make([]int, arrLen)
 

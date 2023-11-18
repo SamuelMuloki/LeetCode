@@ -1,7 +1,5 @@
 package solutions
 
-import "github.com/SamuelMuloki/LeetCode/go/utils"
-
 func CheckZeroOnes(s string) bool {
 	maxZeroes, maxOnes := 0, 0
 	zeroCnt, oneCnt := 0, 0
@@ -14,8 +12,8 @@ func CheckZeroOnes(s string) bool {
 			zeroCnt = 0
 		}
 
-		maxZeroes = utils.Max(maxZeroes, zeroCnt)
-		maxOnes = utils.Max(maxOnes, oneCnt)
+		maxZeroes = max(maxZeroes, zeroCnt)
+		maxOnes = max(maxOnes, oneCnt)
 	}
 
 	return maxOnes > maxZeroes

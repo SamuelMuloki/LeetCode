@@ -1,9 +1,5 @@
 package solutions
 
-import (
-	"github.com/SamuelMuloki/LeetCode/go/utils"
-)
-
 func MaxNumberOfBalloons(text string) int {
 	b, a, l, o, n := 0, 0, 0, 0, 0
 	for _, r := range text {
@@ -21,7 +17,7 @@ func MaxNumberOfBalloons(text string) int {
 		}
 	}
 
-	ans := utils.Min(b, utils.Min(a, n))
-	ans = utils.Min(ans, utils.Min(l/2, o/2))
+	ans := min(b, min(a, n))
+	ans = min(ans, min(l/2, o/2))
 	return ans
 }

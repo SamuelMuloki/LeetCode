@@ -1,7 +1,5 @@
 package solutions
 
-import "github.com/SamuelMuloki/LeetCode/go/utils"
-
 func LongestConsecutive(nums []int) int {
 	set := make(map[int]bool, 0)
 	for i := range nums {
@@ -19,7 +17,7 @@ func LongestConsecutive(nums []int) int {
 			maxCount++
 			j++
 		}
-		count = utils.Max(count, maxCount)
+		count = max(count, maxCount)
 	}
 
 	return count

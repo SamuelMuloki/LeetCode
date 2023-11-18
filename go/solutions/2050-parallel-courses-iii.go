@@ -1,7 +1,5 @@
 package solutions
 
-import "github.com/SamuelMuloki/LeetCode/go/utils"
-
 func MinimumTime(n int, relations [][]int, time []int) int {
 	graph := make(map[int][]int)
 	for _, edge := range relations {
@@ -26,7 +24,7 @@ func MinimumTime(n int, relations [][]int, time []int) int {
 
 		ans := 0
 		for _, neighbor := range graph[node] {
-			ans = utils.Max(ans, dfs(neighbor))
+			ans = max(ans, dfs(neighbor))
 		}
 
 		memo[node] = time[node] + ans
@@ -35,7 +33,7 @@ func MinimumTime(n int, relations [][]int, time []int) int {
 
 	ans := 0
 	for node := 0; node < n; node++ {
-		ans = utils.Max(ans, dfs(node))
+		ans = max(ans, dfs(node))
 	}
 
 	return ans
