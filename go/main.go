@@ -836,4 +836,5 @@ func main() {
 	fmt.Printf("The lonely numbers in the array are %v\n", solutions.FindLonely([]int{10, 6, 5, 8}))
 	fmt.Printf("The maximum possible frequency of an element after performing k operations is %d\n", solutions.MaxFrequency([]int{1, 2, 4}, 5))
 	fmt.Printf("The minimum number of positive deci-binary numbers needed are %d\n", solutions.MinPartitions("82734"))
+	fmt.Printf("The tree constructed from preorder traversal is %v\n", solutions.BstFromPreorder([]int{8, 5, 1, 7, 10, 12}))
 }
