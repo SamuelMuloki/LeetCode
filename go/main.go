@@ -833,4 +833,5 @@ func main() {
 		Right: &utils.TreeNode{Val: 20, Left: &utils.TreeNode{Val: 15}, Right: &utils.TreeNode{Val: 7}},
 	}))
 	fmt.Printf("The running sum of a 1d array is %v\n", solutions.RunningSum([]int{1, 2, 3, 4}))
+	fmt.Printf("The lonely numbers in the array are %v\n", solutions.FindLonely([]int{10, 6, 5, 8}))
 }
