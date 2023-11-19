@@ -839,4 +839,7 @@ func main() {
 	fmt.Printf("The tree constructed from preorder traversal is %v\n", solutions.BstFromPreorder([]int{8, 5, 1, 7, 10, 12}))
 	fmt.Printf("The number of pairs whose sum is less than target is %d\n", solutions.CountPairs([]int{-1, 1, 2, 3, 1}, 2))
 	fmt.Printf("The number of operations to make all elements in nums equal is %d\n", solutions.ReductionOperations([]int{5, 1, 3}))
+	fmt.Printf("Merging linked list in between yields %v\n", solutions.MergeInBetween(&utils.ListNode{
+		Val: 0, Next: &utils.ListNode{Val: 1, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 3, Next: &utils.ListNode{Val: 4, Next: &utils.ListNode{Val: 5}}}}},
+	}, 3, 4, &utils.ListNode{Val: 1000000, Next: &utils.ListNode{Val: 1000001, Next: &utils.ListNode{Val: 1000002}}}))
 }
