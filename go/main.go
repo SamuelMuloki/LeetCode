@@ -848,4 +848,5 @@ func main() {
 		Right: &utils.TreeNode{Val: 5, Left: &utils.TreeNode{Val: 21}, Right: &utils.TreeNode{Val: 34}},
 	}))
 	fmt.Printf("The left annd right sum difference is %v\n", solutions.LeftRightDifference([]int{10, 4, 8, 3}))
+	fmt.Printf("The two arrays represent the same string %t\n", solutions.ArrayStringsAreEqual([]string{"ab", "c"}, []string{"a", "bc"}))
 }
