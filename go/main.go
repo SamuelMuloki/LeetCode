@@ -838,4 +838,5 @@ func main() {
 	fmt.Printf("The minimum number of positive deci-binary numbers needed are %d\n", solutions.MinPartitions("82734"))
 	fmt.Printf("The tree constructed from preorder traversal is %v\n", solutions.BstFromPreorder([]int{8, 5, 1, 7, 10, 12}))
 	fmt.Printf("The number of pairs whose sum is less than target is %d\n", solutions.CountPairs([]int{-1, 1, 2, 3, 1}, 2))
+	fmt.Printf("The number of operations to make all elements in nums equal is %d\n", solutions.ReductionOperations([]int{5, 1, 3}))
 }
