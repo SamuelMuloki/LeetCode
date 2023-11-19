@@ -842,4 +842,9 @@ func main() {
 	fmt.Printf("Merging linked list in between yields %v\n", solutions.MergeInBetween(&utils.ListNode{
 		Val: 0, Next: &utils.ListNode{Val: 1, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 3, Next: &utils.ListNode{Val: 4, Next: &utils.ListNode{Val: 5}}}}},
 	}, 3, 4, &utils.ListNode{Val: 1000000, Next: &utils.ListNode{Val: 1000001, Next: &utils.ListNode{Val: 1000002}}}))
+	fmt.Printf("Reversing odd levels yields %v\n", solutions.ReverseOddLevels(&utils.TreeNode{
+		Val:   2,
+		Left:  &utils.TreeNode{Val: 3, Left: &utils.TreeNode{Val: 8}, Right: &utils.TreeNode{Val: 13}},
+		Right: &utils.TreeNode{Val: 5, Left: &utils.TreeNode{Val: 21}, Right: &utils.TreeNode{Val: 34}},
+	}))
 }
