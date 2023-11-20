@@ -849,4 +849,5 @@ func main() {
 	}))
 	fmt.Printf("The left annd right sum difference is %v\n", solutions.LeftRightDifference([]int{10, 4, 8, 3}))
 	fmt.Printf("The two arrays represent the same string %t\n", solutions.ArrayStringsAreEqual([]string{"ab", "c"}, []string{"a", "bc"}))
+	fmt.Printf("The minimum amount of time to collect the garbage is %d\n", solutions.GarbageCollection([]string{"G", "P", "GP", "GG"}, []int{2, 4, 3}))
 }
