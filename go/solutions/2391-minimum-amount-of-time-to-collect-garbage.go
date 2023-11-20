@@ -1,27 +1,26 @@
 package solutions
 
 func GarbageCollection(garbage []string, travel []int) int {
-	set := make(map[byte]int)
+	prefixSum := make([]int, len(travel)+1)
+	prefixSum[1] = travel[0]
+	for i := 1; i < len(travel); i++ {
+		prefixSum[i+1] = prefixSum[i] + travel[i]
+	}
+
+	garbageLastPos := make(map[byte]int)
+	garbageCount := make(map[byte]int)
 	for i := range garbage {
 		for j := range garbage[i] {
-			set[garbage[i][j]]++
+			garbageLastPos[garbage[i][j]] = i
+			garbageCount[garbage[i][j]]++
 		}
 	}
 
+	garbageTypes := []byte{'M', 'P', 'G'}
 	ans := 0
-	for i := 0; i < len(garbage); i++ {
-		ans += len(garbage[i])
-
-		if i > 0 {
-			ans += len(set) * travel[i-1]
-		}
-
-		for j := 0; j < len(garbage[i]); j++ {
-			set[garbage[i][j]]--
-
-			if set[garbage[i][j]] == 0 {
-				delete(set, garbage[i][j])
-			}
+	for _, ch := range garbageTypes {
+		if count, ok := garbageCount[ch]; ok {
+			ans += prefixSum[garbageLastPos[ch]] + count
 		}
 	}
 
