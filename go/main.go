@@ -855,4 +855,5 @@ func main() {
 	fmt.Printf("The total sum of root to leaf numbers is %d\n", solutions.SumNumbers(&utils.TreeNode{
 		Val: 1, Left: &utils.TreeNode{Val: 2}, Right: &utils.TreeNode{Val: 3},
 	}))
+	fmt.Printf("The prefix common array of two arrays is %v\n", solutions.FindThePrefixCommonArray([]int{1, 3, 2, 4}, []int{3, 1, 2, 4}))
 }
