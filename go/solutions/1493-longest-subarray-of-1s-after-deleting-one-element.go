@@ -1,7 +1,5 @@
 package solutions
 
-import "github.com/SamuelMuloki/LeetCode/go/utils"
-
 func LongestSubarray(nums []int) int {
 	res, zeroCount, maxCount, pos := 0, 0, 0, 0
 	for i := 0; i < len(nums); i++ {
@@ -14,7 +12,7 @@ func LongestSubarray(nums []int) int {
 		}
 
 		maxCount += (nums[i] & 1)
-		res = utils.Max(res, maxCount)
+		res = max(res, maxCount)
 	}
 
 	if zeroCount == 0 {

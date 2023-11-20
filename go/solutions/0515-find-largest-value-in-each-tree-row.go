@@ -25,7 +25,7 @@ func LargestValues(root *utils.TreeNode) []int {
 	for len(queue) > 0 {
 		qLen, maxVal := len(queue), math.MinInt
 		for i := 0; i < qLen; i++ {
-			maxVal = utils.Max(maxVal, queue[i].Val)
+			maxVal = max(maxVal, queue[i].Val)
 			if queue[i].Left != nil {
 				queue = append(queue, queue[i].Left)
 			}

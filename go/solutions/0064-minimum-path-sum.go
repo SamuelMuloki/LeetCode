@@ -1,9 +1,5 @@
 package solutions
 
-import (
-	"github.com/SamuelMuloki/LeetCode/go/utils"
-)
-
 func MinPathSum(grid [][]int) int {
 	m := len(grid)
 	n := len(grid[m-1])
@@ -23,7 +19,7 @@ func MinPathSum(grid [][]int) int {
 
 	for i := 1; i < m; i++ {
 		for j := 1; j < n; j++ {
-			dp[i][j] = utils.Min(dp[i-1][j], dp[i][j-1]) + grid[i][j]
+			dp[i][j] = min(dp[i-1][j], dp[i][j-1]) + grid[i][j]
 		}
 	}
 

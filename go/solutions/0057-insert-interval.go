@@ -2,8 +2,6 @@ package solutions
 
 import (
 	"sort"
-
-	"github.com/SamuelMuloki/LeetCode/go/utils"
 )
 
 func Insert(intervals [][]int, newInterval []int) [][]int {
@@ -31,7 +29,7 @@ func Insert(intervals [][]int, newInterval []int) [][]int {
 	for i := 1; i < len(newIntervals); i++ {
 		n := len(res)
 		if res[n-1][1] >= newIntervals[i][0] {
-			res[n-1][1] = utils.Max(res[n-1][1], newIntervals[i][1])
+			res[n-1][1] = max(res[n-1][1], newIntervals[i][1])
 		} else {
 			res = append(res, newIntervals[i])
 		}

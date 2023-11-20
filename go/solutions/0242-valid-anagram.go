@@ -1,23 +1,21 @@
 package solutions
 
-import "strings"
-
 func IsAnagram(s string, t string) bool {
-	sCount := make(map[string]int)
-	sArr := strings.Split(s, "")
-
 	if len(s) != len(t) {
 		return false
 	}
 
-	for _, val := range sArr {
-		sCount[val] = sCount[val] + 1
+	counts := [26]int{}
+	for i := range s {
+		counts[s[i]-'a']++
+		counts[t[i]-'a']--
 	}
 
-	for key, value := range sCount {
-		if strings.Count(t, key) != value {
+	for i := 0; i < 26; i++ {
+		if counts[i] != 0 {
 			return false
 		}
 	}
+
 	return true
 }

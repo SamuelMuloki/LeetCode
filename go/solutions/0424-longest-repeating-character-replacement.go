@@ -2,8 +2,6 @@ package solutions
 
 import (
 	"math"
-
-	"github.com/SamuelMuloki/LeetCode/go/utils"
 )
 
 func CharacterReplacement(s string, k int) int {
@@ -32,7 +30,7 @@ func CharacterReplacement(s string, k int) int {
 			}
 
 			currMax++
-			maxV = utils.Max(maxV, currMax)
+			maxV = max(maxV, currMax)
 		}
 	}
 

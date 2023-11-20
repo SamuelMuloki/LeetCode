@@ -2,8 +2,6 @@ package solutions
 
 import (
 	"math"
-
-	"github.com/SamuelMuloki/LeetCode/go/utils"
 )
 
 func MinSubArrayLen(target int, nums []int) int {
@@ -12,7 +10,7 @@ func MinSubArrayLen(target int, nums []int) int {
 	for i := 0; i < len(nums); i++ {
 		sum += nums[i]
 		for sum >= target {
-			output = utils.Min(output, i+1-l)
+			output = min(output, i+1-l)
 			sum -= nums[l]
 			l++
 		}

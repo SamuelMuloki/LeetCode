@@ -50,6 +50,8 @@ const { integerBreak } = require("./0343-integer-break");
 const { titleToNumber } = require("./0171-excel-sheet-column-number");
 const { differenceOfSums } = require("./2894-divisible-and-non-divisible-sums-difference");
 const { searchRange } = require("./0034-find-first-and-last-position-of-element-in-sorted-array");
+const { inorderTraversal } = require("./2649-nested-array-generator");
+const { fibGenerator } = require("./2648-generate-fibonacci-sequence");
 
 console.log(containsDuplicate([1, 2, 3, 1]));
 console.log(isAnagram("rat", "car"));
@@ -208,3 +210,15 @@ console.log("The maximum product after integer break is", integerBreak(10))
 console.log("The title to number of the excel colum is", titleToNumber("AB"))
 console.log("The difference of sums is", differenceOfSums(10, 3))
 console.log("The search range is", searchRange([5,7,7,8,8,10], 8))
+
+const generator = inorderTraversal([[6], [1, 3], []]);
+console.log("The next value is", generator.next().value)
+console.log("The next value is", generator.next().value)
+console.log("The next value is", generator.next().value)
+console.log("The next value is", generator.next().done)
+
+const gen = fibGenerator();
+console.log("The next fibonacci value is", gen.next().value)
+console.log("The next fibonacci value is", gen.next().value)
+console.log("The next fibonacci value is", gen.next().value)
+console.log("The next fibonacci value is", gen.next().value)

@@ -1,7 +1,5 @@
 package solutions
 
-import "github.com/SamuelMuloki/LeetCode/go/utils"
-
 func MaximumScore(nums []int, k int) int {
 	n := len(nums)
 	left, right := k, k
@@ -19,13 +17,13 @@ func MaximumScore(nums []int, k int) int {
 
 		if leftVal < rightVal {
 			right++
-			currMin = utils.Min(currMin, nums[right])
+			currMin = min(currMin, nums[right])
 		} else {
 			left--
-			currMin = utils.Min(currMin, nums[left])
+			currMin = min(currMin, nums[left])
 		}
 
-		ans = utils.Max(ans, currMin*(right-left+1))
+		ans = max(ans, currMin*(right-left+1))
 	}
 
 	return ans

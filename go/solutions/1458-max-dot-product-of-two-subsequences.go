@@ -2,8 +2,6 @@ package solutions
 
 import (
 	"math"
-
-	"github.com/SamuelMuloki/LeetCode/go/utils"
 )
 
 func MaxDotProduct(nums1 []int, nums2 []int) int {
@@ -11,13 +9,13 @@ func MaxDotProduct(nums1 []int, nums2 []int) int {
 	firstMin, secondMin := math.MaxInt, math.MaxInt
 
 	for _, num := range nums1 {
-		firstMax = utils.Max(firstMax, num)
-		firstMin = utils.Min(firstMin, num)
+		firstMax = max(firstMax, num)
+		firstMin = min(firstMin, num)
 	}
 
 	for _, num := range nums2 {
-		secondMax = utils.Max(secondMax, num)
-		secondMin = utils.Min(secondMin, num)
+		secondMax = max(secondMax, num)
+		secondMin = min(secondMin, num)
 	}
 
 	if firstMax < 0 && secondMin > 0 {
@@ -36,7 +34,7 @@ func MaxDotProduct(nums1 []int, nums2 []int) int {
 		dp = make([]int, m)
 		for j := len(nums2) - 1; j >= 0; j-- {
 			take := (nums1[i] * nums2[j]) + prevDp[j+1]
-			dp[j] = utils.Max(take, utils.Max(prevDp[j], dp[j+1]))
+			dp[j] = max(take, max(prevDp[j], dp[j+1]))
 		}
 
 		prevDp = dp

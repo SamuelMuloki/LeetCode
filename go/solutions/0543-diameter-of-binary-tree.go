@@ -18,7 +18,7 @@ func dfs(root *utils.TreeNode, maxDiameter *int) int {
 	leftDiameter := dfs(root.Left, maxDiameter)
 	rightDiameter := dfs(root.Right, maxDiameter)
 
-	*maxDiameter = utils.Max(*maxDiameter, leftDiameter+rightDiameter)
+	*maxDiameter = max(*maxDiameter, leftDiameter+rightDiameter)
 
-	return utils.Max(leftDiameter, rightDiameter) + 1
+	return max(leftDiameter, rightDiameter) + 1
 }

@@ -1,7 +1,5 @@
 package solutions
 
-import "github.com/SamuelMuloki/LeetCode/go/utils"
-
 type Stream struct {
 	Set      map[int]int
 	MaxValue int
@@ -14,7 +12,7 @@ func (s *Stream) GetHighestNumber(num int) int {
 	sum := 0
 	for _, val := range s.Set {
 		sum += val
-		tempMax = utils.Max(tempMax, val)
+		tempMax = max(tempMax, val)
 	}
 
 	maxSum := getSum(tempMax)

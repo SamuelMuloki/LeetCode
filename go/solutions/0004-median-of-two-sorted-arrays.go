@@ -2,8 +2,6 @@ package solutions
 
 import (
 	"math"
-
-	"github.com/SamuelMuloki/LeetCode/go/utils"
 )
 
 func FindMedianSortedArrays(nums1 []int, nums2 []int) float64 {
@@ -44,9 +42,9 @@ func FindMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 
 		if ALeft <= BRight && ARight <= BLeft {
 			if total%2 == 0 {
-				return float64(utils.Max(ALeft, ARight)+utils.Min(BLeft, BRight)) / 2
+				return float64(max(ALeft, ARight)+min(BLeft, BRight)) / 2
 			}
-			return float64(utils.Max(ALeft, ARight))
+			return float64(max(ALeft, ARight))
 		}
 
 		if ALeft > BRight {

@@ -1,7 +1,5 @@
 package solutions
 
-import "github.com/SamuelMuloki/LeetCode/go/utils"
-
 func MaxVowels(s string, k int) int {
 	maxV := 0
 	dp := make([]int, len(s))
@@ -23,7 +21,7 @@ func MaxVowels(s string, k int) int {
 		}
 
 		windowMax += dp[j] - dp[j-k]
-		maxV = utils.Max(maxV, windowMax)
+		maxV = max(maxV, windowMax)
 	}
 
 	return maxV

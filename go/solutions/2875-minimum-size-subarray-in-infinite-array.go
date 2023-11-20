@@ -2,8 +2,6 @@ package solutions
 
 import (
 	"math"
-
-	"github.com/SamuelMuloki/LeetCode/go/utils"
 )
 
 func MinSizeSubarray(nums []int, target int) int {
@@ -25,7 +23,7 @@ func MinSizeSubarray(nums []int, target int) int {
 		}
 
 		if sum == target {
-			output = utils.Min(output, i-l+1)
+			output = min(output, i-l+1)
 		}
 		i++
 	}

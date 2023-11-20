@@ -3,8 +3,6 @@ package solutions
 import (
 	"math"
 	"sort"
-
-	"github.com/SamuelMuloki/LeetCode/go/utils"
 )
 
 func MinimumDifference(nums []int, k int) int {
@@ -14,7 +12,7 @@ func MinimumDifference(nums []int, k int) int {
 	ans := math.MaxInt32
 
 	for r < len(nums) {
-		ans = utils.Min(ans, nums[r]-nums[l])
+		ans = min(ans, nums[r]-nums[l])
 		l++
 		r++
 	}

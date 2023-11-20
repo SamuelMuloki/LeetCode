@@ -15,14 +15,13 @@ func MaxSum(arr []int, k int) int {
 	window_sum := max_sum
 	for j := k; j < len(arr); j++ {
 		window_sum += arr[j] - arr[j-k]
-		max_sum = Max(window_sum, max_sum)
+		max_sum = max(window_sum, max_sum)
 	}
 
 	return max_sum
 }
 
 // Reverse a string
-
 func Reverse(s string) string {
 	runes := []rune(s)
 
@@ -31,22 +30,6 @@ func Reverse(s string) string {
 	}
 
 	return string(runes)
-}
-
-func Min(x int, y int) int {
-	if x < y {
-		return x
-	}
-
-	return y
-}
-
-func Max(x int, y int) int {
-	if x > y {
-		return x
-	}
-
-	return y
 }
 
 func MaxArr(arr []int) int {
@@ -92,7 +75,7 @@ func MaximumCost(i, mask, n int, dp [3][1 << 3]int, cost [][]int) int {
 		if (mask & (1 << k)) == 0 {
 			// kth person has not been assigned a task
 			// add cost and make the kth bit of mask = 1
-			ans = Max(ans, cost[i][k]+MaximumCost(i+1, (mask|1<<k), n, dp, cost))
+			ans = max(ans, cost[i][k]+MaximumCost(i+1, (mask|1<<k), n, dp, cost))
 		}
 	}
 
