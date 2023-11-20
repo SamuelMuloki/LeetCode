@@ -852,4 +852,7 @@ func main() {
 	fmt.Printf("The minimum amount of time to collect the garbage is %d\n", solutions.GarbageCollection([]string{"G", "P", "GP", "GG"}, []int{2, 4, 3}))
 	fmt.Printf("The maximum product subarray is %d\n", solutions.MaxProduct([]int{2, 3, -2, 4}))
 	fmt.Printf("The maximum product of three numbers is %d\n", solutions.MaximumProduct([]int{-1, -2, -3}))
+	fmt.Printf("The total sum of root to leaf numbers is %d\n", solutions.SumNumbers(&utils.TreeNode{
+		Val: 1, Left: &utils.TreeNode{Val: 2}, Right: &utils.TreeNode{Val: 3},
+	}))
 }
