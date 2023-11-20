@@ -1,16 +1,23 @@
 package solutions
 
 func MaxProduct(nums []int) int {
-	maxProd := nums[0]
-	for i, minVal, maxVal := 1, maxProd, maxProd; i < len(nums); i++ {
-		if nums[i] < 0 {
-			minVal, maxVal = maxVal, minVal
+	n := len(nums)
+	l, r := 1, 1
+	ans := nums[0]
+	for i := 0; i < n; i++ {
+		if l == 0 {
+			l = 1
 		}
 
-		minVal = min(nums[i], minVal*nums[i])
-		maxVal = max(nums[i], maxVal*nums[i])
-		maxProd = max(maxProd, maxVal)
+		if r == 0 {
+			r = 1
+		}
+
+		l *= nums[i]
+		r *= nums[n-1-i]
+
+		ans = max(ans, max(l, r))
 	}
 
-	return maxProd
+	return ans
 }
