@@ -1,31 +1,23 @@
 package solutions
 
 import (
-	"strconv"
-
 	"github.com/SamuelMuloki/LeetCode/go/utils"
 )
 
 func SumNumbers(root *utils.TreeNode) int {
-	sum := 0
-
-	var dfs func(root *utils.TreeNode, sum *int, str string)
-	dfs = func(root *utils.TreeNode, sum *int, str string) {
+	var dfs func(root *utils.TreeNode, sum int) int
+	dfs = func(root *utils.TreeNode, sum int) int {
 		if root == nil {
-			return
+			return 0
 		}
 
-		str += strconv.Itoa(root.Val)
+		val := sum*10 + root.Val
 		if root.Left == nil && root.Right == nil {
-			num, _ := strconv.Atoi(str)
-			*sum += num
-			return
+			return val
 		}
 
-		dfs(root.Left, sum, str)
-		dfs(root.Right, sum, str)
+		return dfs(root.Left, val) + dfs(root.Right, val)
 	}
 
-	dfs(root, &sum, "")
-	return sum
+	return dfs(root, 0)
 }
