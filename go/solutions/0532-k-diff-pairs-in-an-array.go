@@ -1,25 +1,20 @@
 package solutions
 
-import "sort"
-
 func FindPairs(nums []int, k int) int {
-	sort.Slice(nums, func(i, j int) bool { return nums[i] > nums[j] })
 	ans := 0
-	for i := 0; i < len(nums); i++ {
-		if i > 0 && nums[i-1] == nums[i] {
-			continue
-		}
+	set := make(map[int]int)
+	for i := range nums {
+		set[nums[i]]++
+	}
 
-		for j := i + 1; j < len(nums); j++ {
-			diff := nums[i] - nums[j]
-			if diff == k {
+	for i := range set {
+		val, ok := set[i+k]
+		if k == 0 {
+			if val > 1 {
 				ans++
-				break
 			}
-
-			if diff > k {
-				break
-			}
+		} else if ok {
+			ans++
 		}
 	}
 
