@@ -860,4 +860,7 @@ func main() {
 	fmt.Printf("The number of bad pairs are %d\n", solutions.CountBadPairs([]int{4, 1, 3, 3}))
 	fmt.Printf("The k-diff pairs in the array are %d\n", solutions.FindPairs([]int{3, 1, 4, 1, 5}, 2))
 	fmt.Printf("The number of equal and divisible pairs of an array are %d\n", solutions.CountPairs2([]int{3, 1, 2, 2, 2, 1, 3}, 2))
+	fmt.Printf("The maximum number of words found in sentences are %d\n", solutions.MostWordsFound([]string{
+		"alice and bob love leetcode", "i think so too", "this is great thanks very much",
+	}))
 }
