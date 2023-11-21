@@ -857,4 +857,5 @@ func main() {
 	}))
 	fmt.Printf("The prefix common array of two arrays is %v\n", solutions.FindThePrefixCommonArray([]int{1, 3, 2, 4}, []int{3, 1, 2, 4}))
 	fmt.Printf("The number of nice pairs in the array is %d\n", solutions.CountNicePairs([]int{42, 11, 1, 97}))
+	fmt.Printf("The number of bad pairs are %d\n", solutions.CountBadPairs([]int{4, 1, 3, 3}))
 }
