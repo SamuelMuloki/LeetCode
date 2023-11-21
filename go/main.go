@@ -856,4 +856,5 @@ func main() {
 		Val: 1, Left: &utils.TreeNode{Val: 2}, Right: &utils.TreeNode{Val: 3},
 	}))
 	fmt.Printf("The prefix common array of two arrays is %v\n", solutions.FindThePrefixCommonArray([]int{1, 3, 2, 4}, []int{3, 1, 2, 4}))
+	fmt.Printf("The number of nice pairs in the array is %d\n", solutions.CountNicePairs([]int{42, 11, 1, 97}))
 }
