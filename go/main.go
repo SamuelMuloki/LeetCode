@@ -869,4 +869,5 @@ func main() {
 	fmt.Printf("The result after sorting students by their kth score is %v\n", solutions.SortTheStudents([][]int{
 		{10, 6, 9, 1}, {7, 5, 11, 2}, {4, 8, 3, 15},
 	}, 2))
+	fmt.Printf("The permutation that satisfies the property is %s\n", solutions.CustomSortString("cba", "abcd"))
 }
