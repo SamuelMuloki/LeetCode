@@ -866,4 +866,7 @@ func main() {
 	fmt.Printf("The diagonal order of the elements in the 2d array is %v\n", solutions.FindDiagonalOrder([][]int{
 		{1, 2, 3}, {4, 5, 6}, {7, 8, 9},
 	}))
+	fmt.Printf("The result after sorting students by their kth score is %v\n", solutions.SortTheStudents([][]int{
+		{10, 6, 9, 1}, {7, 5, 11, 2}, {4, 8, 3, 15},
+	}, 2))
 }
