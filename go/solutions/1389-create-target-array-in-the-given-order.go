@@ -1,12 +1,13 @@
 package solutions
 
 func CreateTargetArray(nums []int, index []int) []int {
-	ans := make([]int, 0)
-	for i := range nums {
-		after := ans[index[i]:]
-		ans = append([]int{}, ans[:index[i]]...)
-		ans = append(ans, nums[i])
-		ans = append(ans, after...)
+	ans := make([]int, len(nums))
+	for idx, i := range index {
+		for j := len(ans) - 1; j > i; j-- {
+			ans[j] = ans[j-1]
+		}
+
+		ans[i] = nums[idx]
 	}
 
 	return ans
