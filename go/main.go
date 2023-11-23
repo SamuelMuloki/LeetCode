@@ -873,4 +873,5 @@ func main() {
 	fmt.Printf("Sorting characters by frequency yields %s\n", solutions.FrequencySort("Aabb"))
 	fmt.Printf("Sorting the array by frequency yields %v\n", solutions.FrequencySort2([]int{1, 1, 2, 2, 2, 3}))
 	fmt.Printf("The array can be re arranged to form an arithmetic progression %t\n", solutions.CanMakeArithmeticProgression([]int{3, 5, 1}))
+	fmt.Printf("The number of arithmetic subarrays are %d\n", solutions.NumberOfArithmeticSlices([]int{1, 2, 3, 4}))
 }
