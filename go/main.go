@@ -872,4 +872,5 @@ func main() {
 	fmt.Printf("The permutation that satisfies the property is %s\n", solutions.CustomSortString("cba", "abcd"))
 	fmt.Printf("Sorting characters by frequency yields %s\n", solutions.FrequencySort("Aabb"))
 	fmt.Printf("Sorting the array by frequency yields %v\n", solutions.FrequencySort2([]int{1, 1, 2, 2, 2, 3}))
+	fmt.Printf("The array can be re arranged to form an arithmetic progression %t\n", solutions.CanMakeArithmeticProgression([]int{3, 5, 1}))
 }
