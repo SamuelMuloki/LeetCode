@@ -881,4 +881,7 @@ func main() {
 	fmt.Printf("The Bottm left tree value %d\n", solutions.FindBottomLeftValue(&utils.TreeNode{
 		Val: 2, Left: &utils.TreeNode{Val: 1}, Right: &utils.TreeNode{Val: 3},
 	}))
+	fmt.Printf("Inserting into BST yields %v\n", solutions.InsertIntoBST(&utils.TreeNode{
+		Val: 4, Left: &utils.TreeNode{Val: 2, Left: &utils.TreeNode{Val: 1}, Right: &utils.TreeNode{Val: 3}}, Right: &utils.TreeNode{Val: 7},
+	}, 5))
 }
