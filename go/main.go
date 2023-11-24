@@ -885,4 +885,7 @@ func main() {
 		Val: 4, Left: &utils.TreeNode{Val: 2, Left: &utils.TreeNode{Val: 1}, Right: &utils.TreeNode{Val: 3}}, Right: &utils.TreeNode{Val: 7},
 	}, 5))
 	fmt.Printf("Truncating the senetence yields %s\n", solutions.TruncateSentence("Hello how are you Contestant", 4))
+	fmt.Printf("The root equal sum of children %t\n", solutions.CheckTree(&utils.TreeNode{
+		Val: 10, Left: &utils.TreeNode{Val: 4}, Right: &utils.TreeNode{Val: 6},
+	}))
 }
