@@ -878,4 +878,7 @@ func main() {
 	fmt.Printf("The length of the longest alphabetical continous substring is %d\n", solutions.LongestContinuousSubstring("abacaba"))
 	fmt.Printf("The target array is %v\n", solutions.CreateTargetArray([]int{0, 1, 2, 3, 4}, []int{0, 1, 2, 2, 1}))
 	fmt.Printf("The maximum number of coins you can get are %d\n", solutions.MaxCoins([]int{2, 4, 1, 2, 7, 8}))
+	fmt.Printf("The Bottm left tree value %d\n", solutions.FindBottomLeftValue(&utils.TreeNode{
+		Val: 2, Left: &utils.TreeNode{Val: 1}, Right: &utils.TreeNode{Val: 3},
+	}))
 }
