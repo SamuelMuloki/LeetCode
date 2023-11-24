@@ -877,4 +877,5 @@ func main() {
 	fmt.Printf("The arithmetic subarrays are %v\n", solutions.CheckArithmeticSubarrays([]int{4, 6, 5, 9, 3, 7}, []int{0, 0, 2}, []int{2, 3, 5}))
 	fmt.Printf("The length of the longest alphabetical continous substring is %d\n", solutions.LongestContinuousSubstring("abacaba"))
 	fmt.Printf("The target array is %v\n", solutions.CreateTargetArray([]int{0, 1, 2, 3, 4}, []int{0, 1, 2, 2, 1}))
+	fmt.Printf("The maximum number of coins you can get are %d\n", solutions.MaxCoins([]int{2, 4, 1, 2, 7, 8}))
 }
