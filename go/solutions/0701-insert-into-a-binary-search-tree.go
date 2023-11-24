@@ -15,19 +15,22 @@ func InsertIntoBST(root *utils.TreeNode, val int) *utils.TreeNode {
 		return &utils.TreeNode{Val: val}
 	}
 
-	if root.Val > val {
-		if root.Left == nil {
-			root.Left = &utils.TreeNode{Val: val}
+	curr := root
+	for {
+		if curr.Val > val {
+			if curr.Left == nil {
+				curr.Left = &utils.TreeNode{Val: val}
+				break
+			} else {
+				curr = curr.Left
+			}
 		} else {
-			InsertIntoBST(root.Left, val)
-		}
-	}
-
-	if root.Val < val {
-		if root.Right == nil {
-			root.Right = &utils.TreeNode{Val: val}
-		} else {
-			InsertIntoBST(root.Right, val)
+			if curr.Right == nil {
+				curr.Right = &utils.TreeNode{Val: val}
+				break
+			} else {
+				curr = curr.Right
+			}
 		}
 	}
 
