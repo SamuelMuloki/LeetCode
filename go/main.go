@@ -897,4 +897,5 @@ func main() {
 	fmt.Printf("The diagonal order of the elements in a matrix are %v\n", solutions.FindDiagonalOrder([][]int{
 		{1, 2, 3}, {4, 5, 6}, {7, 8, 9},
 	}))
+	fmt.Printf("The result after restoring string is %s\n", solutions.RestoreString("codeleet", []int{4, 5, 6, 7, 0, 2, 1, 3}))
 }
