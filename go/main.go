@@ -898,4 +898,5 @@ func main() {
 		{1, 2, 3}, {4, 5, 6}, {7, 8, 9},
 	}))
 	fmt.Printf("The result after restoring string is %s\n", solutions.RestoreString("codeleet", []int{4, 5, 6, 7, 0, 2, 1, 3}))
+	fmt.Printf("The difference between the element sum and the digit sum is %d\n", solutions.DifferenceOfSum([]int{1, 15, 6, 3}))
 }
