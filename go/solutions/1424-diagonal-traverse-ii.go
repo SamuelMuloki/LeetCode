@@ -4,7 +4,7 @@ type DiagonalPair struct {
 	row, col int
 }
 
-func FindDiagonalOrder(nums [][]int) []int {
+func FindDiagonalOrder2(nums [][]int) []int {
 	queue := make([]DiagonalPair, 0)
 	queue = append(queue, DiagonalPair{0, 0})
 	ans := make([]int, 0)

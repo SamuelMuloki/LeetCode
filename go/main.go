@@ -863,7 +863,7 @@ func main() {
 	fmt.Printf("The maximum number of words found in sentences are %d\n", solutions.MostWordsFound([]string{
 		"alice and bob love leetcode", "i think so too", "this is great thanks very much",
 	}))
-	fmt.Printf("The diagonal order of the elements in the 2d array is %v\n", solutions.FindDiagonalOrder([][]int{
+	fmt.Printf("The diagonal order II of the elements in the 2d array is %v\n", solutions.FindDiagonalOrder2([][]int{
 		{1, 2, 3}, {4, 5, 6}, {7, 8, 9},
 	}))
 	fmt.Printf("The result after sorting students by their kth score is %v\n", solutions.SortTheStudents([][]int{
@@ -893,5 +893,8 @@ func main() {
 		Val:   1,
 		Left:  &utils.TreeNode{Val: 10, Left: &utils.TreeNode{Val: 3, Left: &utils.TreeNode{Val: 12}, Right: &utils.TreeNode{Val: 8}}},
 		Right: &utils.TreeNode{Val: 4, Left: &utils.TreeNode{Val: 7, Left: &utils.TreeNode{Val: 6}}, Right: &utils.TreeNode{Val: 9, Right: &utils.TreeNode{Val: 2}}},
+	}))
+	fmt.Printf("The diagonal order of the elements in a matrix are %v\n", solutions.FindDiagonalOrder([][]int{
+		{1, 2, 3}, {4, 5, 6}, {7, 8, 9},
 	}))
 }
