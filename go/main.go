@@ -888,4 +888,5 @@ func main() {
 	fmt.Printf("The root equal sum of children %t\n", solutions.CheckTree(&utils.TreeNode{
 		Val: 10, Left: &utils.TreeNode{Val: 4}, Right: &utils.TreeNode{Val: 6},
 	}))
+	fmt.Printf("The sum of the absolute differences in a sorted array is %v\n", solutions.GetSumAbsoluteDifferences([]int{2, 3, 5}))
 }
