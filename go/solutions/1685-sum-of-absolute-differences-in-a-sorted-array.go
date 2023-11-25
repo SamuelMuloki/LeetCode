@@ -2,16 +2,15 @@ package solutions
 
 func GetSumAbsoluteDifferences(nums []int) []int {
 	n := len(nums)
-	prefix := make([]int, n)
-	prefix[0] = nums[0]
-	for i := 1; i < len(nums); i++ {
-		prefix[i] = prefix[i-1] + nums[i]
+	totalSum := 0
+	for i := range nums {
+		totalSum += nums[i]
 	}
 
 	ans := make([]int, n)
+	leftSum := 0
 	for i := 0; i < n; i++ {
-		leftSum := prefix[i] - nums[i]
-		rightSum := prefix[n-1] - prefix[i]
+		rightSum := totalSum - leftSum - nums[i]
 
 		leftCount, rightCount := i, n-1-i
 
@@ -19,6 +18,7 @@ func GetSumAbsoluteDifferences(nums []int) []int {
 		rightTotal := rightSum - rightCount*nums[i]
 
 		ans[i] = leftTotal + rightTotal
+		leftSum += nums[i]
 	}
 
 	return ans
