@@ -889,4 +889,9 @@ func main() {
 		Val: 10, Left: &utils.TreeNode{Val: 4}, Right: &utils.TreeNode{Val: 6},
 	}))
 	fmt.Printf("The sum of the absolute differences in a sorted array is %v\n", solutions.GetSumAbsoluteDifferences([]int{2, 3, 5}))
+	fmt.Printf("The tree is even odd %t\n", solutions.IsEvenOddTree(&utils.TreeNode{
+		Val:   1,
+		Left:  &utils.TreeNode{Val: 10, Left: &utils.TreeNode{Val: 3, Left: &utils.TreeNode{Val: 12}, Right: &utils.TreeNode{Val: 8}}},
+		Right: &utils.TreeNode{Val: 4, Left: &utils.TreeNode{Val: 7, Left: &utils.TreeNode{Val: 6}}, Right: &utils.TreeNode{Val: 9, Right: &utils.TreeNode{Val: 2}}},
+	}))
 }
