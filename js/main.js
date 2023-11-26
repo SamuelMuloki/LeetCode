@@ -52,6 +52,7 @@ const { differenceOfSums } = require("./2894-divisible-and-non-divisible-sums-di
 const { searchRange } = require("./0034-find-first-and-last-position-of-element-in-sorted-array");
 const { inorderTraversal } = require("./2649-nested-array-generator");
 const { fibGenerator } = require("./2648-generate-fibonacci-sequence");
+const { maximumWealth } = require("./1672-richest-customer-wealth");
 
 console.log(containsDuplicate([1, 2, 3, 1]));
 console.log(isAnagram("rat", "car"));
@@ -222,3 +223,5 @@ console.log("The next fibonacci value is", gen.next().value)
 console.log("The next fibonacci value is", gen.next().value)
 console.log("The next fibonacci value is", gen.next().value)
 console.log("The next fibonacci value is", gen.next().value)
+
+console.log("The maximum wealth is", maximumWealth([[1,2,3],[3,2,1]]))
