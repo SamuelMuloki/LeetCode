@@ -905,4 +905,5 @@ func main() {
 	fmt.Printf("The perimeter of the island is %d\n", solutions.IslandPerimeter([][]int{
 		{0, 1, 0, 0}, {1, 1, 1, 0}, {0, 1, 0, 0}, {1, 1, 0, 0},
 	}))
+	fmt.Printf("The Maximum binary tree is %v\n", solutions.ConstructMaximumBinaryTree([]int{3, 2, 1, 6, 0, 5}))
 }
