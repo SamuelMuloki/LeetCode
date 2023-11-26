@@ -11,19 +11,24 @@ import "github.com/SamuelMuloki/LeetCode/go/utils"
  * }
  */
 func ConstructMaximumBinaryTree(nums []int) *utils.TreeNode {
-	if len(nums) == 0 {
-		return nil
-	}
-
-	index := 0
+	st := make([]*utils.TreeNode, 0)
 	for i := range nums {
-		if nums[index] < nums[i] {
-			index = i
+		node := &utils.TreeNode{Val: nums[i]}
+		for len(st) > 0 && st[len(st)-1].Val < node.Val {
+			node.Left = st[len(st)-1]
+			st = st[:len(st)-1]
 		}
+
+		if len(st) > 0 {
+			st[len(st)-1].Right = node
+		}
+
+		st = append(st, node)
 	}
 
-	left := ConstructMaximumBinaryTree(nums[0:index])
-	right := ConstructMaximumBinaryTree(nums[index+1:])
+	for len(st) > 1 {
+		st = st[:len(st)-1]
+	}
 
-	return &utils.TreeNode{Val: nums[index], Left: left, Right: right}
+	return st[len(st)-1]
 }
