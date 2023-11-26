@@ -907,4 +907,7 @@ func main() {
 	}))
 	fmt.Printf("The Maximum binary tree is %v\n", solutions.ConstructMaximumBinaryTree([]int{3, 2, 1, 6, 0, 5}))
 	fmt.Printf("The words that match the pattern are %v\n", solutions.FindAndReplacePattern([]string{"abc", "deq", "mee", "aqq", "dkd", "ccc"}, "abb"))
+	fmt.Printf("The maximum wealth is %d\n", solutions.MaximumWealth([][]int{
+		{1, 2, 3}, {3, 2, 1},
+	}))
 }
