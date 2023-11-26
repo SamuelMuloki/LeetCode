@@ -902,4 +902,7 @@ func main() {
 	fmt.Printf("The largest submatrix with rearrangements is %v\n", solutions.LargestSubmatrix([][]int{
 		{0, 0, 1}, {1, 1, 1}, {1, 0, 1},
 	}))
+	fmt.Printf("The perimeter of the island is %d\n", solutions.IslandPerimeter([][]int{
+		{0, 1, 0, 0}, {1, 1, 1, 0}, {0, 1, 0, 0}, {1, 1, 0, 0},
+	}))
 }
