@@ -911,4 +911,7 @@ func main() {
 		{1, 2, 3}, {3, 2, 1},
 	}))
 	fmt.Printf("The number of distinct phone numbers of length n we can dial are %d\n", solutions.KnightDialer(2))
+	fmt.Printf("The diagonal order of the matrix is %v\n", solutions.DiagonalSort([][]int{
+		{3, 3, 1, 1}, {2, 2, 1, 2}, {1, 1, 1, 2},
+	}))
 }
