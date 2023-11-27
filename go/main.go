@@ -916,4 +916,5 @@ func main() {
 	}))
 	fmt.Printf("The number of possible non empty tile possibilites are %d\n", solutions.NumTilePossibilities("AAB"))
 	fmt.Printf("The new text after arranging the words is %s\n", solutions.ArrangeWords("Leetcode is cool"))
+	fmt.Printf("The indices of the words containing character x are %v\n", solutions.FindWordsContaining([]string{"leet", "code"}, 'e'))
 }
