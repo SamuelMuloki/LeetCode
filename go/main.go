@@ -914,4 +914,5 @@ func main() {
 	fmt.Printf("The diagonal order of the matrix is %v\n", solutions.DiagonalSort([][]int{
 		{3, 3, 1, 1}, {2, 2, 1, 2}, {1, 1, 1, 2},
 	}))
+	fmt.Printf("The number of possible non empty tile possibilites are %d\n", solutions.NumTilePossibilities("AAB"))
 }
