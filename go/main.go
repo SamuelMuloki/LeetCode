@@ -910,4 +910,5 @@ func main() {
 	fmt.Printf("The maximum wealth is %d\n", solutions.MaximumWealth([][]int{
 		{1, 2, 3}, {3, 2, 1},
 	}))
+	fmt.Printf("The number of distinct phone numbers of length n we can dial are %d\n", solutions.KnightDialer(2))
 }
