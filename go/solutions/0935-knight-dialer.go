@@ -1,13 +1,9 @@
 package solutions
 
 func KnightDialer(n int) int {
-	dp := make([][]int, n+1)
-	for i := range dp {
-		dp[i] = make([]int, 10)
-	}
-
+	prevDp := make([]int, 10)
 	for square := 0; square < 10; square++ {
-		dp[0][square] = 1
+		prevDp[square] = 1
 	}
 
 	jumps := [][]int{
@@ -16,18 +12,20 @@ func KnightDialer(n int) int {
 	}
 
 	for remain := 1; remain < n; remain++ {
+		dp := make([]int, 10)
 		for square := 0; square < 10; square++ {
 			ans := 0
 			for _, nextSquare := range jumps[square] {
-				ans = (ans + dp[remain-1][nextSquare]) % (1e9 + 7)
+				ans = (ans + prevDp[nextSquare]) % (1e9 + 7)
 			}
-			dp[remain][square] = ans
+			dp[square] = ans
 		}
+		prevDp = dp
 	}
 
 	ans := 0
 	for square := 0; square < 10; square++ {
-		ans = (ans + dp[n-1][square]) % (1e9 + 7)
+		ans = (ans + prevDp[square]) % (1e9 + 7)
 	}
 
 	return ans
