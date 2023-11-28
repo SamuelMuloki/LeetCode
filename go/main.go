@@ -922,4 +922,7 @@ func main() {
 	fmt.Printf("The max sum of an hour glass is %d\n", solutions.MaxSum2([][]int{
 		{6, 2, 1, 3}, {4, 2, 1, 5}, {9, 2, 8, 7}, {4, 1, 2, 9},
 	}))
+	fmt.Printf("The xor queries of a subarray are %v\n", solutions.XorQueries([]int{1, 3, 4, 8}, [][]int{
+		{0, 1}, {1, 2}, {0, 3}, {3, 3},
+	}))
 }
