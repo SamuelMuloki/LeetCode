@@ -1,13 +1,16 @@
 package solutions
 
 func XorQueries(arr []int, queries [][]int) []int {
+	prefix := make([]int, len(arr)+1)
+	prefix[0] = 0
+	for i := 1; i <= len(arr); i++ {
+		prefix[i] = prefix[i-1] ^ arr[i-1]
+	}
+
 	ans := make([]int, len(queries))
 	for i := range queries {
-		xOr := 0
-		for j := queries[i][0]; j <= queries[i][1]; j++ {
-			xOr ^= arr[j]
-		}
-		ans[i] = xOr
+		ans[i] = prefix[queries[i][1]+1] ^ prefix[queries[i][0]]
 	}
+
 	return ans
 }
