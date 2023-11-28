@@ -925,4 +925,5 @@ func main() {
 	fmt.Printf("The xor queries of a subarray are %v\n", solutions.XorQueries([]int{1, 3, 4, 8}, [][]int{
 		{0, 1}, {1, 2}, {0, 3}, {3, 3},
 	}))
+	fmt.Printf("The sum of odd length subarrays is %d\n", solutions.SumOddLengthSubarrays([]int{1, 4, 2, 5, 3}))
 }
