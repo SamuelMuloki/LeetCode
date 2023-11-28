@@ -918,4 +918,5 @@ func main() {
 	fmt.Printf("The new text after arranging the words is %s\n", solutions.ArrangeWords("Leetcode is cool"))
 	fmt.Printf("The indices of the words containing character x are %v\n", solutions.FindWordsContaining([]string{"leet", "code"}, 'e'))
 	fmt.Printf("The number of ways to split array are %d\n", solutions.WaysToSplitArray([]int{10, 4, -8, 7}))
+	fmt.Printf("The number of ways to divide a long corridor are %d\n", solutions.NumberOfWays2("SSPPSPS"))
 }
