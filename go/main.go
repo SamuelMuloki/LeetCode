@@ -926,4 +926,5 @@ func main() {
 		{0, 1}, {1, 2}, {0, 3}, {3, 3},
 	}))
 	fmt.Printf("The sum of odd length subarrays is %d\n", solutions.SumOddLengthSubarrays([]int{1, 4, 2, 5, 3}))
+	fmt.Printf("The total hamming distance between all pairs of integers is %d\n", solutions.TotalHammingDistance([]int{4, 14, 2}))
 }
