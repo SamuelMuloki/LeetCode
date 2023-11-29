@@ -927,4 +927,5 @@ func main() {
 	}))
 	fmt.Printf("The sum of odd length subarrays is %d\n", solutions.SumOddLengthSubarrays([]int{1, 4, 2, 5, 3}))
 	fmt.Printf("The total hamming distance between all pairs of integers is %d\n", solutions.TotalHammingDistance([]int{4, 14, 2}))
+	fmt.Printf("Adding binary strings yields %s\n", solutions.AddBinary("11", "1"))
 }
