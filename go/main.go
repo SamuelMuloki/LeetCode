@@ -929,4 +929,10 @@ func main() {
 	fmt.Printf("The total hamming distance between all pairs of integers is %d\n", solutions.TotalHammingDistance([]int{4, 14, 2}))
 	fmt.Printf("Adding binary strings yields %s\n", solutions.AddBinary("11", "1"))
 	fmt.Printf("The maximum product of word lengths is %d\n", solutions.MaxProduct2([]string{"abcw", "baz", "foo", "bar", "xtfn", "abcdef"}))
+	fmt.Printf("The number of islands is %d\n", solutions.NumIslands([][]byte{
+		{'1', '1', '1', '1', '0'},
+		{'1', '1', '0', '1', '0'},
+		{'1', '1', '0', '0', '0'},
+		{'0', '0', '0', '0', '0'},
+	}))
 }
