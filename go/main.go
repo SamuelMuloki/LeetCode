@@ -940,4 +940,7 @@ func main() {
 	fmt.Printf("You can visit all rooms %t\n", solutions.CanVisitAllRooms([][]int{
 		{1}, {2}, {3}, {},
 	}))
+	fmt.Printf("The number of provinces are %d\n", solutions.FindCircleNum([][]int{
+		{1, 1, 0}, {1, 1, 0}, {0, 0, 1},
+	}))
 }
