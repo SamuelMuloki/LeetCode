@@ -943,4 +943,5 @@ func main() {
 	fmt.Printf("The number of provinces are %d\n", solutions.FindCircleNum([][]int{
 		{1, 1, 0}, {1, 1, 0}, {0, 0, 1},
 	}))
+	fmt.Printf("The height balanced binary search tree is %v\n", solutions.SortedArrayToBST([]int{-10, -3, 0, 5, 9}))
 }
