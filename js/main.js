@@ -55,6 +55,7 @@ const { fibGenerator } = require("./2648-generate-fibonacci-sequence");
 const { maximumWealth } = require("./1672-richest-customer-wealth");
 const { findWordsContaining } = require("./2942-find-words-containing-character");
 const { minimumOneBitOperations } = require("./1611-minimum-one-bit-operations-to-make-integers-zero");
+const { canVisitAllRooms } = require("./0841-keys-and-rooms");
 
 console.log(containsDuplicate([1, 2, 3, 1]));
 console.log(isAnagram("rat", "car"));
@@ -229,3 +230,4 @@ console.log("The next fibonacci value is", gen.next().value)
 console.log("The maximum wealth is", maximumWealth([[1,2,3],[3,2,1]]))
 console.log("The indices of the words containing character x are", findWordsContaining(["leet","code"], "e"))
 console.log("The minimum one bit operations to make integer zero is", minimumOneBitOperations(3))
+console.log("You can visit all rooms", canVisitAllRooms([[1], [2], [3], []]))
