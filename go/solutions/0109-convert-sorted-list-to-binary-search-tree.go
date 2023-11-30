@@ -18,26 +18,25 @@ import "github.com/SamuelMuloki/LeetCode/go/utils"
  * }
  */
 func SortedListToBST(head *utils.ListNode) *utils.TreeNode {
-	arr, curr := []int{}, head
-	for curr != nil {
-		arr = append(arr, curr.Val)
-		curr = curr.Next
+	if head == nil {
+		return nil
 	}
 
-	var sortedArrToBST func(nums []int) *utils.TreeNode
-	sortedArrToBST = func(nums []int) *utils.TreeNode {
-		n := len(nums)
-		if n == 0 {
-			return nil
-		}
-
-		mid := n / 2
-		return &utils.TreeNode{
-			Val:   nums[mid],
-			Left:  sortedArrToBST(nums[:mid]),
-			Right: sortedArrToBST(nums[mid+1:]),
-		}
+	if head.Next == nil {
+		return &utils.TreeNode{Val: head.Val}
 	}
 
-	return sortedArrToBST(arr)
+	prev, slow, fast := new(utils.ListNode), head, head
+	for fast != nil && fast.Next != nil {
+		prev = slow
+		slow = slow.Next
+		fast = fast.Next.Next
+	}
+
+	prev.Next = nil
+	return &utils.TreeNode{
+		Val:   slow.Val,
+		Left:  SortedListToBST(head),
+		Right: SortedListToBST(slow.Next),
+	}
 }
