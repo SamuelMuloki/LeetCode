@@ -11,27 +11,15 @@ import "github.com/SamuelMuloki/LeetCode/go/utils"
  * }
  */
 func SortedArrayToBST(nums []int) *utils.TreeNode {
-	var construct func(root *utils.TreeNode, arr []int)
-	construct = func(root *utils.TreeNode, arr []int) {
-		if root == nil {
-			return
-		}
-
-		mid := len(arr) / 2
-		root.Val = arr[mid]
-		if len(arr[:mid]) > 0 {
-			root.Left = &utils.TreeNode{}
-			construct(root.Left, arr[:mid])
-		}
-
-		if len(arr[mid+1:]) > 0 {
-			root.Right = &utils.TreeNode{}
-			construct(root.Right, arr[mid+1:])
-		}
+	n := len(nums)
+	if n == 0 {
+		return nil
 	}
 
-	root := &utils.TreeNode{}
-	construct(root, nums)
-
-	return root
+	mid := n / 2
+	return &utils.TreeNode{
+		Val:   nums[mid],
+		Left:  SortedArrayToBST(nums[:mid]),
+		Right: SortedArrayToBST(nums[mid+1:]),
+	}
 }
