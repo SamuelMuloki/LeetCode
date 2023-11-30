@@ -937,4 +937,7 @@ func main() {
 	}))
 	fmt.Printf("The number of digits that divide the number are %d\n", solutions.CountDigits(1248))
 	fmt.Printf("The minimum one bit operations to make integer zero is %d\n", solutions.MinimumOneBitOperations(3))
+	fmt.Printf("You can visit all rooms %t\n", solutions.CanVisitAllRooms([][]int{
+		{1}, {2}, {3}, {},
+	}))
 }
