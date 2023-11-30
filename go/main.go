@@ -936,4 +936,5 @@ func main() {
 		{'0', '0', '0', '0', '0'},
 	}))
 	fmt.Printf("The number of digits that divide the number are %d\n", solutions.CountDigits(1248))
+	fmt.Printf("The minimum one bit operations to make integer zero is %d\n", solutions.MinimumOneBitOperations(3))
 }
