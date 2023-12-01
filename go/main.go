@@ -950,4 +950,5 @@ func main() {
 	fmt.Printf("The nth term of the count and say sequence is %s\n", solutions.CountAndSay(4))
 	fmt.Printf("The resulting string is %s\n", solutions.Evaluate("(name)is(age)yearsold", [][]string{{"name", "bob"}, {"age", "two"}}))
 	fmt.Printf("The score of the parentheses is %d\n", solutions.ScoreOfParentheses("(()(()))"))
+	fmt.Printf("The resulting string after reversing the prefix is %s\n", solutions.ReversePrefix("abcdefd", 'd'))
 }
