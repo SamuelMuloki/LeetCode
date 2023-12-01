@@ -947,4 +947,5 @@ func main() {
 	fmt.Printf("The height balanced binary search tree from list is %v\n", solutions.SortedListToBST(&utils.ListNode{
 		Val: -10, Next: &utils.ListNode{Val: -3, Next: &utils.ListNode{Val: 0, Next: &utils.ListNode{Val: 5, Next: &utils.ListNode{Val: 9}}}},
 	}))
+	fmt.Printf("The nth term of the count and say sequence is %s\n", solutions.CountAndSay(4))
 }
