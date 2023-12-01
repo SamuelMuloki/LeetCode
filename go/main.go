@@ -948,4 +948,5 @@ func main() {
 		Val: -10, Next: &utils.ListNode{Val: -3, Next: &utils.ListNode{Val: 0, Next: &utils.ListNode{Val: 5, Next: &utils.ListNode{Val: 9}}}},
 	}))
 	fmt.Printf("The nth term of the count and say sequence is %s\n", solutions.CountAndSay(4))
+	fmt.Printf("The resulting string is %s\n", solutions.Evaluate("(name)is(age)yearsold", [][]string{{"name", "bob"}, {"age", "two"}}))
 }
