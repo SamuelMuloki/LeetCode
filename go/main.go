@@ -955,4 +955,5 @@ func main() {
 	fmt.Printf("The words that can be formed by characters are %d\n", solutions.CountCharacters([]string{"cat", "bt", "hat", "tree"}, "attach"))
 	fmt.Printf("The maximum number of copies of target that can be formed are %d\n", solutions.RearrangeCharacters("ilovecodingonleetcode", "code"))
 	fmt.Printf("The quotient after dividing two integers %d\n", solutions.Divide(10, 3))
+	fmt.Printf("The array could become non decreasing %t\n", solutions.CheckPossibility([]int{4, 2, 3}))
 }
