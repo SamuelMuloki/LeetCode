@@ -953,4 +953,5 @@ func main() {
 	fmt.Printf("The resulting string after reversing the prefix is %s\n", solutions.ReversePrefix("abcdefd", 'd'))
 	fmt.Printf("The first palindromic string in the array %s\n", solutions.FirstPalindrome([]string{"abc", "car", "ada", "racecar", "cool"}))
 	fmt.Printf("The words that can be formed by characters are %d\n", solutions.CountCharacters([]string{"cat", "bt", "hat", "tree"}, "attach"))
+	fmt.Printf("The maximum number of copies of target that can be formed are %d\n", solutions.RearrangeCharacters("ilovecodingonleetcode", "code"))
 }
