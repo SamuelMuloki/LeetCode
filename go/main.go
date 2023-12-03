@@ -963,4 +963,5 @@ func main() {
 	fmt.Printf("The smallest value of the rearranged number is %d\n", solutions.SmallestNumber(310))
 	fmt.Printf("The usage of the capitals is right %t\n", solutions.DetectCapitalUse("USA"))
 	fmt.Printf("The largest number you can form is %s\n", solutions.LargestNumber([]int{3, 30, 34, 5, 9}))
+	fmt.Printf("The capitalized tite is %s\n", solutions.CapitalizeTitle("capiTalIze tHe titLe"))
 }
