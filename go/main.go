@@ -960,4 +960,5 @@ func main() {
 	fmt.Printf("The minimum time visiting all points is %d\n", solutions.MinTimeToVisitAllPoints([][]int{
 		{1, 1}, {3, 4}, {-1, 0},
 	}))
+	fmt.Printf("The smallest value of the rearranged number is %d\n", solutions.SmallestNumber(310))
 }
