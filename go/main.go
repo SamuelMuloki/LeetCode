@@ -961,4 +961,5 @@ func main() {
 		{1, 1}, {3, 4}, {-1, 0},
 	}))
 	fmt.Printf("The smallest value of the rearranged number is %d\n", solutions.SmallestNumber(310))
+	fmt.Printf("The usage of the capitals is right %t\n", solutions.DetectCapitalUse("USA"))
 }
