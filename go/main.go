@@ -957,4 +957,7 @@ func main() {
 	fmt.Printf("The quotient after dividing two integers %d\n", solutions.Divide(10, 3))
 	fmt.Printf("The array could become non decreasing %t\n", solutions.CheckPossibility([]int{4, 2, 3}))
 	fmt.Printf("The defanged version of the IP address is %s\n", solutions.DefangIPaddr("1.1.1.1"))
+	fmt.Printf("The minimum time visiting all points is %d\n", solutions.MinTimeToVisitAllPoints([][]int{
+		{1, 1}, {3, 4}, {-1, 0},
+	}))
 }
