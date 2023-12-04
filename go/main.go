@@ -964,4 +964,5 @@ func main() {
 	fmt.Printf("The usage of the capitals is right %t\n", solutions.DetectCapitalUse("USA"))
 	fmt.Printf("The largest number you can form is %s\n", solutions.LargestNumber([]int{3, 30, 34, 5, 9}))
 	fmt.Printf("The capitalized tite is %s\n", solutions.CapitalizeTitle("capiTalIze tHe titLe"))
+	fmt.Printf("The maximum good integer in string is %s\n", solutions.LargestGoodInteger("6777133339"))
 }
