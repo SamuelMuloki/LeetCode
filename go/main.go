@@ -965,4 +965,12 @@ func main() {
 	fmt.Printf("The largest number you can form is %s\n", solutions.LargestNumber([]int{3, 30, 34, 5, 9}))
 	fmt.Printf("The capitalized tite is %s\n", solutions.CapitalizeTitle("capiTalIze tHe titLe"))
 	fmt.Printf("The maximum good integer in string is %s\n", solutions.LargestGoodInteger("6777133339"))
+
+	subrectangleQueries := solutions.SubrectangleQueriesConstructor([][]int{
+		{1, 2, 1}, {4, 3, 4}, {3, 2, 1}, {1, 1, 1},
+	})
+	fmt.Printf("Get value at row 0, col 2 %d\n", subrectangleQueries.GetValue(0, 2))
+	subrectangleQueries.UpdateSubrectangle(0, 0, 3, 2, 5)
+	fmt.Printf("Get value at row 0, col 2 %d\n", subrectangleQueries.GetValue(0, 2))
+	fmt.Printf("Get value at row 3, col 1 %d\n", subrectangleQueries.GetValue(3, 1))
 }
