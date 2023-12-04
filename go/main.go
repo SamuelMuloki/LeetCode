@@ -973,4 +973,7 @@ func main() {
 	subrectangleQueries.UpdateSubrectangle(0, 0, 3, 2, 5)
 	fmt.Printf("Get value at row 0, col 2 %d\n", subrectangleQueries.GetValue(0, 2))
 	fmt.Printf("Get value at row 3, col 1 %d\n", subrectangleQueries.GetValue(3, 1))
+	fmt.Printf("The maximum total sum to keep city skyline %d\n", solutions.MaxIncreaseKeepingSkyline([][]int{
+		{3, 0, 8, 4}, {2, 4, 5, 7}, {9, 2, 6, 3}, {0, 3, 1, 0},
+	}))
 }
