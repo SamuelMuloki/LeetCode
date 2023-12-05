@@ -58,6 +58,7 @@ const { minimumOneBitOperations } = require("./1611-minimum-one-bit-operations-t
 const { canVisitAllRooms } = require("./0841-keys-and-rooms");
 const { largestGoodInteger } = require("./2264-largest-3-same-digit-number-in-string");
 const { largestOddNumber } = require("./1903-largest-odd-number-in-string");
+const { numberOfMatches } = require("./1688-count-of-matches-in-tournament");
 
 console.log(containsDuplicate([1, 2, 3, 1]));
 console.log(isAnagram("rat", "car"));
@@ -235,3 +236,4 @@ console.log("The minimum one bit operations to make integer zero is", minimumOne
 console.log("You can visit all rooms", canVisitAllRooms([[1], [2], [3], []]))
 console.log("The maximum good integer in string is", largestGoodInteger("6777133339"))
 console.log("The largest odd number is", largestOddNumber("52"))
+console.log("The number of matches played in the tournament until winner is decided are", numberOfMatches(7))
