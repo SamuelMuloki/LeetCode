@@ -3,9 +3,10 @@ package solutions
 func IsValid2(s string) bool {
 	st := []byte{}
 	for i := range s {
-		st = append(st, s[i])
-		if len(st) > 2 && string(st[len(st)-3:]) == "abc" {
-			st = st[:len(st)-3]
+		if s[i] == 'c' && len(st) > 1 && st[len(st)-1] == 'b' && st[len(st)-2] == 'a' {
+			st = st[:len(st)-2]
+		} else {
+			st = append(st, s[i])
 		}
 	}
 
