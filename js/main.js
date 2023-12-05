@@ -35,11 +35,15 @@ const { canPlaceFlowers } = require("./0605-can-place-flowers");
 const { intersection } = require("./0349-intersection-of-two-arrays");
 const { intersect } = require("./0350-intersection-of-two-arrays-ii");
 const { isSubsequence } = require("./0392-is-subsequence");
-const { strStr } = require("./0028-find-the-index-of-the-first-occurrence-in-a-string");
+const {
+  strStr,
+} = require("./0028-find-the-index-of-the-first-occurrence-in-a-string");
 const { firstUniqChar } = require("./0387-first-unique-character-in-a-string");
 const { find132pattern } = require("./0456-132-pattern");
 const { reverseWords } = require("./0557-reverse-words-in-a-string-iii");
-const { winnerOfGame } = require("./2038-remove-colored-pieces-if-both-neighbors-are-the-same-color");
+const {
+  winnerOfGame,
+} = require("./2038-remove-colored-pieces-if-both-neighbors-are-the-same-color");
 const { numIdenticalPairs } = require("./1512-number-of-good-pairs");
 const { removeStars } = require("./2390-removing-stars-from-a-string");
 const { majorityElement } = require("./0229-majority-element-ii");
@@ -48,17 +52,28 @@ const { ListNode } = require("./utils/list");
 const { pairSum } = require("./2130-maximum-twin-sum-of-a-linked-list");
 const { integerBreak } = require("./0343-integer-break");
 const { titleToNumber } = require("./0171-excel-sheet-column-number");
-const { differenceOfSums } = require("./2894-divisible-and-non-divisible-sums-difference");
-const { searchRange } = require("./0034-find-first-and-last-position-of-element-in-sorted-array");
+const {
+  differenceOfSums,
+} = require("./2894-divisible-and-non-divisible-sums-difference");
+const {
+  searchRange,
+} = require("./0034-find-first-and-last-position-of-element-in-sorted-array");
 const { inorderTraversal } = require("./2649-nested-array-generator");
 const { fibGenerator } = require("./2648-generate-fibonacci-sequence");
 const { maximumWealth } = require("./1672-richest-customer-wealth");
-const { findWordsContaining } = require("./2942-find-words-containing-character");
-const { minimumOneBitOperations } = require("./1611-minimum-one-bit-operations-to-make-integers-zero");
+const {
+  findWordsContaining,
+} = require("./2942-find-words-containing-character");
+const {
+  minimumOneBitOperations,
+} = require("./1611-minimum-one-bit-operations-to-make-integers-zero");
 const { canVisitAllRooms } = require("./0841-keys-and-rooms");
-const { largestGoodInteger } = require("./2264-largest-3-same-digit-number-in-string");
+const {
+  largestGoodInteger,
+} = require("./2264-largest-3-same-digit-number-in-string");
 const { largestOddNumber } = require("./1903-largest-odd-number-in-string");
 const { numberOfMatches } = require("./1688-count-of-matches-in-tournament");
+const { numJewelsInStones } = require("./0771-jewels-and-stones");
 
 console.log(containsDuplicate([1, 2, 3, 1]));
 console.log(isAnagram("rat", "car"));
@@ -198,42 +213,85 @@ console.log("Reverse", reverseVowels("leetcode"));
 console.log("Flowerbed", canPlaceFlowers([1, 0, 0, 0, 1], 1));
 console.log("Intersection of arrays", intersection([1, 2, 2, 1], [2, 2]));
 console.log("Intersection of arrays ii", intersect([1, 2, 2, 1], [2, 2, 2]));
-console.log("Is subsequence", isSubsequence("abc", "ahbgdc"))
-console.log("The index of the string is ", strStr("sadbutsad", "sad"))
-console.log("The first unique character in the string is at position", firstUniqChar("leetcode"))
-console.log("There is a 132 pattern in the array", find132pattern([1, 2, 3, 4]))
-console.log("Reverse the words III yields", reverseWords("Let's take LeetCode contest"))
-console.log("The winner of the remove colored pieces if both neighbors are the same color is", winnerOfGame("AAABABB"))
-console.log("The number of identical pairs in array are", numIdenticalPairs([1, 2, 3, 1, 1, 3]))
-console.log("The result string after removing the stars is", removeStars("leet**cod*e"))
-console.log("The majority element 2 in the array is", majorityElement([3,2,3]))
+console.log("Is subsequence", isSubsequence("abc", "ahbgdc"));
+console.log("The index of the string is ", strStr("sadbutsad", "sad"));
+console.log(
+  "The first unique character in the string is at position",
+  firstUniqChar("leetcode")
+);
+console.log(
+  "There is a 132 pattern in the array",
+  find132pattern([1, 2, 3, 4])
+);
+console.log(
+  "Reverse the words III yields",
+  reverseWords("Let's take LeetCode contest")
+);
+console.log(
+  "The winner of the remove colored pieces if both neighbors are the same color is",
+  winnerOfGame("AAABABB")
+);
+console.log(
+  "The number of identical pairs in array are",
+  numIdenticalPairs([1, 2, 3, 1, 1, 3])
+);
+console.log(
+  "The result string after removing the stars is",
+  removeStars("leet**cod*e")
+);
+console.log(
+  "The majority element 2 in the array is",
+  majorityElement([3, 2, 3])
+);
 
-var head = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))
-console.log("The middle node of the linked list is", middleNode(head))
+var head = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))));
+console.log("The middle node of the linked list is", middleNode(head));
 
-var pairSumHead = ListNode(5, ListNode(4, ListNode(2, ListNode(1))))
-console.log("The twin pair sum of the linked list is", pairSum(pairSumHead))
-console.log("The maximum product after integer break is", integerBreak(10))
-console.log("The title to number of the excel colum is", titleToNumber("AB"))
-console.log("The difference of sums is", differenceOfSums(10, 3))
-console.log("The search range is", searchRange([5,7,7,8,8,10], 8))
+var pairSumHead = ListNode(5, ListNode(4, ListNode(2, ListNode(1))));
+console.log("The twin pair sum of the linked list is", pairSum(pairSumHead));
+console.log("The maximum product after integer break is", integerBreak(10));
+console.log("The title to number of the excel colum is", titleToNumber("AB"));
+console.log("The difference of sums is", differenceOfSums(10, 3));
+console.log("The search range is", searchRange([5, 7, 7, 8, 8, 10], 8));
 
 const generator = inorderTraversal([[6], [1, 3], []]);
-console.log("The next value is", generator.next().value)
-console.log("The next value is", generator.next().value)
-console.log("The next value is", generator.next().value)
-console.log("The next value is", generator.next().done)
+console.log("The next value is", generator.next().value);
+console.log("The next value is", generator.next().value);
+console.log("The next value is", generator.next().value);
+console.log("The next value is", generator.next().done);
 
 const gen = fibGenerator();
-console.log("The next fibonacci value is", gen.next().value)
-console.log("The next fibonacci value is", gen.next().value)
-console.log("The next fibonacci value is", gen.next().value)
-console.log("The next fibonacci value is", gen.next().value)
+console.log("The next fibonacci value is", gen.next().value);
+console.log("The next fibonacci value is", gen.next().value);
+console.log("The next fibonacci value is", gen.next().value);
+console.log("The next fibonacci value is", gen.next().value);
 
-console.log("The maximum wealth is", maximumWealth([[1,2,3],[3,2,1]]))
-console.log("The indices of the words containing character x are", findWordsContaining(["leet","code"], "e"))
-console.log("The minimum one bit operations to make integer zero is", minimumOneBitOperations(3))
-console.log("You can visit all rooms", canVisitAllRooms([[1], [2], [3], []]))
-console.log("The maximum good integer in string is", largestGoodInteger("6777133339"))
-console.log("The largest odd number is", largestOddNumber("52"))
-console.log("The number of matches played in the tournament until winner is decided are", numberOfMatches(7))
+console.log(
+  "The maximum wealth is",
+  maximumWealth([
+    [1, 2, 3],
+    [3, 2, 1],
+  ])
+);
+console.log(
+  "The indices of the words containing character x are",
+  findWordsContaining(["leet", "code"], "e")
+);
+console.log(
+  "The minimum one bit operations to make integer zero is",
+  minimumOneBitOperations(3)
+);
+console.log("You can visit all rooms", canVisitAllRooms([[1], [2], [3], []]));
+console.log(
+  "The maximum good integer in string is",
+  largestGoodInteger("6777133339")
+);
+console.log("The largest odd number is", largestOddNumber("52"));
+console.log(
+  "The number of matches played in the tournament until winner is decided are",
+  numberOfMatches(7)
+);
+console.log(
+  "The number of stones that are also jewels are",
+  numJewelsInStones("aA", "aAAbbbb")
+);
