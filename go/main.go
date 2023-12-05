@@ -981,4 +981,5 @@ func main() {
 	fmt.Printf("The number of matches played in the tournament until winner is decided are %d\n", solutions.NumberOfMatches(7))
 	fmt.Printf("S is a valid string %t\n", solutions.IsValid2("aabcbc"))
 	fmt.Printf("Converting non negative integer num to english words yields %s\n", solutions.NumberToWords(123))
+	fmt.Printf("Printing strings vertically yields %v\n", solutions.PrintVertically("TO BE OR NOT TO BE"))
 }
