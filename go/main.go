@@ -987,4 +987,5 @@ func main() {
 	fmt.Printf("The number of trailing zeros in n! is %d\n", solutions.TrailingZeroes(5))
 	fmt.Printf("The number of primes is %d\n", solutions.CountPrimes(10))
 	fmt.Printf("The number is an ugly number %t\n", solutions.IsUgly(6))
+	fmt.Printf("Add convert the temperature %v\n", solutions.ConvertTemperature(36.50))
 }
