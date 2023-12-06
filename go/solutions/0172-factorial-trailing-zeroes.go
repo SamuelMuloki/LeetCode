@@ -1,9 +1,11 @@
 package solutions
 
 func TrailingZeroes(n int) int {
-	if n == 0 {
-		return 0
+	ans := 0
+	for (n / 5) != 0 {
+		ans += (n / 5)
+		n /= 5
 	}
 
-	return (n / 5) + TrailingZeroes(n/5)
+	return ans
 }
