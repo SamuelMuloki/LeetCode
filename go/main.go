@@ -986,4 +986,5 @@ func main() {
 	fmt.Printf("The total amount of money he will have in leetcode bank is %d\n", solutions.TotalMoney(20))
 	fmt.Printf("The number of trailing zeros in n! is %d\n", solutions.TrailingZeroes(5))
 	fmt.Printf("The number of primes is %d\n", solutions.CountPrimes(10))
+	fmt.Printf("The number is an ugly number %t\n", solutions.IsUgly(6))
 }
