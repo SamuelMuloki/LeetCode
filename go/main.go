@@ -983,4 +983,5 @@ func main() {
 	fmt.Printf("Converting non negative integer num to english words yields %s\n", solutions.NumberToWords(123))
 	fmt.Printf("Printing strings vertically yields %v\n", solutions.PrintVertically("TO BE OR NOT TO BE"))
 	fmt.Printf("The number of stones that are also jewels are %d\n", solutions.NumJewelsInStones("aA", "aAAbbbb"))
+	fmt.Printf("The total amount of money he will have in leetcode bank is %d\n", solutions.TotalMoney(20))
 }
