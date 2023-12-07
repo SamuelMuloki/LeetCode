@@ -994,4 +994,5 @@ func main() {
 	fmt.Printf("The start indices of p's anagrams in the string s are %v\n", solutions.FindAnagrams("cbaebabacd", "abc"))
 	fmt.Printf("One of s1's permutations is the substring s2 %t\n", solutions.CheckInclusion("ab", "eidbaooo"))
 	fmt.Printf("The final value after operations is %d\n", solutions.FinalValueAfterOperations([]string{"--X", "X++", "X++"}))
+	fmt.Printf("The maximum achievable number is %d\n", solutions.TheMaximumAchievableX(4, 1))
 }
