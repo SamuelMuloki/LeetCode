@@ -3,14 +3,9 @@ package solutions
 func FinalValueAfterOperations(operations []string) int {
 	ans := 0
 	for i := range operations {
-		switch operations[i] {
-		case "++X":
+		if operations[i][1] == '+' {
 			ans++
-		case "X++":
-			ans++
-		case "--X":
-			ans--
-		case "X--":
+		} else {
 			ans--
 		}
 	}
