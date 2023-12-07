@@ -992,4 +992,5 @@ func main() {
 		{1, 4, 7, 11, 15}, {2, 5, 8, 12, 19}, {3, 6, 9, 16, 22}, {10, 13, 14, 17, 24}, {18, 21, 23, 26, 30},
 	}, 5))
 	fmt.Printf("The start indices of p's anagrams in the string s are %v\n", solutions.FindAnagrams("cbaebabacd", "abc"))
+	fmt.Printf("One of s1's permutations is the substring s2 %t\n", solutions.CheckInclusion("ab", "eidbaooo"))
 }
