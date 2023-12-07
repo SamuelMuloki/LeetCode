@@ -988,4 +988,7 @@ func main() {
 	fmt.Printf("The number of primes is %d\n", solutions.CountPrimes(10))
 	fmt.Printf("The number is an ugly number %t\n", solutions.IsUgly(6))
 	fmt.Printf("Add convert the temperature %v\n", solutions.ConvertTemperature(36.50))
+	fmt.Printf("The target exist in search matrix II %t\n", solutions.SearchMatrix2([][]int{
+		{1, 4, 7, 11, 15}, {2, 5, 8, 12, 19}, {3, 6, 9, 16, 22}, {10, 13, 14, 17, 24}, {18, 21, 23, 26, 30},
+	}, 5))
 }
