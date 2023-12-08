@@ -74,6 +74,9 @@ const {
 const { largestOddNumber } = require("./1903-largest-odd-number-in-string");
 const { numberOfMatches } = require("./1688-count-of-matches-in-tournament");
 const { numJewelsInStones } = require("./0771-jewels-and-stones");
+const {
+  numberOfEmployeesWhoMetTarget,
+} = require("./2798-number-of-employees-who-met-the-target");
 
 console.log(containsDuplicate([1, 2, 3, 1]));
 console.log(isAnagram("rat", "car"));
@@ -294,4 +297,8 @@ console.log(
 console.log(
   "The number of stones that are also jewels are",
   numJewelsInStones("aA", "aAAbbbb")
+);
+console.log(
+  "The number of employees who met the target are",
+  numberOfEmployeesWhoMetTarget([0, 1, 2, 3, 4], 2)
 );
