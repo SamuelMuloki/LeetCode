@@ -1008,4 +1008,5 @@ func main() {
 		&utils.TreeNode{Val: 2, Left: &utils.TreeNode{Val: 1}, Right: &utils.TreeNode{Val: 4}},
 		&utils.TreeNode{Val: 1, Left: &utils.TreeNode{Val: 0}, Right: &utils.TreeNode{Val: 3}},
 	))
+	fmt.Printf("The number of triplets that can form two arrays of Equal XOR are %d\n", solutions.CountTriplets([]int{2, 3, 1, 6, 7}))
 }
