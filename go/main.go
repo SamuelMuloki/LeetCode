@@ -995,4 +995,7 @@ func main() {
 	fmt.Printf("One of s1's permutations is the substring s2 %t\n", solutions.CheckInclusion("ab", "eidbaooo"))
 	fmt.Printf("The final value after operations is %d\n", solutions.FinalValueAfterOperations([]string{"--X", "X++", "X++"}))
 	fmt.Printf("The maximum achievable number is %d\n", solutions.TheMaximumAchievableX(4, 1))
+	fmt.Printf("Constructing string from binary tree yields %v\n", solutions.Tree2str(&utils.TreeNode{
+		Val: 1, Left: &utils.TreeNode{Val: 2, Left: &utils.TreeNode{Val: 4}}, Right: &utils.TreeNode{Val: 3},
+	}))
 }
