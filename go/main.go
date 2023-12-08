@@ -1003,4 +1003,9 @@ func main() {
 	tinyUrl := codec.Encode("https://leetcode.com/problems/design-tinyurl")
 	fmt.Printf("The encoded tiny url is %s\n", tinyUrl)
 	fmt.Printf("The original url is %s\n", codec.Decode(tinyUrl))
+
+	fmt.Printf("All elements in two binary search trees are %v\n", solutions.GetAllElements(
+		&utils.TreeNode{Val: 2, Left: &utils.TreeNode{Val: 1}, Right: &utils.TreeNode{Val: 4}},
+		&utils.TreeNode{Val: 1, Left: &utils.TreeNode{Val: 0}, Right: &utils.TreeNode{Val: 3}},
+	))
 }
