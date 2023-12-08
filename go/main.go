@@ -998,4 +998,8 @@ func main() {
 	fmt.Printf("Constructing string from binary tree yields %v\n", solutions.Tree2str(&utils.TreeNode{
 		Val: 1, Left: &utils.TreeNode{Val: 2, Left: &utils.TreeNode{Val: 4}}, Right: &utils.TreeNode{Val: 3},
 	}))
+
+	codec := solutions.CodecConstructor()
+	fmt.Printf("The encoded tiny url is %s\n", codec.Encode("https://leetcode.com/problems/design-tinyurl"))
+	fmt.Printf("The original url is %s\n", codec.Decode("https://leetcode.com/problems/design-tinyurl"))
 }
