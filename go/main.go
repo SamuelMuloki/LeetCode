@@ -1000,6 +1000,7 @@ func main() {
 	}))
 
 	codec := solutions.CodecConstructor()
-	fmt.Printf("The encoded tiny url is %s\n", codec.Encode("https://leetcode.com/problems/design-tinyurl"))
-	fmt.Printf("The original url is %s\n", codec.Decode("https://leetcode.com/problems/design-tinyurl"))
+	tinyUrl := codec.Encode("https://leetcode.com/problems/design-tinyurl")
+	fmt.Printf("The encoded tiny url is %s\n", tinyUrl)
+	fmt.Printf("The original url is %s\n", codec.Decode(tinyUrl))
 }
