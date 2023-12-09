@@ -1013,4 +1013,8 @@ func main() {
 	fmt.Printf("The simplified canonical path is %s\n", solutions.SimplifyPath("/home//foo/"))
 	fmt.Printf("Subtracting the product and sum of digits of an integer yields %d\n", solutions.SubtractProductAndSum(234))
 	fmt.Printf("The goal parser's interpretation of command is %s\n", solutions.Interpret("G()(al)"))
+	fmt.Printf("The Lowest common ancestor of the deepest leaves is %v\n", solutions.LcaDeepestLeaves(&utils.TreeNode{
+		Val: 3, Left: &utils.TreeNode{Val: 5, Left: &utils.TreeNode{Val: 6}, Right: &utils.TreeNode{Val: 2, Left: &utils.TreeNode{Val: 7}, Right: &utils.TreeNode{Val: 4}}},
+		Right: &utils.TreeNode{Val: 1, Left: &utils.TreeNode{Val: 0}, Right: &utils.TreeNode{Val: 8}},
+	}))
 }
