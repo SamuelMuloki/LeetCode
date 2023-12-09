@@ -1011,4 +1011,5 @@ func main() {
 	fmt.Printf("The number of triplets that can form two arrays of Equal XOR are %d\n", solutions.CountTriplets([]int{2, 3, 1, 6, 7}))
 	fmt.Printf("The number of employees who met the target are %d\n", solutions.NumberOfEmployeesWhoMetTarget([]int{0, 1, 2, 3, 4}, 2))
 	fmt.Printf("The simplified canonical path is %s\n", solutions.SimplifyPath("/home//foo/"))
+	fmt.Printf("Subtracting the product and sum of digits of an integer yields %d\n", solutions.SubtractProductAndSum(234))
 }
