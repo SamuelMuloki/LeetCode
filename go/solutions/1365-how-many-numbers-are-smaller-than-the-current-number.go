@@ -1,13 +1,22 @@
 package solutions
 
+import "sort"
+
 func SmallerNumbersThanCurrent(nums []int) []int {
-	ans := make([]int, len(nums))
-	for i := 0; i < len(nums); i++ {
-		for j := 0; j < len(nums); j++ {
-			if nums[j] < nums[i] {
-				ans[i]++
-			}
+	n := len(nums)
+	arr := make([]int, n)
+	copy(arr, nums)
+	sort.Ints(arr)
+	set := make(map[int]int)
+	for i := range arr {
+		if _, ok := set[arr[i]]; !ok {
+			set[arr[i]] = i
 		}
+	}
+
+	ans := make([]int, n)
+	for i := range nums {
+		ans[i] = set[nums[i]]
 	}
 
 	return ans
