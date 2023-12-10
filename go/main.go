@@ -1028,4 +1028,5 @@ func main() {
 		Val: 10, Left: &utils.TreeNode{Val: 5, Left: &utils.TreeNode{Val: 3}, Right: &utils.TreeNode{Val: 7}},
 		Right: &utils.TreeNode{Val: 15, Right: &utils.TreeNode{Val: 18}},
 	}, 7, 15))
+	fmt.Printf("The number of steps to reduce number to zero are %d\n", solutions.NumberOfSteps(14))
 }
