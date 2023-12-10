@@ -1024,4 +1024,8 @@ func main() {
 	fmt.Printf("The number of contiguous subarrays where product of all elements is strictly less than k is %d\n", solutions.NumSubarrayProductLessThanK([]int{10, 5, 2, 6}, 100))
 	fmt.Printf("The subarray sums divisible by k are %d\n", solutions.SubarraysDivByK([]int{4, 5, 0, -2, -3, 1}, 5))
 	fmt.Printf("The amount of numbers smaller than the current number are %v\n", solutions.SmallerNumbersThanCurrent([]int{8, 1, 2, 2, 3}))
+	fmt.Printf("The Range sum of the Binary search tree is %d\n", solutions.RangeSumBST(&utils.TreeNode{
+		Val: 10, Left: &utils.TreeNode{Val: 5, Left: &utils.TreeNode{Val: 3}, Right: &utils.TreeNode{Val: 7}},
+		Right: &utils.TreeNode{Val: 15, Right: &utils.TreeNode{Val: 18}},
+	}, 7, 15))
 }
