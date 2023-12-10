@@ -1022,4 +1022,5 @@ func main() {
 		Right: &utils.TreeNode{Val: 1, Left: &utils.TreeNode{Val: 0}, Right: &utils.TreeNode{Val: 8}},
 	}))
 	fmt.Printf("The number of contiguous subarrays where product of all elements is strictly less than k is %d\n", solutions.NumSubarrayProductLessThanK([]int{10, 5, 2, 6}, 100))
+	fmt.Printf("The subarray sums divisible by k are %d\n", solutions.SubarraysDivByK([]int{4, 5, 0, -2, -3, 1}, 5))
 }
