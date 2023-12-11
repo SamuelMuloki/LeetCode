@@ -1033,4 +1033,19 @@ func main() {
 	fmt.Printf("Sorting the list using insertion sort yields %v\n", solutions.InsertionSortList(&utils.ListNode{
 		Val: 4, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 1, Next: &utils.ListNode{Val: 3}}},
 	}))
+
+	bSTIterator := solutions.BSTIteratorConstructor(&utils.TreeNode{
+		Val:   7,
+		Left:  &utils.TreeNode{Val: 3},
+		Right: &utils.TreeNode{Val: 15, Left: &utils.TreeNode{Val: 9}, Right: &utils.TreeNode{Val: 20}},
+	})
+	fmt.Printf("The Next value in BST is %d\n", bSTIterator.Next())
+	fmt.Printf("The Next value in BST is %d\n", bSTIterator.Next())
+	fmt.Printf("The BST has a next Value %t\n", bSTIterator.HasNext())
+	fmt.Printf("The Next value in BST is %d\n", bSTIterator.Next())
+	fmt.Printf("The BST has a next Value %t\n", bSTIterator.HasNext())
+	fmt.Printf("The Next value in BST is %d\n", bSTIterator.Next())
+	fmt.Printf("The BST has a next Value %t\n", bSTIterator.HasNext())
+	fmt.Printf("The Next value in BST is %d\n", bSTIterator.Next())
+	fmt.Printf("The BST has a next Value %t\n", bSTIterator.HasNext())
 }
