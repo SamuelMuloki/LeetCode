@@ -1030,4 +1030,7 @@ func main() {
 	}, 7, 15))
 	fmt.Printf("The number of steps to reduce number to zero are %d\n", solutions.NumberOfSteps(14))
 	fmt.Printf("The Element appearing more than 25 percent in sorted array is %d\n", solutions.FindSpecialInteger([]int{1, 2, 2, 6, 6, 6, 6, 7, 10}))
+	fmt.Printf("Sorting the list using insertion sort yields %v\n", solutions.InsertionSortList(&utils.ListNode{
+		Val: 4, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 1, Next: &utils.ListNode{Val: 3}}},
+	}))
 }
