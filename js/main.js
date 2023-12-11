@@ -77,6 +77,7 @@ const { numJewelsInStones } = require("./0771-jewels-and-stones");
 const {
   numberOfEmployeesWhoMetTarget,
 } = require("./2798-number-of-employees-who-met-the-target");
+const { minMoves2 } = require("./0462-minimum-moves-to-equal-array-elements-ii");
 
 console.log(containsDuplicate([1, 2, 3, 1]));
 console.log(isAnagram("rat", "car"));
@@ -302,3 +303,4 @@ console.log(
   "The number of employees who met the target are",
   numberOfEmployeesWhoMetTarget([0, 1, 2, 3, 4], 2)
 );
+console.log("The minimum number of moves to make array elements equal II is", minMoves2([1,10,2,9]))
