@@ -1,12 +1,9 @@
 package solutions
 
 func FindSpecialInteger(arr []int) int {
-	times := len(arr) / 4
-	set := make(map[int]int)
-	for i := range arr {
-		set[arr[i]]++
-
-		if set[arr[i]] > times {
+	size := len(arr) / 4
+	for i := 0; i < len(arr)-size; i++ {
+		if arr[i] == arr[i+size] {
 			return arr[i]
 		}
 	}
