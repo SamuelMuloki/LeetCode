@@ -3,15 +3,11 @@ package solutions
 import "math"
 
 func MinMoves(nums []int) int {
-	minVal := math.MaxInt32
+	minVal, sum := math.MaxInt32, 0
 	for i := range nums {
+		sum += nums[i]
 		minVal = min(minVal, nums[i])
 	}
 
-	ans := 0
-	for i := range nums {
-		ans += nums[i] - minVal
-	}
-
-	return ans
+	return sum - len(nums)*minVal
 }
