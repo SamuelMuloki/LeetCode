@@ -1050,4 +1050,5 @@ func main() {
 	fmt.Printf("The BST has a next Value %t\n", bSTIterator.HasNext())
 
 	fmt.Printf("The minimum number of moves to make array elements equal is %d\n", solutions.MinMoves([]int{1, 2, 3}))
+	fmt.Printf("The minimum number of moves to make array elements equal II is %d\n", solutions.MinMoves2([]int{1, 2, 3}))
 }
