@@ -1048,4 +1048,6 @@ func main() {
 	fmt.Printf("The BST has a next Value %t\n", bSTIterator.HasNext())
 	fmt.Printf("The Next value in BST is %d\n", bSTIterator.Next())
 	fmt.Printf("The BST has a next Value %t\n", bSTIterator.HasNext())
+
+	fmt.Printf("The minimum number of moves to make array elements equal is %d\n", solutions.MinMoves([]int{1, 2, 3}))
 }
