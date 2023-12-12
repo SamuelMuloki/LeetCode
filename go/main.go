@@ -1051,4 +1051,5 @@ func main() {
 
 	fmt.Printf("The minimum number of moves to make array elements equal is %d\n", solutions.MinMoves([]int{1, 2, 3}))
 	fmt.Printf("The minimum number of moves to make array elements equal II is %d\n", solutions.MinMoves2([]int{1, 2, 3}))
+	fmt.Printf("The max product of two elements in an array is %d\n", solutions.MaxProduct3([]int{3, 4, 5, 2}))
 }
