@@ -1057,4 +1057,5 @@ func main() {
 		Left:  &utils.TreeNode{Val: 3, Left: &utils.TreeNode{Val: 1}, Right: &utils.TreeNode{Val: 6, Left: &utils.TreeNode{Val: 4}, Right: &utils.TreeNode{Val: 7}}},
 		Right: &utils.TreeNode{Val: 10, Right: &utils.TreeNode{Val: 14, Left: &utils.TreeNode{Val: 13}}},
 	}))
+	fmt.Printf("The minimum swaps to make the string balanced are %d\n", solutions.MinSwaps("][]["))
 }
