@@ -1058,4 +1058,5 @@ func main() {
 		Right: &utils.TreeNode{Val: 10, Right: &utils.TreeNode{Val: 14, Left: &utils.TreeNode{Val: 13}}},
 	}))
 	fmt.Printf("The minimum swaps to make the string balanced are %d\n", solutions.MinSwaps("][]["))
+	fmt.Printf("The minimum add to make parentheses valid is %d\n", solutions.MinAddToMakeValid("())"))
 }
