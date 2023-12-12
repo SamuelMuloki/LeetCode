@@ -1052,4 +1052,9 @@ func main() {
 	fmt.Printf("The minimum number of moves to make array elements equal is %d\n", solutions.MinMoves([]int{1, 2, 3}))
 	fmt.Printf("The minimum number of moves to make array elements equal II is %d\n", solutions.MinMoves2([]int{1, 2, 3}))
 	fmt.Printf("The max product of two elements in an array is %d\n", solutions.MaxProduct3([]int{3, 4, 5, 2}))
+	fmt.Printf("The max difference between node and ancestor is %d\n", solutions.MaxAncestorDiff(&utils.TreeNode{
+		Val:   8,
+		Left:  &utils.TreeNode{Val: 3, Left: &utils.TreeNode{Val: 1}, Right: &utils.TreeNode{Val: 6, Left: &utils.TreeNode{Val: 4}, Right: &utils.TreeNode{Val: 7}}},
+		Right: &utils.TreeNode{Val: 10, Right: &utils.TreeNode{Val: 14, Left: &utils.TreeNode{Val: 13}}},
+	}))
 }
