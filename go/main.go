@@ -1059,4 +1059,5 @@ func main() {
 	}))
 	fmt.Printf("The minimum swaps to make the string balanced are %d\n", solutions.MinSwaps("][]["))
 	fmt.Printf("The minimum add to make parentheses valid is %d\n", solutions.MinAddToMakeValid("())"))
+	fmt.Printf("The string is an acronym of words %t\n", solutions.IsAcronym([]string{"alice", "bob", "charlie"}, "abc"))
 }
