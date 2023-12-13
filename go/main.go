@@ -1063,4 +1063,7 @@ func main() {
 	fmt.Printf("The number of special positions in the matrix are %d\n", solutions.NumSpecial([][]int{
 		{1, 0, 0}, {0, 0, 1}, {1, 0, 0},
 	}))
+	fmt.Printf("The difference between ones and zeroes in a row and column is %v\n", solutions.OnesMinusZeros([][]int{
+		{0, 1, 1}, {1, 0, 1}, {0, 0, 1},
+	}))
 }
