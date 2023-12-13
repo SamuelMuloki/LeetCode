@@ -1068,4 +1068,5 @@ func main() {
 	}))
 	fmt.Printf("The minimum remove to make valid parentheses is %s\n", solutions.MinRemoveToMakeValid("))(("))
 	fmt.Printf("The number of consistent strings are %d\n", solutions.CountConsistentStrings("ab", []string{"ad", "bd", "aaab", "baa", "badab"}))
+	fmt.Printf("The number of pairs of similar strings is %d\n", solutions.SimilarPairs([]string{"aba", "aabb", "abcd", "bac", "aabc"}))
 }
