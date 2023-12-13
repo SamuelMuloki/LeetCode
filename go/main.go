@@ -1066,4 +1066,5 @@ func main() {
 	fmt.Printf("The difference between ones and zeroes in a row and column is %v\n", solutions.OnesMinusZeros([][]int{
 		{0, 1, 1}, {1, 0, 1}, {0, 0, 1},
 	}))
+	fmt.Printf("The minimum remove to make valid parentheses is %s\n", solutions.MinRemoveToMakeValid("))(("))
 }
