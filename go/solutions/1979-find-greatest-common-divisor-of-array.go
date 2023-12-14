@@ -1,12 +1,9 @@
 package solutions
 
-func FindGCD(nums []int) int {
-	x, y := 0, 1001
-	for i := range nums {
-		x = max(x, nums[i])
-		y = min(y, nums[i])
-	}
+import "slices"
 
+func FindGCD(nums []int) int {
+	x, y := slices.Min(nums), slices.Max(nums)
 	for y > 0 {
 		x, y = y, x%y
 	}
