@@ -1074,4 +1074,7 @@ func main() {
 	}))
 	fmt.Printf("The result after separating the digits in the array is %v\n", solutions.SeparateDigits([]int{13, 25, 83, 77}))
 	fmt.Printf("Removing trailing zeros from string yields %s\n", solutions.RemoveTrailingZeros("51230100"))
+	fmt.Printf("The Kth smallest element inn a sorted matrix is %d\n", solutions.KthSmallest2([][]int{
+		{1, 5, 9}, {10, 11, 13}, {12, 13, 15},
+	}, 8))
 }
