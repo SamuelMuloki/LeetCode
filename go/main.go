@@ -1069,4 +1069,7 @@ func main() {
 	fmt.Printf("The minimum remove to make valid parentheses is %s\n", solutions.MinRemoveToMakeValid("))(("))
 	fmt.Printf("The number of consistent strings are %d\n", solutions.CountConsistentStrings("ab", []string{"ad", "bd", "aaab", "baa", "badab"}))
 	fmt.Printf("The number of pairs of similar strings is %d\n", solutions.SimilarPairs([]string{"aba", "aabb", "abcd", "bac", "aabc"}))
+	fmt.Printf("The balanced binary search tree is %v\n", solutions.BalanceBST(&utils.TreeNode{
+		Val: 1, Right: &utils.TreeNode{Val: 2, Right: &utils.TreeNode{Val: 3, Right: &utils.TreeNode{Val: 4}}},
+	}))
 }
