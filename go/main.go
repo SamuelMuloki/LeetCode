@@ -1072,4 +1072,5 @@ func main() {
 	fmt.Printf("The balanced binary search tree is %v\n", solutions.BalanceBST(&utils.TreeNode{
 		Val: 1, Right: &utils.TreeNode{Val: 2, Right: &utils.TreeNode{Val: 3, Right: &utils.TreeNode{Val: 4}}},
 	}))
+	fmt.Printf("The result after separating the digits in the array is %v\n", solutions.SeparateDigits([]int{13, 25, 83, 77}))
 }
