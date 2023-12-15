@@ -1078,4 +1078,7 @@ func main() {
 		{1, 5, 9}, {10, 11, 13}, {12, 13, 15},
 	}, 8))
 	fmt.Printf("The greatest common divisor of the array is %d\n", solutions.FindGCD([]int{2, 5, 6, 9, 10}))
+	fmt.Printf("The destination city is %s\n", solutions.DestCity([][]string{
+		{"London", "New York"}, {"New York", "Lima"}, {"Lima", "Sao Paulo"},
+	}))
 }
