@@ -1081,4 +1081,5 @@ func main() {
 	fmt.Printf("The destination city is %s\n", solutions.DestCity([][]string{
 		{"London", "New York"}, {"New York", "Lima"}, {"Lima", "Sao Paulo"},
 	}))
+	fmt.Printf("The ordering of the deck is %v\n", solutions.DeckRevealedIncreasing([]int{17, 13, 11, 2, 3, 5, 7}))
 }
