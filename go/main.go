@@ -1085,4 +1085,5 @@ func main() {
 	fmt.Printf("The minimum number of vertices to reach all nodes are %v\n", solutions.FindSmallestSetOfVertices(6, [][]int{
 		{0, 1}, {0, 2}, {2, 5}, {3, 4}, {4, 2},
 	}))
+	fmt.Printf("The number of strings with prefix are %d\n", solutions.PrefixCount([]string{"pay", "attention", "practice", "attend"}, "at"))
 }
