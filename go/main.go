@@ -1086,4 +1086,5 @@ func main() {
 		{0, 1}, {0, 2}, {2, 5}, {3, 4}, {4, 2},
 	}))
 	fmt.Printf("The number of strings with prefix are %d\n", solutions.PrefixCount([]string{"pay", "attention", "practice", "attend"}, "at"))
+	fmt.Printf("The halves are alike %t\n", solutions.HalvesAreAlike("book"))
 }
