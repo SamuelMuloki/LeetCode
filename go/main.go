@@ -1082,4 +1082,7 @@ func main() {
 		{"London", "New York"}, {"New York", "Lima"}, {"Lima", "Sao Paulo"},
 	}))
 	fmt.Printf("The ordering of the deck is %v\n", solutions.DeckRevealedIncreasing([]int{17, 13, 11, 2, 3, 5, 7}))
+	fmt.Printf("The minimum number of vertices to reach all nodes are %v\n", solutions.FindSmallestSetOfVertices(6, [][]int{
+		{0, 1}, {0, 2}, {2, 5}, {3, 4}, {4, 2},
+	}))
 }
