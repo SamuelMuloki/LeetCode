@@ -1087,4 +1087,5 @@ func main() {
 	}))
 	fmt.Printf("The number of strings with prefix are %d\n", solutions.PrefixCount([]string{"pay", "attention", "practice", "attend"}, "at"))
 	fmt.Printf("The halves are alike %t\n", solutions.HalvesAreAlike("book"))
+	fmt.Printf("The integer n is a sum of powers of three %t\n", solutions.CheckPowersOfThree(12))
 }
