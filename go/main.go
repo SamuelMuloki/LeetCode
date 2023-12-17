@@ -1089,4 +1089,17 @@ func main() {
 	fmt.Printf("The halves are alike %t\n", solutions.HalvesAreAlike("book"))
 	fmt.Printf("The integer n is a sum of powers of three %t\n", solutions.CheckPowersOfThree(12))
 	fmt.Printf("S is a good strings %t\n", solutions.AreOccurrencesEqual("abacbc"))
+
+	foodRatings := solutions.FoodRatingsConstructor(
+		[]string{"kimchi", "miso", "sushi", "moussaka", "ramen", "bulgogi"},
+		[]string{"korean", "japanese", "japanese", "greek", "japanese", "korean"},
+		[]int{9, 12, 8, 15, 14, 7},
+	)
+
+	fmt.Printf("The highest rated food is %s\n", foodRatings.HighestRated("korean"))
+	fmt.Printf("The highest rated food is %s\n", foodRatings.HighestRated("japanese"))
+	foodRatings.ChangeRating("sushi", 16)
+	fmt.Printf("The highest rated food is %s\n", foodRatings.HighestRated("japanese"))
+	foodRatings.ChangeRating("ramen", 16)
+	fmt.Printf("The highest rated food is %s\n", foodRatings.HighestRated("japanese"))
 }
