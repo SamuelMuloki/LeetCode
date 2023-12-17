@@ -3,12 +3,7 @@ package solutions
 func FindNumbers(nums []int) int {
 	ans := 0
 	for i := range nums {
-		count := 0
-		for num := nums[i]; num > 0; num /= 10 {
-			count++
-		}
-
-		if count%2 == 0 {
+		if (nums[i] > 9 && nums[i] < 100) || (nums[i] > 999 && nums[i] < 10000) || nums[i] == 100000 {
 			ans++
 		}
 	}
