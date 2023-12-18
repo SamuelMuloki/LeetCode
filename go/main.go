@@ -1104,4 +1104,7 @@ func main() {
 	fmt.Printf("The highest rated food is %s\n", foodRatings.HighestRated("japanese"))
 	fmt.Printf("The numbers with even digits are %d\n", solutions.FindNumbers([]int{12, 345, 2, 6, 7896}))
 	fmt.Printf("The maximum product difference between two pairs is %d\n", solutions.MaxProductDifference([]int{5, 6, 2, 7, 4}))
+	fmt.Printf("The number of points inside a circle are %v\n", solutions.CountPoints(
+		[][]int{{1, 3}, {3, 3}, {5, 3}, {2, 2}}, [][]int{{2, 3, 1}, {4, 3, 1}, {1, 1, 2}},
+	))
 }
