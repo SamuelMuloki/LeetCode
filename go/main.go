@@ -1103,4 +1103,5 @@ func main() {
 	foodRatings.ChangeRating("ramen", 16)
 	fmt.Printf("The highest rated food is %s\n", foodRatings.HighestRated("japanese"))
 	fmt.Printf("The numbers with even digits are %d\n", solutions.FindNumbers([]int{12, 345, 2, 6, 7896}))
+	fmt.Printf("The maximum product difference between two pairs is %d\n", solutions.MaxProductDifference([]int{5, 6, 2, 7, 4}))
 }
