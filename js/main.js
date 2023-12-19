@@ -78,6 +78,7 @@ const {
   numberOfEmployeesWhoMetTarget,
 } = require("./2798-number-of-employees-who-met-the-target");
 const { minMoves2 } = require("./0462-minimum-moves-to-equal-array-elements-ii");
+const { smallestEvenMultiple } = require("./2413-smallest-even-multiple");
 
 console.log(containsDuplicate([1, 2, 3, 1]));
 console.log(isAnagram("rat", "car"));
@@ -304,3 +305,4 @@ console.log(
   numberOfEmployeesWhoMetTarget([0, 1, 2, 3, 4], 2)
 );
 console.log("The minimum number of moves to make array elements equal II is", minMoves2([1,10,2,9]))
+console.log("The smallest even multiple of 2 and n is", smallestEvenMultiple(5))
