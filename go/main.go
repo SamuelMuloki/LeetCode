@@ -1108,4 +1108,7 @@ func main() {
 		[][]int{{1, 3}, {3, 3}, {5, 3}, {2, 2}}, [][]int{{2, 3, 1}, {4, 3, 1}, {1, 1, 2}},
 	))
 	fmt.Printf("The N-repeated element in size 2N Array is %d\n", solutions.RepeatedNTimes([]int{1, 2, 3, 3}))
+	fmt.Printf("The image after applying the smoother is %v\n", solutions.ImageSmoother([][]int{
+		{1, 1, 1}, {1, 0, 1}, {1, 1, 1},
+	}))
 }
