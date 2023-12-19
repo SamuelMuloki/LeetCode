@@ -1112,4 +1112,5 @@ func main() {
 		{1, 1, 1}, {1, 0, 1}, {1, 1, 1},
 	}))
 	fmt.Printf("The maximum ice cream bars the boy can buy are %d\n", solutions.MaxIceCream([]int{1, 3, 2, 4, 1}, 7))
+	fmt.Printf("The smallest even multiple of 2 and n is %d\n", solutions.SmallestEvenMultiple(5))
 }
