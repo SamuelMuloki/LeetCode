@@ -1111,4 +1111,5 @@ func main() {
 	fmt.Printf("The image after applying the smoother is %v\n", solutions.ImageSmoother([][]int{
 		{1, 1, 1}, {1, 0, 1}, {1, 1, 1},
 	}))
+	fmt.Printf("The maximum ice cream bars the boy can buy are %d\n", solutions.MaxIceCream([]int{1, 3, 2, 4, 1}, 7))
 }
