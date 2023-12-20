@@ -1119,4 +1119,10 @@ func main() {
 	fmt.Printf("Shuffle the array [1,2,3] and return its result %v\n", nums3.Shuffle())
 	fmt.Printf("Resets the array back to its original configuration [1,2,3]. Return %v\n", nums3.Reset())
 	fmt.Printf("Shuffle the array [1,2,3] and return its result %v\n", nums3.Shuffle())
+
+	randomNodeSolution := solutions.RandomNodeConstructor(&utils.ListNode{Val: 1, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 3}}})
+	fmt.Printf("The random node is %d\n", randomNodeSolution.GetRandom())
+	fmt.Printf("The random node is %d\n", randomNodeSolution.GetRandom())
+	fmt.Printf("The random node is %d\n", randomNodeSolution.GetRandom())
+	fmt.Printf("The random node is %d\n", randomNodeSolution.GetRandom())
 }
