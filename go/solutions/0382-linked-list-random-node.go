@@ -14,22 +14,23 @@ import (
  * }
  */
 type RandomNodeSolution struct {
-	nums []int
+	head *utils.ListNode
 }
 
 func RandomNodeConstructor(head *utils.ListNode) RandomNodeSolution {
-	curr, nums := head, []int{}
-	for curr != nil {
-		nums = append(nums, curr.Val)
-		curr = curr.Next
-	}
-
-	return RandomNodeSolution{nums: nums}
+	return RandomNodeSolution{head: head}
 }
 
 func (this *RandomNodeSolution) GetRandom() int {
-	j := rand.Intn(len(this.nums))
-	return this.nums[j]
+	ans, n := 0, 0
+	for curr := this.head; curr != nil; curr = curr.Next {
+		n++
+		if rand.Intn(n) == 0 {
+			ans = curr.Val
+		}
+	}
+
+	return ans
 }
 
 /**
