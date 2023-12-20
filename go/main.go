@@ -1114,4 +1114,9 @@ func main() {
 	fmt.Printf("The maximum ice cream bars the boy can buy are %d\n", solutions.MaxIceCream([]int{1, 3, 2, 4, 1}, 7))
 	fmt.Printf("The smallest even multiple of 2 and n is %d\n", solutions.SmallestEvenMultiple(5))
 	fmt.Printf("The amount of money you will have after buying two chocolates is %d\n", solutions.BuyChoco([]int{1, 2, 2}, 3))
+
+	nums3 := solutions.ShuffleConstructor([]int{1, 2, 3})
+	fmt.Printf("Shuffle the array [1,2,3] and return its result %v\n", nums3.Shuffle())
+	fmt.Printf("Resets the array back to its original configuration [1,2,3]. Return %v\n", nums3.Reset())
+	fmt.Printf("Shuffle the array [1,2,3] and return its result %v\n", nums3.Shuffle())
 }
