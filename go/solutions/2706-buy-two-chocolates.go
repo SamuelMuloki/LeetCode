@@ -1,13 +1,18 @@
 package solutions
 
-import "sort"
-
 func BuyChoco(prices []int, money int) int {
-	sort.Ints(prices)
-	ans, sum := money, prices[0]+prices[1]
-	if sum <= ans {
-		ans -= sum
+	min1, min2 := 101, 101
+	for i := range prices {
+		if prices[i] < min1 {
+			min1, min2 = prices[i], min1
+		} else {
+			min2 = min(min2, prices[i])
+		}
 	}
 
-	return ans
+	if min1+min2 <= money {
+		return money - (min1 + min2)
+	}
+
+	return money
 }
