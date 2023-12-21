@@ -1129,4 +1129,5 @@ func main() {
 	fmt.Printf("The widest vertical area between two points such that no points are inside the area is %d\n", solutions.MaxWidthOfVerticalArea([][]int{
 		{8, 7}, {9, 9}, {7, 4}, {9, 7},
 	}))
+	fmt.Printf("The minimum number of operations to move all in each box is %v\n", solutions.MinOperations3("001011"))
 }
