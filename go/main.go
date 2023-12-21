@@ -1125,4 +1125,8 @@ func main() {
 	fmt.Printf("The random node is %d\n", randomNodeSolution.GetRandom())
 	fmt.Printf("The random node is %d\n", randomNodeSolution.GetRandom())
 	fmt.Printf("The random node is %d\n", randomNodeSolution.GetRandom())
+
+	fmt.Printf("The widest vertical area between two points such that no points are inside the area is %d\n", solutions.MaxWidthOfVerticalArea([][]int{
+		{8, 7}, {9, 9}, {7, 4}, {9, 7},
+	}))
 }
