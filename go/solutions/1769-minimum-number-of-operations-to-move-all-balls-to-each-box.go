@@ -1,16 +1,23 @@
 package solutions
 
 func MinOperations3(boxes string) []int {
-	ans := make([]int, len(boxes))
-	for i := range boxes {
-		count := 0
-		for j := 0; j < len(boxes); j++ {
-			if i != j && boxes[j] == '1' {
-				count += abs(j - i)
-			}
-		}
+	n := len(boxes)
+	leftSum, rightSum := make([]int, n), make([]int, n)
+	leftSum[0], rightSum[n-1] = 0, 0
+	lBalls, rBalls := 0, 0
+	for i := 1; i < n; i++ {
+		leftSum[i] = leftSum[i-1]
+		lBalls += int(boxes[i-1] - '0')
+		leftSum[i] += lBalls
 
-		ans[i] = count
+		rightSum[n-i-1] = rightSum[n-i]
+		rBalls += int(boxes[n-i] - '0')
+		rightSum[n-i-1] += rBalls
+	}
+
+	ans := make([]int, n)
+	for i := 0; i < n; i++ {
+		ans[i] = leftSum[i] + rightSum[i]
 	}
 
 	return ans
