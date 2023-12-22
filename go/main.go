@@ -1133,4 +1133,7 @@ func main() {
 	fmt.Printf("The first letter to appear twice is %v\n", solutions.RepeatedCharacter("abccbaacz"))
 	fmt.Printf("The maximum score after splitting a string is %d\n", solutions.MaxScore("00"))
 	fmt.Printf("Reversing substrings between each pair of parenthenses yields %s\n", solutions.ReverseParentheses("(ed(et(oc))el)"))
+	fmt.Printf("The center of the graph is %d\n", solutions.FindCenter([][]int{
+		{1, 2}, {2, 3}, {4, 2},
+	}))
 }
