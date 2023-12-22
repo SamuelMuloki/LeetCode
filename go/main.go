@@ -1131,4 +1131,5 @@ func main() {
 	}))
 	fmt.Printf("The minimum number of operations to move all in each box is %v\n", solutions.MinOperations3("001011"))
 	fmt.Printf("The first letter to appear twice is %v\n", solutions.RepeatedCharacter("abccbaacz"))
+	fmt.Printf("The maximum score after splitting a string is %d\n", solutions.MaxScore("00"))
 }
