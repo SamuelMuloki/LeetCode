@@ -1136,4 +1136,5 @@ func main() {
 	fmt.Printf("The center of the graph is %d\n", solutions.FindCenter([][]int{
 		{1, 2}, {2, 3}, {4, 2},
 	}))
+	fmt.Printf("I have visited this location before %t\n", solutions.IsPathCrossing("NESWW"))
 }
