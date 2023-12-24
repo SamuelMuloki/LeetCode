@@ -1137,4 +1137,5 @@ func main() {
 		{1, 2}, {2, 3}, {4, 2},
 	}))
 	fmt.Printf("I have visited this location before %t\n", solutions.IsPathCrossing("NESWW"))
+	fmt.Printf("The minimum changes to make alternating binary string is %d\n", solutions.MinOperations2("0100"))
 }
