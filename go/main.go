@@ -1141,4 +1141,5 @@ func main() {
 	fmt.Printf("The number of ways to decode string are %d\n", solutions.NumDecodings("226"))
 	fmt.Printf("The number of possible ways to roll the dice, so the sum of numbers equals target is %d\n", solutions.NumRollsToTarget(2, 6, 7))
 	fmt.Printf("The minimum time Bob needs to make the rope colorful is %d\n", solutions.MinCost("abaac", []int{1, 2, 3, 4, 5}))
+	fmt.Printf("The minimum length of the run-length encoded version of s after deleting atmost k characters %d\n", solutions.GetLengthOfOptimalCompression("aaabcccd", 2))
 }
