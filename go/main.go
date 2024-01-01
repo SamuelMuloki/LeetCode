@@ -1144,4 +1144,5 @@ func main() {
 	fmt.Printf("The minimum length of the run-length encoded version of s after deleting atmost k characters %d\n", solutions.GetLengthOfOptimalCompression("aaabcccd", 2))
 	fmt.Printf("The minimum difficulty of a job schedule is %d\n", solutions.MinDifficulty([]int{6, 5, 4, 3, 4, 2, 1}, 2))
 	fmt.Printf("Every string can be made equal using any number of operartions %t\n", solutions.MakeEqual([]string{"abc", "aabc", "bc"}))
+	fmt.Printf("The largest substring between two equal characters is %d\n", solutions.MaxLengthBetweenEqualCharacters("abca"))
 }
