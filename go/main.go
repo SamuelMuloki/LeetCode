@@ -1146,4 +1146,5 @@ func main() {
 	fmt.Printf("Every string can be made equal using any number of operartions %t\n", solutions.MakeEqual([]string{"abc", "aabc", "bc"}))
 	fmt.Printf("The largest substring between two equal characters is %d\n", solutions.MaxLengthBetweenEqualCharacters("abca"))
 	fmt.Printf("The output after assigning cookies is %d\n", solutions.FindContentChildren([]int{1, 2, 3}, []int{1, 1}))
+	fmt.Printf("The total number of laser beams in the bank %d\n", solutions.NumberOfBeams([]string{"011001", "000000", "010100", "001000"}))
 }
