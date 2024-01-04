@@ -1147,4 +1147,5 @@ func main() {
 	fmt.Printf("The largest substring between two equal characters is %d\n", solutions.MaxLengthBetweenEqualCharacters("abca"))
 	fmt.Printf("The output after assigning cookies is %d\n", solutions.FindContentChildren([]int{1, 2, 3}, []int{1, 1}))
 	fmt.Printf("The total number of laser beams in the bank %d\n", solutions.NumberOfBeams([]string{"011001", "000000", "010100", "001000"}))
+	fmt.Printf("The target indices after sorting the array is %v\n", solutions.TargetIndices([]int{1, 2, 5, 2, 3}, 2))
 }
