@@ -1148,4 +1148,9 @@ func main() {
 	fmt.Printf("The output after assigning cookies is %d\n", solutions.FindContentChildren([]int{1, 2, 3}, []int{1, 1}))
 	fmt.Printf("The total number of laser beams in the bank %d\n", solutions.NumberOfBeams([]string{"011001", "000000", "010100", "001000"}))
 	fmt.Printf("The target indices after sorting the array is %v\n", solutions.TargetIndices([]int{1, 2, 5, 2, 3}, 2))
+	flatten := &utils.TreeNode{
+		Val: 1, Left: &utils.TreeNode{Val: 2, Left: &utils.TreeNode{Val: 3}, Right: &utils.TreeNode{Val: 4}}, Right: &utils.TreeNode{Val: 5, Right: &utils.TreeNode{Val: 6}},
+	}
+	solutions.Flatten(flatten)
+	fmt.Printf("Flatten the binary tree to linked list yields %v\n", flatten)
 }
