@@ -1153,4 +1153,5 @@ func main() {
 	}
 	solutions.Flatten(flatten)
 	fmt.Printf("Flatten the binary tree to linked list yields %v\n", flatten)
+	fmt.Printf("The maximum profit you can take is %d\n", solutions.JobScheduling([]int{1, 2, 3, 3}, []int{3, 4, 5, 6}, []int{50, 10, 40, 70}))
 }
