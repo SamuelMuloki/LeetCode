@@ -1156,4 +1156,5 @@ func main() {
 	fmt.Printf("The maximum profit you can take is %d\n", solutions.JobScheduling([]int{1, 2, 3, 3}, []int{3, 4, 5, 6}, []int{50, 10, 40, 70}))
 	fmt.Printf("The number of arithmetic slices II are %d\n", solutions.NumberOfArithmeticSlices2([]int{2, 4, 6, 8, 10}))
 	fmt.Printf("The complement of base 10 integer is %d\n", solutions.BitwiseComplement(5))
+	fmt.Printf("The complement of a number is %d\n", solutions.BitwiseComplement(1))
 }
