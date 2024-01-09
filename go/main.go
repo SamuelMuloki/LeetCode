@@ -1157,4 +1157,5 @@ func main() {
 	fmt.Printf("The number of arithmetic slices II are %d\n", solutions.NumberOfArithmeticSlices2([]int{2, 4, 6, 8, 10}))
 	fmt.Printf("The complement of base 10 integer is %d\n", solutions.BitwiseComplement(5))
 	fmt.Printf("The complement of a number is %d\n", solutions.BitwiseComplement(1))
+	fmt.Printf("The list of integers representing the size of the parts is %v\n", solutions.PartitionLabels("ababcbacadefegdehijhklij"))
 }
