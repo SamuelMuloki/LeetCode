@@ -1158,4 +1158,9 @@ func main() {
 	fmt.Printf("The complement of base 10 integer is %d\n", solutions.BitwiseComplement(5))
 	fmt.Printf("The complement of a number is %d\n", solutions.BitwiseComplement(1))
 	fmt.Printf("The list of integers representing the size of the parts is %v\n", solutions.PartitionLabels("ababcbacadefegdehijhklij"))
+	fmt.Printf("The number of minutes for the entire tree to be infected are %d\n", solutions.AmountOfTime(&utils.TreeNode{
+		Val:   1,
+		Left:  &utils.TreeNode{Val: 5, Right: &utils.TreeNode{Val: 4, Left: &utils.TreeNode{Val: 9}, Right: &utils.TreeNode{Val: 2}}},
+		Right: &utils.TreeNode{Val: 3, Left: &utils.TreeNode{Val: 10}, Right: &utils.TreeNode{Val: 6}},
+	}, 3))
 }
