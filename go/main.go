@@ -1164,4 +1164,5 @@ func main() {
 		Right: &utils.TreeNode{Val: 3, Left: &utils.TreeNode{Val: 10}, Right: &utils.TreeNode{Val: 6}},
 	}, 3))
 	fmt.Printf("The best time to buy and sell stock II is %d\n", solutions.MaxProfit2([]int{7, 1, 5, 3, 6, 4}))
+	fmt.Printf("The percentage of letter in string is %d\n", solutions.PercentageLetter("foobar", 'o'))
 }
