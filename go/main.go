@@ -1165,4 +1165,7 @@ func main() {
 	}, 3))
 	fmt.Printf("The best time to buy and sell stock II is %d\n", solutions.MaxProfit2([]int{7, 1, 5, 3, 6, 4}))
 	fmt.Printf("The percentage of letter in string is %d\n", solutions.PercentageLetter("foobar", 'o'))
+	fmt.Printf("The players with zero or one losses are %v\n", solutions.FindWinners([][]int{
+		{1, 3}, {2, 3}, {3, 6}, {5, 6}, {5, 7}, {4, 5}, {4, 8}, {4, 9}, {10, 4}, {10, 9},
+	}))
 }
