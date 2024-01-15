@@ -1,28 +1,28 @@
 package solutions
 
-import "sort"
-
 func FindWinners(matches [][]int) [][]int {
-	won, lost := make(map[int]int), make(map[int]int)
+	scores := [100001]int{}
 	for i := range matches {
-		won[matches[i][0]]++
-		lost[matches[i][1]]++
+		if scores[matches[i][0]] == 0 {
+			scores[matches[i][0]] = 1
+		}
+
+		if scores[matches[i][1]] == 0 {
+			scores[matches[i][1]] = 1
+		}
+		scores[matches[i][1]]++
 	}
 
-	one, two := make([]int, 0), make([]int, 0)
-	for k := range won {
-		if _, ok := lost[k]; !ok {
-			one = append(one, k)
+	zeros, ones := make([]int, 0), make([]int, 0)
+	for i := range scores {
+		if scores[i] == 1 {
+			zeros = append(zeros, i)
+		}
+
+		if scores[i] == 2 {
+			ones = append(ones, i)
 		}
 	}
 
-	for k, v := range lost {
-		if v == 1 {
-			two = append(two, k)
-		}
-	}
-
-	sort.Ints(one)
-	sort.Ints(two)
-	return [][]int{one, two}
+	return [][]int{zeros, ones}
 }
