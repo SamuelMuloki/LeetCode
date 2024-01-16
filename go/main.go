@@ -1168,4 +1168,13 @@ func main() {
 	fmt.Printf("The players with zero or one losses are %v\n", solutions.FindWinners([][]int{
 		{1, 3}, {2, 3}, {3, 6}, {5, 6}, {5, 7}, {4, 5}, {4, 8}, {4, 9}, {10, 4}, {10, 9},
 	}))
+
+	randomisedSet := solutions.RandomizedSetConstructor()
+	fmt.Printf("Inserts 1 to the set. Returns true as 1 was inserted successfully %t\n", randomisedSet.Insert(1))
+	fmt.Printf("Returns false as 2 does not exist in the set. %t\n", randomisedSet.Remove(2))
+	fmt.Printf("Inserts 2 to the set, returns true. Set now contains [1,2]. %t\n", randomisedSet.Insert(2))
+	fmt.Printf("getRandom() should return either 1 or 2 randomly. %d\n", randomisedSet.GetRandom())
+	fmt.Printf("Removes 1 from the set, returns true. Set now contains [2]. %t\n", randomisedSet.Remove(1))
+	fmt.Printf("2 was already in the set, so return false. %t\n", randomisedSet.Insert(2))
+	fmt.Printf("Since 2 is the only number in the set, getRandom() will always return 2. %d\n", randomisedSet.GetRandom())
 }
