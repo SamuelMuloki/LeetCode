@@ -1177,4 +1177,5 @@ func main() {
 	fmt.Printf("Removes 1 from the set, returns true. Set now contains [2]. %t\n", randomisedSet.Remove(1))
 	fmt.Printf("2 was already in the set, so return false. %t\n", randomisedSet.Insert(2))
 	fmt.Printf("Since 2 is the only number in the set, getRandom() will always return 2. %d\n", randomisedSet.GetRandom())
+	fmt.Printf("Replacing all digits with characters yields %s\n", solutions.ReplaceDigits("a1c1e1"))
 }
