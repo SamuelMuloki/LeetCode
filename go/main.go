@@ -1178,4 +1178,7 @@ func main() {
 	fmt.Printf("2 was already in the set, so return false. %t\n", randomisedSet.Insert(2))
 	fmt.Printf("Since 2 is the only number in the set, getRandom() will always return 2. %d\n", randomisedSet.GetRandom())
 	fmt.Printf("Replacing all digits with characters yields %s\n", solutions.ReplaceDigits("a1c1e1"))
+	fmt.Printf("The minimum sum of any falling path is %d\n", solutions.MinFallingPathSum([][]int{
+		{2, 1, 3}, {6, 5, 4}, {7, 8, 9},
+	}))
 }
