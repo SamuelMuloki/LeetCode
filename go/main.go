@@ -1181,4 +1181,5 @@ func main() {
 	fmt.Printf("The minimum sum of any falling path is %d\n", solutions.MinFallingPathSum([][]int{
 		{2, 1, 3}, {6, 5, 4}, {7, 8, 9},
 	}))
+	fmt.Printf("The sum of subarray minimums is %v\n", solutions.SumSubarrayMins([]int{11, 81, 94, 43, 3}))
 }
