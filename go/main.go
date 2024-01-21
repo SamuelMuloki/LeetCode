@@ -1182,4 +1182,5 @@ func main() {
 		{2, 1, 3}, {6, 5, 4}, {7, 8, 9},
 	}))
 	fmt.Printf("The sum of subarray minimums is %v\n", solutions.SumSubarrayMins([]int{11, 81, 94, 43, 3}))
+	fmt.Printf("The maximum amount of money you can rob without alerting the police is %d\n", solutions.Rob([]int{2, 7, 9, 3, 1}))
 }
