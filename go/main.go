@@ -1183,4 +1183,5 @@ func main() {
 	}))
 	fmt.Printf("The sum of subarray minimums is %v\n", solutions.SumSubarrayMins([]int{11, 81, 94, 43, 3}))
 	fmt.Printf("The maximum amount of money you can rob without alerting the police is %d\n", solutions.Rob([]int{2, 7, 9, 3, 1}))
+	fmt.Printf("The number that occurs twice and the number that is missing are %v\n", solutions.FindErrorNums([]int{1, 2, 2, 4}))
 }
