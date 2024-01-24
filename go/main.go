@@ -1185,4 +1185,9 @@ func main() {
 	fmt.Printf("The maximum amount of money you can rob without alerting the police is %d\n", solutions.Rob([]int{2, 7, 9, 3, 1}))
 	fmt.Printf("The number that occurs twice and the number that is missing are %v\n", solutions.FindErrorNums([]int{1, 2, 2, 4}))
 	fmt.Printf("The maximum possible length is %d\n", solutions.MaxLength([]string{"cha", "r", "act", "ers"}))
+	fmt.Printf("The number of pseudo-palindromic paths in a binary tree are %d\n", solutions.PseudoPalindromicPaths(&utils.TreeNode{
+		Val:   2,
+		Left:  &utils.TreeNode{Val: 3, Left: &utils.TreeNode{Val: 3}, Right: &utils.TreeNode{Val: 1}},
+		Right: &utils.TreeNode{Val: 1, Right: &utils.TreeNode{Val: 1}},
+	}))
 }
