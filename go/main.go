@@ -1191,4 +1191,5 @@ func main() {
 		Right: &utils.TreeNode{Val: 1, Right: &utils.TreeNode{Val: 1}},
 	}))
 	fmt.Printf("The length of two strings' longest common subsequence is %d\n", solutions.LongestCommonSubsequence("abcde", "ace"))
+	fmt.Printf("The number of paths are %d\n", solutions.FindPaths(2, 2, 2, 0, 0))
 }
