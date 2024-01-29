@@ -1192,4 +1192,5 @@ func main() {
 	}))
 	fmt.Printf("The length of two strings' longest common subsequence is %d\n", solutions.LongestCommonSubsequence("abcde", "ace"))
 	fmt.Printf("The number of paths are %d\n", solutions.FindPaths(2, 2, 2, 0, 0))
+	fmt.Printf("The k inverse pairs of an array %d\n", solutions.KInversePairs(3, 0))
 }
