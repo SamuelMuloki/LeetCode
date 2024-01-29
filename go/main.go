@@ -1196,4 +1196,11 @@ func main() {
 	fmt.Printf("The number of non-empty submatrices that sum to target are %d\n", solutions.NumSubmatrixSumTarget([][]int{
 		{0, 1, 0}, {1, 1, 1}, {0, 1, 0},
 	}, 0))
+
+	myQueue := solutions.MyQueueConstructor()
+	myQueue.Push(1)                                   // queue is: [1]
+	myQueue.Push(2)                                   // queue is: [1, 2] (leftmost is front of the queue)
+	fmt.Printf("Peek returns %d\n", myQueue.Peek())   // return 1
+	fmt.Printf("Pop returns %d\n", myQueue.Pop())     // return 1, queue is [2]
+	fmt.Printf("Empty returns %t\n", myQueue.Empty()) // return false
 }
