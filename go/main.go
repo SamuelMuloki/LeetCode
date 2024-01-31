@@ -1203,4 +1203,11 @@ func main() {
 	fmt.Printf("Peek returns %d\n", myQueue.Peek())   // return 1
 	fmt.Printf("Pop returns %d\n", myQueue.Pop())     // return 1, queue is [2]
 	fmt.Printf("Empty returns %t\n", myQueue.Empty()) // return false
+
+	myStack := solutions.MyStackConstructor()
+	myStack.Push(1)
+	myStack.Push(2)
+	fmt.Printf("Top returns %d\n", myStack.Top())     // return 2
+	fmt.Printf("Pop returns %d\n", myStack.Pop())     // return 2
+	fmt.Printf("Empty returns %t\n", myStack.Empty()) // return false
 }
