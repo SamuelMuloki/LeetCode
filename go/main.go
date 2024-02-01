@@ -1210,4 +1210,6 @@ func main() {
 	fmt.Printf("Top returns %d\n", myStack.Top())     // return 2
 	fmt.Printf("Pop returns %d\n", myStack.Pop())     // return 2
 	fmt.Printf("Empty returns %t\n", myStack.Empty()) // return false
+
+	fmt.Printf("The 2D array containing all the arrays is %v\n", solutions.DivideArray([]int{1, 3, 4, 8, 7, 9, 3, 5, 1}, 2))
 }
