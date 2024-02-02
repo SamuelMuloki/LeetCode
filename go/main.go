@@ -1012,7 +1012,7 @@ func main() {
 	fmt.Printf("The number of employees who met the target are %d\n", solutions.NumberOfEmployeesWhoMetTarget([]int{0, 1, 2, 3, 4}, 2))
 	fmt.Printf("The simplified canonical path is %s\n", solutions.SimplifyPath("/home//foo/"))
 	fmt.Printf("Subtracting the product and sum of digits of an integer yields %d\n", solutions.SubtractProductAndSum(234))
-	fmt.Printf("The goal parser's interpretation of command is %s\n", solutions.Interpret("G()(al)"))
+	// fmt.Printf("The goal parser's interpretation of command is %s\n", solutions.Interpret("G()(al)"))
 	fmt.Printf("The Lowest common ancestor of the deepest leaves is %v\n", solutions.LcaDeepestLeaves(&utils.TreeNode{
 		Val: 3, Left: &utils.TreeNode{Val: 5, Left: &utils.TreeNode{Val: 6}, Right: &utils.TreeNode{Val: 2, Left: &utils.TreeNode{Val: 7}, Right: &utils.TreeNode{Val: 4}}},
 		Right: &utils.TreeNode{Val: 1, Left: &utils.TreeNode{Val: 0}, Right: &utils.TreeNode{Val: 8}},
@@ -1190,7 +1190,7 @@ func main() {
 		Left:  &utils.TreeNode{Val: 3, Left: &utils.TreeNode{Val: 3}, Right: &utils.TreeNode{Val: 1}},
 		Right: &utils.TreeNode{Val: 1, Right: &utils.TreeNode{Val: 1}},
 	}))
-	fmt.Printf("The length of two strings' longest common subsequence is %d\n", solutions.LongestCommonSubsequence("abcde", "ace"))
+	fmt.Printf("The length of two strings longest common subsequence is %d\n", solutions.LongestCommonSubsequence("abcde", "ace"))
 	fmt.Printf("The number of paths are %d\n", solutions.FindPaths(2, 2, 2, 0, 0))
 	fmt.Printf("The k inverse pairs of an array %d\n", solutions.KInversePairs(3, 0))
 	fmt.Printf("The number of non-empty submatrices that sum to target are %d\n", solutions.NumSubmatrixSumTarget([][]int{
@@ -1212,4 +1212,5 @@ func main() {
 	fmt.Printf("Empty returns %t\n", myStack.Empty()) // return false
 
 	fmt.Printf("The 2D array containing all the arrays is %v\n", solutions.DivideArray([]int{1, 3, 4, 8, 7, 9, 3, 5, 1}, 2))
+	fmt.Printf("The sequential digits in the range are %v\n", solutions.SequentialDigits(100, 300))
 }
