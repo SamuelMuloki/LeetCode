@@ -1213,4 +1213,5 @@ func main() {
 
 	fmt.Printf("The 2D array containing all the arrays is %v\n", solutions.DivideArray([]int{1, 3, 4, 8, 7, 9, 3, 5, 1}, 2))
 	fmt.Printf("The sequential digits in the range are %v\n", solutions.SequentialDigits(100, 300))
+	fmt.Printf("The largest sum of the given array after partitioning is %d\n", solutions.MaxSumAfterPartitioning([]int{1, 15, 7, 9, 2, 5, 10}, 3))
 }
