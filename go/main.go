@@ -1217,4 +1217,7 @@ func main() {
 	fmt.Printf("The minimum window substring of s is %s\n", solutions.MinWindow("ADOBECODEBANC", "ABC"))
 	fmt.Printf("The least number of perfect squares that sum to n are %d\n", solutions.NumSquares(12))
 	fmt.Printf("The Largest divisible subset of distinctive positive integers is %v\n", solutions.LargestDivisibleSubset([]int{1, 2, 3}))
+	fmt.Printf("The maximum number of queries collection using both robots is %d\n", solutions.CherryPickup([][]int{
+		{3, 1, 1}, {2, 5, 1}, {1, 5, 5}, {2, 1, 1},
+	}))
 }
