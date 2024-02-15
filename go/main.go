@@ -1220,4 +1220,5 @@ func main() {
 	fmt.Printf("The maximum number of queries collection using both robots is %d\n", solutions.CherryPickup([][]int{
 		{3, 1, 1}, {2, 5, 1}, {1, 5, 5}, {2, 1, 1},
 	}))
+	fmt.Printf("The largest possible perimeter of a polygon whose sides can be formed is %d\n", solutions.LargestPerimeter([]int{1, 12, 1, 2, 5, 50, 3}))
 }
