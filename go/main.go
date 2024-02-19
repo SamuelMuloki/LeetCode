@@ -1223,4 +1223,7 @@ func main() {
 	fmt.Printf("The largest possible perimeter of a polygon whose sides can be formed is %d\n", solutions.LargestPerimeter([]int{1, 12, 1, 2, 5, 50, 3}))
 	fmt.Printf("The Least number of unique ints after k removals is %d\n", solutions.FindLeastNumOfUniqueInts([]int{4, 3, 1, 1, 3, 3, 2}, 3))
 	fmt.Printf("The farthest building index you can reach is %d\n", solutions.FurthestBuilding([]int{4, 2, 7, 6, 9, 14, 12}, 5, 1))
+	fmt.Printf("The number of rooms that held the most meetings are %d\n", solutions.MostBooked(2, [][]int{
+		{0, 10}, {1, 5}, {2, 7}, {3, 4},
+	}))
 }
