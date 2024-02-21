@@ -1226,4 +1226,5 @@ func main() {
 	fmt.Printf("The number of rooms that held the most meetings are %d\n", solutions.MostBooked(2, [][]int{
 		{0, 10}, {1, 5}, {2, 7}, {3, 4},
 	}))
+	fmt.Printf("The bitwise AND of all numbers in the range inclusive s %d\n", solutions.RangeBitwiseAnd(5, 7))
 }
