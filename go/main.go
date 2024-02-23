@@ -1228,4 +1228,7 @@ func main() {
 	}))
 	fmt.Printf("The bitwise AND of all numbers in the range inclusive s %d\n", solutions.RangeBitwiseAnd(5, 7))
 	fmt.Printf("The town judge is %d\n", solutions.FindJudge(2, [][]int{{1, 2}}))
+	fmt.Printf("The cheapest flights within k stops are %d\n", solutions.FindCheapestPrice(4, [][]int{
+		{0, 1, 100}, {1, 2, 100}, {2, 0, 100}, {1, 3, 600}, {2, 3, 200},
+	}, 0, 3, 1))
 }
