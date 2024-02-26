@@ -1234,4 +1234,5 @@ func main() {
 	fmt.Printf("The list of people that have a secret after all meetings have been taken are %v\n", solutions.FindAllPeople(6, [][]int{
 		{1, 2, 5}, {2, 3, 8}, {1, 5, 10},
 	}, 1))
+	fmt.Printf("It is possible to traverse between all such pairs of indices %t\n", solutions.CanTraverseAllPairs([]int{2, 3, 6}))
 }
