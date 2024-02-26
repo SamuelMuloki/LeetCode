@@ -1231,4 +1231,7 @@ func main() {
 	fmt.Printf("The cheapest flights within k stops are %d\n", solutions.FindCheapestPrice(4, [][]int{
 		{0, 1, 100}, {1, 2, 100}, {2, 0, 100}, {1, 3, 600}, {2, 3, 200},
 	}, 0, 3, 1))
+	fmt.Printf("The list of people that have a secret after all meetings have been taken are %v\n", solutions.FindAllPeople(6, [][]int{
+		{1, 2, 5}, {2, 3, 8}, {1, 5, 10},
+	}, 1))
 }
