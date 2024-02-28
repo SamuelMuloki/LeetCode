@@ -1012,7 +1012,7 @@ func main() {
 	fmt.Printf("The number of employees who met the target are %d\n", solutions.NumberOfEmployeesWhoMetTarget([]int{0, 1, 2, 3, 4}, 2))
 	fmt.Printf("The simplified canonical path is %s\n", solutions.SimplifyPath("/home//foo/"))
 	fmt.Printf("Subtracting the product and sum of digits of an integer yields %d\n", solutions.SubtractProductAndSum(234))
-	fmt.Printf("The goal parser's interpretation of command is %s\n", solutions.Interpret("G()(al)"))
+	// fmt.Printf("The goal parser's interpretation of command is %s\n", solutions.Interpret("G()(al)"))
 	fmt.Printf("The Lowest common ancestor of the deepest leaves is %v\n", solutions.LcaDeepestLeaves(&utils.TreeNode{
 		Val: 3, Left: &utils.TreeNode{Val: 5, Left: &utils.TreeNode{Val: 6}, Right: &utils.TreeNode{Val: 2, Left: &utils.TreeNode{Val: 7}, Right: &utils.TreeNode{Val: 4}}},
 		Right: &utils.TreeNode{Val: 1, Left: &utils.TreeNode{Val: 0}, Right: &utils.TreeNode{Val: 8}},
@@ -1129,4 +1129,110 @@ func main() {
 	fmt.Printf("The widest vertical area between two points such that no points are inside the area is %d\n", solutions.MaxWidthOfVerticalArea([][]int{
 		{8, 7}, {9, 9}, {7, 4}, {9, 7},
 	}))
+	fmt.Printf("The minimum number of operations to move all in each box is %v\n", solutions.MinOperations3("001011"))
+	fmt.Printf("The first letter to appear twice is %v\n", solutions.RepeatedCharacter("abccbaacz"))
+	fmt.Printf("The maximum score after splitting a string is %d\n", solutions.MaxScore("00"))
+	fmt.Printf("Reversing substrings between each pair of parenthenses yields %s\n", solutions.ReverseParentheses("(ed(et(oc))el)"))
+	fmt.Printf("The center of the graph is %d\n", solutions.FindCenter([][]int{
+		{1, 2}, {2, 3}, {4, 2},
+	}))
+	fmt.Printf("I have visited this location before %t\n", solutions.IsPathCrossing("NESWW"))
+	fmt.Printf("The minimum changes to make alternating binary string is %d\n", solutions.MinOperations2("0100"))
+	fmt.Printf("The number of ways to decode string are %d\n", solutions.NumDecodings("226"))
+	fmt.Printf("The number of possible ways to roll the dice, so the sum of numbers equals target is %d\n", solutions.NumRollsToTarget(2, 6, 7))
+	fmt.Printf("The minimum time Bob needs to make the rope colorful is %d\n", solutions.MinCost("abaac", []int{1, 2, 3, 4, 5}))
+	fmt.Printf("The minimum length of the run-length encoded version of s after deleting atmost k characters %d\n", solutions.GetLengthOfOptimalCompression("aaabcccd", 2))
+	fmt.Printf("The minimum difficulty of a job schedule is %d\n", solutions.MinDifficulty([]int{6, 5, 4, 3, 4, 2, 1}, 2))
+	fmt.Printf("Every string can be made equal using any number of operartions %t\n", solutions.MakeEqual([]string{"abc", "aabc", "bc"}))
+	fmt.Printf("The largest substring between two equal characters is %d\n", solutions.MaxLengthBetweenEqualCharacters("abca"))
+	fmt.Printf("The output after assigning cookies is %d\n", solutions.FindContentChildren([]int{1, 2, 3}, []int{1, 1}))
+	fmt.Printf("The total number of laser beams in the bank %d\n", solutions.NumberOfBeams([]string{"011001", "000000", "010100", "001000"}))
+	fmt.Printf("The target indices after sorting the array is %v\n", solutions.TargetIndices([]int{1, 2, 5, 2, 3}, 2))
+	flatten := &utils.TreeNode{
+		Val: 1, Left: &utils.TreeNode{Val: 2, Left: &utils.TreeNode{Val: 3}, Right: &utils.TreeNode{Val: 4}}, Right: &utils.TreeNode{Val: 5, Right: &utils.TreeNode{Val: 6}},
+	}
+	solutions.Flatten(flatten)
+	fmt.Printf("Flatten the binary tree to linked list yields %v\n", flatten)
+	fmt.Printf("The maximum profit you can take is %d\n", solutions.JobScheduling([]int{1, 2, 3, 3}, []int{3, 4, 5, 6}, []int{50, 10, 40, 70}))
+	fmt.Printf("The number of arithmetic slices II are %d\n", solutions.NumberOfArithmeticSlices2([]int{2, 4, 6, 8, 10}))
+	fmt.Printf("The complement of base 10 integer is %d\n", solutions.BitwiseComplement(5))
+	fmt.Printf("The complement of a number is %d\n", solutions.BitwiseComplement(1))
+	fmt.Printf("The list of integers representing the size of the parts is %v\n", solutions.PartitionLabels("ababcbacadefegdehijhklij"))
+	fmt.Printf("The number of minutes for the entire tree to be infected are %d\n", solutions.AmountOfTime(&utils.TreeNode{
+		Val:   1,
+		Left:  &utils.TreeNode{Val: 5, Right: &utils.TreeNode{Val: 4, Left: &utils.TreeNode{Val: 9}, Right: &utils.TreeNode{Val: 2}}},
+		Right: &utils.TreeNode{Val: 3, Left: &utils.TreeNode{Val: 10}, Right: &utils.TreeNode{Val: 6}},
+	}, 3))
+	fmt.Printf("The best time to buy and sell stock II is %d\n", solutions.MaxProfit2([]int{7, 1, 5, 3, 6, 4}))
+	fmt.Printf("The percentage of letter in string is %d\n", solutions.PercentageLetter("foobar", 'o'))
+	fmt.Printf("The players with zero or one losses are %v\n", solutions.FindWinners([][]int{
+		{1, 3}, {2, 3}, {3, 6}, {5, 6}, {5, 7}, {4, 5}, {4, 8}, {4, 9}, {10, 4}, {10, 9},
+	}))
+
+	randomisedSet := solutions.RandomizedSetConstructor()
+	fmt.Printf("Inserts 1 to the set. Returns true as 1 was inserted successfully %t\n", randomisedSet.Insert(1))
+	fmt.Printf("Returns false as 2 does not exist in the set. %t\n", randomisedSet.Remove(2))
+	fmt.Printf("Inserts 2 to the set, returns true. Set now contains [1,2]. %t\n", randomisedSet.Insert(2))
+	fmt.Printf("getRandom() should return either 1 or 2 randomly. %d\n", randomisedSet.GetRandom())
+	fmt.Printf("Removes 1 from the set, returns true. Set now contains [2]. %t\n", randomisedSet.Remove(1))
+	fmt.Printf("2 was already in the set, so return false. %t\n", randomisedSet.Insert(2))
+	fmt.Printf("Since 2 is the only number in the set, getRandom() will always return 2. %d\n", randomisedSet.GetRandom())
+	fmt.Printf("Replacing all digits with characters yields %s\n", solutions.ReplaceDigits("a1c1e1"))
+	fmt.Printf("The minimum sum of any falling path is %d\n", solutions.MinFallingPathSum([][]int{
+		{2, 1, 3}, {6, 5, 4}, {7, 8, 9},
+	}))
+	fmt.Printf("The sum of subarray minimums is %v\n", solutions.SumSubarrayMins([]int{11, 81, 94, 43, 3}))
+	fmt.Printf("The maximum amount of money you can rob without alerting the police is %d\n", solutions.Rob([]int{2, 7, 9, 3, 1}))
+	fmt.Printf("The number that occurs twice and the number that is missing are %v\n", solutions.FindErrorNums([]int{1, 2, 2, 4}))
+	fmt.Printf("The maximum possible length is %d\n", solutions.MaxLength([]string{"cha", "r", "act", "ers"}))
+	fmt.Printf("The number of pseudo-palindromic paths in a binary tree are %d\n", solutions.PseudoPalindromicPaths(&utils.TreeNode{
+		Val:   2,
+		Left:  &utils.TreeNode{Val: 3, Left: &utils.TreeNode{Val: 3}, Right: &utils.TreeNode{Val: 1}},
+		Right: &utils.TreeNode{Val: 1, Right: &utils.TreeNode{Val: 1}},
+	}))
+	fmt.Printf("The length of two strings longest common subsequence is %d\n", solutions.LongestCommonSubsequence("abcde", "ace"))
+	fmt.Printf("The number of paths are %d\n", solutions.FindPaths(2, 2, 2, 0, 0))
+	fmt.Printf("The k inverse pairs of an array %d\n", solutions.KInversePairs(3, 0))
+	fmt.Printf("The number of non-empty submatrices that sum to target are %d\n", solutions.NumSubmatrixSumTarget([][]int{
+		{0, 1, 0}, {1, 1, 1}, {0, 1, 0},
+	}, 0))
+
+	myQueue := solutions.MyQueueConstructor()
+	myQueue.Push(1)                                   // queue is: [1]
+	myQueue.Push(2)                                   // queue is: [1, 2] (leftmost is front of the queue)
+	fmt.Printf("Peek returns %d\n", myQueue.Peek())   // return 1
+	fmt.Printf("Pop returns %d\n", myQueue.Pop())     // return 1, queue is [2]
+	fmt.Printf("Empty returns %t\n", myQueue.Empty()) // return false
+
+	myStack := solutions.MyStackConstructor()
+	myStack.Push(1)
+	myStack.Push(2)
+	fmt.Printf("Top returns %d\n", myStack.Top())     // return 2
+	fmt.Printf("Pop returns %d\n", myStack.Pop())     // return 2
+	fmt.Printf("Empty returns %t\n", myStack.Empty()) // return false
+
+	fmt.Printf("The 2D array containing all the arrays is %v\n", solutions.DivideArray([]int{1, 3, 4, 8, 7, 9, 3, 5, 1}, 2))
+	fmt.Printf("The sequential digits in the range are %v\n", solutions.SequentialDigits(100, 300))
+	fmt.Printf("The largest sum of the given array after partitioning is %d\n", solutions.MaxSumAfterPartitioning([]int{1, 15, 7, 9, 2, 5, 10}, 3))
+	fmt.Printf("The minimum window substring of s is %s\n", solutions.MinWindow("ADOBECODEBANC", "ABC"))
+	fmt.Printf("The least number of perfect squares that sum to n are %d\n", solutions.NumSquares(12))
+	fmt.Printf("The Largest divisible subset of distinctive positive integers is %v\n", solutions.LargestDivisibleSubset([]int{1, 2, 3}))
+	fmt.Printf("The maximum number of queries collection using both robots is %d\n", solutions.CherryPickup([][]int{
+		{3, 1, 1}, {2, 5, 1}, {1, 5, 5}, {2, 1, 1},
+	}))
+	fmt.Printf("The largest possible perimeter of a polygon whose sides can be formed is %d\n", solutions.LargestPerimeter([]int{1, 12, 1, 2, 5, 50, 3}))
+	fmt.Printf("The Least number of unique ints after k removals is %d\n", solutions.FindLeastNumOfUniqueInts([]int{4, 3, 1, 1, 3, 3, 2}, 3))
+	fmt.Printf("The farthest building index you can reach is %d\n", solutions.FurthestBuilding([]int{4, 2, 7, 6, 9, 14, 12}, 5, 1))
+	fmt.Printf("The number of rooms that held the most meetings are %d\n", solutions.MostBooked(2, [][]int{
+		{0, 10}, {1, 5}, {2, 7}, {3, 4},
+	}))
+	fmt.Printf("The bitwise AND of all numbers in the range inclusive s %d\n", solutions.RangeBitwiseAnd(5, 7))
+	fmt.Printf("The town judge is %d\n", solutions.FindJudge(2, [][]int{{1, 2}}))
+	fmt.Printf("The cheapest flights within k stops are %d\n", solutions.FindCheapestPrice(4, [][]int{
+		{0, 1, 100}, {1, 2, 100}, {2, 0, 100}, {1, 3, 600}, {2, 3, 200},
+	}, 0, 3, 1))
+	fmt.Printf("The list of people that have a secret after all meetings have been taken are %v\n", solutions.FindAllPeople(6, [][]int{
+		{1, 2, 5}, {2, 3, 8}, {1, 5, 10},
+	}, 1))
+	fmt.Printf("It is possible to traverse between all such pairs of indices %t\n", solutions.CanTraverseAllPairs([]int{2, 3, 6}))
 }
