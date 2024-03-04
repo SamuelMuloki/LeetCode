@@ -1235,4 +1235,5 @@ func main() {
 		{1, 2, 5}, {2, 3, 8}, {1, 5, 10},
 	}, 1))
 	fmt.Printf("It is possible to traverse between all such pairs of indices %t\n", solutions.CanTraverseAllPairs([]int{2, 3, 6}))
+	fmt.Printf("The maximum possible score you can achieve is %d\n", solutions.BagOfTokensScore([]int{100, 200, 300, 400}, 200))
 }
