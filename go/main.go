@@ -1237,4 +1237,5 @@ func main() {
 	fmt.Printf("It is possible to traverse between all such pairs of indices %t\n", solutions.CanTraverseAllPairs([]int{2, 3, 6}))
 	fmt.Printf("The maximum possible score you can achieve is %d\n", solutions.BagOfTokensScore([]int{100, 200, 300, 400}, 200))
 	fmt.Printf("The minimum length of a string after performing the operations is %d\n", solutions.MinimumLength("cabaabac"))
+	fmt.Printf("The number of elements with maximum frequency are %d\n", solutions.MaxFrequencyElements([]int{1, 2, 2, 3, 1, 4}))
 }
