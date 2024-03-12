@@ -1239,4 +1239,7 @@ func main() {
 	fmt.Printf("The minimum length of a string after performing the operations is %d\n", solutions.MinimumLength("cabaabac"))
 	fmt.Printf("The number of elements with maximum frequency are %d\n", solutions.MaxFrequencyElements([]int{1, 2, 2, 3, 1, 4}))
 	fmt.Printf("The minimum integer common to both arrays is %d\n", solutions.GetCommon([]int{1, 2, 3, 6}, []int{2, 3, 4, 5}))
+	fmt.Printf("After repeatedly deleting consecutive sequences of nodes that sum to zero, the head of the list %v\n", solutions.RemoveZeroSumSublists(
+		&utils.ListNode{Val: 1, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: -3, Next: &utils.ListNode{Val: 3, Next: &utils.ListNode{Val: 1}}}}},
+	))
 }
