@@ -1238,4 +1238,5 @@ func main() {
 	fmt.Printf("The maximum possible score you can achieve is %d\n", solutions.BagOfTokensScore([]int{100, 200, 300, 400}, 200))
 	fmt.Printf("The minimum length of a string after performing the operations is %d\n", solutions.MinimumLength("cabaabac"))
 	fmt.Printf("The number of elements with maximum frequency are %d\n", solutions.MaxFrequencyElements([]int{1, 2, 2, 3, 1, 4}))
+	fmt.Printf("The minimum integer common to both arrays is %d\n", solutions.GetCommon([]int{1, 2, 3, 6}, []int{2, 3, 4, 5}))
 }
