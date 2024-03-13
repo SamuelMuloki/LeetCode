@@ -1242,4 +1242,5 @@ func main() {
 	fmt.Printf("After repeatedly deleting consecutive sequences of nodes that sum to zero, the head of the list %v\n", solutions.RemoveZeroSumSublists(
 		&utils.ListNode{Val: 1, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: -3, Next: &utils.ListNode{Val: 3, Next: &utils.ListNode{Val: 1}}}}},
 	))
+	fmt.Printf("The pivot integer is %d\n", solutions.PivotInteger(8))
 }
