@@ -1243,4 +1243,5 @@ func main() {
 		&utils.ListNode{Val: 1, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: -3, Next: &utils.ListNode{Val: 3, Next: &utils.ListNode{Val: 1}}}}},
 	))
 	fmt.Printf("The pivot integer is %d\n", solutions.PivotInteger(8))
+	fmt.Printf("The number of sub arrays with sum are %d\n", solutions.NumSubarraysWithSum([]int{0, 0, 0, 0, 0}, 0))
 }
