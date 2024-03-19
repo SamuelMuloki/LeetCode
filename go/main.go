@@ -1244,4 +1244,7 @@ func main() {
 	))
 	fmt.Printf("The pivot integer is %d\n", solutions.PivotInteger(8))
 	fmt.Printf("The number of sub arrays with sum are %d\n", solutions.NumSubarraysWithSum([]int{0, 0, 0, 0, 0}, 0))
+	fmt.Printf("The minimum number of intervals required to complete all tasks is %d\n", solutions.LeastInterval([]byte{
+		'A', 'A', 'A', 'B', 'B', 'B',
+	}, 2))
 }
