@@ -1247,4 +1247,5 @@ func main() {
 	fmt.Printf("The minimum number of intervals required to complete all tasks is %d\n", solutions.LeastInterval([]byte{
 		'A', 'A', 'A', 'B', 'B', 'B',
 	}, 2))
+	fmt.Printf("The first missing postive integer in an unsorted array is %d\n", solutions.FirstMissingPositive([]int{7, 8, 9, 11, 12}))
 }
