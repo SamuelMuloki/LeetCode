@@ -1248,4 +1248,5 @@ func main() {
 		'A', 'A', 'A', 'B', 'B', 'B',
 	}, 2))
 	fmt.Printf("The first missing postive integer in an unsorted array is %d\n", solutions.FirstMissingPositive([]int{7, 8, 9, 11, 12}))
+	fmt.Printf("The length of the longest subarray with at most k frequency is %d\n", solutions.MaxSubarrayLength([]int{1, 2, 1, 2, 1, 2, 1, 2}, 1))
 }
