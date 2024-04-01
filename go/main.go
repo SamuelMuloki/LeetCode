@@ -1251,4 +1251,5 @@ func main() {
 	fmt.Printf("The length of the longest subarray with at most k frequency is %d\n", solutions.MaxSubarrayLength([]int{1, 2, 1, 2, 1, 2, 1, 2}, 1))
 	fmt.Printf("The number of subarrays where max element appears atleast k times is %d\n", solutions.CountSubarrays([]int{1, 3, 2, 3, 3}, 2))
 	fmt.Printf("The number of subarrays with fixed bounds is %d\n", solutions.CountSubarrays2([]int{1, 3, 5, 2, 7, 5}, 1, 5))
+	fmt.Printf("The number of subarrays with k different integers are %d\n", solutions.SubarraysWithKDistinct([]int{1, 2, 1, 2, 3}, 2))
 }
