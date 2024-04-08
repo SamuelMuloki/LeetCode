@@ -1254,4 +1254,5 @@ func main() {
 	fmt.Printf("The number of subarrays with k different integers are %d\n", solutions.SubarraysWithKDistinct([]int{1, 2, 1, 2, 3}, 2))
 	fmt.Printf("The maximum depth of the parentheses is %d\n", solutions.MaxDepth2("(1+(2*3)+((8)/4))+1"))
 	fmt.Printf("The final string after making it good is %s\n", solutions.MakeGood("leEeetcode"))
+	fmt.Printf("The string is a valid parentheses string %t\n", solutions.CheckValidString("(*))"))
 }
