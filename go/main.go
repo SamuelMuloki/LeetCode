@@ -1255,4 +1255,5 @@ func main() {
 	fmt.Printf("The maximum depth of the parentheses is %d\n", solutions.MaxDepth2("(1+(2*3)+((8)/4))+1"))
 	fmt.Printf("The final string after making it good is %s\n", solutions.MakeGood("leEeetcode"))
 	fmt.Printf("The string is a valid parentheses string %t\n", solutions.CheckValidString("(*))"))
+	fmt.Printf("The number of students unable to eat lunch are %d\n", solutions.CountStudents([]int{1, 1, 1, 0, 0, 1}, []int{1, 0, 0, 0, 1, 1}))
 }
