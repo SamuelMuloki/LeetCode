@@ -1256,4 +1256,5 @@ func main() {
 	fmt.Printf("The final string after making it good is %s\n", solutions.MakeGood("leEeetcode"))
 	fmt.Printf("The string is a valid parentheses string %t\n", solutions.CheckValidString("(*))"))
 	fmt.Printf("The number of students unable to eat lunch are %d\n", solutions.CountStudents([]int{1, 1, 1, 0, 0, 1}, []int{1, 0, 0, 0, 1, 1}))
+	fmt.Printf("The time taken for a person at position k to finish buying tickets is %d\n", solutions.TimeRequiredToBuy([]int{84, 49, 5, 24, 70, 77, 87, 8}, 3))
 }
