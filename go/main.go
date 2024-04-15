@@ -1259,4 +1259,10 @@ func main() {
 	fmt.Printf("The time taken for a person at position k to finish buying tickets is %d\n", solutions.TimeRequiredToBuy([]int{84, 49, 5, 24, 70, 77, 87, 8}, 3))
 	fmt.Printf("The smallest possible integer after removing k digits is %s\n", solutions.RemoveKdigits("1432219", 3))
 	fmt.Printf("The amount of water an elevation can trap after raining is %d\n", solutions.Trap([]int{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1}))
+	fmt.Printf("The largest rectangle containing only 1s and 0s is %d\n", solutions.MaximalRectangle([][]byte{
+		{'1', '0', '1', '0', '0'},
+		{'1', '0', '1', '1', '1'},
+		{'1', '1', '1', '1', '1'},
+		{'1', '0', '0', '1', '0'},
+	}))
 }
