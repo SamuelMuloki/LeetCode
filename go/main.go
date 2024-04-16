@@ -1265,4 +1265,9 @@ func main() {
 		{'1', '1', '1', '1', '1'},
 		{'1', '0', '0', '1', '0'},
 	}))
+	fmt.Printf("Adding one row to the tree yields %v\n", solutions.AddOneRow(&utils.TreeNode{
+		Val:   4,
+		Left:  &utils.TreeNode{Val: 2, Left: &utils.TreeNode{Val: 3}, Right: &utils.TreeNode{Val: 1}},
+		Right: &utils.TreeNode{Val: 6, Left: &utils.TreeNode{Val: 5}},
+	}, 1, 2))
 }
