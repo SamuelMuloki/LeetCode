@@ -1270,4 +1270,9 @@ func main() {
 		Left:  &utils.TreeNode{Val: 2, Left: &utils.TreeNode{Val: 3}, Right: &utils.TreeNode{Val: 1}},
 		Right: &utils.TreeNode{Val: 6, Left: &utils.TreeNode{Val: 5}},
 	}, 1, 2))
+	fmt.Printf("The smallest string starting from leaf is %s\n", solutions.SmallestFromLeaf(&utils.TreeNode{
+		Val:   0,
+		Left:  &utils.TreeNode{Val: 1, Left: &utils.TreeNode{Val: 3}, Right: &utils.TreeNode{Val: 4}},
+		Right: &utils.TreeNode{Val: 2, Left: &utils.TreeNode{Val: 3}, Right: &utils.TreeNode{Val: 4}},
+	}))
 }
