@@ -1275,5 +1275,6 @@ func main() {
 		Left:  &utils.TreeNode{Val: 1, Left: &utils.TreeNode{Val: 3}, Right: &utils.TreeNode{Val: 4}},
 		Right: &utils.TreeNode{Val: 2, Left: &utils.TreeNode{Val: 3}, Right: &utils.TreeNode{Val: 4}},
 	}))
+	fmt.Printf("The 2D array containing 4 length arrays is %v\v", solutions.FindFarmland([][]int{{1, 0, 0}, {0, 1, 1}, {0, 1, 1}}))
 	fmt.Printf("There is a valid path from source to destination %t\n", solutions.ValidPath(3, [][]int{{0, 1}, {1, 2}, {2, 0}}, 0, 2))
 }
