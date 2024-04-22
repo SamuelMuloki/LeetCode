@@ -1277,4 +1277,5 @@ func main() {
 	}))
 	fmt.Printf("The 2D array containing 4 length arrays is %v\v", solutions.FindFarmland([][]int{{1, 0, 0}, {0, 1, 1}, {0, 1, 1}}))
 	fmt.Printf("There is a valid path from source to destination %t\n", solutions.ValidPath(3, [][]int{{0, 1}, {1, 2}, {2, 0}}, 0, 2))
+	fmt.Printf("The minimum total turns required to open the lock are %d\n", solutions.OpenLock([]string{"0201", "0101", "0102", "1212", "2002"}, "0202"))
 }
