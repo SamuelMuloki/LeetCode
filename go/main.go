@@ -1280,4 +1280,7 @@ func main() {
 	fmt.Printf("The minimum total turns required to open the lock are %d\n", solutions.OpenLock([]string{"0201", "0101", "0102", "1212", "2002"}, "0202"))
 	fmt.Printf("The list of all minimum height tree root labels is %v\n", solutions.FindMinHeightTrees(4, [][]int{{1, 0}, {1, 2}, {1, 3}}))
 	fmt.Printf("The length of the longest Ideal string is %d\n", solutions.LongestIdealString("acfgbd", 2))
+	fmt.Printf("The minimum sum of any falling path II is %d\n", solutions.MinFallingPathSum2([][]int{
+		{1, 2, 3}, {4, 5, 6}, {7, 8, 9},
+	}))
 }
