@@ -1283,4 +1283,5 @@ func main() {
 	fmt.Printf("The minimum sum of any falling path II is %d\n", solutions.MinFallingPathSum2([][]int{
 		{1, 2, 3}, {4, 5, 6}, {7, 8, 9},
 	}))
+	fmt.Printf("The minimum numbers of steps to space all the characters in the keyword are %d\n", solutions.FindRotateSteps("godding", "gd"))
 }
