@@ -1284,4 +1284,5 @@ func main() {
 		{1, 2, 3}, {4, 5, 6}, {7, 8, 9},
 	}))
 	fmt.Printf("The minimum numbers of steps to space all the characters in the keyword are %d\n", solutions.FindRotateSteps("godding", "gd"))
+	fmt.Printf("The sum of the distances between the ith node in the tree and all other nodes is %v\n", solutions.SumOfDistancesInTree(6, [][]int{{0, 1}, {0, 2}, {2, 3}, {2, 4}, {2, 5}}))
 }
