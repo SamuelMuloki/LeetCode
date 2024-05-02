@@ -1287,4 +1287,5 @@ func main() {
 	fmt.Printf("The sum of the distances between the ith node in the tree and all other nodes is %v\n", solutions.SumOfDistancesInTree(6, [][]int{{0, 1}, {0, 2}, {2, 3}, {2, 4}, {2, 5}}))
 	fmt.Printf("The minimum number of operations required to make the bitwise XOR of all elements of the final array equal to k are %d\n", solutions.MinOperations4([]int{2, 1, 3, 4}, 1))
 	fmt.Printf("The number of wonderful non-empty substrings in word are %d\n", solutions.WonderfulSubstrings("aabb"))
+	fmt.Printf("The largest positive integer that exists with it's negative is %d\n", solutions.FindMaxK([]int{-1, 2, -3, 3}))
 }
