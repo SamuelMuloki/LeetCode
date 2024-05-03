@@ -1288,4 +1288,5 @@ func main() {
 	fmt.Printf("The minimum number of operations required to make the bitwise XOR of all elements of the final array equal to k are %d\n", solutions.MinOperations4([]int{2, 1, 3, 4}, 1))
 	fmt.Printf("The number of wonderful non-empty substrings in word are %d\n", solutions.WonderfulSubstrings("aabb"))
 	fmt.Printf("The largest positive integer that exists with it's negative is %d\n", solutions.FindMaxK([]int{-1, 2, -3, 3}))
+	fmt.Printf("The result after comparing two version numbers is %d\n", solutions.CompareVersion("1.01", "1.001"))
 }
