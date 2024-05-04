@@ -1289,4 +1289,5 @@ func main() {
 	fmt.Printf("The number of wonderful non-empty substrings in word are %d\n", solutions.WonderfulSubstrings("aabb"))
 	fmt.Printf("The largest positive integer that exists with it's negative is %d\n", solutions.FindMaxK([]int{-1, 2, -3, 3}))
 	fmt.Printf("The result after comparing two version numbers is %d\n", solutions.CompareVersion("1.01", "1.001"))
+	fmt.Printf("The minimum number of boats to carry every given person is %d\n", solutions.NumRescueBoats([]int{1, 2}, 3))
 }
