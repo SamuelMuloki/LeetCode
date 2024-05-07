@@ -1290,4 +1290,5 @@ func main() {
 	fmt.Printf("The largest positive integer that exists with it's negative is %d\n", solutions.FindMaxK([]int{-1, 2, -3, 3}))
 	fmt.Printf("The result after comparing two version numbers is %d\n", solutions.CompareVersion("1.01", "1.001"))
 	fmt.Printf("The minimum number of boats to carry every given person is %d\n", solutions.NumRescueBoats([]int{1, 2}, 3))
+	fmt.Printf("The head of a linked list after doubling it is %v\n", solutions.DoubleIt(&utils.ListNode{Val: 1, Next: &utils.ListNode{Val: 8, Next: &utils.ListNode{Val: 9}}}))
 }
