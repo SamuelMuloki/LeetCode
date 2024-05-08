@@ -1291,4 +1291,5 @@ func main() {
 	fmt.Printf("The result after comparing two version numbers is %d\n", solutions.CompareVersion("1.01", "1.001"))
 	fmt.Printf("The minimum number of boats to carry every given person is %d\n", solutions.NumRescueBoats([]int{1, 2}, 3))
 	fmt.Printf("The head of a linked list after doubling it is %v\n", solutions.DoubleIt(&utils.ListNode{Val: 1, Next: &utils.ListNode{Val: 8, Next: &utils.ListNode{Val: 9}}}))
+	fmt.Printf("The array answer of size n where answer[i] is the rank of the ith athlete is %v\n", solutions.FindRelativeRanks([]int{5, 4, 3, 2, 1}))
 }
