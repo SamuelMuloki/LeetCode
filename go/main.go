@@ -1293,4 +1293,5 @@ func main() {
 	fmt.Printf("The head of a linked list after doubling it is %v\n", solutions.DoubleIt(&utils.ListNode{Val: 1, Next: &utils.ListNode{Val: 8, Next: &utils.ListNode{Val: 9}}}))
 	fmt.Printf("The array answer of size n where answer[i] is the rank of the ith athlete is %v\n", solutions.FindRelativeRanks([]int{5, 4, 3, 2, 1}))
 	fmt.Printf("The maximum sum of the happiness values of the selected children you can achieve by selecting k children. is %d\n", solutions.MaximumHappinessSum([]int{1, 2, 3}, 2))
+	fmt.Printf("The kth smallest fraction considered is %v\n", solutions.KthSmallestPrimeFraction([]int{1, 2, 3, 5}, 3))
 }
