@@ -1294,4 +1294,5 @@ func main() {
 	fmt.Printf("The array answer of size n where answer[i] is the rank of the ith athlete is %v\n", solutions.FindRelativeRanks([]int{5, 4, 3, 2, 1}))
 	fmt.Printf("The maximum sum of the happiness values of the selected children you can achieve by selecting k children. is %d\n", solutions.MaximumHappinessSum([]int{1, 2, 3}, 2))
 	fmt.Printf("The kth smallest fraction considered is %v\n", solutions.KthSmallestPrimeFraction([]int{1, 2, 3, 5}, 3))
+	fmt.Printf("The least amount of money needed to form a paid group of n people is %v\n", solutions.MincostToHireWorkers([]int{10, 20, 5}, []int{70, 50, 30}, 2))
 }
