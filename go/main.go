@@ -1295,4 +1295,7 @@ func main() {
 	fmt.Printf("The maximum sum of the happiness values of the selected children you can achieve by selecting k children. is %d\n", solutions.MaximumHappinessSum([]int{1, 2, 3}, 2))
 	fmt.Printf("The kth smallest fraction considered is %v\n", solutions.KthSmallestPrimeFraction([]int{1, 2, 3, 5}, 3))
 	fmt.Printf("The least amount of money needed to form a paid group of n people is %v\n", solutions.MincostToHireWorkers([]int{10, 20, 5}, []int{70, 50, 30}, 2))
+	fmt.Printf("The largest local values in a matrix are %v\n", solutions.LargestLocal([][]int{
+		{9, 9, 8, 1}, {5, 6, 2, 6}, {8, 2, 6, 4}, {6, 2, 2, 2},
+	}))
 }
