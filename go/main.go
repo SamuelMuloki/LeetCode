@@ -1298,4 +1298,7 @@ func main() {
 	fmt.Printf("The largest local values in a matrix are %v\n", solutions.LargestLocal([][]int{
 		{9, 9, 8, 1}, {5, 6, 2, 6}, {8, 2, 6, 4}, {6, 2, 2, 2},
 	}))
+	fmt.Printf("The highest possible score after making any number of moves %d\n", solutions.MatrixScore([][]int{
+		{0, 0, 1, 1}, {1, 0, 1, 0}, {1, 1, 0, 0},
+	}))
 }
