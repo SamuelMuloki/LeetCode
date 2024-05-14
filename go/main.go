@@ -1301,4 +1301,5 @@ func main() {
 	fmt.Printf("The highest possible score after making any number of moves %d\n", solutions.MatrixScore([][]int{
 		{0, 0, 1, 1}, {1, 0, 1, 0}, {1, 1, 0, 0},
 	}))
+	fmt.Printf("The maximum amount of gold you can collect %d\n", solutions.GetMaximumGold([][]int{{0, 6, 0}, {5, 8, 7}, {0, 9, 0}}))
 }
