@@ -1302,4 +1302,7 @@ func main() {
 		{0, 0, 1, 1}, {1, 0, 1, 0}, {1, 1, 0, 0},
 	}))
 	fmt.Printf("The maximum amount of gold you can collect %d\n", solutions.GetMaximumGold([][]int{{0, 6, 0}, {5, 8, 7}, {0, 9, 0}}))
+	fmt.Printf("The safest path in the grid is %d\n", solutions.MaximumSafenessFactor([][]int{
+		{0, 0, 0, 1}, {0, 0, 0, 0}, {0, 0, 0, 0}, {1, 0, 0, 0},
+	}))
 }
