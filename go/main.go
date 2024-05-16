@@ -1305,4 +1305,9 @@ func main() {
 	fmt.Printf("The safest path in the grid is %d\n", solutions.MaximumSafenessFactor([][]int{
 		{0, 0, 0, 1}, {0, 0, 0, 0}, {0, 0, 0, 0}, {1, 0, 0, 0},
 	}))
+	fmt.Printf("The boolean result of evaluating the root node is %t\n", solutions.EvaluateTree(&utils.TreeNode{
+		Val:   2,
+		Left:  &utils.TreeNode{Val: 1},
+		Right: &utils.TreeNode{Val: 3, Left: &utils.TreeNode{Val: 0}, Right: &utils.TreeNode{Val: 1}},
+	}))
 }
