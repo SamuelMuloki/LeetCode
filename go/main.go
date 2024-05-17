@@ -1310,4 +1310,9 @@ func main() {
 		Left:  &utils.TreeNode{Val: 1},
 		Right: &utils.TreeNode{Val: 3, Left: &utils.TreeNode{Val: 0}, Right: &utils.TreeNode{Val: 1}},
 	}))
+	fmt.Printf("Removing all leaf nods with the target value yields %v\n", solutions.RemoveLeafNodes(&utils.TreeNode{
+		Val:   1,
+		Left:  &utils.TreeNode{Val: 2, Left: &utils.TreeNode{Val: 2}},
+		Right: &utils.TreeNode{Val: 3, Left: &utils.TreeNode{Val: 3, Left: &utils.TreeNode{Val: 2}, Right: &utils.TreeNode{Val: 4}}},
+	}, 2))
 }
