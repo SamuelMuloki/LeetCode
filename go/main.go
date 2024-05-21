@@ -1315,5 +1315,8 @@ func main() {
 		Left:  &utils.TreeNode{Val: 2, Left: &utils.TreeNode{Val: 2}},
 		Right: &utils.TreeNode{Val: 3, Left: &utils.TreeNode{Val: 3, Left: &utils.TreeNode{Val: 2}, Right: &utils.TreeNode{Val: 4}}},
 	}, 2))
+	fmt.Printf("The minimum number of moves required to make every node have exactly one coin is %d\n", solutions.DistributeCoins(&utils.TreeNode{
+		Val: 3, Left: &utils.TreeNode{Val: 0}, Right: &utils.TreeNode{Val: 0},
+	}))
 	fmt.Printf("The sum of all subset XOR totals is %d\n", solutions.SubsetXORSum([]int{1, 3}))
 }
