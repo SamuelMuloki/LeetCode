@@ -1318,5 +1318,6 @@ func main() {
 	fmt.Printf("The minimum number of moves required to make every node have exactly one coin is %d\n", solutions.DistributeCoins(&utils.TreeNode{
 		Val: 3, Left: &utils.TreeNode{Val: 0}, Right: &utils.TreeNode{Val: 0},
 	}))
+	fmt.Printf("The maximum possible sum of the values Alice can achieve by performing the operation any number of times is %d\n", solutions.MaximumValueSum([]int{1, 2, 1}, 3, [][]int{{0, 1}, {0, 2}}))
 	fmt.Printf("The sum of all subset XOR totals is %d\n", solutions.SubsetXORSum([]int{1, 3}))
 }
