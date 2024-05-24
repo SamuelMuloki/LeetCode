@@ -1321,4 +1321,9 @@ func main() {
 	fmt.Printf("The maximum possible sum of the values Alice can achieve by performing the operation any number of times is %d\n", solutions.MaximumValueSum([]int{1, 2, 1}, 3, [][]int{{0, 1}, {0, 2}}))
 	fmt.Printf("The sum of all subset XOR totals is %d\n", solutions.SubsetXORSum([]int{1, 3}))
 	fmt.Printf("The number of non-empty beautiful subsets of the array nums is %d\n", solutions.BeautifulSubsets([]int{2, 4, 6}, 2))
+	fmt.Printf("The maximum score of any valid set of words formed are %d\n", solutions.MaxScoreWords(
+		[]string{"dog", "cat", "dad", "good"},
+		[]byte{'a', 'a', 'c', 'd', 'd', 'd', 'g', 'o', 'o'},
+		[]int{1, 0, 9, 5, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+	))
 }
