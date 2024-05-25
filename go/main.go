@@ -1326,4 +1326,5 @@ func main() {
 		[]byte{'a', 'a', 'c', 'd', 'd', 'd', 'g', 'o', 'o'},
 		[]int{1, 0, 9, 5, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
 	))
+	fmt.Printf("The possible sentences in the word dictionary are %v\n", solutions.WordBreak2("catsanddog", []string{"cat", "cats", "and", "sand", "dog"}))
 }
