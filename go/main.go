@@ -1328,4 +1328,5 @@ func main() {
 	))
 	fmt.Printf("The possible sentences in the word dictionary are %v\n", solutions.WordBreak2("catsanddog", []string{"cat", "cats", "and", "sand", "dog"}))
 	fmt.Printf("It can be proven that the array is special since there are %d numbers greater than or equal to the length of the array\n", solutions.SpecialArray([]int{3, 5}))
+	fmt.Printf("The maximum length of a substring of s that can be changed is %d\n", solutions.EqualSubstring("abcd", "bcdf", 3))
 }
