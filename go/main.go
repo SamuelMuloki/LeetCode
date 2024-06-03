@@ -1331,4 +1331,5 @@ func main() {
 	fmt.Printf("It can be proven that the array is special since there are %d numbers greater than or equal to the length of the array\n", solutions.SpecialArray([]int{3, 5}))
 	fmt.Printf("The maximum length of a substring of s that can be changed is %d\n", solutions.EqualSubstring("abcd", "bcdf", 3))
 	fmt.Printf("The number of steps to reduce a binary representation to one is %d\n", solutions.NumSteps("1101"))
+	fmt.Printf("The score of the string is %d\n", solutions.ScoreOfString("hello"))
 }
