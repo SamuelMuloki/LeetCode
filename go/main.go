@@ -1332,4 +1332,5 @@ func main() {
 	fmt.Printf("The maximum length of a substring of s that can be changed is %d\n", solutions.EqualSubstring("abcd", "bcdf", 3))
 	fmt.Printf("The number of steps to reduce a binary representation to one is %d\n", solutions.NumSteps("1101"))
 	fmt.Printf("The score of the string is %d\n", solutions.ScoreOfString("hello"))
+	fmt.Printf("The minimum number of characters that need to be appended %d\n", solutions.AppendCharacters("coaching", "coding"))
 }
