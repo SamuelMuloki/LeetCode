@@ -1333,4 +1333,5 @@ func main() {
 	fmt.Printf("The number of steps to reduce a binary representation to one is %d\n", solutions.NumSteps("1101"))
 	fmt.Printf("The score of the string is %d\n", solutions.ScoreOfString("hello"))
 	fmt.Printf("The minimum number of characters that need to be appended %d\n", solutions.AppendCharacters("coaching", "coding"))
+	fmt.Printf("The longest palindrome that cann be built is %d\n", solutions.LongestPalindrome2("abccccdd"))
 }
