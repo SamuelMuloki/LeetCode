@@ -1334,4 +1334,5 @@ func main() {
 	fmt.Printf("The score of the string is %d\n", solutions.ScoreOfString("hello"))
 	fmt.Printf("The minimum number of characters that need to be appended %d\n", solutions.AppendCharacters("coaching", "coding"))
 	fmt.Printf("The longest palindrome that cann be built is %d\n", solutions.LongestPalindrome2("abccccdd"))
+	fmt.Printf("The array of characters that show up in all strings are %v\n", solutions.CommonChars([]string{"bella", "label", "roller"}))
 }
