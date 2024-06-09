@@ -1338,4 +1338,5 @@ func main() {
 	fmt.Printf("She can rearrange the cards into groups so that each group is of size groupSize %t\n", solutions.IsNStraightHand([]int{1, 2, 3, 6, 2, 3, 4, 7, 8}, 3))
 	fmt.Printf("It is possible to divide this array into sets of k consecutive numbers: %t\n", solutions.IsPossibleDivide([]int{1, 2, 3, 3, 4, 4, 5, 6}, 4))
 	fmt.Printf("The sentence after replacement is %s\n", solutions.ReplaceWords([]string{"cat", "bat", "rat"}, "the cattle was rattled by the battery"))
+	fmt.Printf("The array nums has a good subarray %t\n", solutions.CheckSubarraySum([]int{23, 2, 4, 6, 7}, 6))
 }
