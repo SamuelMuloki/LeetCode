@@ -1339,4 +1339,5 @@ func main() {
 	fmt.Printf("It is possible to divide this array into sets of k consecutive numbers: %t\n", solutions.IsPossibleDivide([]int{1, 2, 3, 3, 4, 4, 5, 6}, 4))
 	fmt.Printf("The sentence after replacement is %s\n", solutions.ReplaceWords([]string{"cat", "bat", "rat"}, "the cattle was rattled by the battery"))
 	fmt.Printf("The array nums has a good subarray %t\n", solutions.CheckSubarraySum([]int{23, 2, 4, 6, 7}, 6))
+	fmt.Printf("The number of indices where heights[i] != expected[i] is %d\n", solutions.HeightChecker([]int{1, 1, 4, 2, 1, 3}))
 }
