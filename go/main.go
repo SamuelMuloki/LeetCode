@@ -1343,4 +1343,5 @@ func main() {
 	fmt.Printf("The relative sort array is %v\n", solutions.RelativeSortArray([]int{2, 3, 1, 3, 2, 4, 6, 7, 9, 2, 19}, []int{2, 1, 4, 3, 9, 6}))
 	fmt.Printf("The minimum number of moves required to move each student to a seat such that no two students are in the same seat is %d\n", solutions.MinMovesToSeat([]int{4, 1, 5, 9}, []int{1, 3, 2, 6}))
 	fmt.Printf("The minimum increment to make an array unique is %d\n", solutions.MinIncrementForUnique([]int{1, 2, 2}))
+	fmt.Printf("The final maximized capital is %d\n", solutions.FindMaximizedCapital(2, 0, []int{1, 2, 3}, []int{0, 1, 1}))
 }
