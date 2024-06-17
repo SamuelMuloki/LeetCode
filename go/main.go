@@ -1345,4 +1345,5 @@ func main() {
 	fmt.Printf("The minimum increment to make an array unique is %d\n", solutions.MinIncrementForUnique([]int{1, 2, 2}))
 	fmt.Printf("The final maximized capital is %d\n", solutions.FindMaximizedCapital(2, 0, []int{1, 2, 3}, []int{0, 1, 1}))
 	fmt.Printf("The minimum number of patches required are %d\n", solutions.MinPatches([]int{1, 3}, 6))
+	fmt.Printf("There're two integers a and b such that a2 + b2 = c: %t\n", solutions.JudgeSquareSum(5))
 }
