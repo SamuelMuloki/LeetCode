@@ -1347,4 +1347,5 @@ func main() {
 	fmt.Printf("The minimum number of patches required are %d\n", solutions.MinPatches([]int{1, 3}, 6))
 	fmt.Printf("There're two integers a and b such that a2 + b2 = c: %t\n", solutions.JudgeSquareSum(5))
 	fmt.Printf("The maximum profit we can achieve after assigning the workers to the jobs is %d\n", solutions.MaxProfitAssignment([]int{2, 4, 6, 8, 10}, []int{10, 20, 30, 40, 50}, []int{4, 5, 6, 7}))
+	fmt.Printf("The minimum number of days you need to wait to be able to make m bouquets from the garden is %d\n", solutions.MinDays([]int{1, 10, 3, 10, 2}, 3, 1))
 }
