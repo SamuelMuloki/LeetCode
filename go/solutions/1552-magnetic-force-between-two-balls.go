@@ -1,7 +1,6 @@
 package solutions
 
 import (
-	"math"
 	"sort"
 )
 
@@ -25,7 +24,7 @@ func MaxDistance(position []int, m int) int {
 	ans := 0
 	sort.Ints(position)
 
-	low, high := 1, int(math.Ceil(float64(position[n-1]/(m-1))))
+	low, high := 1, position[n-1]/(m-1)
 	for low <= high {
 		mid := low + (high-low)/2
 		if canPlaceBalls(mid) {
