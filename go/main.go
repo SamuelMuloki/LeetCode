@@ -1351,4 +1351,5 @@ func main() {
 	fmt.Printf("The magnetic force between two balls is %d\n", solutions.MaxDistance([]int{1, 2, 3, 4, 7}, 3))
 	fmt.Printf("The maximum number of customers that can be satisfied throughout the day are %d\n", solutions.MaxSatisfied([]int{1, 0, 1, 2, 1, 1, 7, 5}, []int{0, 1, 0, 1, 0, 1, 0, 1}, 3))
 	fmt.Printf("The number of nice subarrays are %d\n", solutions.NumberOfSubarrays([]int{1, 1, 2, 1, 1}, 3))
+	fmt.Printf("The size Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit is %d\n", solutions.LongestSubarray2([]int{8, 2, 4, 7}, 4))
 }
