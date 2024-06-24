@@ -1352,4 +1352,6 @@ func main() {
 	fmt.Printf("The maximum number of customers that can be satisfied throughout the day are %d\n", solutions.MaxSatisfied([]int{1, 0, 1, 2, 1, 1, 7, 5}, []int{0, 1, 0, 1, 0, 1, 0, 1}, 3))
 	fmt.Printf("The number of nice subarrays are %d\n", solutions.NumberOfSubarrays([]int{1, 1, 2, 1, 1}, 3))
 	fmt.Printf("The size Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit is %d\n", solutions.LongestSubarray2([]int{8, 2, 4, 7}, 4))
+	fmt.Printf("The minimum number of k-bit flips required so that there is no 0 in the array is %d\n", solutions.MinKBitFlips([]int{0, 1, 0}, 1))
+
 }
