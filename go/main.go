@@ -1355,4 +1355,5 @@ func main() {
 	fmt.Printf("The minimum number of k-bit flips required so that there is no 0 in the array is %d\n", solutions.MinKBitFlips([]int{0, 1, 0}, 1))
 	fmt.Printf("The maximum total importance of all roads possible after assigning the values optimally is %d\n", solutions.MaximumImportance(5, [][]int{{0, 1}, {1, 2}, {2, 3}, {0, 2}, {1, 3}, {2, 4}}))
 	fmt.Printf("The list of ancestors of the ith node, sorted in ascending order is %v\n", solutions.GetAncestors(8, [][]int{{0, 3}, {0, 4}, {1, 3}, {2, 4}, {2, 7}, {3, 5}, {3, 6}, {3, 7}, {4, 6}}))
+	fmt.Printf("The maximum number of edges you can remove is %d\n", solutions.MaxNumEdgesToRemove(4, [][]int{{3, 1, 2}, {3, 2, 3}, {1, 1, 3}, {1, 2, 4}, {1, 1, 2}, {2, 3, 4}}))
 }
