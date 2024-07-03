@@ -10,7 +10,7 @@ import "github.com/SamuelMuloki/LeetCode/go/utils"
  * }
  */
 func RemoveElements(head *utils.ListNode, val int) *utils.ListNode {
-	dummy := &utils.ListNode{Val: 0, Next: head}
+	dummy := &utils.ListNode{Next: head}
 	curr, prev := head, dummy
 	for curr != nil {
 		if curr.Val == val {

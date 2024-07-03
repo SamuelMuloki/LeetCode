@@ -10,7 +10,7 @@ import "github.com/SamuelMuloki/LeetCode/go/utils"
  * }
  */
 func RemoveZeroSumSublists(head *utils.ListNode) *utils.ListNode {
-	dummy := &utils.ListNode{Val: 0, Next: head}
+	dummy := &utils.ListNode{Next: head}
 
 	m := make(map[int]*utils.ListNode)
 	m[0] = dummy

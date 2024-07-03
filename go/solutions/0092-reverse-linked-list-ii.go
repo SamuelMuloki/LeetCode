@@ -14,7 +14,7 @@ func ReverseBetween(head *utils.ListNode, left int, right int) *utils.ListNode {
 		return head
 	}
 
-	dummy := &utils.ListNode{Val: 0, Next: head}
+	dummy := &utils.ListNode{Next: head}
 	prev := dummy
 
 	for i := 0; i < left-1; i++ {
