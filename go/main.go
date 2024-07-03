@@ -1357,4 +1357,5 @@ func main() {
 	fmt.Printf("The list of ancestors of the ith node, sorted in ascending order is %v\n", solutions.GetAncestors(8, [][]int{{0, 3}, {0, 4}, {1, 3}, {2, 4}, {2, 7}, {3, 5}, {3, 6}, {3, 7}, {4, 6}}))
 	fmt.Printf("The maximum number of edges you can remove is %d\n", solutions.MaxNumEdgesToRemove(4, [][]int{{3, 1, 2}, {3, 2, 3}, {1, 1, 3}, {1, 2, 4}, {1, 1, 2}, {2, 3, 4}}))
 	fmt.Printf("There are three consecutive odd numbers in the array %t\n", solutions.ThreeConsecutiveOdds([]int{2, 6, 4, 1}))
+	fmt.Printf("The minimum difference between the largest and smallest value of nums after performing at most three moves is %d\n", solutions.MinDifference([]int{1, 5, 0, 10, 14}))
 }
