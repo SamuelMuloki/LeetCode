@@ -1359,4 +1359,5 @@ func main() {
 	fmt.Printf("There are three consecutive odd numbers in the array %t\n", solutions.ThreeConsecutiveOdds([]int{2, 6, 4, 1}))
 	fmt.Printf("The minimum difference between the largest and smallest value of nums after performing at most three moves is %d\n", solutions.MinDifference([]int{1, 5, 0, 10, 14}))
 	fmt.Printf("The minimum and maximum number of nodes between two critical points is %v\n", solutions.NodesBetweenCriticalPoints(&utils.ListNode{Val: 3, Next: &utils.ListNode{Val: 1}}))
+	fmt.Printf("The index of the person holding the pillow after time seconds is %d\n", solutions.PassThePillow(4, 5))
 }
