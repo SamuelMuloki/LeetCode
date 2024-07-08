@@ -1361,4 +1361,5 @@ func main() {
 	fmt.Printf("The minimum and maximum number of nodes between two critical points is %v\n", solutions.NodesBetweenCriticalPoints(&utils.ListNode{Val: 3, Next: &utils.ListNode{Val: 1}}))
 	fmt.Printf("The index of the person holding the pillow after time seconds is %d\n", solutions.PassThePillow(4, 5))
 	fmt.Printf("The maximum number of water bottles you can drink %d\n", solutions.NumWaterBottles(9, 3))
+	fmt.Printf("The winner of the game is %d\n", solutions.FindTheWinner(5, 2))
 }
