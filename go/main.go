@@ -1363,4 +1363,5 @@ func main() {
 	fmt.Printf("The maximum number of water bottles you can drink %d\n", solutions.NumWaterBottles(9, 3))
 	fmt.Printf("The winner of the game is %d\n", solutions.FindTheWinner(5, 2))
 	fmt.Printf("The average waiting time of all customers is %f\n", solutions.AverageWaitingTime([][]int{{1, 2}, {2, 5}, {4, 3}}))
+	fmt.Printf("The minimum number of operations needed to go back to the main folder are %d\n", solutions.MinOperations5([]string{"d1/", "d2/", "../", "d21/", "./"}))
 }
