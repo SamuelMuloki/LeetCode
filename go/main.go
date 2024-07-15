@@ -1367,4 +1367,5 @@ func main() {
 	fmt.Printf("The maximum score from removing substrings is %d\n", solutions.MaximumGain("cdbcbbaaabab", 4, 5))
 	fmt.Printf("The array containing the health of the remaining robots is %v\n", solutions.SurvivedRobotsHealths([]int{5, 4, 3, 2, 1}, []int{2, 17, 9, 15, 10}, "RRRRR"))
 	fmt.Printf("The count of all elements as a string in the following form is %s\n", solutions.CountOfAtoms("H2O"))
+	fmt.Printf("The root of the binary tree after construction is %v\n", solutions.CreateBinaryTree([][]int{{20, 15, 1}, {20, 17, 0}, {50, 20, 1}, {50, 80, 0}, {80, 19, 1}}))
 }
