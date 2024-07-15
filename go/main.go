@@ -1365,4 +1365,5 @@ func main() {
 	fmt.Printf("The average waiting time of all customers is %f\n", solutions.AverageWaitingTime([][]int{{1, 2}, {2, 5}, {4, 3}}))
 	fmt.Printf("The minimum number of operations needed to go back to the main folder are %d\n", solutions.MinOperations5([]string{"d1/", "d2/", "../", "d21/", "./"}))
 	fmt.Printf("The maximum score from removing substrings is %d\n", solutions.MaximumGain("cdbcbbaaabab", 4, 5))
+	fmt.Printf("The array containing the health of the remaining robots is %v\n", solutions.SurvivedRobotsHealths([]int{5, 4, 3, 2, 1}, []int{2, 17, 9, 15, 10}, "RRRRR"))
 }
