@@ -1373,4 +1373,9 @@ func main() {
 		Left:  &utils.TreeNode{Val: 2, Right: &utils.TreeNode{Val: 5}},
 		Right: &utils.TreeNode{Val: 3},
 	}))
+	fmt.Printf("The step-by-step directions of the shortest path from node s to node t are %s\n", solutions.GetDirections(&utils.TreeNode{
+		Val:   5,
+		Left:  &utils.TreeNode{Val: 1, Left: &utils.TreeNode{Val: 3}},
+		Right: &utils.TreeNode{Val: 2, Left: &utils.TreeNode{Val: 6}, Right: &utils.TreeNode{Val: 4}},
+	}, 3, 6))
 }
