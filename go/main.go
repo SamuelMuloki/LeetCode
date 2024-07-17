@@ -1378,4 +1378,9 @@ func main() {
 		Left:  &utils.TreeNode{Val: 1, Left: &utils.TreeNode{Val: 3}},
 		Right: &utils.TreeNode{Val: 2, Left: &utils.TreeNode{Val: 6}, Right: &utils.TreeNode{Val: 4}},
 	}, 3, 6))
+	fmt.Printf("The roots of the trees in the remaining forest are %v\n", solutions.DelNodes(&utils.TreeNode{
+		Val:   1,
+		Left:  &utils.TreeNode{Val: 2, Left: &utils.TreeNode{Val: 4}, Right: &utils.TreeNode{Val: 5}},
+		Right: &utils.TreeNode{Val: 3, Left: &utils.TreeNode{Val: 6}, Right: &utils.TreeNode{Val: 7}},
+	}, []int{3, 5}))
 }
