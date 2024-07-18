@@ -1383,4 +1383,9 @@ func main() {
 		Left:  &utils.TreeNode{Val: 2, Left: &utils.TreeNode{Val: 4}, Right: &utils.TreeNode{Val: 5}},
 		Right: &utils.TreeNode{Val: 3, Left: &utils.TreeNode{Val: 6}, Right: &utils.TreeNode{Val: 7}},
 	}, []int{3, 5}))
+	fmt.Printf("The number of good leaf node pairs are %d\n", solutions.CountPairs3(&utils.TreeNode{
+		Val:   1,
+		Left:  &utils.TreeNode{Val: 2, Left: &utils.TreeNode{Val: 4}, Right: &utils.TreeNode{Val: 5}},
+		Right: &utils.TreeNode{Val: 3, Left: &utils.TreeNode{Val: 6}, Right: &utils.TreeNode{Val: 7}},
+	}, 3))
 }
