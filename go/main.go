@@ -1388,4 +1388,7 @@ func main() {
 		Left:  &utils.TreeNode{Val: 2, Left: &utils.TreeNode{Val: 4}, Right: &utils.TreeNode{Val: 5}},
 		Right: &utils.TreeNode{Val: 3, Left: &utils.TreeNode{Val: 6}, Right: &utils.TreeNode{Val: 7}},
 	}, 3))
+	fmt.Printf("All lucky numbers in the matrix are %v\n", solutions.LuckyNumbers([][]int{
+		{3, 7, 8}, {9, 11, 13}, {15, 16, 17},
+	}))
 }
