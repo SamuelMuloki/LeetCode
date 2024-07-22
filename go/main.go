@@ -1391,4 +1391,5 @@ func main() {
 	fmt.Printf("All lucky numbers in the matrix are %v\n", solutions.LuckyNumbers([][]int{
 		{3, 7, 8}, {9, 11, 13}, {15, 16, 17},
 	}))
+	fmt.Printf("The matrix that satisfies the conditions is %v\n", solutions.BuildMatrix(3, [][]int{{1, 2}, {3, 2}}, [][]int{{2, 1}, {3, 2}}))
 }
