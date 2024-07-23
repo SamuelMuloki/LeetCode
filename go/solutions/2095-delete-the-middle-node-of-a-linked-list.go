@@ -10,7 +10,7 @@ import "github.com/SamuelMuloki/LeetCode/go/utils"
  * }
  */
 func DeleteMiddle(head *utils.ListNode) *utils.ListNode {
-	dummy := &utils.ListNode{Val: 0, Next: head}
+	dummy := &utils.ListNode{Next: head}
 	prev := head
 	curr, count := head, 0
 	for curr != nil {

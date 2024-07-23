@@ -14,7 +14,7 @@ func OddEvenList(head *utils.ListNode) *utils.ListNode {
 		return head
 	}
 
-	dummy := &utils.ListNode{Val: 0, Next: head}
+	dummy := &utils.ListNode{Next: head}
 	slow, fast := head, head.Next
 	fastDummy := fast
 	for fast != nil && fast.Next != nil {
