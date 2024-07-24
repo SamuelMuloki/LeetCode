@@ -1392,4 +1392,5 @@ func main() {
 		{3, 7, 8}, {9, 11, 13}, {15, 16, 17},
 	}))
 	fmt.Printf("The matrix that satisfies the conditions is %v\n", solutions.BuildMatrix(3, [][]int{{1, 2}, {3, 2}}, [][]int{{2, 1}, {3, 2}}))
+	fmt.Printf("The array nums sorted in non-decreasing order based on the mapped values of its elements is %v\n", solutions.SortJumbled([]int{8, 9, 4, 0, 2, 1, 3, 5, 7, 6}, []int{991, 338, 38}))
 }
