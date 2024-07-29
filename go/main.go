@@ -1397,4 +1397,5 @@ func main() {
 		{0, 1, 3}, {1, 2, 1}, {1, 3, 4}, {2, 3, 1},
 	}, 4))
 	fmt.Printf("The number of teams you can form given the conditions are %d\n", solutions.NumTeams([]int{2, 5, 3, 4, 1}))
+	fmt.Printf("The minimum cost to convert the string source to the string target is %d\n", solutions.MinimumCost("abcd", "acbe", []byte{'a', 'b', 'c', 'c', 'e', 'd'}, []byte{'b', 'c', 'b', 'e', 'b', 'e'}, []int{2, 5, 5, 1, 2, 20}))
 }
