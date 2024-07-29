@@ -1396,4 +1396,5 @@ func main() {
 	fmt.Printf("The city with the smallest number of cities that are reachable through some path and whose distance is at most distanceThreshold is %d\n", solutions.FindTheCity(4, [][]int{
 		{0, 1, 3}, {1, 2, 1}, {1, 3, 4}, {2, 3, 1},
 	}, 4))
+	fmt.Printf("The number of teams you can form given the conditions are %d\n", solutions.NumTeams([]int{2, 5, 3, 4, 1}))
 }
