@@ -1400,4 +1400,5 @@ func main() {
 	fmt.Printf("The minimum cost to convert the string source to the string target is %d\n", solutions.MinimumCost("abcd", "acbe", []byte{'a', 'b', 'c', 'c', 'e', 'd'}, []byte{'b', 'c', 'b', 'e', 'b', 'e'}, []int{2, 5, 5, 1, 2, 20}))
 	fmt.Printf("The second minimum time it will take to go from vertex 1 to vertex n is %d\n", solutions.SecondMinimum(2, [][]int{{1, 2}}, 3, 2))
 	fmt.Printf("Every 'a' appears before every 'b' in the string %t\n", solutions.CheckString("aaabbb"))
+	fmt.Printf("The minimum of deletetions to make a string balanced are %d\n", solutions.MinimumDeletions("aababbab"))
 }
