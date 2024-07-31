@@ -1401,4 +1401,5 @@ func main() {
 	fmt.Printf("The second minimum time it will take to go from vertex 1 to vertex n is %d\n", solutions.SecondMinimum(2, [][]int{{1, 2}}, 3, 2))
 	fmt.Printf("Every 'a' appears before every 'b' in the string %t\n", solutions.CheckString("aaabbb"))
 	fmt.Printf("The minimum of deletetions to make a string balanced are %d\n", solutions.MinimumDeletions("aababbab"))
+	fmt.Printf("The minimum possible height that the total bookshelf can be after placing shelves in this manner is %d\n", solutions.MinHeightShelves([][]int{{1, 1}, {2, 3}, {2, 3}, {1, 1}, {1, 1}, {1, 1}, {1, 2}}, 4))
 }
