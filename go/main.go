@@ -1406,4 +1406,5 @@ func main() {
 	fmt.Printf("The minimum number of swaps required to group all 1's present in the array together at any location is %d\n", solutions.MinSwaps2([]int{0, 1, 0, 1, 1, 0, 0}))
 	fmt.Printf("You can make arr equal to target %t\n", solutions.CanBeEqual2([]int{1, 2, 3, 4}, []int{2, 4, 1, 3}))
 	fmt.Printf("The sum of the numbers from index left to index right in the new array is %d\n", solutions.RangeSum([]int{1, 2, 3, 4}, 4, 1, 5))
+	fmt.Printf("The kth distinct string in the array is %s\n", solutions.KthDistinct([]string{"d", "b", "c", "b", "c", "a"}, 2))
 }
