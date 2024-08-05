@@ -1404,4 +1404,5 @@ func main() {
 	fmt.Printf("The minimum possible height that the total bookshelf can be after placing shelves in this manner is %d\n", solutions.MinHeightShelves([][]int{{1, 1}, {2, 3}, {2, 3}, {1, 1}, {1, 1}, {1, 1}, {1, 2}}, 4))
 	fmt.Printf("The number of passengers who are strictly more than 60 years old are %d\n", solutions.CountSeniors([]string{"7868190130M7522", "5303914400F9211", "9273338290F4010"}))
 	fmt.Printf("The minimum number of swaps required to group all 1's present in the array together at any location is %d\n", solutions.MinSwaps2([]int{0, 1, 0, 1, 1, 0, 0}))
+	fmt.Printf("You can make arr equal to target %t\n", solutions.CanBeEqual2([]int{1, 2, 3, 4}, []int{2, 4, 1, 3}))
 }
