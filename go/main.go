@@ -1407,4 +1407,5 @@ func main() {
 	fmt.Printf("You can make arr equal to target %t\n", solutions.CanBeEqual2([]int{1, 2, 3, 4}, []int{2, 4, 1, 3}))
 	fmt.Printf("The sum of the numbers from index left to index right in the new array is %d\n", solutions.RangeSum([]int{1, 2, 3, 4}, 4, 1, 5))
 	fmt.Printf("The kth distinct string in the array is %s\n", solutions.KthDistinct([]string{"d", "b", "c", "b", "c", "a"}, 2))
+	fmt.Printf("The minimum number of pushes needed to type word after remapping the keys is %d\n", solutions.MinimumPushes("abcde"))
 }
