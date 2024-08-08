@@ -1408,4 +1408,5 @@ func main() {
 	fmt.Printf("The sum of the numbers from index left to index right in the new array is %d\n", solutions.RangeSum([]int{1, 2, 3, 4}, 4, 1, 5))
 	fmt.Printf("The kth distinct string in the array is %s\n", solutions.KthDistinct([]string{"d", "b", "c", "b", "c", "a"}, 2))
 	fmt.Printf("The minimum number of pushes needed to type word after remapping the keys is %d\n", solutions.MinimumPushes("abcde"))
+	fmt.Printf("The array of coordinates representing the positions of the grid in the order you visited them is %v\n", solutions.SpiralMatrixIII(1, 4, 0, 0))
 }
