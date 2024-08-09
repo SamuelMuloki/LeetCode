@@ -46,9 +46,5 @@ func isValidMagicSquare(grid [][]int, row, col int) bool {
 	col2 := grid[row][col+1] + grid[row+1][col+1] + grid[row+2][col+1]
 	col3 := grid[row][col+2] + grid[row+1][col+2] + grid[row+2][col+2]
 
-	if !(col1 == diagonal1 && col2 == diagonal1 && col3 == diagonal1) {
-		return false
-	}
-
-	return true
+	return (col1 == diagonal1 && col2 == diagonal1 && col3 == diagonal1)
 }
