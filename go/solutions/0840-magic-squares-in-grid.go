@@ -1,50 +1,54 @@
 package solutions
 
 func NumMagicSquaresInside(grid [][]int) int {
-	count := 0
+	ans := 0
 	rows, cols := len(grid), len(grid[0])
 
-	for i := 0; i <= rows-3; i++ {
-		for j := 0; j <= cols-3; j++ {
-			if isValidMagicSquare(grid, i, j) {
-				count++
+	for row := 0; row+2 < rows; row++ {
+		for col := 0; col+2 < cols; col++ {
+			if isValidMagicSquare(grid, row, col) {
+				ans++
 			}
 		}
 	}
 
-	return count
+	return ans
 }
 
-func isValidMagicSquare(grid [][]int, startRow, startCol int) bool {
-	numPresence := make([]bool, 10)
-
-	for i := startRow; i < startRow+3; i++ {
-		for j := startCol; j < startCol+3; j++ {
-			num := grid[i][j]
-			if num < 1 || num > 9 || numPresence[num] {
+func isValidMagicSquare(grid [][]int, row, col int) bool {
+	seen := make([]bool, 10)
+	for i := 0; i < 3; i++ {
+		for j := 0; j < 3; j++ {
+			num := grid[row+i][col+j]
+			if num < 1 || num > 9 || seen[num] {
 				return false
 			}
-			numPresence[num] = true
+			seen[num] = true
 		}
 	}
 
-	targetSum := grid[startRow][startCol] + grid[startRow][startCol+1] + grid[startRow][startCol+2]
-	for i := 0; i < 3; i++ {
-		if getRowSum(grid, startRow+i, startCol) != targetSum ||
-			getColSum(grid, startRow, startCol+i) != targetSum {
-			return false
-		}
+	diagonal1 := grid[row][col] + grid[row+1][col+1] + grid[row+2][col+2]
+	diagonal2 := grid[row+2][col] + grid[row+1][col+1] + grid[row][col+2]
+
+	if diagonal1 != diagonal2 {
+		return false
 	}
 
-	diagonalSum1 := grid[startRow][startCol] + grid[startRow+1][startCol+1] + grid[startRow+2][startCol+2]
-	diagonalSum2 := grid[startRow+2][startCol] + grid[startRow+1][startCol+1] + grid[startRow][startCol+2]
-	return diagonalSum1 == targetSum && diagonalSum2 == targetSum
-}
+	row1 := grid[row][col] + grid[row][col+1] + grid[row][col+2]
+	row2 := grid[row+1][col] + grid[row+1][col+1] + grid[row+1][col+2]
+	row3 := grid[row+2][col] + grid[row+2][col+1] + grid[row+2][col+2]
 
-func getRowSum(grid [][]int, row, startCol int) int {
-	return grid[row][startCol] + grid[row][startCol+1] + grid[row][startCol+2]
-}
+	if !(row1 == diagonal1 && row2 == diagonal1 && row3 == diagonal1) {
+		return false
+	}
 
-func getColSum(grid [][]int, startRow, col int) int {
-	return grid[startRow][col] + grid[startRow+1][col] + grid[startRow+2][col]
+	col1 := grid[row][col] + grid[row+1][col] + grid[row+2][col]
+	col2 := grid[row][col+1] + grid[row+1][col+1] + grid[row+2][col+1]
+	col3 := grid[row][col+2] + grid[row+1][col+2] + grid[row+2][col+2]
+
+	if !(col1 == diagonal1 && col2 == diagonal1 && col3 == diagonal1) {
+		return false
+	}
+
+	return true
 }
