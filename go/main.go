@@ -1412,4 +1412,5 @@ func main() {
 	fmt.Printf("The number of 3 x 3 contiguous magic square subgrids in grid is %d\n", solutions.NumMagicSquaresInside([][]int{
 		{4, 3, 8, 4}, {9, 5, 1, 9}, {2, 7, 6, 2},
 	}))
+	fmt.Printf("The kth smallest distance among all the pairs is %d\n", solutions.SmallestDistancePair([]int{1, 3, 1}, 1))
 }
