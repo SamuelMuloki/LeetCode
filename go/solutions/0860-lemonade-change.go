@@ -12,7 +12,7 @@ func LemonadeChange(bills []int) bool {
 			ten++
 		} else if ten == 0 && five < 3 {
 			return false
-		} else if bills[i] == 20 {
+		} else {
 			if ten == 0 && five >= 3 {
 				five -= 3
 			} else {
