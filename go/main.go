@@ -1414,4 +1414,5 @@ func main() {
 	}))
 	fmt.Printf("The kth smallest distance among all the pairs is %d\n", solutions.SmallestDistancePair([]int{1, 3, 1}, 1))
 	fmt.Printf("You can provide every customer with the correct change %t\n", solutions.LemonadeChange([]int{5, 5, 5, 10, 20}))
+	fmt.Printf("The maximum distance in arrays is %d\n", solutions.MaxDistance2([][]int{{1, 2, 3}, {4, 5}, {1, 2, 3}}))
 }
