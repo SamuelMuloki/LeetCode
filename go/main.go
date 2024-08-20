@@ -1418,4 +1418,5 @@ func main() {
 	fmt.Printf("The maximum number of points you can achieve is %d\n", solutions.MaxPoints([][]int{{1, 2, 3}, {1, 5, 1}, {3, 1, 1}}))
 	fmt.Printf("The nth ugly number is %d\n", solutions.NthUglyNumber(10))
 	fmt.Printf("The minimum number of operations to get the character 'A' exactly n times on the screen is %d\n", solutions.MinSteps3(5))
+	fmt.Printf("Alice wins the game %t\n", solutions.StoneGame([]int{5, 3, 4, 5}))
 }
