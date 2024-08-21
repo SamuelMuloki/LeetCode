@@ -1420,4 +1420,5 @@ func main() {
 	fmt.Printf("The minimum number of operations to get the character 'A' exactly n times on the screen is %d\n", solutions.MinSteps3(5))
 	fmt.Printf("Alice wins the game %t\n", solutions.StoneGame([]int{5, 3, 4, 5}))
 	fmt.Printf("The maximum number of stones Alice can get is %d\n", solutions.StoneGameII([]int{2, 7, 9, 4, 4}))
+	fmt.Printf("The minimum number of turns the printer needed to print it is %d\n", solutions.StrangePrinter("aaabbb"))
 }
