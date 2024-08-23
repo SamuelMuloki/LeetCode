@@ -1421,4 +1421,5 @@ func main() {
 	fmt.Printf("Alice wins the game %t\n", solutions.StoneGame([]int{5, 3, 4, 5}))
 	fmt.Printf("The maximum number of stones Alice can get is %d\n", solutions.StoneGameII([]int{2, 7, 9, 4, 4}))
 	fmt.Printf("The minimum number of turns the printer needed to print it is %d\n", solutions.StrangePrinter("aaabbb"))
+	fmt.Printf("The result of adding and subtracting fractions in string format is %s\n", solutions.FractionAddition("1/3-1/2"))
 }
