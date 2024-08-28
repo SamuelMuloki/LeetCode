@@ -1423,4 +1423,5 @@ func main() {
 	fmt.Printf("The minimum number of turns the printer needed to print it is %d\n", solutions.StrangePrinter("aaabbb"))
 	fmt.Printf("The result of adding and subtracting fractions in string format is %s\n", solutions.FractionAddition("1/3-1/2"))
 	fmt.Printf("The path with the maximum probability of success to go from start to end is %f\n", solutions.MaxProbability(3, [][]int{{0, 1}, {1, 2}, {0, 2}}, []float64{0.5, 0.5, 0.2}, 0, 2))
+	fmt.Printf("The number of islands in grid2 that are considered sub-islands are %d\n", solutions.CountSubIslands([][]int{{1, 1, 1, 0, 0}, {0, 1, 1, 1, 1}, {0, 0, 0, 0, 0}, {1, 0, 0, 0, 0}, {1, 1, 0, 1, 1}}, [][]int{{1, 1, 1, 0, 0}, {0, 0, 1, 1, 1}, {0, 1, 0, 0, 0}, {1, 0, 1, 1, 0}, {0, 1, 0, 1, 0}}))
 }
