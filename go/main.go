@@ -1425,4 +1425,5 @@ func main() {
 	fmt.Printf("The path with the maximum probability of success to go from start to end is %f\n", solutions.MaxProbability(3, [][]int{{0, 1}, {1, 2}, {0, 2}}, []float64{0.5, 0.5, 0.2}, 0, 2))
 	fmt.Printf("The number of islands in grid2 that are considered sub-islands are %d\n", solutions.CountSubIslands([][]int{{1, 1, 1, 0, 0}, {0, 1, 1, 1, 1}, {0, 0, 0, 0, 0}, {1, 0, 0, 0, 0}, {1, 1, 0, 1, 1}}, [][]int{{1, 1, 1, 0, 0}, {0, 0, 1, 1, 1}, {0, 1, 0, 0, 0}, {1, 0, 1, 1, 0}, {0, 1, 0, 1, 0}}))
 	fmt.Printf("The largest possible number of stones that can be removed are %d\n", solutions.RemoveStones([][]int{{0, 0}, {0, 1}, {1, 0}, {1, 2}, {2, 1}, {2, 2}}))
+	fmt.Printf("Converting 1d array into 2d array yields %v\n", solutions.Construct2DArray([]int{1, 2, 3, 4}, 2, 2))
 }
