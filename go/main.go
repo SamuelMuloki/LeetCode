@@ -1427,4 +1427,5 @@ func main() {
 	fmt.Printf("The largest possible number of stones that can be removed are %d\n", solutions.RemoveStones([][]int{{0, 0}, {0, 1}, {1, 0}, {1, 2}, {2, 1}, {2, 2}}))
 	fmt.Printf("Converting 1d array into 2d array yields %v\n", solutions.Construct2DArray([]int{1, 2, 3, 4}, 2, 2))
 	fmt.Printf("The student that will replace the chalk is %d\n", solutions.ChalkReplacer([]int{5, 1, 5}, 22))
+	fmt.Printf("The resulting integer after performing the operations is %d\n", solutions.GetLucky("iiii", 1))
 }
