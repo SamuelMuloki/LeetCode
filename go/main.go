@@ -1428,4 +1428,5 @@ func main() {
 	fmt.Printf("Converting 1d array into 2d array yields %v\n", solutions.Construct2DArray([]int{1, 2, 3, 4}, 2, 2))
 	fmt.Printf("The student that will replace the chalk is %d\n", solutions.ChalkReplacer([]int{5, 1, 5}, 22))
 	fmt.Printf("The resulting integer after performing the operations is %d\n", solutions.GetLucky("iiii", 1))
+	fmt.Printf("The maximum Euclidean distance that the robot ever gets from the origin squared is %d\n", solutions.RobotSim([]int{4, -1, 4, -2, 4}, [][]int{{2, 4}}))
 }
