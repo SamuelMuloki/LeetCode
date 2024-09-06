@@ -1430,4 +1430,7 @@ func main() {
 	fmt.Printf("The resulting integer after performing the operations is %d\n", solutions.GetLucky("iiii", 1))
 	fmt.Printf("The maximum Euclidean distance that the robot ever gets from the origin squared is %d\n", solutions.RobotSim([]int{4, -1, 4, -2, 4}, [][]int{{2, 4}}))
 	fmt.Printf("The missing observations such that the average value n+m are %v\n", solutions.MissingRolls([]int{3, 2, 4, 3}, 4, 2))
+	fmt.Printf("The head of the modified linked list after removing all the nodes is %v\n", solutions.ModifiedList([]int{1, 2, 3, 4, 5}, &utils.ListNode{
+		Val: 1, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 3}},
+	}))
 }
