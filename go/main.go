@@ -1443,4 +1443,7 @@ func main() {
 	fmt.Printf("Splitting the linked list into parts yields %v\n", solutions.SplitListToParts(&utils.ListNode{
 		Val: 1, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 3}},
 	}, 5))
+	fmt.Printf("The generated matrix is %v\n", solutions.SpiralMatrix(1, 4, &utils.ListNode{
+		Val: 0, Next: &utils.ListNode{Val: 1, Next: &utils.ListNode{Val: 2}}},
+	))
 }
