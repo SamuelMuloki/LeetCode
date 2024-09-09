@@ -1440,4 +1440,7 @@ func main() {
 		Left:  &utils.TreeNode{Val: 4, Right: &utils.TreeNode{Val: 2, Left: &utils.TreeNode{Val: 1}}},
 		Right: &utils.TreeNode{Val: 4, Left: &utils.TreeNode{Val: 2, Left: &utils.TreeNode{Val: 6}, Right: &utils.TreeNode{Val: 8, Left: &utils.TreeNode{Val: 1}, Right: &utils.TreeNode{Val: 3}}}},
 	}))
+	fmt.Printf("Splitting the linked list into parts yields %v\n", solutions.SplitListToParts(&utils.ListNode{
+		Val: 1, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 3}},
+	}, 5))
 }
