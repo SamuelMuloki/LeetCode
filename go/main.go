@@ -1433,4 +1433,11 @@ func main() {
 	fmt.Printf("The head of the modified linked list after removing all the nodes is %v\n", solutions.ModifiedList([]int{1, 2, 3, 4, 5}, &utils.ListNode{
 		Val: 1, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 3}},
 	}))
+	fmt.Printf("The elements in the linked list starting from the head correspond to some downward path connected in the binary tree are %t\n", solutions.IsSubPath(&utils.ListNode{
+		Val: 4, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{Val: 8}},
+	}, &utils.TreeNode{
+		Val:   1,
+		Left:  &utils.TreeNode{Val: 4, Right: &utils.TreeNode{Val: 2, Left: &utils.TreeNode{Val: 1}}},
+		Right: &utils.TreeNode{Val: 4, Left: &utils.TreeNode{Val: 2, Left: &utils.TreeNode{Val: 6}, Right: &utils.TreeNode{Val: 8, Left: &utils.TreeNode{Val: 1}, Right: &utils.TreeNode{Val: 3}}}},
+	}))
 }
