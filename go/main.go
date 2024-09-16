@@ -1447,4 +1447,5 @@ func main() {
 		Val: 0, Next: &utils.ListNode{Val: 1, Next: &utils.ListNode{Val: 2}}},
 	))
 	fmt.Printf("The length of the longest such subarray is %d\n", solutions.LongestSubarray3([]int{1, 2, 3, 3, 2, 2}))
+	fmt.Printf("The size of the longest substring containing each vowel an even number of times is %d\n", solutions.FindTheLongestSubstring("eleetminicoworoep"))
 }
