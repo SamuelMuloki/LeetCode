@@ -1446,4 +1446,5 @@ func main() {
 	fmt.Printf("The generated matrix is %v\n", solutions.SpiralMatrix(1, 4, &utils.ListNode{
 		Val: 0, Next: &utils.ListNode{Val: 1, Next: &utils.ListNode{Val: 2}}},
 	))
+	fmt.Printf("The length of the longest such subarray is %d\n", solutions.LongestSubarray3([]int{1, 2, 3, 3, 2, 2}))
 }
