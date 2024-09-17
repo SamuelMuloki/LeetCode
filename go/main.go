@@ -1449,4 +1449,5 @@ func main() {
 	fmt.Printf("The length of the longest such subarray is %d\n", solutions.LongestSubarray3([]int{1, 2, 3, 3, 2, 2}))
 	fmt.Printf("The size of the longest substring containing each vowel an even number of times is %d\n", solutions.FindTheLongestSubstring("eleetminicoworoep"))
 	fmt.Printf("The minimum minutes difference between any two time-points in the list is %d\n", solutions.FindMinDifference([]string{"23:59", "00:00"}))
+	fmt.Printf("The list of all the uncommon words from the two sentences are %v\n", solutions.UncommonFromSentences("this apple is sweet", "this apple is sour"))
 }
