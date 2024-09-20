@@ -1451,4 +1451,5 @@ func main() {
 	fmt.Printf("The minimum minutes difference between any two time-points in the list is %d\n", solutions.FindMinDifference([]string{"23:59", "00:00"}))
 	fmt.Printf("The list of all the uncommon words from the two sentences are %v\n", solutions.UncommonFromSentences("this apple is sweet", "this apple is sour"))
 	fmt.Printf("The possible results from computing all the different possible ways to group numbers and operators are %v\n", solutions.DiffWaysToCompute("2-1-1"))
+	fmt.Printf("The shortest palindrome you can find by performing this transformation is %s\n", solutions.ShortestPalindrome("aacecaaa"))
 }
