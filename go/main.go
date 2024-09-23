@@ -1453,4 +1453,5 @@ func main() {
 	fmt.Printf("The possible results from computing all the different possible ways to group numbers and operators are %v\n", solutions.DiffWaysToCompute("2-1-1"))
 	fmt.Printf("The shortest palindrome you can find by performing this transformation is %s\n", solutions.ShortestPalindrome("aacecaaa"))
 	fmt.Printf("The numbers in the range [1, n] sorted in lexicographical order are %v\n", solutions.LexicalOrder(13))
+	fmt.Printf("The kth lexicographically smallest integer in the range [1, n] is %d\n", solutions.FindKthNumber(13, 2))
 }
