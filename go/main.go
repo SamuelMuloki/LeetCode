@@ -1460,4 +1460,7 @@ func main() {
 	fmt.Printf("The first booked meeting room is %t\n", myCalendar.Book(10, 20))
 	fmt.Printf("The second booked meeting room is %t\n", myCalendar.Book(15, 25))
 	fmt.Printf("The third booked meeting room is %t\n", myCalendar.Book(20, 30))
+	myCalendarTwo := solutions.MyCalendarTwoConstructor()
+	fmt.Printf("The first booked meeting room is %t\n", myCalendarTwo.Book(10, 20))
+	fmt.Printf("The second booked meeting room is %t\n", myCalendarTwo.Book(50, 60))
 }
