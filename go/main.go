@@ -1463,4 +1463,11 @@ func main() {
 	myCalendarTwo := solutions.MyCalendarTwoConstructor()
 	fmt.Printf("The first booked meeting room is %t\n", myCalendarTwo.Book(10, 20))
 	fmt.Printf("The second booked meeting room is %t\n", myCalendarTwo.Book(50, 60))
+	myCircularDeque := solutions.MyCircularDequeConstructor(3)
+	fmt.Printf("The first insert into circular deque is %t\n", myCircularDeque.InsertFront(1))
+	fmt.Printf("The second insert into circular deque is %t\n", myCircularDeque.InsertLast(2))
+	fmt.Printf("The first get from front of circular deque is %d\n", myCircularDeque.GetFront())
+	fmt.Printf("The first get from back of circular deque is %d\n", myCircularDeque.GetRear())
+	fmt.Printf("The first delete from front of circular deque is %t\n", myCircularDeque.DeleteFront())
+	fmt.Printf("The second delete from front of circular deque is %t\n", myCircularDeque.DeleteLast())
 }
