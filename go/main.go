@@ -1470,4 +1470,11 @@ func main() {
 	fmt.Printf("The first get from back of circular deque is %d\n", myCircularDeque.GetRear())
 	fmt.Printf("The first delete from front of circular deque is %t\n", myCircularDeque.DeleteFront())
 	fmt.Printf("The second delete from front of circular deque is %t\n", myCircularDeque.DeleteLast())
+	allOne := solutions.AllOneConstructor()
+	allOne.Inc("hello")
+	allOne.Inc("goodbye")
+	allOne.Inc("hello")
+	allOne.Dec("hello")
+	fmt.Printf("The key with max value is %s\n", allOne.GetMaxKey())
+	fmt.Printf("The key with min value is %s\n", allOne.GetMinKey())
 }
