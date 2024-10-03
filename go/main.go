@@ -1488,4 +1488,5 @@ func main() {
 	stk.Increment(2, 100)
 	fmt.Printf("The top of the stack is %d\n", stk.Pop())
 	fmt.Printf("The top of the stack is %d\n", stk.Pop())
+	fmt.Printf("The length of the smallest subarray that you need to remove is %d\n", solutions.MinSubArrayLen(6, []int{3, 1, 4, 2}))
 }
