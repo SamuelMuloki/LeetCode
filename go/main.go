@@ -1491,4 +1491,5 @@ func main() {
 	fmt.Printf("The length of the smallest subarray that you need to remove is %d\n", solutions.MinSubArrayLen(6, []int{3, 1, 4, 2}))
 	fmt.Printf("The sum of the chemistry of all the teams is %d\n", solutions.DividePlayers([]int{3, 2, 5, 1, 3, 4}))
 	fmt.Printf("Sentence1 and sentence2 are similar %t\n", solutions.AreSentencesSimilar("My name is Haley", "My Haley"))
+	fmt.Printf("The minimum possible length of the resulting string that you can obtain is %d\n", solutions.MinLength("ABFCACDB"))
 }
