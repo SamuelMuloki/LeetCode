@@ -1493,4 +1493,5 @@ func main() {
 	fmt.Printf("Sentence1 and sentence2 are similar %t\n", solutions.AreSentencesSimilar("My name is Haley", "My Haley"))
 	fmt.Printf("The minimum possible length of the resulting string that you can obtain is %d\n", solutions.MinLength("ABFCACDB"))
 	fmt.Printf("The maximum width of a ramp in nums is %d\n", solutions.MaxWidthRamp([]int{6, 0, 8, 2, 1, 5}))
+	fmt.Printf("The chair number that the friend numbered targetFriend will sit on is %d\n", solutions.SmallestChair([][]int{{1, 4}, {2, 3}, {4, 6}}, 1))
 }
