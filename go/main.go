@@ -1495,4 +1495,5 @@ func main() {
 	fmt.Printf("The maximum width of a ramp in nums is %d\n", solutions.MaxWidthRamp([]int{6, 0, 8, 2, 1, 5}))
 	fmt.Printf("The chair number that the friend numbered targetFriend will sit on is %d\n", solutions.SmallestChair([][]int{{1, 4}, {2, 3}, {4, 6}}, 1))
 	fmt.Printf("The minimum number of groups that you can divide the intervals into is %d\n", solutions.MinGroups([][]int{{1, 3}, {5, 6}, {8, 10}, {11, 13}}))
+	fmt.Printf("The smallest range that includes at least one number from each of the k lists is %v\n", solutions.SmallestRange([][]int{{4, 10, 15, 24, 26}, {0, 9, 12, 20}, {5, 18, 22, 30}}))
 }
