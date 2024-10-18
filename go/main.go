@@ -1500,4 +1500,5 @@ func main() {
 	fmt.Printf("The minimum number of steps to group all the black balls to the right and all the white balls to the left is %d\n", solutions.MinimumSteps("11000"))
 	fmt.Printf("The longest possible happy string is %s\n", solutions.LongestDiverseString(1, 1, 7))
 	fmt.Printf("The maximum valued number you can get is %d\n", solutions.MaximumSwap(2736))
+	fmt.Printf("The number of different non-empty subsets with the maximum bitwise OR is %d\n", solutions.CountMaxOrSubsets([]int{3, 1}))
 }
