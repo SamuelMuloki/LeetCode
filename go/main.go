@@ -1502,4 +1502,5 @@ func main() {
 	fmt.Printf("The maximum valued number you can get is %d\n", solutions.MaximumSwap(2736))
 	fmt.Printf("The number of different non-empty subsets with the maximum bitwise OR is %d\n", solutions.CountMaxOrSubsets([]int{3, 1}))
 	fmt.Printf("The kth bit in Sn is %d\n", solutions.FindKthBit(3, 1))
+	fmt.Printf("The evaluation of the expression is %t\n", solutions.ParseBoolExpr("!(f)"))
 }
