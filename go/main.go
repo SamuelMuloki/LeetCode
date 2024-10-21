@@ -1503,4 +1503,5 @@ func main() {
 	fmt.Printf("The number of different non-empty subsets with the maximum bitwise OR is %d\n", solutions.CountMaxOrSubsets([]int{3, 1}))
 	fmt.Printf("The kth bit in Sn is %d\n", solutions.FindKthBit(3, 1))
 	fmt.Printf("The evaluation of the expression is %t\n", solutions.ParseBoolExpr("!(f)"))
+	fmt.Printf("The maximum number of unique substrings that the given string can be split into is %d\n", solutions.MaxUniqueSplit("ababccc"))
 }
