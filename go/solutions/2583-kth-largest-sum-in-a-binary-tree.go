@@ -1,7 +1,7 @@
 package solutions
 
 import (
-	"sort"
+	"container/heap"
 
 	"github.com/SamuelMuloki/LeetCode/go/utils"
 )
@@ -17,7 +17,7 @@ import (
 func KthLargestLevelSum(root *utils.TreeNode, k int) int64 {
 	queue := make([]*utils.TreeNode, 0)
 	queue = append(queue, root)
-	arr := []int{}
+	h := &MinHeap{}
 	for len(queue) > 0 {
 		qLen := len(queue)
 		sum := 0
@@ -32,14 +32,16 @@ func KthLargestLevelSum(root *utils.TreeNode, k int) int64 {
 			}
 		}
 
-		arr = append(arr, sum)
+		heap.Push(h, sum)
+		if h.Len() > k {
+			heap.Pop(h)
+		}
 		queue = queue[qLen:]
 	}
 
-	sort.Slice(arr, func(i, j int) bool { return arr[i] > arr[j] })
-	if k-1 >= len(arr) {
+	if k > h.Len() {
 		return -1
 	}
 
-	return int64(arr[k-1])
+	return int64((*h)[0])
 }
