@@ -1504,4 +1504,9 @@ func main() {
 	fmt.Printf("The kth bit in Sn is %d\n", solutions.FindKthBit(3, 1))
 	fmt.Printf("The evaluation of the expression is %t\n", solutions.ParseBoolExpr("!(f)"))
 	fmt.Printf("The maximum number of unique substrings that the given string can be split into is %d\n", solutions.MaxUniqueSplit("ababccc"))
+	fmt.Printf("The kth largest level sum in the tree is %d\n", solutions.KthLargestLevelSum(&utils.TreeNode{
+		Val:   5,
+		Left:  &utils.TreeNode{Val: 8, Left: &utils.TreeNode{Val: 2, Left: &utils.TreeNode{Val: 4}, Right: &utils.TreeNode{Val: 6}}, Right: &utils.TreeNode{Val: 1}},
+		Right: &utils.TreeNode{Val: 9, Left: &utils.TreeNode{Val: 3}, Right: &utils.TreeNode{Val: 7}},
+	}, 2))
 }
