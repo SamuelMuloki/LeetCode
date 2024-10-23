@@ -1509,4 +1509,9 @@ func main() {
 		Left:  &utils.TreeNode{Val: 8, Left: &utils.TreeNode{Val: 2, Left: &utils.TreeNode{Val: 4}, Right: &utils.TreeNode{Val: 6}}, Right: &utils.TreeNode{Val: 1}},
 		Right: &utils.TreeNode{Val: 9, Left: &utils.TreeNode{Val: 3}, Right: &utils.TreeNode{Val: 7}},
 	}, 2))
+	fmt.Printf("The root of the modified tree is %v\n", solutions.ReplaceValueInTree(&utils.TreeNode{
+		Val:   5,
+		Left:  &utils.TreeNode{Val: 4, Left: &utils.TreeNode{Val: 1}, Right: &utils.TreeNode{Val: 10}},
+		Right: &utils.TreeNode{Val: 9, Right: &utils.TreeNode{Val: 7}},
+	}))
 }
