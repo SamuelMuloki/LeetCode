@@ -1514,4 +1514,13 @@ func main() {
 		Left:  &utils.TreeNode{Val: 4, Left: &utils.TreeNode{Val: 1}, Right: &utils.TreeNode{Val: 10}},
 		Right: &utils.TreeNode{Val: 9, Right: &utils.TreeNode{Val: 7}},
 	}))
+	fmt.Printf("The two trees are flip equivalent %t\n", solutions.FlipEquiv(&utils.TreeNode{
+		Val:   1,
+		Left:  &utils.TreeNode{Val: 2, Right: &utils.TreeNode{Val: 3}},
+		Right: &utils.TreeNode{Val: 1, Left: &utils.TreeNode{Val: 3}, Right: &utils.TreeNode{Val: 2}},
+	}, &utils.TreeNode{
+		Val:   1,
+		Left:  &utils.TreeNode{Val: 2, Right: &utils.TreeNode{Val: 3}},
+		Right: &utils.TreeNode{Val: 1, Left: &utils.TreeNode{Val: 3}, Right: &utils.TreeNode{Val: 2}},
+	}))
 }
