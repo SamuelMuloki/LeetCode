@@ -1,29 +1,23 @@
 package solutions
 
+import (
+	"sort"
+	"strings"
+)
+
 func RemoveSubfolders(folder []string) []string {
-	exists := make(map[string]bool)
-	for i := range folder {
-		exists[folder[i]] = true
-	}
+	sort.Strings(folder)
 
-	ans := []string{}
-	for i := range folder {
-		curr, found := "", false
-		for j := 0; j < len(folder[i]); j++ {
-			curr += string(folder[i][j])
-			if curr == folder[i] || j+1 < len(folder[i]) && folder[i][j+1] != '/' {
-				continue
-			}
+	result := []string{}
+	result = append(result, folder[0])
+	for i := 1; i < len(folder); i++ {
+		lastFolder := result[len(result)-1]
+		lastFolder += string('/')
 
-			if _, ok := exists[curr]; ok {
-				found = true
-			}
-		}
-
-		if !found {
-			ans = append(ans, curr)
+		if !strings.HasPrefix(folder[i], lastFolder) {
+			result = append(result, folder[i])
 		}
 	}
 
-	return ans
+	return result
 }
