@@ -1524,4 +1524,10 @@ func main() {
 		Right: &utils.TreeNode{Val: 1, Left: &utils.TreeNode{Val: 3}, Right: &utils.TreeNode{Val: 2}},
 	}))
 	fmt.Printf("The folders after removing all sub-folders in those folders are %v\n", solutions.RemoveSubfolders([]string{"/a", "/a/b", "/c/d", "/c/d/e", "/c/f"}))
+
+	fmt.Printf("The height of the tree after performing the ith query is %v\n", solutions.TreeQueries(&utils.TreeNode{
+		Val:   1,
+		Left:  &utils.TreeNode{Val: 2, Left: &utils.TreeNode{Val: 4}},
+		Right: &utils.TreeNode{Val: 3},
+	}, []int{1, 2}))
 }
