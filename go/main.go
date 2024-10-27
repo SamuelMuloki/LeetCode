@@ -1530,4 +1530,7 @@ func main() {
 		Left:  &utils.TreeNode{Val: 2, Left: &utils.TreeNode{Val: 4}},
 		Right: &utils.TreeNode{Val: 3},
 	}, []int{1, 2}))
+	fmt.Printf("The number of square submatrices have all ones is %d\n", solutions.CountSquares([][]int{
+		{0, 1, 1, 1}, {1, 1, 1, 1}, {0, 1, 1, 1},
+	}))
 }
