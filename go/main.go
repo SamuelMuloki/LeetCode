@@ -1533,4 +1533,5 @@ func main() {
 	fmt.Printf("The number of square submatrices have all ones is %d\n", solutions.CountSquares([][]int{
 		{0, 1, 1, 1}, {1, 1, 1, 1}, {0, 1, 1, 1},
 	}))
+	fmt.Printf("The length of the longest square streak in nums is %d\n", solutions.LongestSquareStreak([]int{4, 3, 6, 16, 8, 2}))
 }
