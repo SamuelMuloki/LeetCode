@@ -1534,4 +1534,5 @@ func main() {
 		{0, 1, 1, 1}, {1, 1, 1, 1}, {0, 1, 1, 1},
 	}))
 	fmt.Printf("The length of the longest square streak in nums is %d\n", solutions.LongestSquareStreak([]int{4, 3, 6, 16, 8, 2}))
+	fmt.Printf("The maximum number of moves that you can perform is %d\n", solutions.MaxMoves([][]int{{2, 4, 3, 5}, {5, 4, 9, 3}, {3, 4, 2, 11}, {10, 9, 13, 15}}))
 }
