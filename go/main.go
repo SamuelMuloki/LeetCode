@@ -1538,4 +1538,5 @@ func main() {
 	fmt.Printf("The minimum number of elements to remove to make nums a mountain array is %d\n", solutions.MinimumMountainRemovals([]int{1, 3, 1}))
 	fmt.Printf("The minimum total distance traveled by all the robots is %d\n", solutions.MinimumTotalDistance([]int{0, 4, 6}, [][]int{{2, 2}, {6, 2}}))
 	fmt.Printf("The minimum possible number of characters from s to make it fancy is %s\n", solutions.MakeFancyString("aaabbb"))
+	fmt.Printf("The sentence is a circular sentence %t\n", solutions.IsCircularSentence("leetcode exercises sound delightful"))
 }
