@@ -1539,4 +1539,5 @@ func main() {
 	fmt.Printf("The minimum total distance traveled by all the robots is %d\n", solutions.MinimumTotalDistance([]int{0, 4, 6}, [][]int{{2, 2}, {6, 2}}))
 	fmt.Printf("The minimum possible number of characters from s to make it fancy is %s\n", solutions.MakeFancyString("aaabbb"))
 	fmt.Printf("The sentence is a circular sentence %t\n", solutions.IsCircularSentence("leetcode exercises sound delightful"))
+	fmt.Printf("The string s can become goal after some number of shifts on s is %t\n", solutions.RotateString("abcde", "cdeab"))
 }
