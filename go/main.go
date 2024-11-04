@@ -1540,4 +1540,5 @@ func main() {
 	fmt.Printf("The minimum possible number of characters from s to make it fancy is %s\n", solutions.MakeFancyString("aaabbb"))
 	fmt.Printf("The sentence is a circular sentence %t\n", solutions.IsCircularSentence("leetcode exercises sound delightful"))
 	fmt.Printf("The string s can become goal after some number of shifts on s is %t\n", solutions.RotateString("abcde", "cdeab"))
+	fmt.Printf("The compression of the word is %s\n", solutions.CompressedString("aaabbccc"))
 }
