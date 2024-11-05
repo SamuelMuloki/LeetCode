@@ -1541,4 +1541,5 @@ func main() {
 	fmt.Printf("The sentence is a circular sentence %t\n", solutions.IsCircularSentence("leetcode exercises sound delightful"))
 	fmt.Printf("The string s can become goal after some number of shifts on s is %t\n", solutions.RotateString("abcde", "cdeab"))
 	fmt.Printf("The compression of the word is %s\n", solutions.CompressedString("aaabbccc"))
+	fmt.Printf("The minimum number of changes required to make the string s beautiful is %d\n", solutions.MinChanges("1100010"))
 }
