@@ -2,14 +2,36 @@ package solutions
 
 import (
 	"math/bits"
-	"sort"
 )
 
 func CanSortArray(nums []int) bool {
-	sort.SliceStable(nums, func(i, j int) bool {
-		countI, countJ := bits.OnesCount(uint(nums[i])), bits.OnesCount(uint(nums[j]))
-		return countI == countJ && nums[i] < nums[j]
-	})
+	n := len(nums)
+	arr := make([]int, n)
+	copy(arr, nums)
 
-	return sort.SliceIsSorted(nums, func(i, j int) bool { return nums[i] < nums[j] })
+	for i := 0; i < n-1; i++ {
+		if arr[i] <= arr[i+1] {
+			continue
+		} else {
+			if bits.OnesCount(uint(arr[i])) == bits.OnesCount(uint(arr[i+1])) {
+				swapArr(arr, i, i+1)
+			} else {
+				return false
+			}
+		}
+	}
+
+	for i := n - 1; i > 0; i-- {
+		if arr[i] >= arr[i-1] {
+			continue
+		} else {
+			if bits.OnesCount(uint(arr[i])) == bits.OnesCount(uint(arr[i-1])) {
+				swapArr(arr, i, i-1)
+			} else {
+				return false
+			}
+		}
+	}
+
+	return true
 }
