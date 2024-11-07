@@ -1543,4 +1543,5 @@ func main() {
 	fmt.Printf("The compression of the word is %s\n", solutions.CompressedString("aaabbccc"))
 	fmt.Printf("The minimum number of changes required to make the string s beautiful is %d\n", solutions.MinChanges("1100010"))
 	fmt.Printf("The slice can be sorted %t\n", solutions.CanSortArray([]int{8, 4, 2, 30, 15}))
+	fmt.Printf("The largest combination with bitwise AND greater than zero is %d\n", solutions.LargestCombination([]int{16, 17, 71, 62, 12, 24, 14}))
 }
