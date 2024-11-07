@@ -2,7 +2,7 @@ package solutions
 
 func LargestCombination(candidates []int) int {
 	ans := 0
-	for i := 0; i < 32; i++ {
+	for i := 0; i < 24; i++ {
 		count := 0
 		for _, num := range candidates {
 			if num&(1<<i) != 0 {
