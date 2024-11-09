@@ -1545,4 +1545,5 @@ func main() {
 	fmt.Printf("The slice can be sorted %t\n", solutions.CanSortArray([]int{8, 4, 2, 30, 15}))
 	fmt.Printf("The largest combination with bitwise AND greater than zero is %d\n", solutions.LargestCombination([]int{16, 17, 71, 62, 12, 24, 14}))
 	fmt.Printf("The maximum xor for each query is %v\n", solutions.GetMaximumXor([]int{0, 1, 1, 3}, 2))
+	fmt.Printf("The minimum possible value of nums[n - 1] is %d\n", solutions.MinEnd(3, 4))
 }
