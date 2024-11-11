@@ -1547,4 +1547,5 @@ func main() {
 	fmt.Printf("The maximum xor for each query is %v\n", solutions.GetMaximumXor([]int{0, 1, 1, 3}, 2))
 	fmt.Printf("The minimum possible value of nums[n - 1] is %d\n", solutions.MinEnd(3, 4))
 	fmt.Printf("The length of the shortest special non-empty subarray is %d\n", solutions.MinimumSubarrayLength([]int{1, 2, 3}, 2))
+	fmt.Printf("We can make nums strictly increasing %t\n", solutions.PrimeSubOperation([]int{4, 9, 6, 10}))
 }
