@@ -1550,4 +1550,5 @@ func main() {
 	fmt.Printf("We can make nums strictly increasing %t\n", solutions.PrimeSubOperation([]int{4, 9, 6, 10}))
 	fmt.Printf("The maximum beauty of an item whose price is less than or equal to queries[j] is %v\n", solutions.MaximumBeauty([][]int{{1, 2}, {3, 2}, {2, 4}, {5, 6}, {3, 5}}, []int{1, 2, 3, 4}))
 	fmt.Printf("The number of fair pairs is %d\n", solutions.CountFairPairs([]int{0, 1, 7, 4, 4, 5}, 3, 6))
+	fmt.Printf("The minimum possible x is %d\n", solutions.MinimizedMaximum(7, []int{15, 10, 10}))
 }
