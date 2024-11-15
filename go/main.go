@@ -1551,4 +1551,5 @@ func main() {
 	fmt.Printf("The maximum beauty of an item whose price is less than or equal to queries[j] is %v\n", solutions.MaximumBeauty([][]int{{1, 2}, {3, 2}, {2, 4}, {5, 6}, {3, 5}}, []int{1, 2, 3, 4}))
 	fmt.Printf("The number of fair pairs is %d\n", solutions.CountFairPairs([]int{0, 1, 7, 4, 4, 5}, 3, 6))
 	fmt.Printf("The minimum possible x is %d\n", solutions.MinimizedMaximum(7, []int{15, 10, 10}))
+	fmt.Printf("The length of the shortest subarray to remove to make the array sorted is %d\n", solutions.FindLengthOfShortestSubarray([]int{1, 2, 3, 10, 4, 2, 3, 5}))
 }
