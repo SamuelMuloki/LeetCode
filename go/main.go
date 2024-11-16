@@ -1552,4 +1552,5 @@ func main() {
 	fmt.Printf("The number of fair pairs is %d\n", solutions.CountFairPairs([]int{0, 1, 7, 4, 4, 5}, 3, 6))
 	fmt.Printf("The minimum possible x is %d\n", solutions.MinimizedMaximum(7, []int{15, 10, 10}))
 	fmt.Printf("The length of the shortest subarray to remove to make the array sorted is %d\n", solutions.FindLengthOfShortestSubarray([]int{1, 2, 3, 10, 4, 2, 3, 5}))
+	fmt.Printf("The integer array results of size n - k + 1, where results[i] is the power of nums[i..(i + k - 1)] is %v\n", solutions.ResultsArray([]int{1, 2, 3, 4, 3, 2, 5}, 3))
 }
