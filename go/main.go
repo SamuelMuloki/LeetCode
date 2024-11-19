@@ -1555,4 +1555,5 @@ func main() {
 	fmt.Printf("The integer array results of size n - k + 1, where results[i] is the power of nums[i..(i + k - 1)] is %v\n", solutions.ResultsArray([]int{1, 2, 3, 4, 3, 2, 5}, 3))
 	fmt.Printf("The length of the shortest non-empty subarray of nums with a sum of at least k is %d\n", solutions.ShortestSubarray([]int{2, -1, 2}, 3))
 	fmt.Printf("The decrypted code to defuse the bomb! %v\n", solutions.Decrypt([]int{5, 7, 1, 4}, 3))
+	fmt.Printf("The maximum subarray sum of all the subarrays that meet the conditions is %d\n", solutions.MaximumSubarraySum([]int{1, 5, 4, 2, 9, 9, 9}, 3))
 }
