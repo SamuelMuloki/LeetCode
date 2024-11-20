@@ -1556,4 +1556,5 @@ func main() {
 	fmt.Printf("The length of the shortest non-empty subarray of nums with a sum of at least k is %d\n", solutions.ShortestSubarray([]int{2, -1, 2}, 3))
 	fmt.Printf("The decrypted code to defuse the bomb! %v\n", solutions.Decrypt([]int{5, 7, 1, 4}, 3))
 	fmt.Printf("The maximum subarray sum of all the subarrays that meet the conditions is %d\n", solutions.MaximumSubarraySum([]int{1, 5, 4, 2, 9, 9, 9}, 3))
+	fmt.Printf("The minimum number of minutes needed for you to take at least k of each character is %d\n", solutions.TakeCharacters("aabaaaacaabc", 2))
 }
