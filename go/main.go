@@ -1558,4 +1558,5 @@ func main() {
 	fmt.Printf("The maximum subarray sum of all the subarrays that meet the conditions is %d\n", solutions.MaximumSubarraySum([]int{1, 5, 4, 2, 9, 9, 9}, 3))
 	fmt.Printf("The minimum number of minutes needed for you to take at least k of each character is %d\n", solutions.TakeCharacters("aabaaaacaabc", 2))
 	fmt.Printf("The number of unoccupied cells that are not guarded are %d\n", solutions.CountUnguarded(4, 6, [][]int{{0, 0}, {1, 1}, {2, 3}}, [][]int{{0, 1}, {2, 2}, {1, 4}}))
+	fmt.Printf("The maximum number of rows that have all values equal after some number of flips is %d\n", solutions.MaxEqualRowsAfterFlips([][]int{{0, 1}, {1, 1}}))
 }
