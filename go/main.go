@@ -1562,4 +1562,7 @@ func main() {
 	fmt.Printf("The n x m matrix representing the box after the rotation is %v\n", solutions.RotateTheBox([][]byte{
 		{'#', '#', '*', '.', '*', '.'}, {'#', '#', '#', '*', '.', '.'}, {'#', '#', '#', '.', '#', '.'},
 	}))
+	fmt.Printf("The maximum sum of the matrix's elements using the operations is %d\n", solutions.MaxMatrixSum([][]int{
+		{1, -1}, {-1, 1},
+	}))
 }
