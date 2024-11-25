@@ -1565,4 +1565,5 @@ func main() {
 	fmt.Printf("The maximum sum of the matrix's elements using the operations is %d\n", solutions.MaxMatrixSum([][]int{
 		{1, -1}, {-1, 1},
 	}))
+	fmt.Printf("The least number of moves required so that the state of the board is solved are %d\n", solutions.SlidingPuzzle([][]int{{1, 2, 3}, {4, 0, 5}}))
 }
