@@ -1567,4 +1567,5 @@ func main() {
 	}))
 	fmt.Printf("The least number of moves required so that the state of the board is solved are %d\n", solutions.SlidingPuzzle([][]int{{1, 2, 3}, {4, 0, 5}}))
 	fmt.Printf("The team that will be the champion of the tournament is %d\n", solutions.FindChampionII(3, [][]int{{0, 1}, {1, 2}}))
+	fmt.Printf("The length of the shortest path from city 0 to city n - 1 after processing the first i + 1 queries is %d\n", solutions.ShortestDistanceAfterQueries(5, [][]int{{2, 4}, {0, 2}, {0, 4}}))
 }
