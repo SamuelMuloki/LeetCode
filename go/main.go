@@ -1571,4 +1571,5 @@ func main() {
 	fmt.Printf("The minimum number of obstacles to remove so you can move from the upper left corner to the lower right corner is %d\n", solutions.MinimumObstacles([][]int{
 		{0, 1, 1}, {1, 1, 0}, {1, 1, 0},
 	}))
+	fmt.Printf("The valid arrangement of pairs is %v\n", solutions.ValidArrangement([][]int{{5, 1}, {4, 5}, {11, 9}, {9, 4}}))
 }
