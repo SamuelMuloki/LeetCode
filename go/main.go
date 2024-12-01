@@ -1572,4 +1572,5 @@ func main() {
 		{0, 1, 1}, {1, 1, 0}, {1, 1, 0},
 	}))
 	fmt.Printf("The valid arrangement of pairs is %v\n", solutions.ValidArrangement([][]int{{5, 1}, {4, 5}, {11, 9}, {9, 4}}))
+	fmt.Printf("N and its double exist %t\n", solutions.CheckIfExist([]int{10, 2, 5, 3}))
 }
