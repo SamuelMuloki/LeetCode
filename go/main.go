@@ -1574,4 +1574,5 @@ func main() {
 	fmt.Printf("The valid arrangement of pairs is %v\n", solutions.ValidArrangement([][]int{{5, 1}, {4, 5}, {11, 9}, {9, 4}}))
 	fmt.Printf("N and its double exist %t\n", solutions.CheckIfExist([]int{10, 2, 5, 3}))
 	fmt.Printf("The word occurs as a prefix in a sentence %d\n", solutions.IsPrefixOfWord("i love eating burger", "burg"))
+	fmt.Printf("The modified string after the spaces have been added is %s\n", solutions.AddSpaces("LeetcodeHelpsMeLearn", []int{8, 13, 15}))
 }
