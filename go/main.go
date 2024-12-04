@@ -1575,4 +1575,5 @@ func main() {
 	fmt.Printf("N and its double exist %t\n", solutions.CheckIfExist([]int{10, 2, 5, 3}))
 	fmt.Printf("The word occurs as a prefix in a sentence %d\n", solutions.IsPrefixOfWord("i love eating burger", "burg"))
 	fmt.Printf("The modified string after the spaces have been added is %s\n", solutions.AddSpaces("LeetcodeHelpsMeLearn", []int{8, 13, 15}))
+	fmt.Printf("It is possible to make str2 a subsequence of str1 by performing the operation at most once %t\n", solutions.CanMakeSubsequence("abc", "ad"))
 }
