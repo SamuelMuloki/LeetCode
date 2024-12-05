@@ -1577,4 +1577,5 @@ func main() {
 	fmt.Printf("The modified string after the spaces have been added is %s\n", solutions.AddSpaces("LeetcodeHelpsMeLearn", []int{8, 13, 15}))
 	fmt.Printf("It is possible to make str2 a subsequence of str1 by performing the operation at most once %t\n", solutions.CanMakeSubsequence("abc", "ad"))
 	fmt.Printf("The smallest number x greater than or equal to n is %d\n", solutions.SmallestNumber2(10))
+	fmt.Printf("It is possible to obtain the string target by moving the pieces of the string start any number of times %t\n", solutions.CanChange("_R", "R_"))
 }
