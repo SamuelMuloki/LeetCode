@@ -1578,4 +1578,5 @@ func main() {
 	fmt.Printf("It is possible to make str2 a subsequence of str1 by performing the operation at most once %t\n", solutions.CanMakeSubsequence("abc", "ad"))
 	fmt.Printf("The smallest number x greater than or equal to n is %d\n", solutions.SmallestNumber2(10))
 	fmt.Printf("It is possible to obtain the string target by moving the pieces of the string start any number of times %t\n", solutions.CanChange("_R", "R_"))
+	fmt.Printf("The maximum number of integers you can choose following the mentioned rules is %d\n", solutions.MaxCount([]int{1, 6, 5}, 5, 6))
 }
