@@ -1580,4 +1580,5 @@ func main() {
 	fmt.Printf("It is possible to obtain the string target by moving the pieces of the string start any number of times %t\n", solutions.CanChange("_R", "R_"))
 	fmt.Printf("The maximum number of integers you can choose following the mentioned rules is %d\n", solutions.MaxCount([]int{1, 6, 5}, 5, 6))
 	fmt.Printf("The minimum possible penalty after performing the operations is %d\n", solutions.MinimumSize([]int{9}, 3))
+	fmt.Printf("The maximum sum of the two best non overlapping events is %d\n", solutions.MaxTwoEvents([][]int{{1, 3, 2}, {4, 5, 2}, {2, 4, 3}}))
 }
