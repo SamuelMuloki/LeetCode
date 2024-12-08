@@ -16,18 +16,12 @@ func MaxTwoEvents(events [][]int) int {
 	ans := 0
 	for _, event := range events {
 		maxValue := event[2]
-		left, right := 0, n
-		for left < right {
-			mid := (left + right) >> 1
-			if events[mid][0] > event[1] {
-				right = mid
-			} else {
-				left = mid + 1
-			}
-		}
+		index := sort.Search(n, func(i int) bool {
+			return events[i][0] > event[1]
+		})
 
-		if left < n {
-			maxValue += arr[left]
+		if index < n {
+			maxValue += arr[index]
 		}
 		ans = max(ans, maxValue)
 	}
