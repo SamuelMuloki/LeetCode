@@ -1583,4 +1583,5 @@ func main() {
 	fmt.Printf("The maximum sum of the two best non overlapping events is %d\n", solutions.MaxTwoEvents([][]int{{1, 3, 2}, {4, 5, 2}, {2, 4, 3}}))
 	fmt.Printf("Is special array %t\n", solutions.IsArraySpecial([]int{2, 1, 4}))
 	fmt.Printf("The array of booleans is %v\n", solutions.IsArraySpecial2([]int{3, 4, 1, 2, 6}, [][]int{{0, 4}}))
+	fmt.Printf("The length of the longest special substring of s which occurs at least thrice is %d\n", solutions.MaximumLength("aaaa"))
 }
