@@ -1584,4 +1584,5 @@ func main() {
 	fmt.Printf("Is special array %t\n", solutions.IsArraySpecial([]int{2, 1, 4}))
 	fmt.Printf("The array of booleans is %v\n", solutions.IsArraySpecial2([]int{3, 4, 1, 2, 6}, [][]int{{0, 4}}))
 	fmt.Printf("The length of the longest special substring of s which occurs at least thrice is %d\n", solutions.MaximumLength("aaaa"))
+	fmt.Printf("The maximum possible beauty of the array nums after applying the operation any number of times is %d\n", solutions.MaximumBeauty2([]int{4, 6, 1, 2}, 2))
 }
