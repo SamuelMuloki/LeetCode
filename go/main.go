@@ -1587,4 +1587,5 @@ func main() {
 	fmt.Printf("The maximum possible beauty of the array nums after applying the operation any number of times is %d\n", solutions.MaximumBeauty2([]int{4, 6, 1, 2}, 2))
 	fmt.Printf("The number of gifts remaining after k seconds is %d\n", solutions.PickGifts([]int{25, 64, 9, 4, 100}, 4))
 	fmt.Printf("The prices you will pay for ith item is %v\n", solutions.FinalPrices([]int{8, 4, 6, 2, 3}))
+	fmt.Printf("The largest number of chunks we can make to sort the array is %d\n", solutions.MaxChunksToSorted([]int{4, 3, 2, 1, 0}))
 }
