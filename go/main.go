@@ -1588,4 +1588,9 @@ func main() {
 	fmt.Printf("The number of gifts remaining after k seconds is %d\n", solutions.PickGifts([]int{25, 64, 9, 4, 100}, 4))
 	fmt.Printf("The prices you will pay for ith item is %v\n", solutions.FinalPrices([]int{8, 4, 6, 2, 3}))
 	fmt.Printf("The largest number of chunks we can make to sort the array is %d\n", solutions.MaxChunksToSorted([]int{4, 3, 2, 1, 0}))
+	fmt.Printf("The minimum number of operations needed to make the values at each level sorted in a strictly increasing order is %d\n", solutions.MinimumOperations2(&utils.TreeNode{
+		Val:   1,
+		Left:  &utils.TreeNode{Val: 4, Left: &utils.TreeNode{Val: 7}, Right: &utils.TreeNode{Val: 6}},
+		Right: &utils.TreeNode{Val: 3, Left: &utils.TreeNode{Val: 8, Left: &utils.TreeNode{Val: 9}}, Right: &utils.TreeNode{Val: 5, Left: &utils.TreeNode{Val: 10}}},
+	}))
 }
