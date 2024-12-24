@@ -1593,4 +1593,5 @@ func main() {
 		Left:  &utils.TreeNode{Val: 4, Left: &utils.TreeNode{Val: 7}, Right: &utils.TreeNode{Val: 6}},
 		Right: &utils.TreeNode{Val: 3, Left: &utils.TreeNode{Val: 8, Left: &utils.TreeNode{Val: 9}}, Right: &utils.TreeNode{Val: 5, Left: &utils.TreeNode{Val: 10}}},
 	}))
+	fmt.Printf("The minimum possible diameter of the resulting tree is %d\n", solutions.MinimumDiameterAfterMerge([][]int{{0, 1}, {0, 2}, {0, 3}}, [][]int{{0, 1}}))
 }
