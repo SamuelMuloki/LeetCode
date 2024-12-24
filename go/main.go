@@ -1594,4 +1594,5 @@ func main() {
 		Right: &utils.TreeNode{Val: 3, Left: &utils.TreeNode{Val: 8, Left: &utils.TreeNode{Val: 9}}, Right: &utils.TreeNode{Val: 5, Left: &utils.TreeNode{Val: 10}}},
 	}))
 	fmt.Printf("The minimum possible diameter of the resulting tree is %d\n", solutions.MinimumDiameterAfterMerge([][]int{{0, 1}, {0, 2}, {0, 3}}, [][]int{{0, 1}}))
+	fmt.Printf("The maximum number of components in any valid split is %d\n", solutions.MaxKDivisibleComponents(7, [][]int{{0, 1}, {0, 2}, {1, 3}, {1, 4}, {2, 5}, {2, 6}}, []int{3, 0, 6, 1, 5, 2, 1}, 3))
 }
