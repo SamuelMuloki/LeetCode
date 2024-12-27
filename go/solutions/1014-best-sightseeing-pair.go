@@ -2,15 +2,11 @@ package solutions
 
 func MaxScoreSightseeingPair(values []int) int {
 	n := len(values)
-	maxLeftScore := make([]int, n)
-	maxLeftScore[0] = values[0]
-	maxScore := 0
+	ans, maxScore := 0, values[0]
 	for i := 1; i < n; i++ {
-		currentRightScore := values[i] - i
-		maxScore = max(maxScore, maxLeftScore[i-1]+currentRightScore)
-		currentLeftScore := values[i] + i
-		maxLeftScore[i] = max(maxLeftScore[i-1], currentLeftScore)
+		ans = max(ans, maxScore+values[i]-i)
+		maxScore = max(maxScore, values[i]+i)
 	}
 
-	return maxScore
+	return ans
 }
