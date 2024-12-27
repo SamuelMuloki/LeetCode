@@ -1597,4 +1597,5 @@ func main() {
 	fmt.Printf("The maximum number of components in any valid split is %d\n", solutions.MaxKDivisibleComponents(7, [][]int{{0, 1}, {0, 2}, {1, 3}, {1, 4}, {2, 5}, {2, 6}}, []int{3, 0, 6, 1, 5, 2, 1}, 3))
 	fmt.Printf("The indices of the leftmost building where Alice and Bob can meet on the ith query are %v\n", solutions.LeftmostBuildingQueries([]int{6, 4, 8, 5, 2, 7}, [][]int{{0, 1}, {0, 3}, {2, 4}, {2, 2}}))
 	fmt.Printf("The number of different expressions that you can build, which evaluates to target is %d\n", solutions.FindTargetSumWays([]int{1, 1, 1, 1, 1}, 3))
+	fmt.Printf("The maximum score of a pair of sightseeing spots %d\n", solutions.MaxScoreSightseeingPair([]int{8, 1, 5, 2, 6}))
 }
