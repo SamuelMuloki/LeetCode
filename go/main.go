@@ -1600,4 +1600,5 @@ func main() {
 	fmt.Printf("The maximum score of a pair of sightseeing spots %d\n", solutions.MaxScoreSightseeingPair([]int{8, 1, 5, 2, 6}))
 	fmt.Printf("The three non-overlapping subarrays with maximum sum are %v\n", solutions.MaxSumOfThreeSubarrays([]int{1, 2, 1, 2, 6, 7, 5, 1}, 2))
 	fmt.Printf("The number of ways to form target from words is %d\n", solutions.NumWays2([]string{"acca", "bbbb", "caca"}, "aba"))
+	fmt.Printf("The number of different good strings that can be constructed is %d\n", solutions.CountGoodStrings(3, 3, 1, 1))
 }
