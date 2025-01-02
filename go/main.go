@@ -1602,4 +1602,5 @@ func main() {
 	fmt.Printf("The number of ways to form target from words is %d\n", solutions.NumWays2([]string{"acca", "bbbb", "caca"}, "aba"))
 	fmt.Printf("The number of different good strings that can be constructed is %d\n", solutions.CountGoodStrings(3, 3, 1, 1))
 	fmt.Printf("The minimum number of dollars you need to travel every day in the given list of days is %d\n", solutions.MincostTickets([]int{1, 4, 6, 7, 8, 20}, []int{2, 7, 15}))
+	fmt.Printf("The array ans of size queries.length, where ans[i] is the answer to the ith query is %v\n", solutions.VowelStrings([]string{"aba", "bcb", "ece", "aa", "e"}, [][]int{{0, 2}, {1, 4}, {1, 1}}))
 }
