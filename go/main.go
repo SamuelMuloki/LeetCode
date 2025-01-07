@@ -1604,4 +1604,5 @@ func main() {
 	fmt.Printf("The minimum number of dollars you need to travel every day in the given list of days is %d\n", solutions.MincostTickets([]int{1, 4, 6, 7, 8, 20}, []int{2, 7, 15}))
 	fmt.Printf("The array ans of size queries.length, where ans[i] is the answer to the ith query is %v\n", solutions.VowelStrings([]string{"aba", "bcb", "ece", "aa", "e"}, [][]int{{0, 2}, {1, 4}, {1, 1}}))
 	fmt.Printf("The final string after all such shifts to s are applied is %s\n", solutions.ShiftingLetters2("abc", [][]int{{0, 1, 0}, {1, 2, 1}, {0, 2, 1}}))
+	fmt.Printf("All strings in words that are a substring of another word are %v\n", solutions.StringMatching([]string{"mass", "as", "hero", "superhero"}))
 }
