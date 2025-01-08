@@ -1605,4 +1605,5 @@ func main() {
 	fmt.Printf("The array ans of size queries.length, where ans[i] is the answer to the ith query is %v\n", solutions.VowelStrings([]string{"aba", "bcb", "ece", "aa", "e"}, [][]int{{0, 2}, {1, 4}, {1, 1}}))
 	fmt.Printf("The final string after all such shifts to s are applied is %s\n", solutions.ShiftingLetters2("abc", [][]int{{0, 1, 0}, {1, 2, 1}, {0, 2, 1}}))
 	fmt.Printf("All strings in words that are a substring of another word are %v\n", solutions.StringMatching([]string{"mass", "as", "hero", "superhero"}))
+	fmt.Printf("The number of index pairs (i, j) such that i < j, and isPrefixAndSuffix(words[i], words[j]) is true are %d\n", solutions.CountPrefixSuffixPairs([]string{"a", "aba", "ababa", "aa"}))
 }
