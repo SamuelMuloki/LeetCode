@@ -1,47 +1,32 @@
 package solutions
 
 func WordSubsets(words1 []string, words2 []string) []string {
-	maxFrequencies := make([]int, 26)
-	lettersNeeded := make(map[int]struct{})
-
-	countFrequencies := func(word string) []int {
-		frequencies := make([]int, 26)
-		for _, c := range word {
-			idx := c - 'a'
-			frequencies[idx]++
-		}
-		return frequencies
-	}
-
+	count := [26]int{}
 	for _, word := range words2 {
-		wordFrequencies := countFrequencies(word)
-		for i := 0; i < 26; i++ {
-			if wordFrequencies[i] > maxFrequencies[i] {
-				maxFrequencies[i] = wordFrequencies[i]
-				lettersNeeded[i] = struct{}{}
-			}
+		count2 := [26]int{}
+		for _, ch := range word {
+			count2[ch-'a']++
+			count[ch-'a'] = max(count[ch-'a'], count2[ch-'a'])
 		}
 	}
 
-	lettersNeededSlice := make([]int, 0, len(lettersNeeded))
-	for i := range lettersNeeded {
-		lettersNeededSlice = append(lettersNeededSlice, i)
-	}
-
-	universalWords := []string{}
+	ans := []string{}
 	for _, word := range words1 {
-		wordFrequencies := countFrequencies(word)
-		isUniversal := true
-		for _, i := range lettersNeededSlice {
-			if wordFrequencies[i] < maxFrequencies[i] {
-				isUniversal = false
+		count2 := [26]int{}
+		for _, ch := range word {
+			count2[ch-'a']++
+		}
+		for i := 0; i <= 26; i++ {
+			if i == 26 {
+				ans = append(ans, word)
+				break
+			}
+
+			if count[i] > count2[i] {
 				break
 			}
 		}
-		if isUniversal {
-			universalWords = append(universalWords, word)
-		}
 	}
 
-	return universalWords
+	return ans
 }
