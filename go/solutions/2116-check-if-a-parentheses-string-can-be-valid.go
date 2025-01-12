@@ -32,9 +32,5 @@ func CanBeValid(s string, locked string) bool {
 		unlocked = unlocked[:len(unlocked)-1]
 	}
 
-	if len(openBrackets) > 0 {
-		return false
-	}
-
-	return true
+	return len(openBrackets) == 0
 }
