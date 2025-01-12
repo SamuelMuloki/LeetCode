@@ -1608,4 +1608,5 @@ func main() {
 	fmt.Printf("The number of index pairs (i, j) such that i < j, and isPrefixAndSuffix(words[i], words[j]) is true are %d\n", solutions.CountPrefixSuffixPairs([]string{"a", "aba", "ababa", "aa"}))
 	fmt.Printf("The array of all the universal strings in words1 is %v\n", solutions.WordSubsets([]string{"amazon", "apple", "facebook", "google", "leetcode"}, []string{"e", "o"}))
 	fmt.Printf("You can use all the characters in s to construct k palindrome strings %t\n", solutions.CanConstruct("annabelle", 2))
+	fmt.Printf("You can make s a valid parentheses string %t\n", solutions.CanBeValid("))()))", "010100"))
 }
