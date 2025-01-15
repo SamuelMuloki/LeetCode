@@ -1610,4 +1610,5 @@ func main() {
 	fmt.Printf("You can use all the characters in s to construct k palindrome strings %t\n", solutions.CanConstruct("annabelle", 2))
 	fmt.Printf("You can make s a valid parentheses string %t\n", solutions.CanBeValid("))()))", "010100"))
 	fmt.Printf("The minimum length of the final string s that you can achieve after any number of operations is %d\n", solutions.MinimumLength2("aabccabba"))
+	fmt.Printf("Te positive integer x with the set bits equal to num2 and where x XOR num1 is minimal is %d\n", solutions.MinimizeXor(3, 5))
 }
