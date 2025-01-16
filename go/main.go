@@ -1611,4 +1611,5 @@ func main() {
 	fmt.Printf("You can make s a valid parentheses string %t\n", solutions.CanBeValid("))()))", "010100"))
 	fmt.Printf("The minimum length of the final string s that you can achieve after any number of operations is %d\n", solutions.MinimumLength2("aabccabba"))
 	fmt.Printf("Te positive integer x with the set bits equal to num2 and where x XOR num1 is minimal is %d\n", solutions.MinimizeXor(3, 5))
+	fmt.Printf("The bitwise XOR of all integers in nums3 is %d\n", solutions.XorAllNums([]int{2, 1, 3}, []int{10, 2, 5, 0}))
 }
