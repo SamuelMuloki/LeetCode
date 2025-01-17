@@ -1,10 +1,10 @@
 package solutions
 
 func DoesValidArrayExist(derived []int) bool {
-	XOR := 0
+	sum := 0
 	for _, num := range derived {
-		XOR ^= num
+		sum += num
 	}
 
-	return XOR == 0
+	return sum%2 == 0
 }
