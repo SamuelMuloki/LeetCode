@@ -1614,4 +1614,5 @@ func main() {
 	fmt.Printf("The bitwise XOR of all integers in nums3 is %d\n", solutions.XorAllNums([]int{2, 1, 3}, []int{10, 2, 5, 0}))
 	fmt.Printf("There exists a valid binary array original that could have formed derived %t\n", solutions.DoesValidArrayExist([]int{1, 1, 0}))
 	fmt.Printf("The minimum cost to make the grid have at least one valid path is %d\n", solutions.MinCost2([][]int{{1, 1, 1, 1}, {2, 2, 2, 2}, {1, 1, 1, 1}, {2, 2, 2, 2}}))
+	fmt.Printf("The amount of water that can be trapped after raining is %d\n", solutions.TrapRainWater([][]int{{1, 4, 3, 1, 3, 2}, {3, 2, 1, 3, 2, 4}, {2, 3, 3, 2, 3, 1}}))
 }
