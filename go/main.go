@@ -1617,4 +1617,5 @@ func main() {
 	fmt.Printf("The amount of water that can be trapped after raining is %d\n", solutions.TrapRainWater([][]int{{1, 4, 3, 1, 3, 2}, {3, 2, 1, 3, 2, 4}, {2, 3, 3, 2, 3, 1}}))
 	fmt.Printf("The smallest index i at which either a row or a column will be completely painted in mat is %d\n", solutions.FirstCompleteIndex([]int{1, 3, 4, 2}, [][]int{{1, 4}, {2, 3}}))
 	fmt.Printf("The maximum absolute difference between adjacent elements is %d\n", solutions.MaxAdjacentDistance([]int{1, 2, 4}))
+	fmt.Printf("The minimum number of consecutive cards you have to pick up to have a pair of matching cards among the picked cards is %d\n", solutions.MinimumCardPickup([]int{3, 4, 2, 3, 4, 7}))
 }
