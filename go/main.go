@@ -1615,4 +1615,5 @@ func main() {
 	fmt.Printf("There exists a valid binary array original that could have formed derived %t\n", solutions.DoesValidArrayExist([]int{1, 1, 0}))
 	fmt.Printf("The minimum cost to make the grid have at least one valid path is %d\n", solutions.MinCost2([][]int{{1, 1, 1, 1}, {2, 2, 2, 2}, {1, 1, 1, 1}, {2, 2, 2, 2}}))
 	fmt.Printf("The amount of water that can be trapped after raining is %d\n", solutions.TrapRainWater([][]int{{1, 4, 3, 1, 3, 2}, {3, 2, 1, 3, 2, 4}, {2, 3, 3, 2, 3, 1}}))
+	fmt.Printf("The smallest index i at which either a row or a column will be completely painted in mat is %d\n", solutions.FirstCompleteIndex([]int{1, 3, 4, 2}, [][]int{{1, 4}, {2, 3}}))
 }
