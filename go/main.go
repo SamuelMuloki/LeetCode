@@ -1619,4 +1619,5 @@ func main() {
 	fmt.Printf("The maximum absolute difference between adjacent elements is %d\n", solutions.MaxAdjacentDistance([]int{1, 2, 4}))
 	fmt.Printf("The minimum number of consecutive cards you have to pick up to have a pair of matching cards among the picked cards is %d\n", solutions.MinimumCardPickup([]int{3, 4, 2, 3, 4, 7}))
 	fmt.Printf("The number of points collected by the second robot is %d\n", solutions.GridGame([][]int{{2, 5, 4}, {1, 5, 1}}))
+	fmt.Printf("The distance of the nearest 0 for each cell in the grid is %v\n", solutions.UpdateMatrix([][]int{{0, 0, 0}, {0, 1, 0}, {0, 0, 0}}))
 }
