@@ -1621,4 +1621,5 @@ func main() {
 	fmt.Printf("The number of points collected by the second robot is %d\n", solutions.GridGame([][]int{{2, 5, 4}, {1, 5, 1}}))
 	fmt.Printf("The distance of the nearest 0 for each cell in the grid is %v\n", solutions.UpdateMatrix([][]int{{0, 0, 0}, {0, 1, 0}, {0, 0, 0}}))
 	fmt.Printf("The integer matrix height of size m x n where height[i][j] is cell (i, j)'s height is %v\n", solutions.HighestPeak([][]int{{0, 1}, {0, 0}}))
+	fmt.Printf("The number of servers that communicate with any other server is %v\n", solutions.CountServers([][]int{{1, 0}, {0, 1}}))
 }
