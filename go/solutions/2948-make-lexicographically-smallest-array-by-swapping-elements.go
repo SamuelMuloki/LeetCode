@@ -7,12 +7,14 @@ func LexicographicallySmallestArray(nums []int, limit int) []int {
 	arr := make([]struct {
 		Value, Index int
 	}, n)
+
 	for i := 0; i < n; i++ {
 		arr[i] = struct{ Value, Index int }{Value: nums[i], Index: i}
 	}
 	sort.Slice(arr, func(i, j int) bool {
 		return arr[i].Value < arr[j].Value
 	})
+
 	for i := 0; i < n-1; i++ {
 		ind := []int{arr[i].Index}
 		ptr := i
