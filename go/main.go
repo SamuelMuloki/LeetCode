@@ -1624,4 +1624,5 @@ func main() {
 	fmt.Printf("The number of servers that communicate with any other server is %v\n", solutions.CountServers([][]int{{1, 0}, {0, 1}}))
 	fmt.Printf("The array containing all the safe nodes of the graph is %v\n", solutions.EventualSafeNodes([][]int{{1, 2}, {2, 3}, {5}, {0}, {5}, {}, {}}))
 	fmt.Printf("The lexicographically smallest array that can be obtained by performing the operation any number of times is %v\n", solutions.LexicographicallySmallestArray([]int{1, 7, 6, 18, 2, 1}, 3))
+	fmt.Printf("The maximum number of employees that can be invited to the meeting are %d\n", solutions.MaximumInvitations([]int{2, 2, 1, 2}))
 }
