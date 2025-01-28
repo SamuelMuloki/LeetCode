@@ -1626,4 +1626,5 @@ func main() {
 	fmt.Printf("The lexicographically smallest array that can be obtained by performing the operation any number of times is %v\n", solutions.LexicographicallySmallestArray([]int{1, 7, 6, 18, 2, 1}, 3))
 	fmt.Printf("The maximum number of employees that can be invited to the meeting are %d\n", solutions.MaximumInvitations([]int{2, 2, 1, 2}))
 	fmt.Printf("The answer to the jth query is %v\n", solutions.CheckIfPrerequisite(2, [][]int{{1, 0}}, [][]int{{0, 1}, {1, 0}}))
+	fmt.Printf("The maximum number of fish the fisher can catch if he chooses his starting cell optimally is %d\n", solutions.FindMaxFish([][]int{{0, 2, 1, 0}, {4, 0, 0, 3}, {1, 0, 0, 4}, {0, 3, 2, 0}}))
 }
