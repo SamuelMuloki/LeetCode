@@ -13,11 +13,11 @@ func FindMaxFish(grid [][]int) int {
 	countFish := func(row, col int) int {
 		count := 0
 		cells := list.New()
-		cells.PushBack(struct{ Row, Col int }{row, col})
+		cells.PushBack(Cell{row, col})
 		vis[row][col] = true
 		for cells.Len() > 0 {
-			cell := cells.Remove(cells.Front()).(struct{ Row, Col int })
-			row, col := cell.Row, cell.Col
+			cell := cells.Remove(cells.Front()).(Cell)
+			row, col := cell.row, cell.col
 			count += grid[row][col]
 
 			for dir := 0; dir < 4; dir++ {
