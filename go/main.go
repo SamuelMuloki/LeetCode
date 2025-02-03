@@ -1630,4 +1630,5 @@ func main() {
 	fmt.Printf("The edge that can be removed so that the resulting graph is a tree of n nodes is %d\n", solutions.FindRedundantConnection([][]int{{1, 2}, {1, 3}, {2, 3}}))
 	fmt.Printf("The maximum number of groups into which you can divide the nodes is %d\n", solutions.MagnificentSets(3, [][]int{{1, 2}, {2, 3}, {3, 1}}))
 	fmt.Printf("The size of the largest island in grid after applying this operation is %d\n", solutions.LargestIsland([][]int{{1, 0}, {0, 1}}))
+	fmt.Printf("The length of the longest subarray of nums which is either strictly increasing or decreasing is %d\n", solutions.LongestMonotonicSubarray([]int{1, 4, 3, 3, 2}))
 }
