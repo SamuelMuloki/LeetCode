@@ -1631,4 +1631,5 @@ func main() {
 	fmt.Printf("The maximum number of groups into which you can divide the nodes is %d\n", solutions.MagnificentSets(3, [][]int{{1, 2}, {2, 3}, {3, 1}}))
 	fmt.Printf("The size of the largest island in grid after applying this operation is %d\n", solutions.LargestIsland([][]int{{1, 0}, {0, 1}}))
 	fmt.Printf("The length of the longest subarray of nums which is either strictly increasing or decreasing is %d\n", solutions.LongestMonotonicSubarray([]int{1, 4, 3, 3, 2}))
+	fmt.Printf("The number of partitions where the difference between the sum of the left and right subarrays is even is %d\n", solutions.CountPartitions([]int{10, 10, 3, 7, 6}))
 }
