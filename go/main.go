@@ -1633,4 +1633,5 @@ func main() {
 	fmt.Printf("The length of the longest subarray of nums which is either strictly increasing or decreasing is %d\n", solutions.LongestMonotonicSubarray([]int{1, 4, 3, 3, 2}))
 	fmt.Printf("The number of partitions where the difference between the sum of the left and right subarrays is even is %d\n", solutions.CountPartitions([]int{10, 10, 3, 7, 6}))
 	fmt.Printf("The maximum possible sum of an ascending subarray in nums is %d\n", solutions.MaxAscendingSum([]int{10, 20, 30, 5, 10, 50}))
+	fmt.Printf("The resulting string after removing all digits is %s\n", solutions.ClearDigits("cb34"))
 }
