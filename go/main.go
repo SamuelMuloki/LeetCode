@@ -1635,4 +1635,5 @@ func main() {
 	fmt.Printf("The maximum possible sum of an ascending subarray in nums is %d\n", solutions.MaxAscendingSum([]int{10, 20, 30, 5, 10, 50}))
 	fmt.Printf("The resulting string after removing all digits is %s\n", solutions.ClearDigits("cb34"))
 	fmt.Printf("It is possible to make both strings equal by performing at most one string swap on exactly one of the strings %t\n", solutions.AreAlmostEqual("bank", "kanb"))
+	fmt.Printf("The number of tuples (a, b, c, d) are %d\n", solutions.TupleSameProduct([]int{2, 3, 4, 6}))
 }
