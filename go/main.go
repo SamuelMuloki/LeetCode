@@ -1636,4 +1636,5 @@ func main() {
 	fmt.Printf("The resulting string after removing all digits is %s\n", solutions.ClearDigits("cb34"))
 	fmt.Printf("It is possible to make both strings equal by performing at most one string swap on exactly one of the strings %t\n", solutions.AreAlmostEqual("bank", "kanb"))
 	fmt.Printf("The number of tuples (a, b, c, d) are %d\n", solutions.TupleSameProduct([]int{2, 3, 4, 6}))
+	fmt.Printf("The number of distinct colors after the ith query is %v\n", solutions.QueryResults(4, [][]int{{1, 4}, {2, 5}, {1, 3}, {3, 4}}))
 }
