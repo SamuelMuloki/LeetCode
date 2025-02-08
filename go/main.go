@@ -1637,4 +1637,13 @@ func main() {
 	fmt.Printf("It is possible to make both strings equal by performing at most one string swap on exactly one of the strings %t\n", solutions.AreAlmostEqual("bank", "kanb"))
 	fmt.Printf("The number of tuples (a, b, c, d) are %d\n", solutions.TupleSameProduct([]int{2, 3, 4, 6}))
 	fmt.Printf("The number of distinct colors after the ith query is %v\n", solutions.QueryResults(4, [][]int{{1, 4}, {2, 5}, {1, 3}, {3, 4}}))
+	numContainers := solutions.NumberContainersConstructor()
+	fmt.Printf("Find 10 yields %d\n", numContainers.Find(10))
+	numContainers.Change(2, 10)
+	numContainers.Change(1, 10)
+	numContainers.Change(3, 10)
+	numContainers.Change(5, 10)
+	fmt.Printf("Find 10 (2) yields %d\n", numContainers.Find(10))
+	numContainers.Change(1, 20)
+	fmt.Printf("Find 10 (3) yields %d\n", numContainers.Find(10))
 }
