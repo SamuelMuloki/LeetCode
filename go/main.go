@@ -1646,4 +1646,5 @@ func main() {
 	fmt.Printf("Find 10 (2) yields %d\n", numContainers.Find(10))
 	numContainers.Change(1, 20)
 	fmt.Printf("Find 10 (3) yields %d\n", numContainers.Find(10))
+	fmt.Printf("The maximum value that you can obtain over all possible indices is %d\n", solutions.MaximumSum([]int{18, 43, 36, 13, 7}))
 }
