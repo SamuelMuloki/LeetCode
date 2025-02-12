@@ -9,12 +9,12 @@ func MaximumSum(nums []int) int {
 			curr += (num % 10)
 			num /= 10
 		}
+
 		if val, ok := count[curr]; ok {
 			ans = max(ans, val+nums[i])
-			count[curr] = max(count[curr], nums[i])
-		} else {
-			count[curr] = nums[i]
 		}
+
+		count[curr] = max(count[curr], nums[i])
 	}
 
 	return ans
