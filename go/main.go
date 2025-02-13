@@ -1647,4 +1647,5 @@ func main() {
 	numContainers.Change(1, 20)
 	fmt.Printf("Find 10 (3) yields %d\n", numContainers.Find(10))
 	fmt.Printf("The maximum value that you can obtain over all possible indices is %d\n", solutions.MaximumSum([]int{18, 43, 36, 13, 7}))
+	fmt.Printf("The minimum number of operations needed so that all elements of the array are greater than or equal to k are %d\n", solutions.MinOperations6([]int{2, 11, 10, 1, 3}, 10))
 }
