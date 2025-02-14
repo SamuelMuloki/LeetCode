@@ -1,45 +1,39 @@
 package solutions
 
 type ProductOfNumbers struct {
-	st              []int
-	lastZeroFoundAt int
+	st     []int
+	prefix int
 }
 
 func ProductOfNumbersConstructor() ProductOfNumbers {
 	return ProductOfNumbers{
-		st:              []int{},
-		lastZeroFoundAt: -1,
+		st:     []int{},
+		prefix: 1,
 	}
 }
 
 func (this *ProductOfNumbers) Add(num int) {
-	product := num
-	if len(this.st) > 0 {
-		if this.st[len(this.st)-1] == 0 {
-			product *= 1
-		} else {
-			product *= this.st[len(this.st)-1]
-		}
-	}
-
-	this.st = append(this.st, product)
 	if num == 0 {
-		this.lastZeroFoundAt = len(this.st) - 1
+		this.prefix = 1
+		this.st = []int{}
+	} else {
+		this.prefix *= num
+		this.st = append(this.st, this.prefix)
 	}
 }
 
 func (this *ProductOfNumbers) GetProduct(k int) int {
 	n := len(this.st)
-	if n-k <= this.lastZeroFoundAt {
+	if k > n {
 		return 0
 	}
 
-	idx := n - k - 1
-	if idx < 0 || this.st[idx] == 0 {
-		return this.st[n-1]
+	startIdx, endIdx := n-k-1, n-1
+	if startIdx < 0 {
+		return this.st[endIdx]
 	}
 
-	return this.st[n-1] / this.st[idx]
+	return this.st[endIdx] / this.st[startIdx]
 }
 
 /**
