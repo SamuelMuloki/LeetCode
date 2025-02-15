@@ -7,15 +7,7 @@ func PunishmentNumber(n int) int {
 	for num := 1; num <= n; num++ {
 		mul := num * num
 		strNum := strconv.Itoa(mul)
-		memo := make([][]int, len(strNum))
-		for i := range memo {
-			memo[i] = make([]int, num+1)
-			for j := range memo[i] {
-				memo[i][j] = -1
-			}
-		}
-
-		if findPartitions(0, 0, strNum, num, memo) {
+		if canPartition(strNum, num) {
 			ans += mul
 		}
 	}
@@ -23,31 +15,24 @@ func PunishmentNumber(n int) int {
 	return ans
 }
 
-func findPartitions(start, sum int, strNum string, target int, memo [][]int) bool {
-	if start == len(strNum) {
-		return sum == target
+func canPartition(strNum string, target int) bool {
+	if strNum == "" && target == 0 {
+		return true
 	}
 
-	if sum > target {
+	if target < 0 {
 		return false
 	}
 
-	if memo[start][sum] != -1 {
-		return memo[start][sum] == 1
-	}
+	for idx := 0; idx < len(strNum); idx++ {
+		left := strNum[0 : idx+1]
+		right := strNum[idx+1 : len(strNum)]
+		leftNum, _ := strconv.Atoi(left)
 
-	partitionFound := false
-	for curr := start; curr < len(strNum); curr++ {
-		currStr := strNum[start : curr+1]
-		addEnd, _ := strconv.Atoi(currStr)
-
-		partitionFound = partitionFound || findPartitions(curr+1, sum+addEnd, strNum, target, memo)
-		if partitionFound {
-			memo[start][sum] = 1
+		if canPartition(right, target-leftNum) {
 			return true
 		}
 	}
 
-	memo[start][sum] = 0
 	return false
 }
