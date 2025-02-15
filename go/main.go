@@ -1659,4 +1659,5 @@ func main() {
 	fmt.Printf("Product of last 4 is %d\n", productNumbers.GetProduct(4))
 	productNumbers.Add(8)
 	fmt.Printf("Product of last 2 is %d\n", productNumbers.GetProduct(2))
+	fmt.Printf("The punishment number of n is %d\n", solutions.PunishmentNumber(37))
 }
