@@ -1,13 +1,10 @@
 package solutions
 
-import "strconv"
-
 func PunishmentNumber(n int) int {
 	ans := 0
 	for num := 1; num <= n; num++ {
 		mul := num * num
-		strNum := strconv.Itoa(mul)
-		if canPartition(strNum, num) {
+		if canPartition(mul, num) {
 			ans += mul
 		}
 	}
@@ -15,24 +12,16 @@ func PunishmentNumber(n int) int {
 	return ans
 }
 
-func canPartition(strNum string, target int) bool {
-	if strNum == "" && target == 0 {
-		return true
-	}
-
-	if target < 0 {
+func canPartition(mul, target int) bool {
+	if target < 0 || mul < target {
 		return false
 	}
 
-	for idx := 0; idx < len(strNum); idx++ {
-		left := strNum[0 : idx+1]
-		right := strNum[idx+1:]
-		leftNum, _ := strconv.Atoi(left)
-
-		if canPartition(right, target-leftNum) {
-			return true
-		}
+	if mul == target {
+		return true
 	}
 
-	return false
+	return canPartition(mul/10, target-(mul%10)) ||
+		canPartition(mul/100, target-(mul%100)) ||
+		canPartition(mul/1000, target-(mul%1000))
 }
