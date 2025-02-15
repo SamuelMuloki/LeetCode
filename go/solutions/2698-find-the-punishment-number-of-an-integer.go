@@ -26,7 +26,7 @@ func canPartition(strNum string, target int) bool {
 
 	for idx := 0; idx < len(strNum); idx++ {
 		left := strNum[0 : idx+1]
-		right := strNum[idx+1 : len(strNum)]
+		right := strNum[idx+1:]
 		leftNum, _ := strconv.Atoi(left)
 
 		if canPartition(right, target-leftNum) {
