@@ -1661,4 +1661,5 @@ func main() {
 	fmt.Printf("Product of last 2 is %d\n", productNumbers.GetProduct(2))
 	fmt.Printf("The punishment number of n is %d\n", solutions.PunishmentNumber(37))
 	fmt.Printf("The lexicographically largest sequence is %v\n", solutions.ConstructDistancedSequence(5))
+	fmt.Printf("The lexicographically smallest possible string num that meets the conditions is %s\n", solutions.SmallestNumber3("IIIDIDDD"))
 }
