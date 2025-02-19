@@ -1662,4 +1662,5 @@ func main() {
 	fmt.Printf("The punishment number of n is %d\n", solutions.PunishmentNumber(37))
 	fmt.Printf("The lexicographically largest sequence is %v\n", solutions.ConstructDistancedSequence(5))
 	fmt.Printf("The lexicographically smallest possible string num that meets the conditions is %s\n", solutions.SmallestNumber3("IIIDIDDD"))
+	fmt.Printf("The kth string of this list or return an empty string if there are less than k happy strings of length n is %s\n", solutions.GetHappyString(1, 3))
 }
