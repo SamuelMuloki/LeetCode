@@ -1664,4 +1664,5 @@ func main() {
 	fmt.Printf("The lexicographically smallest possible string num that meets the conditions is %s\n", solutions.SmallestNumber3("IIIDIDDD"))
 	fmt.Printf("The kth string of this list or return an empty string if there are less than k happy strings of length n is %s\n", solutions.GetHappyString(1, 3))
 	fmt.Printf("Recovering the root from the binary tree yields %v\n", solutions.RecoverFromPreorder("1-2--3--4-5--6--7"))
+	fmt.Printf("The Binary tree after constrruction is %v\n", solutions.ConstructFromPrePost([]int{1, 2, 4, 5, 3, 6, 7}, []int{4, 5, 2, 6, 7, 3, 1}))
 }
