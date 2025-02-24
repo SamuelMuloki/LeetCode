@@ -9,7 +9,6 @@ func MostProfitablePath(edges [][]int, bob int, amount []int) int {
 	n := len(amount)
 	maxIncome := math.MinInt32
 	tree := make([][]int, n)
-	visited := make([]bool, n)
 	nodeQueue := list.New()
 	nodeQueue.PushBack([]int{0, 0, 0})
 
@@ -41,7 +40,7 @@ func MostProfitablePath(edges [][]int, bob int, amount []int) int {
 
 	bobPath := findBobPath(tree, bob, 0, make(map[int]int), make([]bool, n))
 
-	visited = make([]bool, n)
+	visited := make([]bool, n)
 	for nodeQueue.Len() > 0 {
 		front := nodeQueue.Front()
 		nodeQueue.Remove(front)
