@@ -1,24 +1,23 @@
 package solutions
 
 import (
-	"container/list"
 	"math"
 )
 
 func MostProfitablePath(edges [][]int, bob int, amount []int) int {
 	n := len(amount)
 	maxIncome := math.MinInt32
-	tree := make([][]int, n)
-	nodeQueue := list.New()
-	nodeQueue.PushBack([]int{0, 0, 0})
+	graph := make([][]int, n)
 
 	for _, edge := range edges {
-		tree[edge[0]] = append(tree[edge[0]], edge[1])
-		tree[edge[1]] = append(tree[edge[1]], edge[0])
+		graph[edge[0]] = append(graph[edge[0]], edge[1])
+		graph[edge[1]] = append(graph[edge[1]], edge[0])
 	}
 
-	var findBobPath func(tree [][]int, sourceNode, time int, bobPath map[int]int, visited []bool) map[int]int
-	findBobPath = func(tree [][]int, sourceNode, time int, bobPath map[int]int, visited []bool) map[int]int {
+	visited := make([]bool, n)
+	bobPath := make(map[int]int)
+	var findBobPath func(sourceNode, time int) map[int]int
+	findBobPath = func(sourceNode, time int) map[int]int {
 		bobPath[sourceNode] = time
 		visited[sourceNode] = true
 
@@ -26,9 +25,9 @@ func MostProfitablePath(edges [][]int, bob int, amount []int) int {
 			return bobPath
 		}
 
-		for _, adjacentNode := range tree[sourceNode] {
+		for _, adjacentNode := range graph[sourceNode] {
 			if !visited[adjacentNode] {
-				if findBobPath(tree, adjacentNode, time+1, bobPath, visited) != nil {
+				if findBobPath(adjacentNode, time+1) != nil {
 					return bobPath
 				}
 			}
@@ -38,13 +37,14 @@ func MostProfitablePath(edges [][]int, bob int, amount []int) int {
 		return nil
 	}
 
-	bobPath := findBobPath(tree, bob, 0, make(map[int]int), make([]bool, n))
+	bobPath = findBobPath(bob, 0)
 
-	visited := make([]bool, n)
-	for nodeQueue.Len() > 0 {
-		front := nodeQueue.Front()
-		nodeQueue.Remove(front)
-		node := front.Value.([]int)
+	queue := [][]int{}
+	queue = append(queue, []int{0, 0, 0})
+	visited = make([]bool, n)
+	for len(queue) > 0 {
+		node := queue[0]
+		queue = queue[1:]
 		sourceNode, time, income := node[0], node[1], node[2]
 
 		if _, found := bobPath[sourceNode]; !found || time < bobPath[sourceNode] {
@@ -53,19 +53,18 @@ func MostProfitablePath(edges [][]int, bob int, amount []int) int {
 			income += amount[sourceNode] / 2
 		}
 
-		if len(tree[sourceNode]) == 1 && sourceNode != 0 {
-			if income > maxIncome {
-				maxIncome = income
-			}
+		if len(graph[sourceNode]) == 1 && sourceNode != 0 {
+			maxIncome = max(maxIncome, income)
 		}
 
-		for _, adjacentNode := range tree[sourceNode] {
+		for _, adjacentNode := range graph[sourceNode] {
 			if !visited[adjacentNode] {
-				nodeQueue.PushBack([]int{adjacentNode, time + 1, income})
+				queue = append(queue, []int{adjacentNode, time + 1, income})
 			}
 		}
 
 		visited[sourceNode] = true
 	}
+
 	return maxIncome
 }
