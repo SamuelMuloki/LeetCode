@@ -1666,4 +1666,5 @@ func main() {
 	fmt.Printf("Recovering the root from the binary tree yields %v\n", solutions.RecoverFromPreorder("1-2--3--4-5--6--7"))
 	fmt.Printf("The Binary tree after constrruction is %v\n", solutions.ConstructFromPrePost([]int{1, 2, 4, 5, 3, 6, 7}, []int{4, 5, 2, 6, 7, 3, 1}))
 	fmt.Printf("The maximum net income Alice can have if she travels towards the optimal leaf node is %d\n", solutions.MostProfitablePath([][]int{{0, 1}, {1, 2}, {1, 3}, {3, 4}}, 3, []int{-2, 4, 2, -4, 6}))
+	fmt.Printf("The number of subarrays with odd sum is %d\n", solutions.NumOfSubarrays([]int{1, 3, 5}))
 }
