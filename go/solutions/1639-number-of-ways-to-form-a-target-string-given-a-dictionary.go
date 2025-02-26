@@ -12,7 +12,7 @@ func NumWays2(words []string, target string) int {
 	}
 
 	dp := make([][]int, m)
-	for i, _ := range dp {
+	for i := range dp {
 		dp[i] = make([]int, n)
 	}
 
