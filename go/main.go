@@ -1668,4 +1668,5 @@ func main() {
 	fmt.Printf("The maximum net income Alice can have if she travels towards the optimal leaf node is %d\n", solutions.MostProfitablePath([][]int{{0, 1}, {1, 2}, {1, 3}, {3, 4}}, 3, []int{-2, 4, 2, -4, 6}))
 	fmt.Printf("The number of subarrays with odd sum is %d\n", solutions.NumOfSubarrays([]int{1, 3, 5}))
 	fmt.Printf("The maximum absolute sum of any (possibly empty) subarray of nums is %d\n", solutions.MaxAbsoluteSum([]int{1, -3, 2, 3, -4}))
+	fmt.Printf("The length of the longest fibonacci subsequence is %d\n", solutions.LenLongestFibSubseq([]int{1, 2, 3, 4, 5, 6, 7, 8}))
 }
