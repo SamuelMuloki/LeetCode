@@ -1669,4 +1669,5 @@ func main() {
 	fmt.Printf("The number of subarrays with odd sum is %d\n", solutions.NumOfSubarrays([]int{1, 3, 5}))
 	fmt.Printf("The maximum absolute sum of any (possibly empty) subarray of nums is %d\n", solutions.MaxAbsoluteSum([]int{1, -3, 2, 3, -4}))
 	fmt.Printf("The length of the longest fibonacci subsequence is %d\n", solutions.LenLongestFibSubseq([]int{1, 2, 3, 4, 5, 6, 7, 8}))
+	fmt.Printf("The shortest string that has both str1 and str2 as subsequences is %s\n", solutions.ShortestCommonSupersequence("abac", "cab"))
 }
