@@ -1671,4 +1671,5 @@ func main() {
 	fmt.Printf("The length of the longest fibonacci subsequence is %d\n", solutions.LenLongestFibSubseq([]int{1, 2, 3, 4, 5, 6, 7, 8}))
 	fmt.Printf("The shortest string that has both str1 and str2 as subsequences is %s\n", solutions.ShortestCommonSupersequence("abac", "cab"))
 	fmt.Printf("The resulting array after merging arrays is %v\n", solutions.MergeArrays([][]int{{1, 3}, {2, 3}, {4, 15}}, [][]int{{1, 4}, {3, 2}, {4, 1}}))
+	fmt.Printf("The total number of colored cells are %d\n", solutions.ColoredCells(2))
 }
