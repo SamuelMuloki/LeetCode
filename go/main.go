@@ -1672,4 +1672,5 @@ func main() {
 	fmt.Printf("The shortest string that has both str1 and str2 as subsequences is %s\n", solutions.ShortestCommonSupersequence("abac", "cab"))
 	fmt.Printf("The resulting array after merging arrays is %v\n", solutions.MergeArrays([][]int{{1, 3}, {2, 3}, {4, 15}}, [][]int{{1, 4}, {3, 2}, {4, 1}}))
 	fmt.Printf("The total number of colored cells are %d\n", solutions.ColoredCells(2))
+	fmt.Printf("The minimum number of operations needed such that there is at least one occurrence of k consecutive black blocks is %d\n", solutions.MinimumRecolors("WBBWWBBWBW", 7))
 }
