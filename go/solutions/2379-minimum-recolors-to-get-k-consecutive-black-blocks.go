@@ -1,8 +1,10 @@
 package solutions
 
+import "math"
+
 func MinimumRecolors(blocks string, k int) int {
 	start, cnt := 0, 0
-	ans := 101
+	ans := math.MaxInt
 	for i := 0; i < len(blocks); i++ {
 		if blocks[i] == 'W' {
 			cnt++
