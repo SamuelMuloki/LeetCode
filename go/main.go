@@ -1674,4 +1674,5 @@ func main() {
 	fmt.Printf("The total number of colored cells are %d\n", solutions.ColoredCells(2))
 	fmt.Printf("The minimum number of operations needed such that there is at least one occurrence of k consecutive black blocks is %d\n", solutions.MinimumRecolors("WBBWWBBWBW", 7))
 	fmt.Printf("The number of alternating groups II is %d\n", solutions.NumberOfAlternatingGroupsII([]int{0, 1, 0, 1, 0}, 3))
+	fmt.Printf("The number of substrings containing every vowel and k consonants is %d\n", solutions.CountOfSubstrings("ieaouqqieaouqq", 1))
 }
