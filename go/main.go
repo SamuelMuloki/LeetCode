@@ -1676,4 +1676,5 @@ func main() {
 	fmt.Printf("The number of alternating groups II is %d\n", solutions.NumberOfAlternatingGroupsII([]int{0, 1, 0, 1, 0}, 3))
 	fmt.Printf("The number of substrings containing every vowel and k consonants is %d\n", solutions.CountOfSubstrings("ieaouqqieaouqq", 1))
 	fmt.Printf("The number of substrings containing at least one occurrence of all these characters a, b and c is %d\n", solutions.NumberOfSubstrings("abcabc"))
+	fmt.Printf("The maximum between the number of positive integers and the number of negative integers is %d\n", solutions.MaximumCount([]int{-2, -1, -1, 1, 2, 3}))
 }
