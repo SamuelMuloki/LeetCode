@@ -1677,4 +1677,5 @@ func main() {
 	fmt.Printf("The number of substrings containing every vowel and k consonants is %d\n", solutions.CountOfSubstrings("ieaouqqieaouqq", 1))
 	fmt.Printf("The number of substrings containing at least one occurrence of all these characters a, b and c is %d\n", solutions.NumberOfSubstrings("abcabc"))
 	fmt.Printf("The maximum between the number of positive integers and the number of negative integers is %d\n", solutions.MaximumCount([]int{-2, -1, -1, 1, 2, 3}))
+	fmt.Printf("It is possible to transform nums into a Zero Array %t\n", solutions.IsZeroArray([]int{1, 0, 1}, [][]int{{0, 2}}))
 }
