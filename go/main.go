@@ -1680,4 +1680,5 @@ func main() {
 	fmt.Printf("It is possible to transform nums into a Zero Array %t\n", solutions.IsZeroArray([]int{1, 0, 1}, [][]int{{0, 2}}))
 	fmt.Printf("The minimum possible non-negative value of k, such that after processing the first k queries in sequence, nums becomes a Zero Array is %d\n", solutions.MinZeroArray([]int{2, 0, 2}, [][]int{{0, 2, 1}, {0, 2, 1}, {1, 1, 3}}))
 	fmt.Printf("The minimum integer k such that she can eat all the bananas within h hours is %d\n", solutions.MinEatingSpeed([]int{3, 6, 7, 11}, 8))
+	fmt.Printf("The maximum number of candies each child can get is %d\n", solutions.MaximumCandies([]int{5, 8, 6}, 3))
 }
