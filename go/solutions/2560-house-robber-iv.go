@@ -16,7 +16,7 @@ func MinCapability(nums []int, k int) int {
 	}
 
 	maxV := math.MinInt
-	for i := 0; i < len(nums); i++ {
+	for i := 1; i < len(nums); i++ {
 		maxV = max(maxV, nums[i])
 	}
 
