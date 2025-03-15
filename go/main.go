@@ -1681,4 +1681,5 @@ func main() {
 	fmt.Printf("The minimum possible non-negative value of k, such that after processing the first k queries in sequence, nums becomes a Zero Array is %d\n", solutions.MinZeroArray([]int{2, 0, 2}, [][]int{{0, 2, 1}, {0, 2, 1}, {1, 1, 3}}))
 	fmt.Printf("The minimum integer k such that she can eat all the bananas within h hours is %d\n", solutions.MinEatingSpeed([]int{3, 6, 7, 11}, 8))
 	fmt.Printf("The maximum number of candies each child can get is %d\n", solutions.MaximumCandies([]int{5, 8, 6}, 3))
+	fmt.Printf("The minimum capability of the robber out of all the possible ways to steal at least k houses is %d\n", solutions.MinCapability([]int{2, 3, 5, 9}, 2))
 }
