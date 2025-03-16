@@ -1682,4 +1682,5 @@ func main() {
 	fmt.Printf("The minimum integer k such that she can eat all the bananas within h hours is %d\n", solutions.MinEatingSpeed([]int{3, 6, 7, 11}, 8))
 	fmt.Printf("The maximum number of candies each child can get is %d\n", solutions.MaximumCandies([]int{5, 8, 6}, 3))
 	fmt.Printf("The minimum capability of the robber out of all the possible ways to steal at least k houses is %d\n", solutions.MinCapability([]int{2, 3, 5, 9}, 2))
+	fmt.Printf("The minimum time taken to repair all the cars is %d\n", solutions.RepairCars([]int{4, 2, 3, 1}, 10))
 }
