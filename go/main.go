@@ -1684,4 +1684,5 @@ func main() {
 	fmt.Printf("The minimum capability of the robber out of all the possible ways to steal at least k houses is %d\n", solutions.MinCapability([]int{2, 3, 5, 9}, 2))
 	fmt.Printf("The minimum time taken to repair all the cars is %d\n", solutions.RepairCars([]int{4, 2, 3, 1}, 10))
 	fmt.Printf("Array nums can be divided into equal pairs %t\n", solutions.DivideArray2([]int{3, 2, 3, 2, 2, 2}))
+	fmt.Printf("The longest nice subarray is %d\n", solutions.LongestNiceSubarray([]int{1, 3, 8, 48, 10}))
 }
