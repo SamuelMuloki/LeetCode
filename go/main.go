@@ -1686,4 +1686,5 @@ func main() {
 	fmt.Printf("Array nums can be divided into equal pairs %t\n", solutions.DivideArray2([]int{3, 2, 3, 2, 2, 2}))
 	fmt.Printf("The longest nice subarray is %d\n", solutions.LongestNiceSubarray([]int{1, 3, 8, 48, 10}))
 	fmt.Printf("The minimum number of operations required to make all elements in nums equal to 1 is %d\n", solutions.MinOperations7([]int{0, 1, 1, 1, 0, 0}))
+	fmt.Printf("The minimum cost of a walk for query i is %v\n", solutions.MinimumCost2(5, [][]int{{0, 1, 7}, {1, 3, 7}, {1, 2, 1}}, [][]int{{0, 3}, {3, 4}}))
 }
