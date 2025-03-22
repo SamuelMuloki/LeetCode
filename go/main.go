@@ -1688,4 +1688,5 @@ func main() {
 	fmt.Printf("The minimum number of operations required to make all elements in nums equal to 1 is %d\n", solutions.MinOperations7([]int{0, 1, 1, 1, 0, 0}))
 	fmt.Printf("The minimum cost of a walk for query i is %v\n", solutions.MinimumCost2(5, [][]int{{0, 1, 7}, {1, 3, 7}, {1, 2, 1}}, [][]int{{0, 3}, {3, 4}}))
 	fmt.Printf("The list of all the recipes that you can create is %v\n", solutions.FindAllRecipes([]string{"bread"}, [][]string{{"yeast", "flour"}}, []string{"yeast", "flour", "corn"}))
+	fmt.Printf("The number of complete connected components of the graph is %d\n", solutions.CountCompleteComponents(6, [][]int{{0, 1}, {0, 2}, {1, 2}, {3, 4}, {3, 5}}))
 }
