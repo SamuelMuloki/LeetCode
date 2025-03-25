@@ -1691,4 +1691,5 @@ func main() {
 	fmt.Printf("The number of complete connected components of the graph is %d\n", solutions.CountCompleteComponents(6, [][]int{{0, 1}, {0, 2}, {1, 2}, {3, 4}, {3, 5}}))
 	fmt.Printf("The number of ways you can arrive at your destination in the shortest amount of time is %d\n", solutions.CountPaths(7, [][]int{{0, 6, 7}, {0, 1, 2}, {1, 2, 3}, {1, 3, 3}, {6, 3, 3}, {3, 5, 1}, {6, 5, 1}, {2, 5, 1}, {0, 4, 5}, {4, 6, 2}}))
 	fmt.Printf("The count of days when the employee is available for work but no meetings are scheduled is %d\n", solutions.CountDays(10, [][]int{{5, 7}, {1, 3}, {9, 10}}))
+	fmt.Printf("The grid can be cut into sections %t\n", solutions.CheckValidCuts(4, [][]int{{0, 0, 1, 1}, {2, 0, 3, 4}, {0, 2, 2, 3}, {3, 0, 4, 3}}))
 }
