@@ -1,30 +1,38 @@
 package solutions
 
 func MinimumIndex(nums []int) int {
-	n := len(nums)
-	set := make(map[int]int)
-	majorityNum, maxCnt := 0, 0
+	x, count, n := nums[0], 0, len(nums)
 	for _, num := range nums {
-		set[num]++
-		if set[num] > set[majorityNum] {
-			majorityNum = num
+		if num == x {
+			count++
+		} else {
+			count--
 		}
+		if count == 0 {
+			x = num
+			count = 1
+		}
+	}
 
-		maxCnt = max(maxCnt, set[num])
+	xCount := 0
+	for _, num := range nums {
+		if num == x {
+			xCount++
+		}
 	}
 
 	var check = func(i, left, right int) bool {
 		return left*2 > i+1 && right*2 > n-i-1
 	}
 
-	left, right := 0, maxCnt
+	count = 0
 	for i := 0; i < len(nums); i++ {
-		if nums[i] == majorityNum {
-			left++
-			right--
+		if nums[i] == x {
+			count++
 		}
 
-		if check(i, left, right) {
+		remainingCount := xCount - count
+		if check(i, count, remainingCount) {
 			return i
 		}
 	}
