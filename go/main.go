@@ -1694,4 +1694,5 @@ func main() {
 	fmt.Printf("The grid can be cut into sections %t\n", solutions.CheckValidCuts(4, [][]int{{0, 0, 1, 1}, {2, 0, 3, 4}, {0, 2, 2, 3}, {3, 0, 4, 3}}))
 	fmt.Printf("The minimum number of operations to make the grid uni-value is %d\n", solutions.MinOperations8([][]int{{2, 4}, {6, 8}}, 2))
 	fmt.Printf("The minimum index of a valid split is %d\n", solutions.MinimumIndex([]int{1, 2, 2, 2}))
+	fmt.Printf("The maximum number of points you can get is %d\n", solutions.MaxPoints2([][]int{{1, 2, 3}, {2, 5, 7}, {3, 5, 1}}, []int{5, 6, 2}))
 }
