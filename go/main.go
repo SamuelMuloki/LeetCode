@@ -1697,4 +1697,7 @@ func main() {
 	fmt.Printf("The maximum number of points you can get is %d\n", solutions.MaxPoints2([][]int{{1, 2, 3}, {2, 5, 7}, {3, 5, 1}}, []int{5, 6, 2}))
 	fmt.Printf("The next greater number for every element in nums is %v\n", solutions.NextGreaterElementsII([]int{1, 2, 1}))
 	fmt.Printf("The smallest integer which has exactly the same digits existing in the integer n and is greater in value than n is %d\n", solutions.NextGreaterElementIII(12))
+	nextPerm := []int{1, 2, 3}
+	solutions.NextPermutation(nextPerm)
+	fmt.Printf("The next permutation of nums is %v\n", nextPerm)
 }
