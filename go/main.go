@@ -1701,4 +1701,5 @@ func main() {
 	solutions.NextPermutation(nextPerm)
 	fmt.Printf("The next permutation of nums is %v\n", nextPerm)
 	fmt.Printf("The maximum possible score after applying at most k operations is %d\n", solutions.MaximumScore2([]int{8, 3, 9, 3, 8}, 2))
+	fmt.Printf("The difference between the maximum and minimum scores among marble distributions is %d\n", solutions.PutMarbles([]int{1, 3, 5, 1}, 2))
 }
