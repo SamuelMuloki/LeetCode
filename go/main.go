@@ -1703,4 +1703,5 @@ func main() {
 	fmt.Printf("The maximum possible score after applying at most k operations is %d\n", solutions.MaximumScore2([]int{8, 3, 9, 3, 8}, 2))
 	fmt.Printf("The difference between the maximum and minimum scores among marble distributions is %d\n", solutions.PutMarbles([]int{1, 3, 5, 1}, 2))
 	fmt.Println("The maximum points you can earn for the exam is", solutions.MaxPoints([][]int{{3, 2}, {4, 3}, {4, 4}, {2, 5}}))
+	fmt.Printf("The partition has an equal sum %t\n", solutions.CanPartition([]int{1, 5, 11, 5}))
 }
