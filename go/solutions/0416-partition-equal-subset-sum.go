@@ -7,27 +7,18 @@ func CanPartition(nums []int) bool {
 		sum += nums[i]
 	}
 
-	dp := make([][]bool, n+1)
-	for i := range dp {
-		dp[i] = make([]bool, sum+1)
+	if sum%2 != 0 {
+		return false
 	}
 
-	for i := n - 1; i >= 0; i-- {
-		for total := 0; total <= sum; total++ {
-			if sum-total == total {
-				dp[i][total] = true
-				continue
-			}
-
-			skip := dp[i+1][total]
-			take := false
-			if total+nums[i] <= sum {
-				take = dp[i+1][total+nums[i]]
-			}
-
-			dp[i][total] = skip || take
+	target := sum / 2
+	dp := make([]bool, target+1)
+	dp[0] = true
+	for _, num := range nums {
+		for j := target; j >= num; j-- {
+			dp[j] = dp[j] || dp[j-num]
 		}
 	}
 
-	return dp[0][0]
+	return dp[target]
 }
