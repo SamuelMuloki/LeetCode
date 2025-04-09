@@ -1705,4 +1705,5 @@ func main() {
 	fmt.Println("The maximum points you can earn for the exam is", solutions.MaxPoints([][]int{{3, 2}, {4, 3}, {4, 4}, {2, 5}}))
 	fmt.Printf("The partition has an equal sum %t\n", solutions.CanPartition([]int{1, 5, 11, 5}))
 	fmt.Printf("The minimum number of operations needed to make the elements in the array distinct is %d\n", solutions.MinimumOperations3([]int{1, 2, 3, 4, 2, 3, 3, 5, 7}))
+	fmt.Printf("The minimum number of operations required to make every element in nums equal to k is %d\n", solutions.MinOperations9([]int{5, 2, 5, 4, 5}, 2))
 }
