@@ -1708,4 +1708,5 @@ func main() {
 	fmt.Printf("The minimum number of operations required to make every element in nums equal to k is %d\n", solutions.MinOperations9([]int{5, 2, 5, 4, 5}, 2))
 	fmt.Printf("The total number of powerful integers in the range [start..finish] are %d\n", solutions.NumberOfPowerfulInt(1, 6000, 4, "124"))
 	fmt.Printf("The count of good integers containing n digits is %d\n", solutions.CountGoodIntegers(3, 5))
+	fmt.Printf("The total number of good digit strings of length n is %d\n", solutions.CountGoodNumbers(1))
 }
