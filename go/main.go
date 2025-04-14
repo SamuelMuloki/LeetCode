@@ -1709,4 +1709,5 @@ func main() {
 	fmt.Printf("The total number of powerful integers in the range [start..finish] are %d\n", solutions.NumberOfPowerfulInt(1, 6000, 4, "124"))
 	fmt.Printf("The count of good integers containing n digits is %d\n", solutions.CountGoodIntegers(3, 5))
 	fmt.Printf("The total number of good digit strings of length n is %d\n", solutions.CountGoodNumbers(1))
+	fmt.Printf("The number of good triplets is %d\n", solutions.CountGoodTriplets([]int{3, 0, 1, 1, 9, 7}, 7, 2, 3))
 }
