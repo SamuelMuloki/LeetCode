@@ -1710,4 +1710,5 @@ func main() {
 	fmt.Printf("The count of good integers containing n digits is %d\n", solutions.CountGoodIntegers(3, 5))
 	fmt.Printf("The total number of good digit strings of length n is %d\n", solutions.CountGoodNumbers(1))
 	fmt.Printf("The number of good triplets is %d\n", solutions.CountGoodTriplets([]int{3, 0, 1, 1, 9, 7}, 7, 2, 3))
+	fmt.Printf("The total number of good triplets is %d\n", solutions.GoodTriplets([]int{2, 0, 1, 3}, []int{0, 1, 2, 3}))
 }
