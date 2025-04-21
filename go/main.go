@@ -1713,4 +1713,5 @@ func main() {
 	fmt.Printf("The total number of good triplets is %d\n", solutions.GoodTriplets([]int{2, 0, 1, 3}, []int{0, 1, 2, 3}))
 	fmt.Printf("The number of good subarrays is %d\n", solutions.CountGood([]int{1, 1, 1, 1, 1}, 10))
 	fmt.Printf("The minimum number of rabbits that could be in the forest is %d\n", solutions.NumRabbits([]int{0, 0, 1, 1, 1}))
+	fmt.Printf("The number of possible hidden sequences is %d\n", solutions.NumberOfArrays([]int{1, -3, 4}, 1, 6))
 }
