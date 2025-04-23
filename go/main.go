@@ -1715,4 +1715,5 @@ func main() {
 	fmt.Printf("The minimum number of rabbits that could be in the forest is %d\n", solutions.NumRabbits([]int{0, 0, 1, 1, 1}))
 	fmt.Printf("The number of possible hidden sequences is %d\n", solutions.NumberOfArrays([]int{1, -3, 4}, 1, 6))
 	fmt.Printf("The number of distinct ideal arrays of length n is %d\n", solutions.IdealArrays(2, 5))
+	fmt.Printf("The number of groups that have the largest size is %d\n", solutions.CountLargestGroup(13))
 }
