@@ -1716,4 +1716,5 @@ func main() {
 	fmt.Printf("The number of possible hidden sequences is %d\n", solutions.NumberOfArrays([]int{1, -3, 4}, 1, 6))
 	fmt.Printf("The number of distinct ideal arrays of length n is %d\n", solutions.IdealArrays(2, 5))
 	fmt.Printf("The number of groups that have the largest size is %d\n", solutions.CountLargestGroup(13))
+	fmt.Printf("The number of complete subarrays is %d\n", solutions.CountCompleteSubarrays([]int{1, 3, 1, 2, 2}))
 }
