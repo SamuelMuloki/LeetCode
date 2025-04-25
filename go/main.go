@@ -1717,4 +1717,5 @@ func main() {
 	fmt.Printf("The number of distinct ideal arrays of length n is %d\n", solutions.IdealArrays(2, 5))
 	fmt.Printf("The number of groups that have the largest size is %d\n", solutions.CountLargestGroup(13))
 	fmt.Printf("The number of complete subarrays is %d\n", solutions.CountCompleteSubarrays([]int{1, 3, 1, 2, 2}))
+	fmt.Printf("The count of interesting subarrays is %d\n", solutions.CountInterestingSubarrays([]int{3, 2, 4}, 2, 1))
 }
