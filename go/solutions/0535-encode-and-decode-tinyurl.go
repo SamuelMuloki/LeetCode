@@ -42,10 +42,10 @@ func (this *Codec) Decode(shortUrl string) string {
 }
 
 func randStr() string {
-	rand.Seed(time.Now().UnixNano())
+	r := rand.New(rand.NewSource(time.Now().UnixNano()))
 	res := make([]byte, 6)
 	for i := range res {
-		random := rand.Intn(len(asciiCharacters))
+		random := r.Intn(len(asciiCharacters))
 		res[i] = asciiCharacters[random]
 	}
 	return string(res)
