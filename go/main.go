@@ -1719,4 +1719,5 @@ func main() {
 	fmt.Printf("The number of complete subarrays is %d\n", solutions.CountCompleteSubarrays([]int{1, 3, 1, 2, 2}))
 	fmt.Printf("The count of interesting subarrays is %d\n", solutions.CountInterestingSubarrays([]int{3, 2, 4}, 2, 1))
 	fmt.Printf("The number of subarrays of length 3 such that the sum of the first and third numbers equals exactly half of the second number is %d\n", solutions.CountSubarrays3([]int{1, 2, 1, 4, 1}))
+	fmt.Printf("The most common response across all days after removing duplicate responses within each responses[i] is %s\n", solutions.FindCommonResponse([][]string{{"good", "ok", "good", "ok"}, {"ok", "bad", "good", "ok", "ok"}, {"good"}, {"bad"}}))
 }
