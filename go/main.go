@@ -1722,4 +1722,5 @@ func main() {
 	fmt.Printf("The most common response across all days after removing duplicate responses within each responses[i] is %s\n", solutions.FindCommonResponse([][]string{{"good", "ok", "good", "ok"}, {"ok", "bad", "good", "ok", "ok"}, {"good"}, {"bad"}}))
 	fmt.Printf("The number of non-empty subarrays of nums whose score is strictly less than k is %d\n", solutions.CountSubarrays4([]int{2, 1, 4, 3, 5}, 10))
 	fmt.Printf("The maximum number of tasks that can be completed is %d\n", solutions.MaxTaskAssign([]int{3, 2, 1}, []int{0, 3, 3}, 1, 1))
+	fmt.Printf("The string representing the final state is %s\n", solutions.PushDominoes("RR.L"))
 }
