@@ -1723,4 +1723,5 @@ func main() {
 	fmt.Printf("The number of non-empty subarrays of nums whose score is strictly less than k is %d\n", solutions.CountSubarrays4([]int{2, 1, 4, 3, 5}, 10))
 	fmt.Printf("The maximum number of tasks that can be completed is %d\n", solutions.MaxTaskAssign([]int{3, 2, 1}, []int{0, 3, 3}, 1, 1))
 	fmt.Printf("The string representing the final state is %s\n", solutions.PushDominoes("RR.L"))
+	fmt.Printf("The minimum number of rotations so that all the values in tops are the same, or all the values in bottoms are the same is %d\n", solutions.MinDominoRotations([]int{2, 1, 2, 4, 2, 2}, []int{5, 2, 6, 2, 3, 2}))
 }
