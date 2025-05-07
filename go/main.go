@@ -1726,4 +1726,5 @@ func main() {
 	fmt.Printf("The minimum number of rotations so that all the values in tops are the same, or all the values in bottoms are the same is %d\n", solutions.MinDominoRotations([]int{2, 1, 2, 4, 2, 2}, []int{5, 2, 6, 2, 3, 2}))
 	fmt.Printf("The number of pairs (i, j) for which 0 <= i < j < dominoes.length, and dominoes[i] is equivalent to dominoes[j] is %d\n", solutions.NumEquivDominoPairs([][]int{{1, 2}, {2, 1}, {3, 4}, {5, 6}}))
 	fmt.Printf("The number of ways to tile an 2 x n board is %d\n", solutions.NumTilings(3))
+	fmt.Printf("The minimum number of steps to walk from the upper left corner (0, 0) to the lower right corner (m - 1, n - 1) given that you can eliminate at most k obstacles is %d\n", solutions.ShortestPath([][]int{{0, 0, 0}, {1, 1, 0}, {0, 0, 0}, {0, 1, 1}, {0, 0, 0}}, 1))
 }
