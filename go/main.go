@@ -1729,4 +1729,5 @@ func main() {
 	fmt.Printf("The minimum number of steps to walk from the upper left corner (0, 0) to the lower right corner (m - 1, n - 1) given that you can eliminate at most k obstacles is %d\n", solutions.ShortestPath([][]int{{0, 0, 0}, {1, 1, 0}, {0, 0, 0}, {0, 1, 1}, {0, 0, 0}}, 1))
 	fmt.Printf("The minimum time to reach the room (n - 1, m - 1) is %d\n", solutions.MinTimeToReach([][]int{{0, 4}, {4, 4}}))
 	fmt.Printf("The minimum time to reach the room (n - 1, m - 1) 2 is %d\n", solutions.MinTimeToReach2([][]int{{0, 4}, {4, 4}}))
+	fmt.Printf("The number of distinct permutations of num that are balanced is %d\n", solutions.CountBalancedPermutations("123"))
 }
