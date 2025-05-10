@@ -1730,4 +1730,5 @@ func main() {
 	fmt.Printf("The minimum time to reach the room (n - 1, m - 1) is %d\n", solutions.MinTimeToReach([][]int{{0, 4}, {4, 4}}))
 	fmt.Printf("The minimum time to reach the room (n - 1, m - 1) 2 is %d\n", solutions.MinTimeToReach2([][]int{{0, 4}, {4, 4}}))
 	fmt.Printf("The number of distinct permutations of num that are balanced is %d\n", solutions.CountBalancedPermutations("123"))
+	fmt.Printf("The minimum equal sum you can obtain is %d\n", solutions.MinSum([]int{3, 2, 0, 1, 0}, []int{6, 5, 0}))
 }
