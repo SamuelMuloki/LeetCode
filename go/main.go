@@ -1732,4 +1732,5 @@ func main() {
 	fmt.Printf("The number of distinct permutations of num that are balanced is %d\n", solutions.CountBalancedPermutations("123"))
 	fmt.Printf("The minimum equal sum you can obtain is %d\n", solutions.MinSum([]int{3, 2, 0, 1, 0}, []int{6, 5, 0}))
 	fmt.Printf("The sorted array of unique integers is %v\n", solutions.FindEvenNumbers([]int{2, 1, 3, 0}))
+	fmt.Printf("The length of the resulting string after exactly t transformations is %d\n", solutions.LengthAfterTransformations("abcyy", 2))
 }
