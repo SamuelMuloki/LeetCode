@@ -1734,4 +1734,5 @@ func main() {
 	fmt.Printf("The sorted array of unique integers is %v\n", solutions.FindEvenNumbers([]int{2, 1, 3, 0}))
 	fmt.Printf("The length of the resulting string after exactly t transformations is %d\n", solutions.LengthAfterTransformations("abcyy", 2))
 	fmt.Printf("The length of the resulting string after exactly t transformations is %d\n", solutions.LengthAfterTransformations2("abcyy", 2, []int{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2}))
+	fmt.Printf("The selected subsequence is %v\n", solutions.GetLongestSubsequence([]string{"e", "a", "b"}, []int{0, 0, 1}))
 }
