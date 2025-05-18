@@ -1,7 +1,5 @@
 package solutions
 
-const MOD3 = 1_000_000_007
-
 func CountBalancedPermutations(num string) int {
 	tot, n := 0, len(num)
 	cnt := make([]int, 10)
@@ -21,7 +19,7 @@ func CountBalancedPermutations(num string) int {
 		comb[i] = make([]int, maxOdd+1)
 		comb[i][i], comb[i][0] = 1, 1
 		for j := 1; j < i; j++ {
-			comb[i][j] = (comb[i-1][j] + comb[i-1][j-1]) % MOD3
+			comb[i][j] = (comb[i-1][j] + comb[i-1][j-1]) % MOD
 		}
 	}
 
@@ -40,10 +38,10 @@ func CountBalancedPermutations(num string) int {
 			for curr := min(totSum, target); curr >= max(0, totSum-target); curr-- {
 				res := 0
 				for j := max(0, cnt[i]-evenCnt); j <= min(cnt[i], oddCnt) && i*j <= curr; j++ {
-					ways := comb[oddCnt][j] * comb[evenCnt][cnt[i]-j] % MOD3
-					res = (res + ways*f[curr-i*j][oddCnt-j]%MOD3) % MOD3
+					ways := comb[oddCnt][j] * comb[evenCnt][cnt[i]-j] % MOD
+					res = (res + ways*f[curr-i*j][oddCnt-j]%MOD) % MOD
 				}
-				f[curr][oddCnt] = res % MOD3
+				f[curr][oddCnt] = res % MOD
 			}
 		}
 	}

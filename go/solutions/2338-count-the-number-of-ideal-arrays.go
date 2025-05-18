@@ -1,9 +1,8 @@
 package solutions
 
 const (
-	MOD2  int = 1e9 + 7
-	MAX_N     = 10010
-	MAX_P     = 15 // There are up to 15 prime factors
+	MAX_N = 10010
+	MAX_P = 15 // There are up to 15 prime factors
 )
 
 var (
@@ -44,7 +43,7 @@ func initialize() {
 	for i := 1; i < MAX_N+MAX_P; i++ {
 		c[i][0] = 1
 		for j := 1; j <= MAX_P && j <= i; j++ {
-			c[i][j] = (c[i-1][j] + c[i-1][j-1]) % MOD2
+			c[i][j] = (c[i-1][j] + c[i-1][j-1]) % MOD
 		}
 	}
 }
@@ -55,9 +54,9 @@ func IdealArrays(n int, maxValue int) int {
 	for x := 1; x <= maxValue; x++ {
 		mul := 1
 		for _, p := range ps[x] {
-			mul = mul * c[n+p-1][p] % MOD2
+			mul = mul * c[n+p-1][p] % MOD
 		}
-		ans = (ans + mul) % MOD2
+		ans = (ans + mul) % MOD
 	}
 	return ans
 }
