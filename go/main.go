@@ -1736,4 +1736,5 @@ func main() {
 	fmt.Printf("The length of the resulting string after exactly t transformations is %d\n", solutions.LengthAfterTransformations2("abcyy", 2, []int{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2}))
 	fmt.Printf("The selected subsequence is %v\n", solutions.GetLongestSubsequence([]string{"e", "a", "b"}, []int{0, 0, 1}))
 	fmt.Printf("The number of ways to color the grid with no two adjacent cells having the same color is %d\n", solutions.ColorTheGrid(1, 1))
+	fmt.Printf("The string representing the type of triangle that can be formed is %s\n", solutions.TriangleType([]int{3, 4, 5}))
 }
