@@ -9,7 +9,7 @@ func MaxRemoval(nums []int, queries [][]int) int {
 	sort.Slice(queries, func(i, j int) bool {
 		return queries[i][0] < queries[j][0]
 	})
-	pq := &MinHeap{}
+	pq := &MaxHeap{}
 	heap.Init(pq)
 	diff := make([]int, len(nums)+1)
 	operations := 0
