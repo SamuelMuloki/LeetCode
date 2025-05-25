@@ -1738,4 +1738,5 @@ func main() {
 	fmt.Printf("The number of ways to color the grid with no two adjacent cells having the same color is %d\n", solutions.ColorTheGrid(1, 1))
 	fmt.Printf("The string representing the type of triangle that can be formed is %s\n", solutions.TriangleType([]int{3, 4, 5}))
 	fmt.Printf("The maximum number of elements that can be removed from queries is %d\n", solutions.MaxRemoval([]int{2, 0, 2}, [][]int{{0, 2}, {0, 2}, {1, 1}}))
+	fmt.Printf("The length of the longest palindrome that you can create is %d\n", solutions.LongestPalindrome3([]string{"lc", "cl", "gg"}))
 }
