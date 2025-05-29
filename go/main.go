@@ -1741,4 +1741,5 @@ func main() {
 	fmt.Printf("The length of the longest palindrome that you can create is %d\n", solutions.LongestPalindrome3([]string{"lc", "cl", "gg"}))
 	fmt.Printf("The largest color value of any valid path in the given graph is %d\n", solutions.LargestPathValue("abaca", [][]int{{0, 1}, {0, 2}, {2, 3}, {3, 4}}))
 	fmt.Printf("The maximum possible number of nodes target to node is %v\n", solutions.MaxTargetNodes([][]int{{0, 1}, {0, 2}, {2, 3}, {2, 4}}, [][]int{{0, 1}, {0, 2}, {0, 3}, {2, 7}, {1, 4}, {4, 5}, {4, 6}}, 2))
+	fmt.Printf("The maximum possible number of nodes target to node 2 is %v\n", solutions.MaxTargetNodes2([][]int{{0, 1}, {0, 2}, {2, 3}, {2, 4}}, [][]int{{0, 1}, {0, 2}, {0, 3}, {2, 7}, {1, 4}, {4, 5}, {4, 6}}))
 }
