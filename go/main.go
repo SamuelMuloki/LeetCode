@@ -1745,4 +1745,5 @@ func main() {
 	fmt.Printf("The index of the node that can be reached from both node1 and node2 is %d\n", solutions.ClosestMeetingNode([]int{2, 2, 3, -1}, 0, 1))
 	fmt.Printf("The least number of dice rolls required to reach the square n2. If it is not possible to reach the square is %d\n", solutions.SnakesAndLadders([][]int{{-1, -1, -1, -1, -1, -1}, {-1, -1, -1, -1, -1, -1}, {-1, -1, -1, -1, -1, -1}, {-1, -1, 35, -1, 13, -1}, {-1, -1, -1, -1, -1, -1}, {-1, 15, -1, -1, -1, -1}}))
 	fmt.Printf("The total number of ways to distribute n candies among 3 children is %d\n", solutions.DistributeCandies(5, 2))
+	fmt.Printf("The maximum number of candies you can get following the rules is %d\n", solutions.MaxCandies([]int{1, 0, 1, 0}, []int{7, 5, 4, 100}, [][]int{{}, {}, {1}, {}}, [][]int{{1, 2}, {3}, {}, {}}, []int{0}))
 }
