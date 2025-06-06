@@ -1748,4 +1748,5 @@ func main() {
 	fmt.Printf("The maximum number of candies you can get following the rules is %d\n", solutions.MaxCandies([]int{1, 0, 1, 0}, []int{7, 5, 4, 100}, [][]int{{}, {}, {1}, {}}, [][]int{{1, 2}, {3}, {}, {}}, []int{0}))
 	fmt.Printf("The lexicographically largest string from the box after all the rounds are finished is %s\n", solutions.AnswerString("dbca", 2))
 	fmt.Printf("The lexicographically smallest equivalent string of baseStr is %s\n", solutions.SmallestEquivalentString("parker", "morris", "parser"))
+	fmt.Printf("The lexicographically smallest string that can be written on the paper is %s\n", solutions.RobotWithString("zza"))
 }
