@@ -1749,4 +1749,5 @@ func main() {
 	fmt.Printf("The lexicographically largest string from the box after all the rounds are finished is %s\n", solutions.AnswerString("dbca", 2))
 	fmt.Printf("The lexicographically smallest equivalent string of baseStr is %s\n", solutions.SmallestEquivalentString("parker", "morris", "parser"))
 	fmt.Printf("The lexicographically smallest string that can be written on the paper is %s\n", solutions.RobotWithString("zza"))
+	fmt.Printf("The lexicographically smallest resulting string after removing all '*' characters is %s\n", solutions.ClearStars("aaba*"))
 }
