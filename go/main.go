@@ -1751,4 +1751,5 @@ func main() {
 	fmt.Printf("The lexicographically smallest string that can be written on the paper is %s\n", solutions.RobotWithString("zza"))
 	fmt.Printf("The lexicographically smallest resulting string after removing all '*' characters is %s\n", solutions.ClearStars("aaba*"))
 	fmt.Printf("The maximum difference between odd and even frequencies is %d\n", solutions.MaxDifference("aaaaabbc"))
+	fmt.Printf("The maximum difference between odd and even frequencies 2 is %d\n", solutions.MaxDifference2("12233", 4))
 }
