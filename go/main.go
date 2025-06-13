@@ -1752,4 +1752,5 @@ func main() {
 	fmt.Printf("The lexicographically smallest resulting string after removing all '*' characters is %s\n", solutions.ClearStars("aaba*"))
 	fmt.Printf("The maximum difference between odd and even frequencies is %d\n", solutions.MaxDifference("aaaaabbc"))
 	fmt.Printf("The maximum difference between odd and even frequencies 2 is %d\n", solutions.MaxDifference2("12233", 4))
+	fmt.Printf("The minimum maximum difference among all p pairs is %d\n", solutions.MinimizeMax([]int{10, 1, 2, 7, 1, 3}, 2))
 }
