@@ -1756,4 +1756,5 @@ func main() {
 	fmt.Printf("The difference between the maximum and minimum values Bob can make by remapping exactly one digit in number is %d\n", solutions.MinMaxDifference(11891))
 	fmt.Printf("The max difference between a and b is %d\n", solutions.MaxDiff(555))
 	fmt.Printf("The maximum difference is %d\n", solutions.MaximumDifference([]int{7, 1, 5, 4}))
+	fmt.Printf("The number of good arrays that can be formed is %d\n", solutions.CountGoodArrays(3, 2, 1))
 }
