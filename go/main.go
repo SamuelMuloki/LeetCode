@@ -1758,4 +1758,5 @@ func main() {
 	fmt.Printf("The maximum difference is %d\n", solutions.MaximumDifference([]int{7, 1, 5, 4}))
 	fmt.Printf("The number of good arrays that can be formed is %d\n", solutions.CountGoodArrays(3, 2, 1))
 	fmt.Printf("The minimum number of subsequences needed such that the difference between the maximum and minimum values in each subsequence is at most k is %d\n", solutions.PartitionArray([]int{3, 6, 1, 2, 5}, 2))
+	fmt.Printf("The maximum Manhattan distance from the origin that can be achieved is %d\n", solutions.MaxDistance3("NWSE", 1))
 }
