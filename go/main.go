@@ -1761,4 +1761,5 @@ func main() {
 	fmt.Printf("The maximum Manhattan distance from the origin that can be achieved is %d\n", solutions.MaxDistance3("NWSE", 1))
 	fmt.Printf("The minimum number of characters you need to delete to make word k-special is %d\n", solutions.MinimumDeletions3("aabcaba", 0))
 	fmt.Printf("The string array denoting the composition of every group s has been divided into %v\n", solutions.DivideString("abcdefghij", 3, 'x'))
+	fmt.Printf("The sum of the n smallest k-mirror numbers is %d\n", solutions.KMirror(2, 5))
 }
