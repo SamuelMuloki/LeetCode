@@ -1763,4 +1763,5 @@ func main() {
 	fmt.Printf("The string array denoting the composition of every group s has been divided into %v\n", solutions.DivideString("abcdefghij", 3, 'x'))
 	fmt.Printf("The sum of the n smallest k-mirror numbers is %d\n", solutions.KMirror(2, 5))
 	fmt.Printf("The list of all k-distant indices sorted in increasing order is %v\n", solutions.FindKDistantIndices([]int{3, 4, 9, 1, 3, 9, 5}, 9, 1))
+	fmt.Printf("The Kth smallest productt of nums1[i] * nums2[j] is %d\n", solutions.KthSmallestProduct([]int{1, 7}, []int{3, 4}, 2))
 }
