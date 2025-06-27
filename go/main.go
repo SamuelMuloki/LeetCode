@@ -1765,4 +1765,5 @@ func main() {
 	fmt.Printf("The list of all k-distant indices sorted in increasing order is %v\n", solutions.FindKDistantIndices([]int{3, 4, 9, 1, 3, 9, 5}, 9, 1))
 	fmt.Printf("The Kth smallest productt of nums1[i] * nums2[j] is %d\n", solutions.KthSmallestProduct([]int{1, 7}, []int{3, 4}, 2))
 	fmt.Printf("Tthe length of the longest subsequence of s that makes up a binary number less than or equal to k is %d\n", solutions.LongestSubsequence("1001010", 5))
+	fmt.Printf("The longest subsequence repeated k times in string s is %s\n", solutions.LongestSubsequenceRepeatedK("ababc", 2))
 }
