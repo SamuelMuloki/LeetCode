@@ -1767,4 +1767,5 @@ func main() {
 	fmt.Printf("Tthe length of the longest subsequence of s that makes up a binary number less than or equal to k is %d\n", solutions.LongestSubsequence("1001010", 5))
 	fmt.Printf("The longest subsequence repeated k times in string s is %s\n", solutions.LongestSubsequenceRepeatedK("ababc", 2))
 	fmt.Printf("The subsequence of length k with the largest sum is %v\n", solutions.MaxSubsequence([]int{-1, -2, 3, 4}, 3))
+	fmt.Printf("The number of non-empty subsequences of nums with a sum less than or equal to target is %d\n", solutions.NumSubseq([]int{3, 5, 6, 7}, 9))
 }
