@@ -1770,4 +1770,5 @@ func main() {
 	fmt.Printf("The number of non-empty subsequences of nums with a sum less than or equal to target is %d\n", solutions.NumSubseq([]int{3, 5, 6, 7}, 9))
 	fmt.Printf("The length of its longest harmonious subsequence among all its possible subsequences is %d\n", solutions.FindLHS([]int{1, 3, 2, 2, 5, 2, 3, 7}))
 	fmt.Printf("The total number of possible original strings that Alice might have intended to type is %d\n", solutions.PossibleStringCount("abbcccc"))
+	fmt.Printf("The total number of possible original strings that Alice might have intended to type, if she was trying to type a string of size at least k is %d\n", solutions.PossibleStringCount2("aabbccdd", 7))
 }
