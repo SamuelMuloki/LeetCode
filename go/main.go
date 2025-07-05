@@ -1773,4 +1773,5 @@ func main() {
 	fmt.Printf("The total number of possible original strings that Alice might have intended to type, if she was trying to type a string of size at least k is %d\n", solutions.PossibleStringCount2("aabbccdd", 7))
 	fmt.Printf("The value of the kth character in word is %c\n", solutions.KthCharacter(5))
 	fmt.Printf("The value of the kth character in word after performing all the operations is %c\n", solutions.KthCharacter2(5, []int{0, 0, 0}))
+	fmt.Printf("The largest lucky integer in the array is %d\n", solutions.FindLucky([]int{2, 2, 3, 4}))
 }
