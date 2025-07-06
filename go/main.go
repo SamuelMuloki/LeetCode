@@ -1774,4 +1774,6 @@ func main() {
 	fmt.Printf("The value of the kth character in word is %c\n", solutions.KthCharacter(5))
 	fmt.Printf("The value of the kth character in word after performing all the operations is %c\n", solutions.KthCharacter2(5, []int{0, 0, 0}))
 	fmt.Printf("The largest lucky integer in the array is %d\n", solutions.FindLucky([]int{2, 2, 3, 4}))
+	findSumPairs := solutions.FindSumPairsConstructor([]int{1, 1, 2, 2, 2, 3}, []int{1, 4, 5, 2, 5, 4})
+	fmt.Printf("The number of pairs that sum to 7 is %d\n", findSumPairs.Count(7))
 }
