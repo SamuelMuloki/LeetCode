@@ -1776,4 +1776,5 @@ func main() {
 	fmt.Printf("The largest lucky integer in the array is %d\n", solutions.FindLucky([]int{2, 2, 3, 4}))
 	findSumPairs := solutions.FindSumPairsConstructor([]int{1, 1, 2, 2, 2, 3}, []int{1, 4, 5, 2, 5, 4})
 	fmt.Printf("The number of pairs that sum to 7 is %d\n", findSumPairs.Count(7))
+	fmt.Printf("The maximum number of events you can attend is %d\n", solutions.MaxEvents([][]int{{1, 2}, {2, 3}, {3, 4}, {1, 2}}))
 }
