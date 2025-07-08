@@ -2,7 +2,7 @@ package solutions
 
 func MaximumValueSum(nums []int, k int, edges [][]int) int64 {
 	sum := int64(0)
-	minExtra := int64(1000000)
+	minExtra := int64(1 << 30)
 	count := 0
 
 	for _, val := range nums {
@@ -18,7 +18,7 @@ func MaximumValueSum(nums []int, k int, edges [][]int) int64 {
 
 	if count%2 == 0 {
 		return sum
-	} else {
-		return sum - minExtra
 	}
+
+	return sum - minExtra
 }
