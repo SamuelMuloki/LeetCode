@@ -1777,4 +1777,5 @@ func main() {
 	findSumPairs := solutions.FindSumPairsConstructor([]int{1, 1, 2, 2, 2, 3}, []int{1, 4, 5, 2, 5, 4})
 	fmt.Printf("The number of pairs that sum to 7 is %d\n", findSumPairs.Count(7))
 	fmt.Printf("The maximum number of events you can attend is %d\n", solutions.MaxEvents([][]int{{1, 2}, {2, 3}, {3, 4}, {1, 2}}))
+	fmt.Printf("The maximum sum of values that you can receive by attending events is %d\n", solutions.MaxValue([][]int{{1, 2, 4}, {3, 4, 3}, {2, 3, 10}}, 2))
 }
