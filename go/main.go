@@ -1778,4 +1778,5 @@ func main() {
 	fmt.Printf("The number of pairs that sum to 7 is %d\n", findSumPairs.Count(7))
 	fmt.Printf("The maximum number of events you can attend is %d\n", solutions.MaxEvents([][]int{{1, 2}, {2, 3}, {3, 4}, {1, 2}}))
 	fmt.Printf("The maximum sum of values that you can receive by attending events is %d\n", solutions.MaxValue([][]int{{1, 2, 4}, {3, 4, 3}, {2, 3, 10}}, 2))
+	fmt.Printf("The maximum amount of free time possible after rearranging the meetings is %d\n", solutions.MaxFreeTime(5, 1, []int{1, 3}, []int{2, 5}))
 }
