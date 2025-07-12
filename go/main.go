@@ -1780,4 +1780,5 @@ func main() {
 	fmt.Printf("The maximum sum of values that you can receive by attending events is %d\n", solutions.MaxValue([][]int{{1, 2, 4}, {3, 4, 3}, {2, 3, 10}}, 2))
 	fmt.Printf("The maximum amount of free time possible after rearranging the meetings is %d\n", solutions.MaxFreeTime(5, 1, []int{1, 3}, []int{2, 5}))
 	fmt.Printf("The maximum amount of free time II possible after rearranging the meetings is %d\n", solutions.MaxFreeTime2(5, []int{1, 3}, []int{2, 5}))
+	fmt.Printf("The earliest possible round number and the latest possible round number in which these two players will compete against each other is %v\n", solutions.EarliestAndLatest(4, 2, 3))
 }
