@@ -1783,4 +1783,5 @@ func main() {
 	fmt.Printf("The earliest possible round number and the latest possible round number in which these two players will compete against each other is %v\n", solutions.EarliestAndLatest(4, 2, 3))
 	fmt.Printf("The maximum number of matchings between players and trainers is %d\n", solutions.MatchPlayersAndTrainers([]int{4, 7, 9}, []int{8, 2, 5, 8}))
 	fmt.Printf("The word is valid %t\n", solutions.IsValid3("UuE6"))
+	fmt.Printf("The length of the longest valid subsequence of nums is %d\n", solutions.MaximumLength2([]int{1, 2, 3, 4}))
 }
