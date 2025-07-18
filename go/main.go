@@ -1785,4 +1785,5 @@ func main() {
 	fmt.Printf("The word is valid %t\n", solutions.IsValid3("UuE6"))
 	fmt.Printf("The length of the longest valid subsequence of nums is %d\n", solutions.MaximumLength2([]int{1, 2, 3, 4}))
 	fmt.Printf("The length of the longest valid subsequence of nums is %d\n", solutions.MaximumLength3([]int{1, 2, 3, 4, 5}, 2))
+	fmt.Printf("The minimum difference possible between the sums of the two parts after the removal of n elements is %d\n", solutions.MinimumDifference2([]int{3, 1, 2}))
 }
