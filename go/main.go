@@ -1787,4 +1787,5 @@ func main() {
 	fmt.Printf("The length of the longest valid subsequence of nums is %d\n", solutions.MaximumLength3([]int{1, 2, 3, 4, 5}, 2))
 	fmt.Printf("The minimum difference possible between the sums of the two parts after the removal of n elements is %d\n", solutions.MinimumDifference2([]int{3, 1, 2}))
 	fmt.Printf("The 2D array ans containing the paths of the remaining folders after deleting all the marked folders is %v\n", solutions.DeleteDuplicateFolder([][]string{{"a"}, {"c"}, {"d"}, {"a", "b"}, {"c", "b"}, {"d", "a"}}))
+	fmt.Printf("The maximum score you can get by erasing exactly one subarray is %d\n", solutions.MaximumUniqueSubarray([]int{4, 2, 4, 5, 6}))
 }
