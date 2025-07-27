@@ -1791,4 +1791,5 @@ func main() {
 	fmt.Printf("The minimum score of any possible pair of edge removals on the given tree is %d\n", solutions.MinimumScore([]int{1, 5, 5, 4, 11}, [][]int{{0, 1}, {1, 2}, {1, 3}, {3, 4}}))
 	fmt.Printf("The maximum sum of such a subarray is %d\n", solutions.MaxSum3([]int{1, 2, 3, 4, 5}))
 	fmt.Printf("The maximum number of subarrays possible after removing exactly one conflicting pair is %d\n", solutions.MaxSubarrays(4, [][]int{{2, 3}, {1, 4}}))
+	fmt.Printf("The number of hills and valleys in nums is %d\n", solutions.CountHillValley([]int{2, 4, 1, 1, 6, 5}))
 }
