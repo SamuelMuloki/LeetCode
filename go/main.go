@@ -1793,4 +1793,5 @@ func main() {
 	fmt.Printf("The maximum number of subarrays possible after removing exactly one conflicting pair is %d\n", solutions.MaxSubarrays(4, [][]int{{2, 3}, {1, 4}}))
 	fmt.Printf("The number of hills and valleys in nums is %d\n", solutions.CountHillValley([]int{2, 4, 1, 1, 6, 5}))
 	fmt.Printf("Tnteger array answer of size n, where answer[i] is the length of the minimum sized subarray starting at i with maximum bitwise OR is %v\n", solutions.SmallestSubarrays([]int{1, 0, 2, 1, 3}))
+	fmt.Printf("The number of distinct bitwise ORs of all the non-empty subarrays of array nums is %d\n", solutions.SubarrayBitwiseORs([]int{1, 2, 4}))
 }
