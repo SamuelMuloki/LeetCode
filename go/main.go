@@ -1796,4 +1796,5 @@ func main() {
 	fmt.Printf("The number of distinct bitwise ORs of all the non-empty subarrays of array nums is %d\n", solutions.SubarrayBitwiseORs([]int{1, 2, 4}))
 	fmt.Printf("The minimum cost to make both the baskets equal is %d\n", solutions.MinCost3([]int{4, 2, 2, 2}, []int{1, 4, 1, 2}))
 	fmt.Printf("The maximum total number of fruits you can harvest is %d\n", solutions.MaxTotalFruits([][]int{{2, 8}, {6, 3}, {8, 6}}, 5, 4))
+	fmt.Printf("The maximum number of fruits you can pick is %d\n", solutions.TotalFruit([]int{1, 2, 1}))
 }
