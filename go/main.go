@@ -1795,4 +1795,5 @@ func main() {
 	fmt.Printf("Tnteger array answer of size n, where answer[i] is the length of the minimum sized subarray starting at i with maximum bitwise OR is %v\n", solutions.SmallestSubarrays([]int{1, 0, 2, 1, 3}))
 	fmt.Printf("The number of distinct bitwise ORs of all the non-empty subarrays of array nums is %d\n", solutions.SubarrayBitwiseORs([]int{1, 2, 4}))
 	fmt.Printf("The minimum cost to make both the baskets equal is %d\n", solutions.MinCost3([]int{4, 2, 2, 2}, []int{1, 4, 1, 2}))
+	fmt.Printf("The maximum total number of fruits you can harvest is %d\n", solutions.MaxTotalFruits([][]int{{2, 8}, {6, 3}, {8, 6}}, 5, 4))
 }
