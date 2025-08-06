@@ -1798,4 +1798,5 @@ func main() {
 	fmt.Printf("The maximum total number of fruits you can harvest is %d\n", solutions.MaxTotalFruits([][]int{{2, 8}, {6, 3}, {8, 6}}, 5, 4))
 	fmt.Printf("The maximum number of fruits you can pick is %d\n", solutions.TotalFruit([]int{1, 2, 1}))
 	fmt.Println("The number of fruit types that remain unplaced after all possible allocations are made is", solutions.NumOfUnplacedFruits([]int{4, 2, 5}, []int{3, 5, 4}))
+	fmt.Println("The number of fruit types that remain unplaced after all possible allocations are made II is", solutions.NumOfUnplacedFruits2([]int{3, 6, 1}, []int{6, 4, 7}))
 }
