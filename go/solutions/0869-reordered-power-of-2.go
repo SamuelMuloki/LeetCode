@@ -1,32 +1,23 @@
 package solutions
 
-import "strconv"
-
 func ReorderedPowerOf2(n int) bool {
-	var isPowerOfTwo = func(num int) bool {
-		return num > 0 && (num-1)&num == 0
-	}
+	var getDigits = func(n int) [10]int {
+		digits := [10]int{}
 
-	res := false
-	var permute func(arr []rune, l, r int) bool
-	permute = func(arr []rune, l, r int) bool {
-		if l == r {
-			num, _ := strconv.Atoi(string(arr))
-			res = res || arr[0] != '0' && isPowerOfTwo(num)
-			return res
+		for n > 0 {
+			digits[n%10]++
+			n /= 10
 		}
 
-		for i := l; i <= r; i++ {
-			arr[l], arr[i] = arr[i], arr[l]
-			permute(arr, l+1, r)
-			arr[l], arr[i] = arr[i], arr[l]
-		}
-
-		return res
+		return digits
 	}
 
-	str := strconv.Itoa(n)
-	runes := []rune(str)
+	digits := getDigits(n)
+	for i := 1; i <= 1_000_000_000; i *= 2 {
+		if getDigits(i) == digits {
+			return true
+		}
+	}
 
-	return permute(runes, 0, len(runes)-1)
+	return false
 }
