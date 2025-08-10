@@ -1800,4 +1800,5 @@ func main() {
 	fmt.Println("The number of fruit types that remain unplaced after all possible allocations are made is", solutions.NumOfUnplacedFruits([]int{4, 2, 5}, []int{3, 5, 4}))
 	fmt.Println("The number of fruit types that remain unplaced after all possible allocations are made II is", solutions.NumOfUnplacedFruits2([]int{3, 6, 1}, []int{6, 4, 7}))
 	fmt.Printf("The probability that A is used up before B, plus half the probability that both soups are used up in the same turn is %.4f\n", solutions.SoupServings(50))
+	fmt.Printf("The resulting number is a power of two: %t\n", solutions.ReorderedPowerOf2(16))
 }
