@@ -1802,4 +1802,5 @@ func main() {
 	fmt.Printf("The probability that A is used up before B, plus half the probability that both soups are used up in the same turn is %.4f\n", solutions.SoupServings(50))
 	fmt.Printf("The resulting number is a power of two: %t\n", solutions.ReorderedPowerOf2(16))
 	fmt.Printf("The array answers, equal in length to queries, where answers[i] is the answer to the ith query is %v\n", solutions.ProductQueries(15, [][]int{{0, 1}, {2, 2}, {0, 3}}))
+	fmt.Printf("The number of ways n can be expressed as the sum of the xth power of unique positive integers is %d\n", solutions.NumberOfWays3(10, 2))
 }
