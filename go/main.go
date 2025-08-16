@@ -1803,4 +1803,5 @@ func main() {
 	fmt.Printf("The resulting number is a power of two: %t\n", solutions.ReorderedPowerOf2(16))
 	fmt.Printf("The array answers, equal in length to queries, where answers[i] is the answer to the ith query is %v\n", solutions.ProductQueries(15, [][]int{{0, 1}, {2, 2}, {0, 3}}))
 	fmt.Printf("The number of ways n can be expressed as the sum of the xth power of unique positive integers is %d\n", solutions.NumberOfWays3(10, 2))
+	fmt.Println("The maximum number you can get by changing at most one digit is", solutions.Maximum69Number(9669))
 }
