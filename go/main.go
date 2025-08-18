@@ -1805,4 +1805,5 @@ func main() {
 	fmt.Printf("The number of ways n can be expressed as the sum of the xth power of unique positive integers is %d\n", solutions.NumberOfWays3(10, 2))
 	fmt.Println("The maximum number you can get by changing at most one digit is", solutions.Maximum69Number(9669))
 	fmt.Printf("The probability that Alice has n or fewer points is %.4f\n", solutions.New21Game(10, 1, 10))
+	fmt.Printf("You can get such expression that evaluates to 24: %t\n", solutions.JudgePoint24([]int{4, 1, 8, 7}))
 }
