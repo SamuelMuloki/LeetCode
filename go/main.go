@@ -1807,4 +1807,5 @@ func main() {
 	fmt.Printf("The probability that Alice has n or fewer points is %.4f\n", solutions.New21Game(10, 1, 10))
 	fmt.Printf("You can get such expression that evaluates to 24: %t\n", solutions.JudgePoint24([]int{4, 1, 8, 7}))
 	fmt.Printf("The number of submatrices that have all ones are %d\n", solutions.NumSubmat([][]int{{1, 0, 1}, {1, 1, 0}, {1, 1, 0}}))
+	fmt.Printf("The minimum possible area of the rectangle covering all ones is %d\n", solutions.MinimumArea([][]int{{0, 1, 0}, {1, 0, 1}}))
 }
