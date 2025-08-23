@@ -1808,4 +1808,5 @@ func main() {
 	fmt.Printf("You can get such expression that evaluates to 24: %t\n", solutions.JudgePoint24([]int{4, 1, 8, 7}))
 	fmt.Printf("The number of submatrices that have all ones are %d\n", solutions.NumSubmat([][]int{{1, 0, 1}, {1, 1, 0}, {1, 1, 0}}))
 	fmt.Printf("The minimum possible area of the rectangle covering all ones is %d\n", solutions.MinimumArea([][]int{{0, 1, 0}, {1, 0, 1}}))
+	fmt.Printf("The minimum possible sum of the area of these rectangles is %d\n", solutions.MinimumSum3([][]int{{1, 0, 1}, {1, 1, 1}}))
 }
