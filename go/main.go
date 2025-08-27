@@ -1810,4 +1810,5 @@ func main() {
 	fmt.Printf("The minimum possible area of the rectangle covering all ones is %d\n", solutions.MinimumArea([][]int{{0, 1, 0}, {1, 0, 1}}))
 	fmt.Printf("The minimum possible sum of the area of these rectangles is %d\n", solutions.MinimumSum3([][]int{{1, 0, 1}, {1, 1, 1}}))
 	fmt.Printf("The area of the rectangle having the longest diagonal is %d\n", solutions.AreaOfMaxDiagonal([][]int{{9, 3}, {8, 6}}))
+	fmt.Printf("The length of the longest V-shaped diagonal segment is %d\n", solutions.LenOfVDiagonal([][]int{{2, 2, 1, 2, 2}, {2, 0, 2, 2, 0}, {2, 0, 1, 1, 0}, {1, 0, 2, 2, 2}, {2, 0, 0, 2, 2}}))
 }
