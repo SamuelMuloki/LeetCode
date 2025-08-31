@@ -1813,7 +1813,7 @@ func main() {
 	fmt.Printf("The length of the longest V-shaped diagonal segment is %d\n", solutions.LenOfVDiagonal([][]int{{2, 2, 1, 2, 2}, {2, 0, 2, 2, 0}, {2, 0, 1, 1, 0}, {1, 0, 2, 2, 2}, {2, 0, 0, 2, 2}}))
 	fmt.Printf("The sorted matrix is %v\n", solutions.SortMatrix([][]int{{1, 7, 3}, {9, 8, 2}, {4, 5, 6}}))
 	fmt.Printf("The number of possible pairs (x, y) that satisfy the conditions is %d\n", solutions.FlowerGame(3, 2))
-	fmt.Printf("The 9*9 grid is a valid sudoku: %t\n", solutions.IsValidSudoku([][]byte{
+	board2 := [][]byte{
 		{'5', '3', '.', '.', '7', '.', '.', '.', '.'},
 		{'6', '.', '.', '1', '9', '5', '.', '.', '.'},
 		{'.', '9', '8', '.', '.', '.', '.', '6', '.'},
@@ -1823,5 +1823,8 @@ func main() {
 		{'.', '6', '.', '.', '.', '.', '2', '8', '.'},
 		{'.', '.', '.', '4', '1', '9', '.', '.', '5'},
 		{'.', '.', '.', '.', '8', '.', '.', '7', '9'},
-	}))
+	}
+	fmt.Printf("The 9*9 grid is a valid sudoku: %t\n", solutions.IsValidSudoku(board2))
+	solutions.SolveSudoku(board2)
+	fmt.Printf("The solved sudoku board is %v\n", board2)
 }
