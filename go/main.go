@@ -1827,4 +1827,5 @@ func main() {
 	fmt.Printf("The 9*9 grid is a valid sudoku: %t\n", solutions.IsValidSudoku(board2))
 	solutions.SolveSudoku(board2)
 	fmt.Printf("The solved sudoku board is %v\n", board2)
+	fmt.Printf("The number of pairs of points (A, B) that satisfy the conditions is %d\n", solutions.NumberOfPairs([][]int{{1, 1}, {2, 2}, {3, 3}}))
 }
