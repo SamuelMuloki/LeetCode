@@ -1829,4 +1829,5 @@ func main() {
 	fmt.Printf("The solved sudoku board is %v\n", board2)
 	fmt.Printf("The number of pairs of points (A, B) that satisfy the conditions is %d\n", solutions.NumberOfPairs([][]int{{1, 1}, {2, 2}, {3, 3}}))
 	fmt.Printf("The number of pairs of points where you can place Alice and Bob is %d\n", solutions.NumberOfPairs2([][]int{{1, 1}, {2, 2}, {3, 3}}))
+	fmt.Printf("The closest person to the target is %d\n", solutions.FindClosest(2, 7, 4))
 }
