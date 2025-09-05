@@ -1830,4 +1830,5 @@ func main() {
 	fmt.Printf("The number of pairs of points (A, B) that satisfy the conditions is %d\n", solutions.NumberOfPairs([][]int{{1, 1}, {2, 2}, {3, 3}}))
 	fmt.Printf("The number of pairs of points where you can place Alice and Bob is %d\n", solutions.NumberOfPairs2([][]int{{1, 1}, {2, 2}, {3, 3}}))
 	fmt.Printf("The closest person to the target is %d\n", solutions.FindClosest(2, 7, 4))
+	fmt.Printf("The integer denoting the minimum number of operations needed to make num1 equal to 0 is %d\n", solutions.MakeTheIntegerZero(3, -2))
 }
