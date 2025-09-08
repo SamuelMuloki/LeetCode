@@ -1833,4 +1833,5 @@ func main() {
 	fmt.Printf("The integer denoting the minimum number of operations needed to make num1 equal to 0 is %d\n", solutions.MakeTheIntegerZero(3, -2))
 	fmt.Printf("The minimum number of operations required to reduce all elements of the array to zero for each query is %v\n", solutions.MinOperations10([][]int{{1, 2}, {2, 4}}))
 	fmt.Printf("The array containing n unique integers such that they add up to 0 is %v\n", solutions.SumZero(5))
+	fmt.Printf("The list of two non zero integers [a, b] is %v\n", solutions.GetNoZeroIntegers(2))
 }
