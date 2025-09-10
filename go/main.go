@@ -1835,4 +1835,5 @@ func main() {
 	fmt.Printf("The array containing n unique integers such that they add up to 0 is %v\n", solutions.SumZero(5))
 	fmt.Printf("The list of two non zero integers [a, b] is %v\n", solutions.GetNoZeroIntegers(2))
 	fmt.Printf("The number of people who know the secret at the end of day n is %d\n", solutions.PeopleAwareOfSecret(6, 2, 4))
+	fmt.Printf("The minimum number of users you need to teach is %d\n", solutions.MinimumTeachings(4, [][]int{{1}, {2}, {1, 2}}, [][]int{{1, 2}, {1, 3}, {2, 3}}))
 }
