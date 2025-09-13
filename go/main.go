@@ -1837,4 +1837,5 @@ func main() {
 	fmt.Printf("The number of people who know the secret at the end of day n is %d\n", solutions.PeopleAwareOfSecret(6, 2, 4))
 	fmt.Printf("The minimum number of users you need to teach is %d\n", solutions.MinimumTeachings(4, [][]int{{1}, {2}, {1, 2}}, [][]int{{1, 2}, {1, 3}, {2, 3}}))
 	fmt.Printf("Alice wins the game: %t\n", solutions.DoesAliceWin("leetcoder"))
+	fmt.Printf("The sum of the two frequencies is %d\n", solutions.MaxFreqSum("successes"))
 }
