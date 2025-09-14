@@ -5,11 +5,28 @@ import "strings"
 func Spellchecker(wordlist []string, queries []string) []string {
 	m := make(map[string]bool)
 	lower := make(map[string]string)
+	e := make(map[string]string)
+	var convert = func(word string) string {
+		runes := []rune(word)
+		for i, r := range runes {
+			if isVowel(r) {
+				runes[i] = '*'
+			}
+		}
+
+		return string(runes)
+	}
+
 	for _, word := range wordlist {
 		m[word] = true
 		l := strings.ToLower(word)
 		if _, ok := lower[l]; !ok {
 			lower[l] = word
+		}
+
+		c := convert(l)
+		if _, ok := e[c]; !ok {
+			e[c] = word
 		}
 	}
 
@@ -26,27 +43,9 @@ func Spellchecker(wordlist []string, queries []string) []string {
 			continue
 		}
 
-		w1 := l
-		for _, word := range wordlist {
-			w2 := strings.ToLower(word)
-			if len(w1) != len(w2) {
-				continue
-			}
-
-			found := true
-			for i, w := range w2 {
-				if rune(w1[i]) != w {
-					if !(isVowel(rune(w1[i])) && isVowel(w)) {
-						found = false
-						break
-					}
-				}
-			}
-
-			if found {
-				res[i] = word
-				break
-			}
+		if w, ok := e[convert(l)]; ok {
+			res[i] = w
+			continue
 		}
 	}
 
