@@ -1838,4 +1838,5 @@ func main() {
 	fmt.Printf("The minimum number of users you need to teach is %d\n", solutions.MinimumTeachings(4, [][]int{{1}, {2}, {1, 2}}, [][]int{{1, 2}, {1, 3}, {2, 3}}))
 	fmt.Printf("Alice wins the game: %t\n", solutions.DoesAliceWin("leetcoder"))
 	fmt.Printf("The sum of the two frequencies is %d\n", solutions.MaxFreqSum("successes"))
+	fmt.Printf("The list of words answer, where answer[i] is the correct word for query = queries[i] is %v\n", solutions.Spellchecker([]string{"KiTe", "kite", "hare", "Hare"}, []string{"kite", "Kite", "KiTe", "Hare", "HARE", "Hear", "hear", "keti", "keet", "keto"}))
 }
