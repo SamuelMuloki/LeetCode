@@ -1839,4 +1839,5 @@ func main() {
 	fmt.Printf("Alice wins the game: %t\n", solutions.DoesAliceWin("leetcoder"))
 	fmt.Printf("The sum of the two frequencies is %d\n", solutions.MaxFreqSum("successes"))
 	fmt.Printf("The list of words answer, where answer[i] is the correct word for query = queries[i] is %v\n", solutions.Spellchecker([]string{"KiTe", "kite", "hare", "Hare"}, []string{"kite", "Kite", "KiTe", "Hare", "HARE", "Hear", "hear", "keti", "keet", "keto"}))
+	fmt.Printf("The number of words in text you can fully type using this keyboard is %d\n", solutions.CanBeTypedWords("hello world", "ad"))
 }
