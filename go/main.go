@@ -1841,4 +1841,11 @@ func main() {
 	fmt.Printf("The list of words answer, where answer[i] is the correct word for query = queries[i] is %v\n", solutions.Spellchecker([]string{"KiTe", "kite", "hare", "Hare"}, []string{"kite", "Kite", "KiTe", "Hare", "HARE", "Hear", "hear", "keti", "keet", "keto"}))
 	fmt.Printf("The number of words in text you can fully type using this keyboard is %d\n", solutions.CanBeTypedWords("hello world", "ad"))
 	fmt.Printf("The final modified array is %v\n", solutions.ReplaceNonCoprimes([]int{6, 4, 3, 2, 7, 6, 2}))
+	taskManager := solutions.TaskManagerConstructor([][]int{{1, 101, 10}, {2, 102, 20}, {3, 103, 15}})
+	taskManager.Add(4, 104, 5)
+	taskManager.Edit(102, 8)
+	taskManager.ExecTop()
+	taskManager.Rmv(101)
+	taskManager.Add(5, 105, 15)
+	taskManager.ExecTop()
 }
