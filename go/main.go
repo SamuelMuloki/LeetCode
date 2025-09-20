@@ -1857,4 +1857,15 @@ func main() {
 	fmt.Printf("The value of the formula '=A1+B2' is %d\n", spreadsheet.GetValue("=A1+B2"))
 	spreadsheet.ResetCell("A1")
 	fmt.Printf("The value of the formula '=A1+B2' is %d\n", spreadsheet.GetValue("=A1+B2"))
+
+	router := solutions.RouterConstructor(3)
+	fmt.Printf("%t\n", router.AddPacket(1, 4, 90))
+	fmt.Printf("%t\n", router.AddPacket(2, 5, 90))
+	fmt.Printf("%t\n", router.AddPacket(1, 4, 90))
+	fmt.Printf("%t\n", router.AddPacket(3, 5, 95))
+	fmt.Printf("%t\n", router.AddPacket(4, 5, 105))
+	fmt.Printf("%v\n", router.ForwardPacket())
+	fmt.Printf("%t\n", router.AddPacket(5, 2, 110))
+	fmt.Printf("%d\n", router.GetCount(5, 100, 110))
+
 }
