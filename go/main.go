@@ -1868,4 +1868,11 @@ func main() {
 	fmt.Printf("%t\n", router.AddPacket(5, 2, 110))
 	fmt.Printf("%d\n", router.GetCount(5, 100, 110))
 
+	movieRentingSystem := solutions.MovieRentingSystemConstructor(3, [][]int{{0, 1, 5}, {0, 2, 6}, {0, 3, 7}, {1, 1, 4}, {1, 2, 7}, {2, 1, 5}})
+	fmt.Printf("%v\n", movieRentingSystem.Search(1))
+	movieRentingSystem.Rent(0, 1)
+	movieRentingSystem.Rent(1, 2)
+	fmt.Printf("%v\n", movieRentingSystem.Report())
+	movieRentingSystem.Drop(1, 2)
+	fmt.Printf("%v\n", movieRentingSystem.Search(2))
 }
