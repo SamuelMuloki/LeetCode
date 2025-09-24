@@ -1875,4 +1875,5 @@ func main() {
 	fmt.Printf("%v\n", movieRentingSystem.Report())
 	movieRentingSystem.Drop(1, 2)
 	fmt.Printf("%v\n", movieRentingSystem.Search(2))
+	fmt.Printf("The fraction in string format is %s\n", solutions.FractionToDecimal(4, 333))
 }
