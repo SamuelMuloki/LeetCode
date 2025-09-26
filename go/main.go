@@ -1876,4 +1876,5 @@ func main() {
 	movieRentingSystem.Drop(1, 2)
 	fmt.Printf("%v\n", movieRentingSystem.Search(2))
 	fmt.Printf("The fraction in string format is %s\n", solutions.FractionToDecimal(4, 333))
+	fmt.Printf("The number of triplets chosen from the array that can make triangles if we take them as side lengths of a triangle is %d\n", solutions.TriangleNumber([]int{2, 2, 3, 4}))
 }
