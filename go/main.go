@@ -1877,4 +1877,5 @@ func main() {
 	fmt.Printf("%v\n", movieRentingSystem.Search(2))
 	fmt.Printf("The fraction in string format is %s\n", solutions.FractionToDecimal(4, 333))
 	fmt.Printf("The number of triplets chosen from the array that can make triangles if we take them as side lengths of a triangle is %d\n", solutions.TriangleNumber([]int{2, 2, 3, 4}))
+	fmt.Printf("The area of the largest triangle that can be formed by any three different points is %.6f\n", solutions.LargestTriangleArea([][]int{{0, 0}, {0, 1}, {1, 0}, {0, 2}, {2, 0}}))
 }
