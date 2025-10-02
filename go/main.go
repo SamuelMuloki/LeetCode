@@ -1880,4 +1880,5 @@ func main() {
 	fmt.Printf("The area of the largest triangle that can be formed by any three different points is %.6f\n", solutions.LargestTriangleArea([][]int{{0, 0}, {0, 1}, {1, 0}, {0, 2}, {2, 0}}))
 	fmt.Printf("The largest perimeter of a triangle with a non-zero area, formed from three of these lengths is %d\n", solutions.LargestPerimeter2([]int{2, 1, 2}))
 	fmt.Printf("The minimum possible score that you can achieve with some triangulation of the polygon is %d\n", solutions.MinScoreTriangulation([]int{1, 2, 3}))
+	fmt.Printf("The maximum number of water bottles you can drink is %d\n", solutions.MaxBottlesDrunk(13, 6))
 }
