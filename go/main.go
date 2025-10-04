@@ -1881,4 +1881,5 @@ func main() {
 	fmt.Printf("The largest perimeter of a triangle with a non-zero area, formed from three of these lengths is %d\n", solutions.LargestPerimeter2([]int{2, 1, 2}))
 	fmt.Printf("The minimum possible score that you can achieve with some triangulation of the polygon is %d\n", solutions.MinScoreTriangulation([]int{1, 2, 3}))
 	fmt.Printf("The maximum number of water bottles you can drink is %d\n", solutions.MaxBottlesDrunk(13, 6))
+	fmt.Printf("The first k characters for every 2k characters counting from the start of the string is %s\n", solutions.ReverseStr("abcdefg", 2))
 }
