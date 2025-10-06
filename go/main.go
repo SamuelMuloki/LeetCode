@@ -1883,4 +1883,5 @@ func main() {
 	fmt.Printf("The maximum number of water bottles you can drink is %d\n", solutions.MaxBottlesDrunk(13, 6))
 	fmt.Printf("The first k characters for every 2k characters counting from the start of the string is %s\n", solutions.ReverseStr("abcdefg", 2))
 	fmt.Printf("The 2D list of grid coordinates result where result[i] = [ri, ci] denotes that rain water can flow from cell (ri, ci) to both the Pacific and Atlantic oceans is %v\n", solutions.PacificAtlantic([][]int{{1, 2, 2, 3, 5}, {3, 2, 3, 4, 4}, {2, 4, 5, 3, 1}, {6, 7, 1, 4, 5}, {5, 1, 1, 2, 4}}))
+	fmt.Printf("The minimum time until you can reach the bottom right square (n - 1, n - 1) is %d\n", solutions.SwimInWater([][]int{{0, 2}, {1, 3}}))
 }
