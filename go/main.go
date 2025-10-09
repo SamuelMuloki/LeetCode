@@ -1886,4 +1886,5 @@ func main() {
 	fmt.Printf("The minimum time until you can reach the bottom right square (n - 1, n - 1) is %d\n", solutions.SwimInWater([][]int{{0, 2}, {1, 3}}))
 	fmt.Printf("Avoid flooding: %v\n", solutions.AvoidFlood([]int{1, 2, 0, 0, 2, 1}))
 	fmt.Printf("The integer array pairs of length n where pairs[i] is the number of potions that will form a successful pair with the ith spell is %v\n", solutions.SuccessfulPairs([]int{5, 1, 3}, []int{1, 2, 3, 4, 5}, 7))
+	fmt.Printf("The minimum amount of time required for the potions to be brewed properly is %d\n", solutions.MinTime([]int{1, 5, 2, 4}, []int{5, 1, 4, 2}))
 }
