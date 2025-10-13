@@ -1889,4 +1889,5 @@ func main() {
 	fmt.Printf("The minimum amount of time required for the potions to be brewed properly is %d\n", solutions.MinTime([]int{1, 5, 2, 4}, []int{5, 1, 4, 2}))
 	fmt.Printf("The maximum possible energy you can gain is %d\n", solutions.MaximumEnergy([]int{5, 2, -10, -5, 1}, 3))
 	fmt.Printf("The maximum possible total damage that a magician can cast is %d\n", solutions.MaximumTotalDamage([]int{1, 1, 3, 4}))
+	fmt.Printf("The sum of the array products for all valid magical sequences is %d\n", solutions.MagicalSum(5, 5, []int{1, 10, 100, 10000, 1000000}))
 }
