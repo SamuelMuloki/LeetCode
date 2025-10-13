@@ -1890,4 +1890,5 @@ func main() {
 	fmt.Printf("The maximum possible energy you can gain is %d\n", solutions.MaximumEnergy([]int{5, 2, -10, -5, 1}, 3))
 	fmt.Printf("The maximum possible total damage that a magician can cast is %d\n", solutions.MaximumTotalDamage([]int{1, 1, 3, 4}))
 	fmt.Printf("The sum of the array products for all valid magical sequences is %d\n", solutions.MagicalSum(5, 5, []int{1, 10, 100, 10000, 1000000}))
+	fmt.Printf("The words after deleting all anagram is %v\n", solutions.RemoveAnagrams([]string{"abba", "baba", "bbaa", "cd", "cd"}))
 }
