@@ -1893,4 +1893,5 @@ func main() {
 	fmt.Printf("The words after deleting all anagram is %v\n", solutions.RemoveAnagrams([]string{"abba", "baba", "bbaa", "cd", "cd"}))
 	fmt.Printf("It is possible to find two such adjacent increasing subarrays %t\n", solutions.HasIncreasingSubarrays([]int{2, 5, 7, 8, 9, 2, 3, 4, 3, 1}, 3))
 	fmt.Printf("The maximum possible value of k is %d\n", solutions.MaxIncreasingSubarrays([]int{2, 5, 7, 8, 9, 2, 3, 4, 3, 1}))
+	fmt.Printf("The maximum MEX of nums after applying the mentioned operation any number of times is %d\n", solutions.FindSmallestInteger([]int{1, -10, 7, 13, 6, 8}, 5))
 }
