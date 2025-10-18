@@ -1895,4 +1895,5 @@ func main() {
 	fmt.Printf("The maximum possible value of k is %d\n", solutions.MaxIncreasingSubarrays([]int{2, 5, 7, 8, 9, 2, 3, 4, 3, 1}))
 	fmt.Printf("The maximum MEX of nums after applying the mentioned operation any number of times is %d\n", solutions.FindSmallestInteger([]int{1, -10, 7, 13, 6, 8}, 5))
 	fmt.Printf("The integer denoting the maximum number of resulting partitions after the operations by optimally choosing at most one index to change %d\n", solutions.MaxPartitionsAfterOperations("accca", 2))
+	fmt.Printf("The maximum possible number of distinct elements in nums after performing the operations is %d\n", solutions.MaxDistinctElements([]int{4, 4, 4, 4}, 1))
 }
