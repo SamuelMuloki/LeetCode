@@ -1896,4 +1896,5 @@ func main() {
 	fmt.Printf("The maximum MEX of nums after applying the mentioned operation any number of times is %d\n", solutions.FindSmallestInteger([]int{1, -10, 7, 13, 6, 8}, 5))
 	fmt.Printf("The integer denoting the maximum number of resulting partitions after the operations by optimally choosing at most one index to change %d\n", solutions.MaxPartitionsAfterOperations("accca", 2))
 	fmt.Printf("The maximum possible number of distinct elements in nums after performing the operations is %d\n", solutions.MaxDistinctElements([]int{4, 4, 4, 4}, 1))
+	fmt.Printf("The lexicographically smallest string you can obtain by applying the above operations any number of times on s is %d\n", solutions.FindLexSmallestString("5525", 9, 2))
 }
