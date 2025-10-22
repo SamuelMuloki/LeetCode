@@ -1898,4 +1898,5 @@ func main() {
 	fmt.Printf("The maximum possible number of distinct elements in nums after performing the operations is %d\n", solutions.MaxDistinctElements([]int{4, 4, 4, 4}, 1))
 	fmt.Printf("The lexicographically smallest string you can obtain by applying the above operations any number of times on s is %d\n", solutions.FindLexSmallestString("5525", 9, 2))
 	fmt.Printf("The maximum possible frequency of any element in nums after performing the operations is %d\n", solutions.MaxFrequency2([]int{1, 4, 5}, 1, 2))
+	fmt.Printf("The maximum possible frequency of any element in nums after performing the operations II is %d\n", solutions.MaxFrequency3([]int{1, 4, 5}, 1, 2))
 }
