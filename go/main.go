@@ -1900,4 +1900,5 @@ func main() {
 	fmt.Printf("The maximum possible frequency of any element in nums after performing the operations is %d\n", solutions.MaxFrequency2([]int{1, 4, 5}, 1, 2))
 	fmt.Printf("The maximum possible frequency of any element in nums after performing the operations II is %d\n", solutions.MaxFrequency3([]int{1, 4, 5}, 1, 2))
 	fmt.Printf("The final two digits in s are the same %t\n", solutions.HasSameDigits("3902"))
+	fmt.Printf("The smallest numerically balanced number strictly greater than n is %d\n", solutions.NextBeautifulNumber(1000))
 }
