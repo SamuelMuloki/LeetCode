@@ -1913,5 +1913,5 @@ func main() {
 	fmt.Printf("The bank object after transfer is %v\n", bank)
 	bank.Deposit(10, 50)
 	fmt.Printf("The bank object after deposit is %v\n", bank)
-
+	fmt.Printf("The number of possible valid selections is %d\n", solutions.CountValidSelections([]int{1, 0, 2, 0, 3}))
 }
