@@ -1914,4 +1914,5 @@ func main() {
 	bank.Deposit(10, 50)
 	fmt.Printf("The bank object after deposit is %v\n", bank)
 	fmt.Printf("The number of possible valid selections is %d\n", solutions.CountValidSelections([]int{1, 0, 2, 0, 3}))
+	fmt.Printf("The array of size two containing the two numbers (in any order), so peace can return to Digitville is %v\n", solutions.GetSneakyNumbers([]int{0, 1, 1, 0}))
 }
