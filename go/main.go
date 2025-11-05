@@ -1916,4 +1916,5 @@ func main() {
 	fmt.Printf("The number of possible valid selections is %d\n", solutions.CountValidSelections([]int{1, 0, 2, 0, 3}))
 	fmt.Printf("The array of size two containing the two numbers (in any order), so peace can return to Digitville is %v\n", solutions.GetSneakyNumbers([]int{0, 1, 1, 0}))
 	fmt.Printf("The integer array answer of length n - k + 1 where answer[i] is the x-sum of the subarray nums[i..i + k - 1] is %v\n", solutions.FindXSum([]int{1, 1, 2, 2, 3, 4, 2, 3}, 6, 2))
+	fmt.Printf("The integer array answer of length n - k + 1 where answer[i] is the x-sum of the subarray nums[i..i + k - 1] II is %v\n", solutions.FindXSum2([]int{1, 1, 2, 2, 3, 4, 2, 3}, 6, 2))
 }
