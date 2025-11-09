@@ -1919,4 +1919,5 @@ func main() {
 	fmt.Printf("The integer array answer of length n - k + 1 where answer[i] is the x-sum of the subarray nums[i..i + k - 1] II is %v\n", solutions.FindXSum2([]int{1, 1, 2, 2, 3, 4, 2, 3}, 6, 2))
 	fmt.Printf("The array of integers representing the results of each query of type [1, x] in the order they appear is %v\n", solutions.ProcessQueries(5, [][]int{{1, 2}, {2, 3}, {3, 4}, {4, 5}}, [][]int{{1, 3}, {2, 1}, {1, 1}, {2, 2}, {1, 2}}))
 	fmt.Printf("The maximum possible minimum power of a city, if the additional power stations are built optimally is %d\n", solutions.MaxPower2([]int{1, 2, 4, 5, 0}, 1, 2))
+	fmt.Printf("The number of operations required to make either num1 = 0 or num2 = 0 is %d\n", solutions.CountOperations(2, 3))
 }
