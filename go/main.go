@@ -1922,4 +1922,5 @@ func main() {
 	fmt.Printf("The number of operations required to make either num1 = 0 or num2 = 0 is %d\n", solutions.CountOperations(2, 3))
 	fmt.Printf("The minimum number of operations required to make all elements in the array 0 is %d\n", solutions.MinOperations11([]int{0, 2}))
 	fmt.Printf("The size of the largest subset of strs such that there are at most m 0's and n 1's in the subset is %d\n", solutions.FindMaxForm([]string{"10", "0001", "111001", "1", "0"}, 5, 3))
+	fmt.Printf("The minimum number of operations required to make all elements in the array 1 is %d\n", solutions.MinOperations12([]int{2, 6, 3, 4}))
 }
