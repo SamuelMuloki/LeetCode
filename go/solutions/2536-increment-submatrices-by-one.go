@@ -1,20 +1,40 @@
 package solutions
 
 func RangeAddQueries(n int, queries [][]int) [][]int {
-	res := make([][]int, n)
-	for i := range res {
-		res[i] = make([]int, n)
+	diff := make([][]int, n+1)
+	for i := range diff {
+		diff[i] = make([]int, n+1)
 	}
 
-	for _, query := range queries {
-		startRow, startCol := query[0], query[1]
-		endRow, endCol := query[2], query[3]
-		for i := startRow; i <= endRow; i++ {
-			for j := startCol; j <= endCol; j++ {
-				res[i][j] += 1
+	for _, q := range queries {
+		row1, col1, row2, col2 := q[0], q[1], q[2], q[3]
+		diff[row1][col1] += 1
+		diff[row2+1][col1] -= 1
+		diff[row1][col2+1] -= 1
+		diff[row2+1][col2+1] += 1
+	}
+
+	mat := make([][]int, n)
+	for i := range mat {
+		mat[i] = make([]int, n)
+	}
+
+	for i := 0; i < n; i++ {
+		for j := 0; j < n; j++ {
+			x1 := 0
+			if i > 0 {
+				x1 = mat[i-1][j]
 			}
+			x2 := 0
+			if j > 0 {
+				x2 = mat[i][j-1]
+			}
+			x3 := 0
+			if i > 0 && j > 0 {
+				x3 = mat[i-1][j-1]
+			}
+			mat[i][j] = diff[i][j] + x1 + x2 - x3
 		}
 	}
-
-	return res
+	return mat
 }
