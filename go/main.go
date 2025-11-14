@@ -1924,4 +1924,5 @@ func main() {
 	fmt.Printf("The size of the largest subset of strs such that there are at most m 0's and n 1's in the subset is %d\n", solutions.FindMaxForm([]string{"10", "0001", "111001", "1", "0"}, 5, 3))
 	fmt.Printf("The minimum number of operations required to make all elements in the array 1 is %d\n", solutions.MinOperations12([]int{2, 6, 3, 4}))
 	fmt.Printf("The maximum number of operations that you can perform are %d\n", solutions.MaxOperations2("1001101"))
+	fmt.Printf("The matrix mat after performing every query is %v\n", solutions.RangeAddQueries(3, [][]int{{1, 1, 2, 2}, {0, 0, 1, 1}}))
 }
