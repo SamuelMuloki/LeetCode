@@ -1925,4 +1925,5 @@ func main() {
 	fmt.Printf("The minimum number of operations required to make all elements in the array 1 is %d\n", solutions.MinOperations12([]int{2, 6, 3, 4}))
 	fmt.Printf("The maximum number of operations that you can perform are %d\n", solutions.MaxOperations2("1001101"))
 	fmt.Printf("The matrix mat after performing every query is %v\n", solutions.RangeAddQueries(3, [][]int{{1, 1, 2, 2}, {0, 0, 1, 1}}))
+	fmt.Printf("The number of substrings with dominant ones is %d\n", solutions.NumberOfSubstrings2("00011"))
 }
