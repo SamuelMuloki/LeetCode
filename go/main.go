@@ -1927,4 +1927,5 @@ func main() {
 	fmt.Printf("The matrix mat after performing every query is %v\n", solutions.RangeAddQueries(3, [][]int{{1, 1, 2, 2}, {0, 0, 1, 1}}))
 	fmt.Printf("The number of substrings with dominant ones is %d\n", solutions.NumberOfSubstrings2("00011"))
 	fmt.Printf("All 1's are at least k places away from each other %t\n", solutions.KLengthApart([]int{1, 0, 0, 0, 1, 0, 0, 1}, 2))
+	fmt.Printf("The last character must be a one-bit character is %t\n", solutions.IsOneBitCharacter([]int{1, 0, 0}))
 }
