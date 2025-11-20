@@ -1929,4 +1929,5 @@ func main() {
 	fmt.Printf("All 1's are at least k places away from each other %t\n", solutions.KLengthApart([]int{1, 0, 0, 0, 1, 0, 0, 1}, 2))
 	fmt.Printf("The last character must be a one-bit character is %t\n", solutions.IsOneBitCharacter([]int{1, 0, 0}))
 	fmt.Printf("The final value of original is %d\n", solutions.FindFinalValue([]int{5, 3, 6, 1, 12}, 3))
+	fmt.Printf("The minimum possible size of a containing set is %d\n", solutions.IntersectionSizeTwo([][]int{{1, 3}, {3, 7}, {8, 9}}))
 }
