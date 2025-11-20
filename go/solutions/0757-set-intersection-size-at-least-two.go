@@ -20,7 +20,7 @@ func IntersectionSizeTwo(intervals [][]int) int {
 		todo[i] = 2
 	}
 
-	ress := 0
+	res := 0
 	for t := n - 1; t >= 0; t-- {
 		s := intervals[t][0]
 		m := todo[t]
@@ -30,9 +30,9 @@ func IntersectionSizeTwo(intervals [][]int) int {
 					todo[i]--
 				}
 			}
-			ress++
+			res++
 		}
 	}
 
-	return ress
+	return res
 }
