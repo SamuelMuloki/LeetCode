@@ -1931,4 +1931,5 @@ func main() {
 	fmt.Printf("The final value of original is %d\n", solutions.FindFinalValue([]int{5, 3, 6, 1, 12}, 3))
 	fmt.Printf("The minimum possible size of a containing set is %d\n", solutions.IntersectionSizeTwo([][]int{{1, 3}, {3, 7}, {8, 9}}))
 	fmt.Printf("The minimum number of operations to make all elements of nums divisible by 3 is %d\n", solutions.MinimumOperations4([]int{1, 2, 3, 4}))
+	fmt.Printf("The maximum possible sum of elements of the array such that it is divisible by three is %d\n", solutions.MaxSumDivThree([]int{1, 2, 3, 4, 4}))
 }
