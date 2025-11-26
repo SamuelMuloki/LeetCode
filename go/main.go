@@ -1933,4 +1933,5 @@ func main() {
 	fmt.Printf("The minimum number of operations to make all elements of nums divisible by 3 is %d\n", solutions.MinimumOperations4([]int{1, 2, 3, 4}))
 	fmt.Printf("The maximum possible sum of elements of the array such that it is divisible by three is %d\n", solutions.MaxSumDivThree([]int{1, 2, 3, 4, 4}))
 	fmt.Printf("The array of booleans answer where answer[i] is true if xi is divisible by 5 is %v\n", solutions.PrefixesDivBy5([]int{0, 1, 1}))
+	fmt.Printf("The length of n. If there is no such n is %d\n", solutions.SmallestRepunitDivByK(1))
 }
