@@ -1935,4 +1935,5 @@ func main() {
 	fmt.Printf("The array of booleans answer where answer[i] is true if xi is divisible by 5 is %v\n", solutions.PrefixesDivBy5([]int{0, 1, 1}))
 	fmt.Printf("The length of n. If there is no such n is %d\n", solutions.SmallestRepunitDivByK(1))
 	fmt.Printf("The number of paths where the sum of the elements on the path is divisible by k is %d\n", solutions.NumberOfPaths([][]int{{5, 2, 4}, {3, 0, 5}, {0, 7, 2}}, 3))
+	fmt.Printf("The maximum sum of a subarray of nums is %d\n", solutions.MaxSubarraySum([]int{1, 2}, 1))
 }
