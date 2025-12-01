@@ -1936,4 +1936,6 @@ func main() {
 	fmt.Printf("The length of n. If there is no such n is %d\n", solutions.SmallestRepunitDivByK(1))
 	fmt.Printf("The number of paths where the sum of the elements on the path is divisible by k is %d\n", solutions.NumberOfPaths([][]int{{5, 2, 4}, {3, 0, 5}, {0, 7, 2}}, 3))
 	fmt.Printf("The maximum sum of a subarray of nums is %d\n", solutions.MaxSubarraySum([]int{1, 2}, 1))
+	fmt.Printf("The minimum number of operations required to make the sum of the array divisible by k is %d\n", solutions.MinOperations13([]int{3, 9, 7}, 5))
+	fmt.Printf("Maximum running time for %d computers with batteries %v = %d\n", 3, []int{3, 3, 3, 3, 3}, solutions.MaxRunTime(3, []int{3, 3, 3, 3, 3}))
 }
