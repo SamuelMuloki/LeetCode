@@ -1940,4 +1940,5 @@ func main() {
 	fmt.Printf("Maximum running time for %d computers with batteries %v = %d\n", 3, []int{3, 3, 3, 3, 3}, solutions.MaxRunTime(3, []int{3, 3, 3, 3, 3}))
 	fmt.Printf("The number of unique horizontal trapezoids that can be formed by choosing any four distinct points from points are %d\n", solutions.CountTrapezoids([][]int{{1, 0}, {2, 0}, {3, 0}, {2, 2}, {3, 2}}))
 	fmt.Printf("The number of unique trapezoids that can be formed by choosing any four distinct points from points %d\n", solutions.CountTrapezoids2([][]int{{-3, 2}, {3, 0}, {2, 3}, {3, 2}, {2, -3}}))
+	fmt.Printf("The total number of collisions that will happen on the road are %d\n", solutions.CountCollisions("RLRSLL"))
 }
