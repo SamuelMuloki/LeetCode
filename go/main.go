@@ -163,6 +163,14 @@ func main() {
 	stream.GetHighestNumber(3)
 	fmt.Printf("The highest number for stream is %d\n", stream.GetHighestNumber(7))
 
+	// Example: Maximum running time of n computers
+	batteries := []int{3, 3, 3, 3}
+	n := 3
+	fmt.Printf("Maximum running time for %d computers with batteries %v = %d\n", n, batteries, solutions.MaxRunTime(n, batteries))
+	stream.GetHighestNumber(2)
+	stream.GetHighestNumber(3)
+	fmt.Printf("The highest number for stream is %d\n", stream.GetHighestNumber(7))
+
 	reorderHead := &utils.ListNode{
 		Val: 1, Next: &utils.ListNode{Val: 2, Next: &utils.ListNode{
 			Val: 3, Next: &utils.ListNode{Val: 4, Next: nil},
@@ -1936,9 +1944,5 @@ func main() {
 	fmt.Printf("The length of n. If there is no such n is %d\n", solutions.SmallestRepunitDivByK(1))
 	fmt.Printf("The number of paths where the sum of the elements on the path is divisible by k is %d\n", solutions.NumberOfPaths([][]int{{5, 2, 4}, {3, 0, 5}, {0, 7, 2}}, 3))
 	fmt.Printf("The maximum sum of a subarray of nums is %d\n", solutions.MaxSubarraySum([]int{1, 2}, 1))
-	fmt.Printf("The minimum number of operations required to make the sum of the array divisible by k is %d\n", solutions.MinOperations13([]int{3, 9, 7}, 5))
-	fmt.Printf("Maximum running time for %d computers with batteries %v = %d\n", 3, []int{3, 3, 3, 3, 3}, solutions.MaxRunTime(3, []int{3, 3, 3, 3, 3}))
-	fmt.Printf("The number of unique horizontal trapezoids that can be formed by choosing any four distinct points from points are %d\n", solutions.CountTrapezoids([][]int{{1, 0}, {2, 0}, {3, 0}, {2, 2}, {3, 2}}))
-	fmt.Printf("The number of unique trapezoids that can be formed by choosing any four distinct points from points %d\n", solutions.CountTrapezoids2([][]int{{-3, 2}, {3, 0}, {2, 3}, {3, 2}, {2, -3}}))
-	fmt.Printf("The total number of collisions that will happen on the road are %d\n", solutions.CountCollisions("RLRSLL"))
+	fmt.Printf("The number of partitions where the difference between the maximum and minimum elements is at most k is %d\n", solutions.CountPartitions2([]int{9, 4, 1, 3, 7}, 4))
 }
