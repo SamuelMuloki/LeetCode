@@ -1945,4 +1945,5 @@ func main() {
 	fmt.Printf("The number of paths where the sum of the elements on the path is divisible by k is %d\n", solutions.NumberOfPaths([][]int{{5, 2, 4}, {3, 0, 5}, {0, 7, 2}}, 3))
 	fmt.Printf("The maximum sum of a subarray of nums is %d\n", solutions.MaxSubarraySum([]int{1, 2}, 1))
 	fmt.Printf("The number of partitions where the difference between the maximum and minimum elements is at most k is %d\n", solutions.CountPartitions2([]int{9, 4, 1, 3, 7}, 4))
+	fmt.Printf("The number of square triples such that 1 <= a, b, c <= n is %d\n", solutions.CountTriples(10))
 }
