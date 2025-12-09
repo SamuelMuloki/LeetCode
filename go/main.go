@@ -1946,4 +1946,5 @@ func main() {
 	fmt.Printf("The maximum sum of a subarray of nums is %d\n", solutions.MaxSubarraySum([]int{1, 2}, 1))
 	fmt.Printf("The number of partitions where the difference between the maximum and minimum elements is at most k is %d\n", solutions.CountPartitions2([]int{9, 4, 1, 3, 7}, 4))
 	fmt.Printf("The number of square triples such that 1 <= a, b, c <= n is %d\n", solutions.CountTriples(10))
+	fmt.Printf("The total number of special triplets in the array is %d\n", solutions.SpecialTriplets([]int{6, 3, 6}))
 }
