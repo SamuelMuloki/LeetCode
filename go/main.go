@@ -1948,4 +1948,5 @@ func main() {
 	fmt.Printf("The number of square triples such that 1 <= a, b, c <= n is %d\n", solutions.CountTriples(10))
 	fmt.Printf("The total number of special triplets in the array is %d\n", solutions.SpecialTriplets([]int{6, 3, 6}))
 	fmt.Printf("The number of permutations of [0, 1, 2, ..., (n - 1)] that represent a valid order are %d\n", solutions.CountPermutations([]int{1, 2, 3}))
+	fmt.Printf("The number of covered buildings is %d\n", solutions.CountCoveredBuildings(3, [][]int{{1, 2}, {2, 2}, {3, 2}, {2, 1}, {2, 3}}))
 }
