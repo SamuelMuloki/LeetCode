@@ -1951,4 +1951,5 @@ func main() {
 	fmt.Printf("The number of covered buildings is %d\n", solutions.CountCoveredBuildings(3, [][]int{{1, 2}, {2, 2}, {3, 2}, {2, 1}, {2, 3}}))
 	fmt.Printf("The number of mentions the user with id i has across all MESSAGE events is %v\n", solutions.CountMentions(2, [][]string{{"MESSAGE", "10", "id1 id0"}, {"OFFLINE", "11", "0"}, {"MESSAGE", "71", "HERE"}}))
 	fmt.Printf("The array of the codes of all valid coupons, sorted first by their businessLine is %v\n", solutions.ValidateCoupons([]string{"SAVE20", "", "PHARMA5", "SAVE@20"}, []string{"restaurant", "grocery", "pharmacy", "restaurant"}, []bool{true, true, true, true}))
+	fmt.Printf("The number of smooth descent periods are %d\n", solutions.GetDescentPeriods([]int{3, 2, 1, 4}))
 }
