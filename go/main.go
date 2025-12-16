@@ -1952,4 +1952,5 @@ func main() {
 	fmt.Printf("The number of mentions the user with id i has across all MESSAGE events is %v\n", solutions.CountMentions(2, [][]string{{"MESSAGE", "10", "id1 id0"}, {"OFFLINE", "11", "0"}, {"MESSAGE", "71", "HERE"}}))
 	fmt.Printf("The array of the codes of all valid coupons, sorted first by their businessLine is %v\n", solutions.ValidateCoupons([]string{"SAVE20", "", "PHARMA5", "SAVE@20"}, []string{"restaurant", "grocery", "pharmacy", "restaurant"}, []bool{true, true, true, true}))
 	fmt.Printf("The number of smooth descent periods are %d\n", solutions.GetDescentPeriods([]int{3, 2, 1, 4}))
+	fmt.Printf("The maximum profit that can be achieved without exceeding the given budget is %d\n", solutions.MaxProfit3(2, []int{1, 2}, []int{4, 3}, [][]int{{1, 2}}, 3))
 }
