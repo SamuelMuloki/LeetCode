@@ -1953,4 +1953,5 @@ func main() {
 	fmt.Printf("The array of the codes of all valid coupons, sorted first by their businessLine is %v\n", solutions.ValidateCoupons([]string{"SAVE20", "", "PHARMA5", "SAVE@20"}, []string{"restaurant", "grocery", "pharmacy", "restaurant"}, []bool{true, true, true, true}))
 	fmt.Printf("The number of smooth descent periods are %d\n", solutions.GetDescentPeriods([]int{3, 2, 1, 4}))
 	fmt.Printf("The maximum profit that can be achieved without exceeding the given budget is %d\n", solutions.MaxProfit3(2, []int{1, 2}, []int{4, 3}, [][]int{{1, 2}}, 3))
+	fmt.Printf("The maximum total profit you can earn by making at most k transactions is %d\n", solutions.MaximumProfit([]int{1, 7, 9, 8, 2}, 2))
 }
