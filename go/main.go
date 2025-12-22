@@ -1955,5 +1955,6 @@ func main() {
 	fmt.Printf("The maximum profit that can be achieved without exceeding the given budget is %d\n", solutions.MaxProfit3(2, []int{1, 2}, []int{4, 3}, [][]int{{1, 2}}, 3))
 	fmt.Printf("The maximum total profit you can earn by making at most k transactions is %d\n", solutions.MaximumProfit([]int{1, 7, 9, 8, 2}, 2))
 	fmt.Printf("The maximum possible profit you can achieve is %d\n", solutions.MaxProfit4([]int{5, 4, 3}, []int{1, 1, 0}, 2))
-	fmt.Printf("The number of columns that you will delete are %d\n", solutions.MinDeletionSize([]string{"cba","daf","ghi"}))
+	fmt.Printf("The number of columns that you will delete are %d\n", solutions.MinDeletionSize([]string{"cba", "daf", "ghi"}))
+	fmt.Printf("The minimum possible value of answer.length iss %d\n", solutions.MinDeletionSize2([]string{"ca", "bb", "ac"}))
 }
