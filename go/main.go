@@ -1959,4 +1959,5 @@ func main() {
 	fmt.Printf("The minimum possible value of answer.length II is %d\n", solutions.MinDeletionSize2([]string{"ca", "bb", "ac"}))
 	fmt.Printf("The minimum possible value of answer.length III is %d\n", solutions.MinDeletionSize3([]string{"babca", "bbazb"}))
 	fmt.Printf("The minimum number of boxes you need to select to redistribute these n packs of apples into boxes is %d\n", solutions.MinimumBoxes([]int{1, 3, 2}, []int{4, 3, 1, 5, 2}))
+	fmt.Printf("The earliest hour at which the shop must be closed to incur a minimum penalty is %d\n", solutions.BestClosingTime("YYNY"))
 }
