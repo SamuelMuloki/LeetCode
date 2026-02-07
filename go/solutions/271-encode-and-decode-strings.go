@@ -1,7 +1,6 @@
 package solutions
 
 import (
-	"fmt"
 	"strconv"
 	"strings"
 )
@@ -18,16 +17,16 @@ func (this *Codec2) Encode(strs []string) string {
 		sizes = append(sizes, strconv.Itoa(len(str)))
 	}
 
-	return fmt.Sprintf("%s%s%s", strings.Join(sizes, ","), "#", strings.Join(strs, ""))
+	return strings.Join(sizes, ",") + "#" + strings.Join(strs, "")
 }
 
-func (this *Codec2) Decode(s string) []string {
+func (this *Codec2) Decode(encoded string) []string {
 	res := []string{}
-	if s == "" {
+	if encoded == "" {
 		return res
 	}
 
-	parts := strings.SplitN(s, "#", 2)
+	parts := strings.SplitN(encoded, "#", 2)
 	sizes := strings.Split(parts[0], ",")
 	idx := 0
 	for i := range sizes {
