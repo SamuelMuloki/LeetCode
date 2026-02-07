@@ -1960,4 +1960,8 @@ func main() {
 	fmt.Printf("The minimum possible value of answer.length III is %d\n", solutions.MinDeletionSize3([]string{"babca", "bbazb"}))
 	fmt.Printf("The minimum number of boxes you need to select to redistribute these n packs of apples into boxes is %d\n", solutions.MinimumBoxes([]int{1, 3, 2}, []int{4, 3, 1, 5, 2}))
 	fmt.Printf("The earliest hour at which the shop must be closed to incur a minimum penalty is %d\n", solutions.BestClosingTime("YYNY"))
+	codec2 := solutions.NewCodec2()
+	encodedStr := codec2.Encode([]string{"Hello", "World"})
+	decodedStr := codec2.Decode(encodedStr)
+	fmt.Printf("The encoded and decoded strings are %s and %v\n", encodedStr, decodedStr)
 }
